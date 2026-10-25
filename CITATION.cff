@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "classical-physics-ai999x: an offline, verified classical physics solver"
+authors:
+  - family-names: Farabi
+    given-names: Ibnul Jaif
+    affiliation: AI999X
+version: 1.0.0
+license: Apache-2.0
+url: "https://huggingface.co/AI999X/classical-physics-ai999x"
+repository-code: "https://huggingface.co/AI999X/classical-physics-ai999x"
+keywords:
+  - classical physics
+  - classical_physics
+  - ai999x
+  - offline
+  - cpu
+  - stem
+  - education
+  - step-by-step
+  - latex
+  - solver
+  - physics
+  - mechanics
