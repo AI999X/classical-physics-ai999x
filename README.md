@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/classical-physics-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.2
 
 Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ classical-physics-ai999x is an offline, deterministic Python solver that answers
 
 | Property | Value |
 |---|---|
-| Package | `classical-physics-ai999x` 1.0.1 (import `classical_physics_ai999x`) |
+| Package | `classical-physics-ai999x` 1.0.2 (import `classical_physics_ai999x`) |
 | Type | Deterministic neuro-symbolic classical physics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 46 certified derivations, 16 certified model_familys, 2 certified procedures, 132 certified relations |
 | Knowledge pack | version 1.0.2 |
@@ -61,7 +61,7 @@ classical_physics.ask("Who created you?").message
 # -> classical-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `classical-physics-ai999x "<question>"`, `classical-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on classical-physics-ai999x 1.0.1.
+Command line: `classical-physics-ai999x "<question>"`, `classical-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on classical-physics-ai999x 1.0.2.
 
 ## Find the right capability, and draw it
 
@@ -228,10 +228,10 @@ _Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0.001 F, source 10 V) char
 ## Citation
 
 ```bibtex
-@software{classical_physics_ai999x_1_0_1,
+@software{classical_physics_ai999x_1_0_2,
   title  = {classical-physics-ai999x: an offline, verified classical physics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.1},
+  year   = {2026}, version = {1.0.2},
   url    = {https://huggingface.co/AI999X/classical-physics-ai999x}
 }
 ```
