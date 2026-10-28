@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "classical-physics-ai999x"
-version = "1.0.0"
+version = "1.0.1"
 description = "Offline classical physics solver: kinematics, dynamics, energy, momentum, rotation, gravitation, oscillations, waves and sound, optics, thermodynamics, electricity and magnetism, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"

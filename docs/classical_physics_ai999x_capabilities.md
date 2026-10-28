@@ -304,6 +304,10 @@ $$
 - **Assumes:** constant acceleration along a line
 - **Evidence:** hand-checked pack
 
+![Trajectories of a projectile launched at 20 m/s (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/displacement-time-drawing.svg)
+
+*Trajectories of a projectile launched at 20 m/s (g = 9.81 m/s², no air resistance) at three angles: each point's horizontal distance and height computed by the package (uniform motion and constant acceleration), the top from its maximum-height formula, and on the 45° path the velocity vectors (horizontal part constant, vertical part from v = v₀ + a t) — θ = 30°: range 35.3119 m, top 5.09684 m; θ = 45°: range 40.7747 m, top 10.1937 m; θ = 60°: range 35.3119 m, top 15.2905 m.*
+
 ```python
 classical_physics_ai999x.solve('displacement_time', v0='3 m/s', a='2 m/s^2', t='4 s', target='x')
 # -> 28 m   (SOLVED)
@@ -649,6 +653,10 @@ $$
 
 - **Assumes:** speeds far below the speed of light
 - **Evidence:** hand-checked pack
+
+![Energy of a 1 kg body falling from rest from 20 m (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/kinetic-energy-bars.svg)
+
+*Energy of a 1 kg body falling from rest from 20 m (g = 9.81 m/s², no air resistance): potential energy and kinetic energy (from the speed after the fall), each computed by the package, stacked — their sum stays 196.2 J: h = 20 m: U = 196.2 J, K = 0 J (v = 0 m/s); h = 15 m: U = 147.15 J, K = 49.05 J (v = 9.90454 m/s); h = 10 m: U = 98.1 J, K = 98.1 J (v = 14.0071 m/s); h = 5 m: U = 49.05 J, K = 147.15 J (v = 17.1552 m/s); h = 0 m: U = 0 J, K = 196.2 J (v = 19.8091 m/s).*
 
 ```python
 classical_physics_ai999x.solve('kinetic_energy', m='4 kg', v='3 m/s', target='K')
@@ -1314,6 +1322,10 @@ $$
 - **Fails when:** another force pushes into or pulls away from the surface; the incline itself accelerates
 - **Assumes:** no acceleration perpendicular to the incline; no other force with a component normal to the surface
 - **Evidence:** hand-checked pack
+
+![Forces on a 2 kg block on a frictionless 30° incline (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/normal-force-incline-diagram.svg)
+
+*Forces on a 2 kg block on a frictionless 30° incline (g = 9.81 m/s²), each computed by the package and drawn to scale (0.12 length units per newton): weight 19.62 N, normal force 16.9914 N = m g cos θ, component along the slope 9.81 N = m g sin θ, which accelerates the block at 4.905 m/s².*
 
 ```python
 classical_physics_ai999x.solve('normal_force_incline', m='10 kg', g='9.8 m/s^2', theta='60 deg', target='N')
@@ -4014,6 +4026,10 @@ $$
 - **Assumes:** a single resistor and capacitor; the capacitor is uncharged at $t = 0$
 - **Evidence:** fundamental_law
 
+![Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/rc-charging-curve.svg)
+
+*Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0.001 F, source 10 V) charging from 0 and discharging from 10 V, 50 times each from the package; time constant τ = 1 s; marked: t = τ, charging voltage 6.32121 V (63.2121 % of the source).*
+
 ```python
 classical_physics_ai999x.solve('rc_charging', emf='9 V', t='0.008 s', R='1000 ohm', C='8e-06 F', target='V')
 # -> 5.68909 V   (SOLVED)
@@ -4295,6 +4311,10 @@ $$
 - **Fails when:** before the transients decay
 - **Assumes:** sinusoidal driving force; linear viscous damping; steady state (transients have died out)
 - **Evidence:** theorem
+
+![Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes — b = 0](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/driven-amplitude-curve.svg)
+
+*Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes — b = 0.25: ω_r = 1.99217 rad/s, A = 2.00392 m; b = 0.5: ω_r = 1.9685 rad/s, A = 1.00791 m; b = 1: ω_r = 1.87083 rad/s, A = 0.516398 m; b = 2: ω_r = 1.41421 rad/s, A = 0.288675 m.*
 
 ```python
 classical_physics_ai999x.solve('driven_amplitude', F0='10 N', k='50 N/m', m='2 kg', b='4 kg/s', w='3 rad/s', target='A')

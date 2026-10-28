@@ -1,5 +1,5 @@
 {
- "package": "1.0.0",
+ "package": "1.0.1",
  "pack": "1.0.2",
  "knowledge_db": null,
  "files": {
@@ -12,10 +12,10 @@
   "capabilities/procedures_certified.json": "38a6991fc2f903bc1bdcd728a5b3832de073cb4aa9ed08b7a24a502443989c48",
   "capabilities/procedures_compiled.json": "d7943aa9a77a7b6d313c3e1b3c2ef3a96f0844ac310afd749260b514e2188f55",
   "capabilities/derivations_certified.json": "4bea34dd43d405f99260c5622bfa78d46737944f6f4aff78235194817aacc1eb",
-  "classical_physics_knowledge_public.sqlite": "8641ea5ba46ba37d60ef1d749a6ddb3162640d5c236adf861d5e2f2c5fa61467",
-  "search/encoder.int8.onnx": "8dfdc64b74a689092588fa02d7b7c90a09c478de71f1a4003e18dce5cd0980bd",
-  "search/tokenizer.json": "22814b2533272c7a139d477e6d514d35989c4abe3a2195b40942bc527a1e1d15",
-  "search/index.json": "a4efb354b436ecd9ea3aaf36cbdaa1e2562e557336b3c68183b1ad3355d49f70",
+  "classical_physics_knowledge_public.sqlite": "16a9efbe9c767d6f0eb2348e184db2b12d3968d2bf466212412e193418d9b1d1",
+  "search/encoder.int8.onnx": "521452d928a72da4d241b1835ab0f46b0e81ff58ffff0367b9a7029bd129fbd9",
+  "search/tokenizer.json": "b2f2deb461e6ad672b8e42aac29773e7a9be77d582cdf58808113ea43fda565e",
+  "search/index.json": "d8f81d9706c9a0efa7d9643bcec3d39a6c3500766ce0f44937d85ad90f772507",
   "reader/reader.int8.onnx": "ecee16f238097a01129c8c071809cc24d3edb25c7d73ca29bd5c383981ca0c33",
   "reader/tokenizer.json": "a54ec88bce54ad97ea91cd47911b41025e80d47e13af62d47cf5758a65ba8387",
   "reader/labels.json": "328c9073146573ae8e9890ac487d5a4cfe6914fef45fb0047633ac580f8fff80",
