@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/AI999X/classical-physics-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/classical-physics-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/classical-physics-ai999x)](https://pypi.org/project/classical-physics-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/classical-physics-ai999x)
 
-**[Install](https://pypi.org/project/classical-physics-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
+**[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/classical-physics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/classical-physics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
 License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
@@ -12,7 +12,275 @@ classical-physics-ai999x is an offline, deterministic Python solver that answers
 
 **classical-physics-ai999x** is a compact, deterministic classical physics engine for Python. It reads a question in plain English (or a typed call), picks a certified classical physics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
+
+**Run it your way.** classical-physics-ai999x comes as the AI999X desktop app and as the command-line program `classical-physics` for Windows and Linux, runs in your browser as WebAssembly, and installs as a Python package. The desktop app, the command line and the browser run the same compiled Rust program on your own device: offline, no Python needed.
+
+## Get it
+
+| Way to run it | For | Get it |
+|---|---|---|
+| **AI999X Classical Physics desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
+| **Command line** (`classical-physics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#try) |
+| **Python** | Python 3.10+ | `pip install classical-physics-ai999x` |
+
+Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+
+## Rust versions
+
+Classical Physics also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/classical-physics-ai999x/releases/tag/v1.0.3) and on the website.
+
+| Program | System | File | Size | Download | Use |
+|---|---|---|---|---|---|
+| Desktop app (Classical Physics) | Windows x86-64 | `ai999x-classical-physics-1.2.0-windows-x86_64.zip` | 6.3 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-classical-physics.exe` (no installer) |
+| Desktop app (Classical Physics) | Linux x86-64 | `ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz` | 7.2 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-classical-physics` (X11 or Wayland desktop) |
+| Command line (`classical-physics`) | Windows x86-64 | `ai999x-classical-physics-cli-1.2.0-windows-x86_64.zip` | 1.7 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `classical-physics.exe ask "<question>"` or `classical-physics.exe solve <capability> name=value` |
+| Command line (`classical-physics`) | Linux x86-64 | `ai999x-classical-physics-cli-1.2.0-linux-x86_64.tar.gz` | 1.7 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./classical-physics ask "<question>"` or `./classical-physics solve <capability> name=value` |
+
+The command-line archive holds `classical-physics` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+
+## Quick start
+
+### Desktop app
+
+Download **AI999X Classical Physics** for your system (above), unpack it and start it; type a question in words or pick a capability, fill in the form and press Compute. Figures and an explanation of the answer appear beside it. The AI999X desktop app has the same, with Classical Physics among all AI999X models.
+
+Linux, from a terminal:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz
+./ai999x-classical-physics-1.2.0-linux-x86_64/ai999x-classical-physics
+```
+
+### Command line
+
+Linux:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+classical-physics --version
+```
+
+Windows (PowerShell):
+
+```powershell
+$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+(Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
+Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
+classical-physics --version
+```
+
+Every command below was run as shown; the text under it is what the program printed.
+
+**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```console
+$ classical-physics ask "A 3 kg object moves at 4 m/s. What is its kinetic energy?"
+Read as: Translational kinetic energy
+kinetic energy (K) = 24 J
+  by: Translational kinetic energy  (K = m*v**2/2)
+  m = 3 kg   [3 kg]
+  v = 4 m/s   [4 m/s]
+  assumes: speeds far below the speed of light
+```
+
+**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```console
+$ classical-physics info two_resistors_series_parallel
+Two resistors in series and in parallel
+  series resistances add; parallel conductances add
+  in   r1       first resistance [ohm]
+  in   r2       second resistance [ohm]
+  out  rs       series equivalent [ohm]
+  out  rp       parallel equivalent [ohm]
+```
+
+**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```console
+$ classical-physics solve two_resistors_series_parallel "r1=6 ohm" "r2=3 ohm"
+rs = 9 ohm
+rp = 2 ohm
+  by: Two resistors in series and in parallel  (series resistances add; parallel conductances add)
+  r1 = 6 ohm
+  r2 = 3 ohm
+  assumes: r1 > 0; r2 > 0
+```
+
+**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
+
+```console
+$ classical-physics figures rocket_delta_v "ve=3000 m/s" "m0=1000 kg" "mf=400 kg" --out .
+[
+  {
+    "slug": "rocket-delta-v-live-1",
+    "title": "Change in velocity as initial mass varies",
+    "caption": "Change in velocity as m0 runs from 437.5 to 1750 kg, every other input as you entered it (36 solutions). Marked: your m0 = 1000 kg gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
+    "file": "./rocket-delta-v-live-1.svg"
+  },
+  {
+    "slug": "rocket-delta-v-live-2",
+    "title": "Change in velocity as exhaust velocity varies",
+    "caption": "Change in velocity as ve runs from 750 to 5250 m/s, every other input as you entered it (29 solutions). Marked: your ve = 3000 m/s gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
+    "file": "./rocket-delta-v-live-2.svg"
+  }
+]
+```
+
+**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | classical-physics batch
+
+`cases.jsonl`:
+
+```json
+{"key": "two_resistors_series_parallel", "inputs": {"r1": "6 ohm", "r2": "3 ohm"}}
+{"key": "rocket_delta_v", "inputs": {"ve": "3000 m/s", "m0": "1000 kg", "mf": "400 kg"}}
+```
+
+```console
+$ classical-physics batch < cases.jsonl
+{"outcome":"SOLVED","message":"","value":9.0,"unit":"ohm","solved_for":"rs","si":[["r1",6.0],["r2",3.0]],"values":[["rs",9.0,"ohm"],["rp",2.0,"ohm"]],"target":"rs","phrase":"series equivalent","assumptions":["r1 > 0","r2 > 0"],"name":"Two resistors in series and in parallel","equation":"series resistances add; parallel conductances add"}
+{"outcome":"SOLVED","message":"","value":2748.8721956224654,"unit":"m/s","solved_for":"dv","si":[["ve",3000.0],["m0",1000.0],["mf",400.0]],"target":"dv","phrase":"change in velocity","assumptions":["no gravity or drag during the burn","a constant exhaust velocity","the situation is: rocket"],"name":"Velocity change of a rocket (Tsiolkovsky)","equation":"dv = ve*log(m0/mf)"}
+```
+
+### In your browser
+
+Open [Classical Physics on ai999x.com](https://www.ai999x.com/models/classical-physics-ai999x/#try), choose a capability and press **Compute**: the model runs on your own device as WebAssembly; nothing is sent anywhere. Change any input (any unit of the right kind) and the answer, its explanation and the figures follow.
+
+In your own page: `classical_physics_ai999x.wasm` and the loader `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js).
+
+### Python
+
+```bash
+pip install classical-physics-ai999x
+```
+
+## Worked examples in every form
+
+The same worked example from the command line, from Python and in the browser. Each command-line output is what the program printed.
+
+### Reactance of a capacitor
+
+Command line:
+
+```console
+$ classical-physics solve capacitive_reactance "f=60 Hz" "C=1e-06 F"
+capacitive reactance (X) = 2652.582385 ohm
+  by: Reactance of a capacitor  (X = 1/(2*pi*f*C))
+  f = 60 Hz   [60 Hz]
+  C = 1e-06 F   [1e-06 F]
+  assumes: sinusoidal AC; the situation is: capacitor
+```
+
+Python:
+
+```python
+import classical_physics_ai999x as m
+
+a = m.solve("capacitive_reactance", f="60 Hz", C="1e-06 F")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#cap-capacitive_reactance) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the capacitive reactance, which represents the opposition a capacitor offers to alternating current. The result 2652.58 ohm is derived using the frequency 60 Hz and the capacitance 1e-06 F. A lower value indicates that the capacitor allows more current to flow at this specific frequency, while a higher value suggests greater resistance to the signal.
+
+### Reactance of an inductor
+
+Command line:
+
+```console
+$ classical-physics solve inductive_reactance "f=60 Hz" "L=0.03 H"
+inductive reactance (X) = 11.30973355 ohm
+  by: Reactance of an inductor  (X = 2*pi*f*L)
+  f = 60 Hz   [60 Hz]
+  L = 0.03 H   [0.03 H]
+  assumes: sinusoidal AC; the situation is: inductor
+```
+
+Python:
+
+```python
+import classical_physics_ai999x as m
+
+a = m.solve("inductive_reactance", f="60 Hz", L="0.03 H")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#cap-inductive_reactance) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the opposition to alternating current provided by an inductor. Using the frequency of the signal and the inductance value, the result shows that the inductive reactance equals 11.3097 ohm. This value indicates how much the component resists changes in current flow within the circuit.
+
+### Resonant frequency of an LC circuit
+
+Command line:
+
+```console
+$ classical-physics solve lc_resonance "L=0.01 H" "C=1e-06 F"
+resonant frequency (f) = 1591.549431 Hz
+  by: Resonant frequency of an LC circuit  (f = 1/(2*pi*sqrt(L*C)))
+  L = 0.01 H   [0.01 H]
+  C = 1e-06 F   [1e-06 F]
+  assumes: ideal components; negligible resistance for the frequency; the situation is: lc circuit
+```
+
+Python:
+
+```python
+import classical_physics_ai999x as m
+
+a = m.solve("lc_resonance", L="0.01 H", C="1e-06 F")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#cap-lc_resonance) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the resonant frequency of an LC circuit, which is the rate at which energy oscillates between the inductor and the capacitor. Given an inductance of 0.01 H and a capacitance of 1e-06 F, the resulting frequency is 1591.55 Hz. This value represents the natural tuning point where the circuit responds most strongly to alternating current signals.
+
+### Rms current of a sinusoidal supply
+
+Command line:
+
+```console
+$ classical-physics solve rms_current "I0=10 A"
+rms current (Irms) = 7.071067812 A
+  by: Rms current of a sinusoidal supply  (Irms = I0/sqrt(2))
+  I0 = 10 A   [10 A]
+  assumes: a sinusoidal waveform; the situation is: alternating current
+```
+
+Python:
+
+```python
+import classical_physics_ai999x as m
+
+a = m.solve("rms_current", I0="10 A")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#cap-rms_current) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the effective current value for a sinusoidal alternating supply. Taking the peak current, which is 10 A, and dividing it by the square root of two gives the root mean square current of 7.07107 A. This specific value represents the amount of direct current that would produce the same heating effect in a resistor as this alternating current.
+
+## Documentation
+
+- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_rust_guide.md)
+- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_capabilities.md)
+- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/classical-physics-ai999x/
 
 ## Highlights
 
@@ -20,6 +288,7 @@ classical-physics-ai999x is an offline, deterministic Python solver that answers
 - **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 1177 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `classical-physics` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** kinematics, dynamics, energy, momentum, rotation, gravitation, oscillations, waves and sound, optics, thermodynamics, electricity and magnetism.
 
@@ -38,7 +307,7 @@ classical-physics-ai999x is an offline, deterministic Python solver that answers
 | Creator / engineer | Ibnul Jaif Farabi |
 | Organization | AI999X |
 
-## Quickstart
+## Python quick start
 
 ```bash
 pip install classical-physics-ai999x
@@ -61,7 +330,7 @@ classical_physics.ask("Who created you?").message
 # -> classical-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `classical-physics-ai999x "<question>"`, `classical-physics-ai999x --capabilities`. The outputs above were produced by running this exact code on classical-physics-ai999x 1.0.3.
+The Python package also installs a Python command, `classical-physics-ai999x "<question>"`; for the native program use `classical-physics` (above). The outputs above were produced by running this exact code on classical-physics-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -91,7 +360,7 @@ classical_physics.plot(a)
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
-## Worked examples
+## Python worked examples, with their steps
 
 Each question was put to `classical-physics-ai999x`; the answer is the one it returned, with the steps it took.
 
