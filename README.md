@@ -4,7 +4,7 @@
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/classical-physics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/classical-physics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
 
 Field: **Physical Sciences** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -20,26 +20,13 @@ classical-physics-ai999x is an offline, deterministic Python solver that answers
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Classical Physics desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
-| **Command line** (`classical-physics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X Classical Physics desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-classical-physics-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-classical-physics-1.4.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
+| **Command line** (`classical-physics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
 | **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install classical-physics-ai999x` |
 
-Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
-
-## Rust versions
-
-Classical Physics also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/classical-physics-ai999x/releases/tag/v1.0.3) and on the website.
-
-| Program | System | File | Size | Download | Use |
-|---|---|---|---|---|---|
-| Desktop app (Classical Physics) | Windows x86-64 | `ai999x-classical-physics-1.2.0-windows-x86_64.zip` | 6.3 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-classical-physics.exe` (no installer) |
-| Desktop app (Classical Physics) | Linux x86-64 | `ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz` | 7.2 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-classical-physics` (X11 or Wayland desktop) |
-| Command line (`classical-physics`) | Windows x86-64 | `ai999x-classical-physics-cli-1.2.0-windows-x86_64.zip` | 1.7 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `classical-physics.exe ask "<question>"` or `classical-physics.exe solve <capability> name=value` |
-| Command line (`classical-physics`) | Linux x86-64 | `ai999x-classical-physics-cli-1.2.0-linux-x86_64.tar.gz` | 1.7 MB | [Hub](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/ai999x-classical-physics-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/classical-physics-ai999x/releases/download/v1.0.3/ai999x-classical-physics-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./classical-physics ask "<question>"` or `./classical-physics solve <capability> name=value` |
-
-The command-line archive holds `classical-physics` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -50,11 +37,11 @@ Download **AI999X Classical Physics** for your system (above), unpack it and sta
 Linux, from a terminal:
 
 ```bash
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-classical-physics-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz
-./ai999x-classical-physics-1.2.0-linux-x86_64/ai999x-classical-physics
+tar xzf ai999x-classical-physics-1.4.0-linux-x86_64.tar.gz
+./ai999x-classical-physics-1.4.0-linux-x86_64/ai999x-classical-physics
 ```
 
 ### Command line
@@ -62,23 +49,23 @@ tar xzf ai999x-classical-physics-1.2.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 classical-physics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 classical-physics --version
 ```
@@ -119,26 +106,6 @@ rp = 2 ohm
   r1 = 6 ohm
   r2 = 3 ohm
   assumes: r1 > 0; r2 > 0
-```
-
-**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```console
-$ classical-physics figures rocket_delta_v "ve=3000 m/s" "m0=1000 kg" "mf=400 kg" --out .
-[
-  {
-    "slug": "rocket-delta-v-live-1",
-    "title": "Change in velocity as initial mass varies",
-    "caption": "Change in velocity as m0 runs from 437.5 to 1750 kg, every other input as you entered it (36 solutions). Marked: your m0 = 1000 kg gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
-    "file": "./rocket-delta-v-live-1.svg"
-  },
-  {
-    "slug": "rocket-delta-v-live-2",
-    "title": "Change in velocity as exhaust velocity varies",
-    "caption": "Change in velocity as ve runs from 750 to 5250 m/s, every other input as you entered it (29 solutions). Marked: your ve = 3000 m/s gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
-    "file": "./rocket-delta-v-live-2.svg"
-  }
-]
 ```
 
 **Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | classical-physics batch
@@ -296,7 +263,7 @@ _What this means:_ This calculation determines the effective current value for a
 
 | Property | Value |
 |---|---|
-| Package | `classical-physics-ai999x` 1.0.3 (import `classical_physics_ai999x`) |
+| Package | `classical-physics-ai999x` 1.1.0 (import `classical_physics_ai999x`) |
 | Type | Deterministic neuro-symbolic classical physics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 46 certified derivations, 16 certified model_familys, 2 certified procedures, 132 certified relations |
 | Knowledge pack | version 1.0.2 |
@@ -330,7 +297,7 @@ classical_physics.ask("Who created you?").message
 # -> classical-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `classical-physics-ai999x "<question>"`; for the native program use `classical-physics` (above). The outputs above were produced by running this exact code on classical-physics-ai999x 1.0.3.
+The Python package also installs a Python command, `classical-physics-ai999x "<question>"`; for the native program use `classical-physics` (above). The outputs above were produced by running this exact code on classical-physics-ai999x 1.1.0.
 
 ## Find the right capability, and draw it
 
@@ -497,10 +464,10 @@ _Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0.001 F, source 10 V) char
 ## Citation
 
 ```bibtex
-@software{classical_physics_ai999x_1_0_3,
+@software{classical_physics_ai999x_1_1_0,
   title  = {classical-physics-ai999x: an offline, verified classical physics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.3},
+  year   = {2026}, version = {1.1.0},
   url    = {https://huggingface.co/AI999X/classical-physics-ai999x}
 }
 ```
