@@ -1,4 +1,4 @@
-# classical-physics: the Classical Physics program — user guide
+# classical-physics: the Classical Physics program, user guide
 
 **classical-physics-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Classical Physics covers kinematics, dynamics, energy, momentum, rotation, gravi
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Classical Physics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-classical-physics-1.4.0-windows-x86_64.zip |
-| Desktop app: Classical Physics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-classical-physics-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Classical Physics | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-windows-x86_64.zip |
+| Desktop app: Classical Physics | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Classical Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-classical-physics-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-classical-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Classical Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-classical-physics-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-classical-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-classical-physics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-classical-physics-1.4.0-linux-x86_64.tar.gz
-./ai999x-classical-physics-1.4.0-linux-x86_64/ai999x-classical-physics
+tar xzf ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
+./ai999x-classical-physics-1.5.0-linux-x86_64/ai999x-classical-physics
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `classical-physics` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 classical-physics --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 classical-physics --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ classical-physics --version
-classical-physics-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+classical-physics-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
 ### 2.2 Ask in words
@@ -207,29 +207,7 @@ exhaust velocity (ve) = 2999.997604 m/s
   assumes: no gravity or drag during the burn; a constant exhaust velocity; the situation is: rocket
 ```
 
-### 2.10 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ classical-physics figures rocket_delta_v "ve=3000 m/s" "m0=1000 kg" "mf=400 kg" --out .
-[
-  {
-    "slug": "rocket-delta-v-live-1",
-    "title": "Change in velocity as initial mass varies",
-    "caption": "Change in velocity as m0 runs from 437.5 to 1750 kg, every other input as you entered it (36 solutions). Marked: your m0 = 1000 kg gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
-    "file": ".\\rocket-delta-v-live-1.svg"
-  },
-  {
-    "slug": "rocket-delta-v-live-2",
-    "title": "Change in velocity as exhaust velocity varies",
-    "caption": "Change in velocity as ve runs from 750 to 5250 m/s, every other input as you entered it (29 solutions). Marked: your ve = 3000 m/s gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
-    "file": ".\\rocket-delta-v-live-2.svg"
-  }
-]
-```
-
-### 2.11 Many questions at once
+### 2.10 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | classical-physics batch
 
@@ -302,24 +280,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `classical-physics figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ classical-physics figures rocket_delta_v "ve=3000 m/s" "m0=1000 kg" "mf=400 kg" --out .
-[
-  {
-    "slug": "rocket-delta-v-live-1",
-    "title": "Change in velocity as initial mass varies",
-    "caption": "Change in velocity as m0 runs from 437.5 to 1750 kg, every other input as you entered it (36 solutions). Marked: your m0 = 1000 kg gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
-    "file": ".\\rocket-delta-v-live-1.svg"
-  },
-  {
-    "slug": "rocket-delta-v-live-2",
-    "title": "Change in velocity as exhaust velocity varies",
-    "caption": "Change in velocity as ve runs from 750 to 5250 m/s, every other input as you entered it (29 solutions). Marked: your ve = 3000 m/s gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.",
-    "file": ".\\rocket-delta-v-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `classical_physics_ai999x.wasm` (https://www.ai999x.com/compute/rust/classical_physics_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -343,9 +303,9 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="capacitive_reactance"></a>
 
-#### Reactance of a capacitor — `capacitive_reactance`
+#### Reactance of a capacitor: `capacitive_reactance`
 
-One equation links capacitive reactance (X), Frequency (f) and Capacitance (C). Give all but one of them and it is solved for the one left out — by default capacitive reactance (X).
+One equation links capacitive reactance (X), Frequency (f) and Capacitance (C). Give all but one of them and it is solved for the one left out, by default capacitive reactance (X).
 
 $$
 X = \frac{1}{2 \pi f C}
@@ -372,9 +332,9 @@ capacitive reactance (X) = 2652.582385 ohm
 
 <a id="inductive_reactance"></a>
 
-#### Reactance of an inductor — `inductive_reactance`
+#### Reactance of an inductor: `inductive_reactance`
 
-One equation links inductive reactance (X), Frequency (f) and Inductance (L). Give all but one of them and it is solved for the one left out — by default inductive reactance (X).
+One equation links inductive reactance (X), Frequency (f) and Inductance (L). Give all but one of them and it is solved for the one left out, by default inductive reactance (X).
 
 $$
 X = 2 \pi f L
@@ -401,9 +361,9 @@ inductive reactance (X) = 11.30973355 ohm
 
 <a id="lc_resonance"></a>
 
-#### Resonant frequency of an LC circuit — `lc_resonance`
+#### Resonant frequency of an LC circuit: `lc_resonance`
 
-One equation links resonant frequency (f), Inductance (L) and Capacitance (C). Give all but one of them and it is solved for the one left out — by default resonant frequency (f).
+One equation links resonant frequency (f), Inductance (L) and Capacitance (C). Give all but one of them and it is solved for the one left out, by default resonant frequency (f).
 
 $$
 f = \frac{1}{2 \pi \sqrt{L C}}
@@ -430,9 +390,9 @@ resonant frequency (f) = 1591.549431 Hz
 
 <a id="rms_current"></a>
 
-#### Rms current of a sinusoidal supply — `rms_current`
+#### Rms current of a sinusoidal supply: `rms_current`
 
-One equation links rms current (Irms) and peak current (I0). Give all but one of them and it is solved for the one left out — by default rms current (Irms).
+One equation links rms current (Irms) and peak current (I0). Give all but one of them and it is solved for the one left out, by default rms current (Irms).
 
 $$
 I_{\text{rms}} = \frac{I_{0}}{\sqrt{2}}
@@ -457,9 +417,9 @@ rms current (Irms) = 7.071067812 A
 
 <a id="rms_voltage"></a>
 
-#### Rms voltage of a sinusoidal supply — `rms_voltage`
+#### Rms voltage of a sinusoidal supply: `rms_voltage`
 
-One equation links rms voltage (Vrms) and peak voltage (V0). Give all but one of them and it is solved for the one left out — by default rms voltage (Vrms).
+One equation links rms voltage (Vrms) and peak voltage (V0). Give all but one of them and it is solved for the one left out, by default rms voltage (Vrms).
 
 $$
 V_{\text{rms}} = \frac{V_{0}}{\sqrt{2}}
@@ -486,9 +446,9 @@ rms voltage (Vrms) = 120.2081528 V
 
 <a id="parallel_plate_capacitor"></a>
 
-#### Capacitance of parallel plates — `parallel_plate_capacitor`
+#### Capacitance of parallel plates: `parallel_plate_capacitor`
 
-One equation links Capacitance (C), area of each plate (A), plate separation (d) and Permittivity (eps0). Give all but one of them and it is solved for the one left out — by default Capacitance (C).
+One equation links Capacitance (C), area of each plate (A), plate separation (d) and Permittivity (eps0). Give all but one of them and it is solved for the one left out, by default Capacitance (C).
 
 $$
 C = \frac{\varepsilon_{0} A}{d}
@@ -517,9 +477,9 @@ In the worked example, A = 0.01 m^2, d = 0.001 m, eps0 = 8.854187813e-12 C^2/(N*
 
 <a id="capacitance_definition"></a>
 
-#### Charge on a capacitor — `capacitance_definition`
+#### Charge on a capacitor: `capacitance_definition`
 
-One equation links charge on either plate (Q), capacitance (C) and voltage across the capacitor (V). Give all but one of them and it is solved for the one left out — by default charge on either plate (Q).
+One equation links charge on either plate (Q), capacitance (C) and voltage across the capacitor (V). Give all but one of them and it is solved for the one left out, by default charge on either plate (Q).
 
 $$
 Q = C V
@@ -546,9 +506,9 @@ charge on either plate (Q) = 0.00012 C
 
 <a id="capacitor_energy"></a>
 
-#### Energy stored in a capacitor — `capacitor_energy`
+#### Energy stored in a capacitor: `capacitor_energy`
 
-One equation links energy stored (Ecap), Capacitance (C) and Voltage (V). Give all but one of them and it is solved for the one left out — by default energy stored (Ecap).
+One equation links energy stored (Ecap), Capacitance (C) and Voltage (V). Give all but one of them and it is solved for the one left out, by default energy stored (Ecap).
 
 $$
 \text{Ecap} = \frac{C V^{2}}{2}
@@ -577,9 +537,9 @@ energy stored (Ecap) = 0.02 J
 
 <a id="ohm_power_current"></a>
 
-#### Power from current and resistance — `ohm_power_current`
+#### Power from current and resistance: `ohm_power_current`
 
-One equation links power dissipated (P), Current (I) and Resistance (R). Give all but one of them and it is solved for the one left out — by default power dissipated (P).
+One equation links power dissipated (P), Current (I) and Resistance (R). Give all but one of them and it is solved for the one left out, by default power dissipated (P).
 
 $$
 P = I^{2} R
@@ -606,9 +566,9 @@ power dissipated (P) = 20 W
 
 <a id="ohm_power_voltage"></a>
 
-#### Power from voltage and resistance — `ohm_power_voltage`
+#### Power from voltage and resistance: `ohm_power_voltage`
 
-One equation links power dissipated (P), Voltage (V) and Resistance (R). Give all but one of them and it is solved for the one left out — by default power dissipated (P).
+One equation links power dissipated (P), Voltage (V) and Resistance (R). Give all but one of them and it is solved for the one left out, by default power dissipated (P).
 
 $$
 P = \frac{V^{2}}{R}
@@ -635,9 +595,9 @@ power dissipated (P) = 24 W
 
 <a id="resistivity"></a>
 
-#### Resistance of a uniform wire — `resistivity`
+#### Resistance of a uniform wire: `resistivity`
 
-One equation links Resistance (R), resistivity of the material (rho_e), length of the wire (L) and cross-sectional area (A). Give all but one of them and it is solved for the one left out — by default Resistance (R).
+One equation links Resistance (R), resistivity of the material (rho_e), length of the wire (L) and cross-sectional area (A). Give all but one of them and it is solved for the one left out, by default Resistance (R).
 
 $$
 R = \frac{\rho_{e} L}{A}
@@ -666,7 +626,7 @@ resistance (R) = 0.168 ohm
 
 <a id="two_resistors_series_parallel"></a>
 
-#### Two resistors in series and in parallel — `two_resistors_series_parallel`
+#### Two resistors in series and in parallel: `two_resistors_series_parallel`
 
 The equivalent resistance of two resistors connected in series and connected in parallel.
 
@@ -699,9 +659,9 @@ rp = 2 ohm
 
 <a id="angular_frequency"></a>
 
-#### Angular frequency and frequency — `angular_frequency`
+#### Angular frequency and frequency: `angular_frequency`
 
-One equation links angular frequency (omega) and frequency (f). Give all but one of them and it is solved for the one left out — by default angular frequency (omega).
+One equation links angular frequency (omega) and frequency (f). Give all but one of them and it is solved for the one left out, by default angular frequency (omega).
 
 $$
 \omega = 2 \pi f
@@ -723,9 +683,9 @@ angular frequency (omega) = 3.141592654 rad/s
 
 <a id="centripetal_acceleration"></a>
 
-#### Centripetal acceleration — `centripetal_acceleration`
+#### Centripetal acceleration: `centripetal_acceleration`
 
-One equation links centripetal acceleration (a), speed (v) and radius of the circle (r). Give all but one of them and it is solved for the one left out — by default centripetal acceleration (a).
+One equation links centripetal acceleration (a), speed (v) and radius of the circle (r). Give all but one of them and it is solved for the one left out, by default centripetal acceleration (a).
 
 $$
 a = \frac{v^{2}}{r}
@@ -752,9 +712,9 @@ centripetal acceleration (a) = 12 m/s^2
 
 <a id="centripetal_force"></a>
 
-#### Centripetal force — `centripetal_force`
+#### Centripetal force: `centripetal_force`
 
-One equation links centripetal force (F), mass (m), speed (v) and radius of the circle (r). Give all but one of them and it is solved for the one left out — by default centripetal force (F).
+One equation links centripetal force (F), mass (m), speed (v) and radius of the circle (r). Give all but one of them and it is solved for the one left out, by default centripetal force (F).
 
 $$
 F = \frac{m v^{2}}{r}
@@ -783,9 +743,9 @@ centripetal force (F) = 24 N
 
 <a id="period_frequency"></a>
 
-#### Period and frequency — `period_frequency`
+#### Period and frequency: `period_frequency`
 
-One equation links period (T) and frequency (f). Give all but one of them and it is solved for the one left out — by default period (T).
+One equation links period (T) and frequency (f). Give all but one of them and it is solved for the one left out, by default period (T).
 
 $$
 T = \frac{1}{f}
@@ -810,9 +770,9 @@ period (T) = 0.25 s
 
 <a id="tangential_speed"></a>
 
-#### Speed on a circle from angular speed — `tangential_speed`
+#### Speed on a circle from angular speed: `tangential_speed`
 
-One equation links speed (v), angular speed (omega) and radius of the circle (r). Give all but one of them and it is solved for the one left out — by default speed (v).
+One equation links speed (v), angular speed (omega) and radius of the circle (r). Give all but one of them and it is solved for the one left out, by default speed (v).
 
 $$
 v = \omega r
@@ -841,9 +801,9 @@ speed (v) = 2 m/s
 
 <a id="elastic_collision_first_final"></a>
 
-#### Final velocity of the first body in a one-dimensional elastic collision — `elastic_collision_first_final`
+#### Final velocity of the first body in a one-dimensional elastic collision, `elastic_collision_first_final`
 
-One equation links final velocity of the first body (v1f), mass of the first body (m1), mass of the second body (m2), initial velocity of the first body (v1) and initial velocity of the second body (v2). Give all but one of them and it is solved for the one left out — by default final velocity of the first body (v1f).
+One equation links final velocity of the first body (v1f), mass of the first body (m1), mass of the second body (m2), initial velocity of the first body (v1) and initial velocity of the second body (v2). Give all but one of them and it is solved for the one left out, by default final velocity of the first body (v1f).
 
 $$
 v_{1f} = \frac{\left(m_{1} - m_{2}\right) v_{1} + 2 m_{2} v_{2}}{m_{1} + m_{2}}
@@ -874,9 +834,9 @@ final velocity of the first body (v1f) = 1 m/s
 
 <a id="elastic_collision_second_final"></a>
 
-#### Final velocity of the second body in a one-dimensional elastic collision — `elastic_collision_second_final`
+#### Final velocity of the second body in a one-dimensional elastic collision, `elastic_collision_second_final`
 
-One equation links final velocity of the second body (v2f), mass of the first body (m1), mass of the second body (m2), initial velocity of the first body (v1) and initial velocity of the second body (v2). Give all but one of them and it is solved for the one left out — by default final velocity of the second body (v2f).
+One equation links final velocity of the second body (v2f), mass of the first body (m1), mass of the second body (m2), initial velocity of the first body (v1) and initial velocity of the second body (v2). Give all but one of them and it is solved for the one left out, by default final velocity of the second body (v2f).
 
 $$
 v_{2f} = \frac{\left(m_{2} - m_{1}\right) v_{2} + 2 m_{1} v_{1}}{m_{1} + m_{2}}
@@ -909,9 +869,9 @@ final velocity of the second body (v2f) = 4 m/s
 
 <a id="acceleration_frictionless_incline"></a>
 
-#### Acceleration down a frictionless incline — `acceleration_frictionless_incline`
+#### Acceleration down a frictionless incline: `acceleration_frictionless_incline`
 
-One equation links acceleration down the incline (a), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out — by default acceleration down the incline (a).
+One equation links acceleration down the incline (a), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out, by default acceleration down the incline (a).
 
 $$
 a = g \sin\left(\theta\right)
@@ -938,9 +898,9 @@ acceleration down the incline (a) = 4.9 m/s^2
 
 <a id="average_force_from_momentum_change"></a>
 
-#### Average net force from a change of momentum — `average_force_from_momentum_change`
+#### Average net force from a change of momentum, `average_force_from_momentum_change`
 
-One equation links average net force (F), final momentum (p2), initial momentum (p1) and time over which the momentum changes (t). Give all but one of them and it is solved for the one left out — by default average net force (F).
+One equation links average net force (F), final momentum (p2), initial momentum (p1) and time over which the momentum changes (t). Give all but one of them and it is solved for the one left out, by default average net force (F).
 
 $$
 F = \frac{p_2 - p_1}{t}
@@ -969,9 +929,9 @@ average net force (F) = 5 N
 
 <a id="weight_component_along_incline"></a>
 
-#### Component of the weight along an incline — `weight_component_along_incline`
+#### Component of the weight along an incline: `weight_component_along_incline`
 
-One equation links component of the weight along the incline (F), mass (m), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out — by default component of the weight along the incline (F).
+One equation links component of the weight along the incline (F), mass (m), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out, by default component of the weight along the incline (F).
 
 $$
 F = m g \sin\left(\theta\right)
@@ -1000,9 +960,9 @@ component of the weight along the incline (F) = 49 N
 
 <a id="impulse"></a>
 
-#### Impulse of a constant force — `impulse`
+#### Impulse of a constant force: `impulse`
 
-One equation links impulse (J), force (F) and time the force acts (t). Give all but one of them and it is solved for the one left out — by default impulse (J).
+One equation links impulse (J), force (F) and time the force acts (t). Give all but one of them and it is solved for the one left out, by default impulse (J).
 
 $$
 J = F t
@@ -1029,9 +989,9 @@ impulse (J) = 60 N*s
 
 <a id="momentum"></a>
 
-#### Linear momentum — `momentum`
+#### Linear momentum: `momentum`
 
-One equation links momentum (p), mass (m) and velocity (v). Give all but one of them and it is solved for the one left out — by default momentum (p).
+One equation links momentum (p), mass (m) and velocity (v). Give all but one of them and it is solved for the one left out, by default momentum (p).
 
 $$
 p = m v
@@ -1058,9 +1018,9 @@ momentum (p) = 14 kg*m/s
 
 <a id="newton_second"></a>
 
-#### Net force and acceleration — `newton_second`
+#### Net force and acceleration: `newton_second`
 
-One equation links net force (F), mass (m) and acceleration (a). Give all but one of them and it is solved for the one left out — by default net force (F).
+One equation links net force (F), mass (m) and acceleration (a). Give all but one of them and it is solved for the one left out, by default net force (F).
 
 $$
 F = m a
@@ -1087,9 +1047,9 @@ net force (F) = 10 N
 
 <a id="net_force_friction"></a>
 
-#### Net force with an opposing friction force — `net_force_friction`
+#### Net force with an opposing friction force: `net_force_friction`
 
-One equation links net force (F), applied force (P) and friction force (f). Give all but one of them and it is solved for the one left out — by default net force (F).
+One equation links net force (F), applied force (P) and friction force (f). Give all but one of them and it is solved for the one left out, by default net force (F).
 
 $$
 F = P - f
@@ -1116,9 +1076,9 @@ net force (F) = 38 N
 
 <a id="normal_on_level"></a>
 
-#### Normal force on a level surface — `normal_on_level`
+#### Normal force on a level surface: `normal_on_level`
 
-One equation links normal force (N) and weight (W). Give all but one of them and it is solved for the one left out — by default normal force (N).
+One equation links normal force (N) and weight (W). Give all but one of them and it is solved for the one left out, by default normal force (N).
 
 $$
 N = W
@@ -1143,9 +1103,9 @@ normal force (N) = 70 N
 
 <a id="normal_force_incline"></a>
 
-#### Normal force on an incline — `normal_force_incline`
+#### Normal force on an incline: `normal_force_incline`
 
-One equation links normal force from the incline (N), mass (m), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out — by default normal force from the incline (N).
+One equation links normal force from the incline (N), mass (m), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out, by default normal force from the incline (N).
 
 $$
 N = m g \cos\left(\theta\right)
@@ -1174,9 +1134,9 @@ normal force from the incline (N) = 49 N
 
 <a id="kinetic_friction"></a>
 
-#### Sliding friction — `kinetic_friction`
+#### Sliding friction: `kinetic_friction`
 
-One equation links friction force (f), coefficient of friction (mu) and normal force (N). Give all but one of them and it is solved for the one left out — by default friction force (f).
+One equation links friction force (f), coefficient of friction (mu) and normal force (N). Give all but one of them and it is solved for the one left out, by default friction force (f).
 
 $$
 f = \mu N
@@ -1184,7 +1144,7 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `mu` | in | coefficient of friction | — |
+| `mu` | in | coefficient of friction | - |
 | `N` | in | normal force | N |
 | `f` | out | friction force | N |
 
@@ -1203,9 +1163,9 @@ friction force (f) = 20 N
 
 <a id="tension_hanging_at_rest"></a>
 
-#### Tension in a rope holding a hanging body — `tension_hanging_at_rest`
+#### Tension in a rope holding a hanging body: `tension_hanging_at_rest`
 
-One equation links tension in the rope (T), mass of the hanging body (m) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out — by default tension in the rope (T).
+One equation links tension in the rope (T), mass of the hanging body (m) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out, by default tension in the rope (T).
 
 $$
 T = m g
@@ -1232,9 +1192,9 @@ tension in the rope (T) = 98 N
 
 <a id="weight"></a>
 
-#### Weight in a uniform gravitational field — `weight`
+#### Weight in a uniform gravitational field: `weight`
 
-One equation links weight (W), mass (m) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out — by default weight (W).
+One equation links weight (W), mass (m) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out, by default weight (W).
 
 $$
 W = m g
@@ -1263,9 +1223,9 @@ weight (W) = 98 N
 
 <a id="charge_current"></a>
 
-#### Charge carried by a steady current — `charge_current`
+#### Charge carried by a steady current: `charge_current`
 
-One equation links charge (Q), current (I) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default charge (Q).
+One equation links charge (Q), current (I) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default charge (Q).
 
 $$
 Q = I t
@@ -1292,9 +1252,9 @@ charge (Q) = 60 C
 
 <a id="electric_power"></a>
 
-#### Electric power — `electric_power`
+#### Electric power: `electric_power`
 
-One equation links electric power (P), voltage (V) and current (I). Give all but one of them and it is solved for the one left out — by default electric power (P).
+One equation links electric power (P), voltage (V) and current (I). Give all but one of them and it is solved for the one left out, by default electric power (P).
 
 $$
 P = V I
@@ -1321,9 +1281,9 @@ electric power (P) = 36 W
 
 <a id="ohm"></a>
 
-#### Voltage across an ohmic resistance — `ohm`
+#### Voltage across an ohmic resistance: `ohm`
 
-One equation links voltage (V), current (I) and resistance (R). Give all but one of them and it is solved for the one left out — by default voltage (V).
+One equation links voltage (V), current (I) and resistance (R). Give all but one of them and it is solved for the one left out, by default voltage (V).
 
 $$
 V = I R
@@ -1352,9 +1312,9 @@ voltage (V) = 12 V
 
 <a id="point_charge_field"></a>
 
-#### Electric field of a point charge — `point_charge_field`
+#### Electric field of a point charge: `point_charge_field`
 
-One equation links field strength at distance r (Ef), magnitude of the source charge (Q), distance from the charge (r) and Coulomb constant (ke). Give all but one of them and it is solved for the one left out — by default field strength at distance r (Ef).
+One equation links field strength at distance r (Ef), magnitude of the source charge (Q), distance from the charge (r) and Coulomb constant (ke). Give all but one of them and it is solved for the one left out, by default field strength at distance r (Ef).
 
 $$
 E_{f} = \frac{k_{e} Q}{r^{2}}
@@ -1383,9 +1343,9 @@ field strength at distance r (Ef) = 199723.3732 N/C
 
 <a id="point_charge_potential"></a>
 
-#### Electric potential of a point charge — `point_charge_potential`
+#### Electric potential of a point charge: `point_charge_potential`
 
-One equation links electric potential relative to infinity (V), source charge (Q), distance from the charge (r) and Coulomb constant (ke). Give all but one of them and it is solved for the one left out — by default electric potential relative to infinity (V).
+One equation links electric potential relative to infinity (V), source charge (Q), distance from the charge (r) and Coulomb constant (ke). Give all but one of them and it is solved for the one left out, by default electric potential relative to infinity (V).
 
 $$
 V = \frac{k_{e} Q}{r}
@@ -1414,9 +1374,9 @@ electric potential relative to infinity (V) = 53.92531075 V
 
 <a id="electric_force_in_field"></a>
 
-#### Force on a charge in an electric field — `electric_force_in_field`
+#### Force on a charge in an electric field: `electric_force_in_field`
 
-One equation links magnitude of the electric force (F), magnitude of the charge (q) and electric field strength at the charge (Ef). Give all but one of them and it is solved for the one left out — by default magnitude of the electric force (F).
+One equation links magnitude of the electric force (F), magnitude of the charge (q) and electric field strength at the charge (Ef). Give all but one of them and it is solved for the one left out, by default magnitude of the electric force (F).
 
 $$
 F = q E_{f}
@@ -1443,9 +1403,9 @@ magnitude of the electric force (F) = 0.06 N
 
 <a id="uniform_field_potential"></a>
 
-#### Potential difference in a uniform field — `uniform_field_potential`
+#### Potential difference in a uniform field: `uniform_field_potential`
 
-One equation links potential difference between the plates (V), uniform field strength (Ef) and separation along the field (d). Give all but one of them and it is solved for the one left out — by default potential difference between the plates (V).
+One equation links potential difference between the plates (V), uniform field strength (Ef) and separation along the field (d). Give all but one of them and it is solved for the one left out, by default potential difference between the plates (V).
 
 $$
 V = E_{f} d
@@ -1474,9 +1434,9 @@ potential difference between the plates (V) = 10 V
 
 <a id="power_energy"></a>
 
-#### Average power — `power_energy`
+#### Average power: `power_energy`
 
-One equation links average power (P), energy transferred (E) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default average power (P).
+One equation links average power (P), energy transferred (E) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default average power (P).
 
 $$
 P = \frac{E}{t}
@@ -1503,9 +1463,9 @@ average power (P) = 30 W
 
 <a id="spring_energy"></a>
 
-#### Energy stored in a linear spring — `spring_energy`
+#### Energy stored in a linear spring: `spring_energy`
 
-One equation links elastic potential energy (U), spring constant (k) and extension or compression (x). Give all but one of them and it is solved for the one left out — by default elastic potential energy (U).
+One equation links elastic potential energy (U), spring constant (k) and extension or compression (x). Give all but one of them and it is solved for the one left out, by default elastic potential energy (U).
 
 $$
 U = \frac{k x^{2}}{2}
@@ -1532,9 +1492,9 @@ elastic potential energy (U) = 2 J
 
 <a id="spring_force"></a>
 
-#### Force of a linear spring — `spring_force`
+#### Force of a linear spring: `spring_force`
 
-One equation links spring force (magnitude) (F), spring constant (k) and extension or compression (x). Give all but one of them and it is solved for the one left out — by default spring force (magnitude) (F).
+One equation links spring force (magnitude) (F), spring constant (k) and extension or compression (x). Give all but one of them and it is solved for the one left out, by default spring force (magnitude) (F).
 
 $$
 F = k x
@@ -1561,9 +1521,9 @@ spring force (magnitude) (F) = 15 N
 
 <a id="gravitational_pe"></a>
 
-#### Gravitational potential energy near the surface — `gravitational_pe`
+#### Gravitational potential energy near the surface, `gravitational_pe`
 
-One equation links gravitational potential energy (U), mass (m), gravitational acceleration (g) and height above the reference level (h). Give all but one of them and it is solved for the one left out — by default gravitational potential energy (U).
+One equation links gravitational potential energy (U), mass (m), gravitational acceleration (g) and height above the reference level (h). Give all but one of them and it is solved for the one left out, by default gravitational potential energy (U).
 
 $$
 U = m g h
@@ -1592,9 +1552,9 @@ gravitational potential energy (U) = 98 J
 
 <a id="power_force_speed"></a>
 
-#### Power of a force on a moving body — `power_force_speed`
+#### Power of a force on a moving body: `power_force_speed`
 
-One equation links power (P), force along the motion (F) and speed (v). Give all but one of them and it is solved for the one left out — by default power (P).
+One equation links power (P), force along the motion (F) and speed (v). Give all but one of them and it is solved for the one left out, by default power (P).
 
 $$
 P = F v
@@ -1621,9 +1581,9 @@ power (P) = 120 W
 
 <a id="spring_launch_speed"></a>
 
-#### Speed of a body launched by a spring — `spring_launch_speed`
+#### Speed of a body launched by a spring: `spring_launch_speed`
 
-One equation links spring constant (k), compression of the spring before release (x), mass of the body (m) and speed when the spring has returned to its natural length (v). Give all but one of them and it is solved for the one left out — by default .
+One equation links spring constant (k), compression of the spring before release (x), mass of the body (m) and speed when the spring has returned to its natural length (v). Give all but one of them and it is solved for the one left out, by default .
 
 $$
 \frac{k x^{2}}{2} = \frac{m v^{2}}{2}
@@ -1652,9 +1612,9 @@ speed when the spring has returned to its natural length (v) = 2 m/s
 
 <a id="kinetic_energy"></a>
 
-#### Translational kinetic energy — `kinetic_energy`
+#### Translational kinetic energy: `kinetic_energy`
 
-One equation links kinetic energy (K), mass (m) and speed (v). Give all but one of them and it is solved for the one left out — by default kinetic energy (K).
+One equation links kinetic energy (K), mass (m) and speed (v). Give all but one of them and it is solved for the one left out, by default kinetic energy (K).
 
 $$
 K = \frac{m v^{2}}{2}
@@ -1681,9 +1641,9 @@ kinetic energy (K) = 18 J
 
 <a id="work"></a>
 
-#### Work by a constant force — `work`
+#### Work by a constant force: `work`
 
-One equation links work done (W), force (F), displacement (d) and angle between force and displacement (theta). Give all but one of them and it is solved for the one left out — by default work done (W).
+One equation links work done (W), force (F), displacement (d) and angle between force and displacement (theta). Give all but one of them and it is solved for the one left out, by default work done (W).
 
 $$
 W = F d \cos\left(\theta\right)
@@ -1712,9 +1672,9 @@ work done (W) = 25 J
 
 <a id="net_work_kinetic_energy"></a>
 
-#### Work-energy theorem — `net_work_kinetic_energy`
+#### Work-energy theorem: `net_work_kinetic_energy`
 
-One equation links net work done on the body, equal to its change in kinetic energy (W), mass (m), final speed (v) and initial speed (v0). Give all but one of them and it is solved for the one left out — by default net work done on the body, equal to its change in kinetic energy (W).
+One equation links net work done on the body, equal to its change in kinetic energy (W), mass (m), final speed (v) and initial speed (v0). Give all but one of them and it is solved for the one left out, by default net work done on the body, equal to its change in kinetic energy (W).
 
 $$
 W = \frac{m \left(v^{2} - v_0^{2}\right)}{2}
@@ -1745,9 +1705,9 @@ net work done on the body, equal to its change in kinetic energy (W) = 24 J
 
 <a id="absolute_pressure_depth"></a>
 
-#### Absolute pressure at a depth in a fluid — `absolute_pressure_depth`
+#### Absolute pressure at a depth in a fluid: `absolute_pressure_depth`
 
-One equation links absolute pressure at the depth (P), pressure at the surface (P0), density of the fluid (rho), Acceleration (g) and depth below the surface (h). Give all but one of them and it is solved for the one left out — by default absolute pressure at the depth (P).
+One equation links absolute pressure at the depth (P), pressure at the surface (P0), density of the fluid (rho), Acceleration (g) and depth below the surface (h). Give all but one of them and it is solved for the one left out, by default absolute pressure at the depth (P).
 
 $$
 P = P_{0} + \rho g h
@@ -1778,9 +1738,9 @@ absolute pressure at the depth (P) = 199391.5 Pa
 
 <a id="flow_rate_volume_time"></a>
 
-#### Flow rate as volume per time — `flow_rate_volume_time`
+#### Flow rate as volume per time: `flow_rate_volume_time`
 
-One equation links volume flow rate (Q), volume delivered (V) and time taken (t). Give all but one of them and it is solved for the one left out — by default volume flow rate (Q).
+One equation links volume flow rate (Q), volume delivered (V) and time taken (t). Give all but one of them and it is solved for the one left out, by default volume flow rate (Q).
 
 $$
 Q = \frac{V}{t}
@@ -1807,9 +1767,9 @@ volume flow rate (Q) = 0.0002 m^3/s
 
 <a id="flow_rate_area_speed"></a>
 
-#### Flow rate through a cross section — `flow_rate_area_speed`
+#### Flow rate through a cross section: `flow_rate_area_speed`
 
-One equation links volume flow rate (Q), cross-sectional area (A) and average speed of the fluid (v). Give all but one of them and it is solved for the one left out — by default volume flow rate (Q).
+One equation links volume flow rate (Q), cross-sectional area (A) and average speed of the fluid (v). Give all but one of them and it is solved for the one left out, by default volume flow rate (Q).
 
 $$
 Q = A v
@@ -1836,9 +1796,9 @@ volume flow rate (Q) = 0.0006 m^3/s
 
 <a id="density"></a>
 
-#### Mass density — `density`
+#### Mass density: `density`
 
-One equation links density (rho), mass (m) and volume (V). Give all but one of them and it is solved for the one left out — by default density (rho).
+One equation links density (rho), mass (m) and volume (V). Give all but one of them and it is solved for the one left out, by default density (rho).
 
 $$
 \rho = \frac{m}{V}
@@ -1865,9 +1825,9 @@ density (rho) = 3000 kg/m^3
 
 <a id="hydrostatic_pressure"></a>
 
-#### Pressure of a column of fluid — `hydrostatic_pressure`
+#### Pressure of a column of fluid: `hydrostatic_pressure`
 
-One equation links gauge pressure (P), fluid density (rho), gravitational acceleration (g) and depth below the surface (h). Give all but one of them and it is solved for the one left out — by default gauge pressure (P).
+One equation links gauge pressure (P), fluid density (rho), gravitational acceleration (g) and depth below the surface (h). Give all but one of them and it is solved for the one left out, by default gauge pressure (P).
 
 $$
 P = \rho g h
@@ -1896,9 +1856,9 @@ gauge pressure (P) = 19600 Pa
 
 <a id="pressure_force"></a>
 
-#### Pressure of a force on an area — `pressure_force`
+#### Pressure of a force on an area: `pressure_force`
 
-One equation links pressure (P), force normal to the surface (F) and area (A). Give all but one of them and it is solved for the one left out — by default pressure (P).
+One equation links pressure (P), force normal to the surface (F) and area (A). Give all but one of them and it is solved for the one left out, by default pressure (P).
 
 $$
 P = \frac{F}{A}
@@ -1927,9 +1887,9 @@ pressure (P) = 5000 Pa
 
 <a id="surface_gravity"></a>
 
-#### Gravitational acceleration at a distance from a mass — `surface_gravity`
+#### Gravitational acceleration at a distance from a mass, `surface_gravity`
 
-One equation links gravitational acceleration (g), mass of the planet or star (M), distance from the centre (r) and Gravitational constant (G). Give all but one of them and it is solved for the one left out — by default gravitational acceleration (g).
+One equation links gravitational acceleration (g), mass of the planet or star (M), distance from the centre (r) and Gravitational constant (G). Give all but one of them and it is solved for the one left out, by default gravitational acceleration (g).
 
 $$
 g = \frac{G M}{r^{2}}
@@ -1958,9 +1918,9 @@ gravitational acceleration (g) = 9.819767158 m/s^2
 
 <a id="orbital_period"></a>
 
-#### Period of a circular orbit — `orbital_period`
+#### Period of a circular orbit: `orbital_period`
 
-One equation links orbital period (T), orbital radius (r), mass of the central body (M) and Gravitational constant (G). Give all but one of them and it is solved for the one left out — by default orbital period (T).
+One equation links orbital period (T), orbital radius (r), mass of the central body (M) and Gravitational constant (G). Give all but one of them and it is solved for the one left out, by default orbital period (T).
 
 $$
 T = 2 \pi \sqrt{\frac{r^{3}}{G M}}
@@ -1989,9 +1949,9 @@ orbital period (T) = 86289.61224 s
 
 <a id="orbital_speed"></a>
 
-#### Speed in a circular orbit — `orbital_speed`
+#### Speed in a circular orbit: `orbital_speed`
 
-One equation links orbital speed (v), mass of the central body (M), orbital radius (r) and Gravitational constant (G). Give all but one of them and it is solved for the one left out — by default orbital speed (v).
+One equation links orbital speed (v), mass of the central body (M), orbital radius (r) and Gravitational constant (G). Give all but one of them and it is solved for the one left out, by default orbital speed (v).
 
 $$
 v = \sqrt{\frac{G M}{r}}
@@ -2022,9 +1982,9 @@ orbital speed (v) = 7671.7721 m/s
 
 <a id="rl_current_decay"></a>
 
-#### Current dying away in an RL circuit — `rl_current_decay`
+#### Current dying away in an RL circuit: `rl_current_decay`
 
-One equation links current at time t (I), initial current (I0), time since the circuit was switched off (t) and time constant (tau). Give all but one of them and it is solved for the one left out — by default current at time t (I).
+One equation links current at time t (I), initial current (I0), time since the circuit was switched off (t) and time constant (tau). Give all but one of them and it is solved for the one left out, by default current at time t (I).
 
 $$
 I = I_{0} e^{\frac{-t}{\tau}}
@@ -2053,9 +2013,9 @@ current at time t (I) = 3.678794412 A
 
 <a id="motional_emf"></a>
 
-#### Emf of a rod moving through a magnetic field — `motional_emf`
+#### Emf of a rod moving through a magnetic field, `motional_emf`
 
-One equation links induced emf (emf), magnetic field (B), length of the rod (l) and speed of the rod (v). Give all but one of them and it is solved for the one left out — by default induced emf (emf).
+One equation links induced emf (emf), magnetic field (B), length of the rod (l) and speed of the rod (v). Give all but one of them and it is solved for the one left out, by default induced emf (emf).
 
 $$
 \text{emf} = B l v
@@ -2084,9 +2044,9 @@ induced emf (emf) = 0.3 V
 
 <a id="rl_time_constant"></a>
 
-#### Time constant of an RL circuit — `rl_time_constant`
+#### Time constant of an RL circuit: `rl_time_constant`
 
-One equation links time constant (tau), inductance (L) and resistance (R). Give all but one of them and it is solved for the one left out — by default time constant (tau).
+One equation links time constant (tau), inductance (L) and resistance (R). Give all but one of them and it is solved for the one left out, by default time constant (tau).
 
 $$
 \tau = \frac{L}{R}
@@ -2115,9 +2075,9 @@ time constant (tau) = 0.005 s
 
 <a id="average_velocity_displacement"></a>
 
-#### Displacement from the mean of initial and final velocity — `average_velocity_displacement`
+#### Displacement from the mean of initial and final velocity, `average_velocity_displacement`
 
-One equation links displacement (x), initial velocity (v0), final velocity (v) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default displacement (x).
+One equation links displacement (x), initial velocity (v0), final velocity (v) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default displacement (x).
 
 $$
 x = \frac{\left(v_0 + v\right) t}{2}
@@ -2146,9 +2106,9 @@ displacement (x) = 21 m
 
 <a id="displacement_time"></a>
 
-#### Displacement under constant acceleration — `displacement_time`
+#### Displacement under constant acceleration: `displacement_time`
 
-One equation links displacement (x), initial velocity (v0), acceleration (a) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default displacement (x).
+One equation links displacement (x), initial velocity (v0), acceleration (a) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default displacement (x).
 
 $$
 x = v_0 t + \frac{a t^{2}}{2}
@@ -2177,9 +2137,9 @@ displacement (x) = 28 m
 
 <a id="max_height_vertical_throw"></a>
 
-#### Maximum height of a vertical throw — `max_height_vertical_throw`
+#### Maximum height of a vertical throw: `max_height_vertical_throw`
 
-One equation links maximum height above the launch point (h), launch speed (v0) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out — by default maximum height above the launch point (h).
+One equation links maximum height above the launch point (h), launch speed (v0) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out, by default maximum height above the launch point (h).
 
 $$
 h = \frac{v_0^{2}}{2 g}
@@ -2206,9 +2166,9 @@ maximum height above the launch point (h) = 10 m
 
 <a id="uniform_motion"></a>
 
-#### Motion at constant velocity — `uniform_motion`
+#### Motion at constant velocity: `uniform_motion`
 
-One equation links distance travelled (d), constant speed (v) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default distance travelled (d).
+One equation links distance travelled (d), constant speed (v) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default distance travelled (d).
 
 $$
 d = v t
@@ -2235,9 +2195,9 @@ distance travelled (d) = 600 m
 
 <a id="velocity_displacement"></a>
 
-#### Speed after a displacement under constant acceleration — `velocity_displacement`
+#### Speed after a displacement under constant acceleration, `velocity_displacement`
 
-One equation links final speed (v), initial speed (v0), acceleration (a) and displacement (x). Give all but one of them and it is solved for the one left out — by default .
+One equation links final speed (v), initial speed (v0), acceleration (a) and displacement (x). Give all but one of them and it is solved for the one left out, by default .
 
 $$
 v^{2} = v_0^{2} + 2 a x
@@ -2266,9 +2226,9 @@ final speed (v) = 10 m/s
 
 <a id="speed_after_fall_from_rest"></a>
 
-#### Speed after falling from rest — `speed_after_fall_from_rest`
+#### Speed after falling from rest: `speed_after_fall_from_rest`
 
-One equation links speed after the fall (v), gravitational acceleration (g) and height fallen (h). Give all but one of them and it is solved for the one left out — by default speed after the fall (v).
+One equation links speed after the fall (v), gravitational acceleration (g) and height fallen (h). Give all but one of them and it is solved for the one left out, by default speed after the fall (v).
 
 $$
 v = \sqrt{2 g h}
@@ -2295,9 +2255,9 @@ speed after the fall (v) = 14 m/s
 
 <a id="time_to_top_vertical_throw"></a>
 
-#### Time to the top of a vertical throw — `time_to_top_vertical_throw`
+#### Time to the top of a vertical throw: `time_to_top_vertical_throw`
 
-One equation links time from launch to the highest point (t), launch speed (v0) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out — by default time from launch to the highest point (t).
+One equation links time from launch to the highest point (t), launch speed (v0) and gravitational acceleration (g). Give all but one of them and it is solved for the one left out, by default time from launch to the highest point (t).
 
 $$
 t = \frac{v_0}{g}
@@ -2324,7 +2284,7 @@ time from launch to the highest point (t) = 3 s
 
 <a id="uniform_acceleration_state"></a>
 
-#### Velocity and displacement after constant acceleration — `uniform_acceleration_state`
+#### Velocity and displacement after constant acceleration, `uniform_acceleration_state`
 
 The final velocity and the displacement of a body that starts at velocity u and accelerates uniformly at a for a time t.
 
@@ -2357,9 +2317,9 @@ s = 45 m
 
 <a id="velocity_time"></a>
 
-#### Velocity under constant acceleration — `velocity_time`
+#### Velocity under constant acceleration: `velocity_time`
 
-One equation links final velocity (v), initial velocity (v0), acceleration (a) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default final velocity (v).
+One equation links final velocity (v), initial velocity (v0), acceleration (a) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default final velocity (v).
 
 $$
 v = v_0 + a t
@@ -2390,9 +2350,9 @@ final velocity (v) = 13 m/s
 
 <a id="loop_center_field"></a>
 
-#### Magnetic field at the centre of a circular loop — `loop_center_field`
+#### Magnetic field at the centre of a circular loop, `loop_center_field`
 
-One equation links field at the centre (B), Current (I), radius of the loop (r) and Permeability (mu0). Give all but one of them and it is solved for the one left out — by default field at the centre (B).
+One equation links field at the centre (B), Current (I), radius of the loop (r) and Permeability (mu0). Give all but one of them and it is solved for the one left out, by default field at the centre (B).
 
 $$
 B = \frac{\mu_{0} I}{2 r}
@@ -2421,9 +2381,9 @@ field at the centre (B) = 3.141592655e-05 T
 
 <a id="solenoid_field"></a>
 
-#### Magnetic field inside a long solenoid — `solenoid_field`
+#### Magnetic field inside a long solenoid: `solenoid_field`
 
-One equation links Magnetic field (B), turns per unit length (nt), Current (I) and Permeability (mu0). Give all but one of them and it is solved for the one left out — by default Magnetic field (B).
+One equation links Magnetic field (B), turns per unit length (nt), Current (I) and Permeability (mu0). Give all but one of them and it is solved for the one left out, by default Magnetic field (B).
 
 $$
 B = \mu_{0} n_{t} I
@@ -2452,9 +2412,9 @@ magnetic field (B) = 0.002513274124 T
 
 <a id="long_wire_field"></a>
 
-#### Magnetic field of a long straight wire — `long_wire_field`
+#### Magnetic field of a long straight wire: `long_wire_field`
 
-One equation links Magnetic field (B), Current (I), distance from the wire (r) and Permeability (mu0). Give all but one of them and it is solved for the one left out — by default Magnetic field (B).
+One equation links Magnetic field (B), Current (I), distance from the wire (r) and Permeability (mu0). Give all but one of them and it is solved for the one left out, by default Magnetic field (B).
 
 $$
 B = \frac{\mu_{0} I}{2 \pi r}
@@ -2483,9 +2443,9 @@ magnetic field (B) = 4.000000002e-05 T
 
 <a id="magnetic_force_wire"></a>
 
-#### Magnetic force on a current-carrying wire — `magnetic_force_wire`
+#### Magnetic force on a current-carrying wire: `magnetic_force_wire`
 
-One equation links Force (F), Current (I), length of wire in the field (L), Magnetic field (B) and angle between the wire and the field (theta). Give all but one of them and it is solved for the one left out — by default Force (F).
+One equation links Force (F), Current (I), length of wire in the field (L), Magnetic field (B) and angle between the wire and the field (theta). Give all but one of them and it is solved for the one left out, by default Force (F).
 
 $$
 F = I L B \sin\left(\theta\right)
@@ -2516,9 +2476,9 @@ force (F) = 0.4 N
 
 <a id="magnetic_force_charge"></a>
 
-#### Magnetic force on a moving charge — `magnetic_force_charge`
+#### Magnetic force on a moving charge: `magnetic_force_charge`
 
-One equation links magnitude of the magnetic force (F), Charge (q), speed of the charge (v), Magnetic field (B) and angle between velocity and field (theta). Give all but one of them and it is solved for the one left out — by default magnitude of the magnetic force (F).
+One equation links magnitude of the magnetic force (F), Charge (q), speed of the charge (v), Magnetic field (B) and angle between velocity and field (theta). Give all but one of them and it is solved for the one left out, by default magnitude of the magnetic force (F).
 
 $$
 F = q v B \sin\left(\theta\right)
@@ -2549,9 +2509,9 @@ magnitude of the magnetic force (F) = 1.6e-13 N
 
 <a id="cyclotron_radius"></a>
 
-#### Radius of a charged particle's circle in a magnetic field — `cyclotron_radius`
+#### Radius of a charged particle's circle in a magnetic field, `cyclotron_radius`
 
-One equation links radius of the circular path (r), mass of the particle (m), speed perpendicular to the field (v), magnitude of the charge (q), field strength (B) and angle between the velocity and the field (theta). Give all but one of them and it is solved for the one left out — by default radius of the circular path (r).
+One equation links radius of the circular path (r), mass of the particle (m), speed perpendicular to the field (v), magnitude of the charge (q), field strength (B) and angle between the velocity and the field (theta). Give all but one of them and it is solved for the one left out, by default radius of the circular path (r).
 
 $$
 r = \frac{m v}{q B \sin\left(\theta\right)}
@@ -2586,9 +2546,9 @@ radius of the circular path (r) = 0.020875 m
 
 <a id="mirror_focal_length"></a>
 
-#### Focal length of a spherical mirror — `mirror_focal_length`
+#### Focal length of a spherical mirror: `mirror_focal_length`
 
-One equation links focal length (f) and radius of curvature (R). Give all but one of them and it is solved for the one left out — by default focal length (f).
+One equation links focal length (f) and radius of curvature (R). Give all but one of them and it is solved for the one left out, by default focal length (f).
 
 $$
 f = \frac{R}{2}
@@ -2613,9 +2573,9 @@ focal length (f) = 0.2 m
 
 <a id="index_of_refraction"></a>
 
-#### Index of refraction — `index_of_refraction`
+#### Index of refraction: `index_of_refraction`
 
-One equation links index of refraction (n), Speed (c) and speed of light in the medium (v). Give all but one of them and it is solved for the one left out — by default index of refraction (n).
+One equation links index of refraction (n), Speed (c) and speed of light in the medium (v). Give all but one of them and it is solved for the one left out, by default index of refraction (n).
 
 $$
 n = \frac{c}{v}
@@ -2625,7 +2585,7 @@ $$
 |---|---|---|---|
 | `c` | in | Speed (optional) | m/s |
 | `v` | in | speed of light in the medium | m/s |
-| `n` | out | index of refraction | — |
+| `n` | out | index of refraction | - |
 
 **Applies when:** light in a transparent medium; transparent materials.
 
@@ -2642,9 +2602,9 @@ index of refraction (n) = 1.49896229
 
 <a id="thin_lens"></a>
 
-#### Thin lens equation — `thin_lens`
+#### Thin lens equation: `thin_lens`
 
-One equation links object distance (d_o), image distance (d_i) and focal length (f). Give all but one of them and it is solved for the one left out — by default .
+One equation links object distance (d_o), image distance (d_i) and focal length (f). Give all but one of them and it is solved for the one left out, by default .
 
 $$
 \frac{1}{d_{o}} + \frac{1}{d_{i}} = \frac{1}{f}
@@ -2671,9 +2631,9 @@ image distance (d_i) = 0.15 m
 
 <a id="wavelength_in_medium"></a>
 
-#### Wavelength of light in a medium — `wavelength_in_medium`
+#### Wavelength of light in a medium: `wavelength_in_medium`
 
-One equation links wavelength in the medium (lam_n), wavelength in vacuum (lam) and index of refraction (n). Give all but one of them and it is solved for the one left out — by default wavelength in the medium (lam_n).
+One equation links wavelength in the medium (lam_n), wavelength in vacuum (lam) and index of refraction (n). Give all but one of them and it is solved for the one left out, by default wavelength in the medium (lam_n).
 
 $$
 \lambda_{n} = \frac{\lambda}{n}
@@ -2682,7 +2642,7 @@ $$
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
 | `lam` | in | wavelength in vacuum | m |
-| `n` | in | index of refraction | — |
+| `n` | in | index of refraction | - |
 | `lam_n` | out | wavelength in the medium | m |
 
 **Applies when:** the frequency is unchanged across the boundary; light entering a transparent medium.
@@ -2702,9 +2662,9 @@ wavelength in the medium (lam_n) = 4e-07 m
 
 <a id="escape_speed"></a>
 
-#### Escape speed — `escape_speed`
+#### Escape speed: `escape_speed`
 
-One equation links escape speed (v), Gravitational constant (G), mass of the body (M) and distance from its center (r). Give all but one of them and it is solved for the one left out — by default escape speed (v).
+One equation links escape speed (v), Gravitational constant (G), mass of the body (M) and distance from its center (r). Give all but one of them and it is solved for the one left out, by default escape speed (v).
 
 $$
 v = \sqrt{\frac{2 G M}{r}}
@@ -2733,9 +2693,9 @@ In the worked example, G = 6.6743e-11 N*m^2/kg^2, M = 5.972e+24 kg, r = 6371000 
 
 <a id="kepler_period_semi_major"></a>
 
-#### Orbital period from the semi-major axis (Kepler's third law) — `kepler_period_semi_major`
+#### Orbital period from the semi-major axis (Kepler's third law), `kepler_period_semi_major`
 
-One equation links orbital period (T), semi-major axis (a), Gravitational constant (G) and mass of the central body (M). Give all but one of them and it is solved for the one left out — by default orbital period (T).
+One equation links orbital period (T), semi-major axis (a), Gravitational constant (G) and mass of the central body (M). Give all but one of them and it is solved for the one left out, by default orbital period (T).
 
 $$
 T = 2 \pi \sqrt{\frac{a^{3}}{G M}}
@@ -2764,9 +2724,9 @@ orbital period (T) = 31554187.75 s
 
 <a id="vis_viva"></a>
 
-#### Orbital speed on an elliptical orbit (vis-viva) — `vis_viva`
+#### Orbital speed on an elliptical orbit (vis-viva), `vis_viva`
 
-One equation links orbital speed at distance r (v), Gravitational constant (G), mass of the central body (M), distance from the center of the central body (r) and semi-major axis (a). Give all but one of them and it is solved for the one left out — by default orbital speed at distance r (v).
+One equation links orbital speed at distance r (v), Gravitational constant (G), mass of the central body (M), distance from the center of the central body (r) and semi-major axis (a). Give all but one of them and it is solved for the one left out, by default orbital speed at distance r (v).
 
 $$
 v = \sqrt{G M \left(\frac{2}{r} - \frac{1}{a}\right)}
@@ -2799,9 +2759,9 @@ orbital speed at distance r (v) = 8003.685272 m/s
 
 <a id="amplitude_resonance_frequency"></a>
 
-#### Amplitude-resonance frequency of a driven damped oscillator — `amplitude_resonance_frequency`
+#### Amplitude-resonance frequency of a driven damped oscillator, `amplitude_resonance_frequency`
 
-One equation links driving frequency of maximum amplitude (wr), spring constant (k), oscillating mass (m) and viscous damping coefficient (b). Give all but one of them and it is solved for the one left out — by default driving frequency of maximum amplitude (wr).
+One equation links driving frequency of maximum amplitude (wr), spring constant (k), oscillating mass (m) and viscous damping coefficient (b). Give all but one of them and it is solved for the one left out, by default driving frequency of maximum amplitude (wr).
 
 $$
 \omega_{r} = \sqrt{\frac{k}{m} - \frac{b^{2}}{2 m^{2}}}
@@ -2830,9 +2790,9 @@ driving frequency of maximum amplitude (wr) = 4.795831523 rad/s
 
 <a id="damped_angular_frequency"></a>
 
-#### Angular frequency of a damped oscillator — `damped_angular_frequency`
+#### Angular frequency of a damped oscillator: `damped_angular_frequency`
 
-One equation links angular frequency of the damped oscillation (wd), spring constant (k), oscillating mass (m) and viscous damping coefficient (b). Give all but one of them and it is solved for the one left out — by default angular frequency of the damped oscillation (wd).
+One equation links angular frequency of the damped oscillation (wd), spring constant (k), oscillating mass (m) and viscous damping coefficient (b). Give all but one of them and it is solved for the one left out, by default angular frequency of the damped oscillation (wd).
 
 $$
 \omega_{d} = \sqrt{\frac{k}{m} - \frac{b^{2}}{4 m^{2}}}
@@ -2861,9 +2821,9 @@ angular frequency of the damped oscillation (wd) = 4.898979486 rad/s
 
 <a id="damping_ratio"></a>
 
-#### Damping ratio — `damping_ratio`
+#### Damping ratio: `damping_ratio`
 
-One equation links damping ratio (zeta), viscous damping coefficient (b), spring constant (k) and oscillating mass (m). Give all but one of them and it is solved for the one left out — by default damping ratio (zeta).
+One equation links damping ratio (zeta), viscous damping coefficient (b), spring constant (k) and oscillating mass (m). Give all but one of them and it is solved for the one left out, by default damping ratio (zeta).
 
 $$
 \zeta = \frac{b}{2 \sqrt{k m}}
@@ -2874,7 +2834,7 @@ $$
 | `b` | in | viscous damping coefficient | kg/s |
 | `k` | in | spring constant | N/m |
 | `m` | in | oscillating mass | kg |
-| `zeta` | out | damping ratio | — |
+| `zeta` | out | damping ratio | - |
 
 **Applies when:** linear viscous damping; a damped mass-spring system.
 
@@ -2892,9 +2852,9 @@ damping ratio (zeta) = 0.2
 
 <a id="double_pendulum_fast_mode"></a>
 
-#### Higher normal mode of a double pendulum — `double_pendulum_fast_mode`
+#### Higher normal mode of a double pendulum: `double_pendulum_fast_mode`
 
-One equation links higher normal-mode angular frequency (w), Acceleration (g) and length of each arm (L). Give all but one of them and it is solved for the one left out — by default higher normal-mode angular frequency (w).
+One equation links higher normal-mode angular frequency (w), Acceleration (g) and length of each arm (L). Give all but one of them and it is solved for the one left out, by default higher normal-mode angular frequency (w).
 
 $$
 \omega = \sqrt{\frac{\left(2 + \sqrt{2}\right) g}{L}}
@@ -2921,9 +2881,9 @@ higher normal-mode angular frequency (w) = 5.786363057 rad/s
 
 <a id="coupled_fast_mode"></a>
 
-#### Higher normal-mode frequency of two coupled oscillators — `coupled_fast_mode`
+#### Higher normal-mode frequency of two coupled oscillators, `coupled_fast_mode`
 
-One equation links higher normal-mode angular frequency (w2), each outer spring's constant (k), coupling spring constant (kc) and each mass (m). Give all but one of them and it is solved for the one left out — by default higher normal-mode angular frequency (w2).
+One equation links higher normal-mode angular frequency (w2), each outer spring's constant (k), coupling spring constant (kc) and each mass (m). Give all but one of them and it is solved for the one left out, by default higher normal-mode angular frequency (w2).
 
 $$
 \omega_{2} = \sqrt{\frac{k + 2 k_{c}}{m}}
@@ -2952,9 +2912,9 @@ higher normal-mode angular frequency (w2) = 5.477225575 rad/s
 
 <a id="double_pendulum_slow_mode"></a>
 
-#### Lower normal mode of a double pendulum — `double_pendulum_slow_mode`
+#### Lower normal mode of a double pendulum: `double_pendulum_slow_mode`
 
-One equation links lower normal-mode angular frequency (w), Acceleration (g) and length of each arm (L). Give all but one of them and it is solved for the one left out — by default lower normal-mode angular frequency (w).
+One equation links lower normal-mode angular frequency (w), Acceleration (g) and length of each arm (L). Give all but one of them and it is solved for the one left out, by default lower normal-mode angular frequency (w).
 
 $$
 \omega = \sqrt{\frac{\left(2 - \sqrt{2}\right) g}{L}}
@@ -2981,9 +2941,9 @@ lower normal-mode angular frequency (w) = 2.396790055 rad/s
 
 <a id="shm_max_speed"></a>
 
-#### Maximum speed of a mass on a spring — `shm_max_speed`
+#### Maximum speed of a mass on a spring: `shm_max_speed`
 
-One equation links maximum speed (at equilibrium) (v), amplitude (X), spring constant (k) and oscillating mass (m). Give all but one of them and it is solved for the one left out — by default maximum speed (at equilibrium) (v).
+One equation links maximum speed (at equilibrium) (v), amplitude (X), spring constant (k) and oscillating mass (m). Give all but one of them and it is solved for the one left out, by default maximum speed (at equilibrium) (v).
 
 $$
 v = X \sqrt{\frac{k}{m}}
@@ -3012,9 +2972,9 @@ maximum speed (at equilibrium) (v) = 1 m/s
 
 <a id="spring_oscillation_period"></a>
 
-#### Period of a mass on a spring — `spring_oscillation_period`
+#### Period of a mass on a spring: `spring_oscillation_period`
 
-One equation links Time (T), Mass (m) and Spring constant (k). Give all but one of them and it is solved for the one left out — by default Time (T).
+One equation links Time (T), Mass (m) and Spring constant (k). Give all but one of them and it is solved for the one left out, by default Time (T).
 
 $$
 T = 2 \pi \sqrt{\frac{m}{k}}
@@ -3041,9 +3001,9 @@ time (T) = 0.3141592654 s
 
 <a id="physical_pendulum_period"></a>
 
-#### Period of a physical pendulum — `physical_pendulum_period`
+#### Period of a physical pendulum: `physical_pendulum_period`
 
-One equation links small-oscillation period (T), moment of inertia about the pivot (Ir), mass of the body (m), Acceleration (g) and distance from the pivot to the center of mass (d). Give all but one of them and it is solved for the one left out — by default small-oscillation period (T).
+One equation links small-oscillation period (T), moment of inertia about the pivot (Ir), mass of the body (m), Acceleration (g) and distance from the pivot to the center of mass (d). Give all but one of them and it is solved for the one left out, by default small-oscillation period (T).
 
 $$
 T = 2 \pi \sqrt{\frac{I_{r}}{m g d}}
@@ -3074,9 +3034,9 @@ small-oscillation period (T) = 1.831592715 s
 
 <a id="pendulum_period"></a>
 
-#### Period of a simple pendulum — `pendulum_period`
+#### Period of a simple pendulum: `pendulum_period`
 
-One equation links period of the swing (T), length of the pendulum (Lp) and Acceleration (g). Give all but one of them and it is solved for the one left out — by default period of the swing (T).
+One equation links period of the swing (T), length of the pendulum (Lp) and Acceleration (g). Give all but one of them and it is solved for the one left out, by default period of the swing (T).
 
 $$
 T = 2 \pi \sqrt{\frac{L_{p}}{g}}
@@ -3103,9 +3063,9 @@ period of the swing (T) = 2.006409293 s
 
 <a id="quality_factor"></a>
 
-#### Quality factor of a damped oscillator — `quality_factor`
+#### Quality factor of a damped oscillator: `quality_factor`
 
-One equation links quality factor (Qf), spring constant (k), oscillating mass (m) and viscous damping coefficient (b). Give all but one of them and it is solved for the one left out — by default quality factor (Qf).
+One equation links quality factor (Qf), spring constant (k), oscillating mass (m) and viscous damping coefficient (b). Give all but one of them and it is solved for the one left out, by default quality factor (Qf).
 
 $$
 Q_{f} = \frac{\sqrt{k m}}{b}
@@ -3116,7 +3076,7 @@ $$
 | `k` | in | spring constant | N/m |
 | `m` | in | oscillating mass | kg |
 | `b` | in | viscous damping coefficient | kg/s |
-| `Qf` | out | quality factor | — |
+| `Qf` | out | quality factor | - |
 
 **Applies when:** linear viscous damping; a damped mass-spring system.
 
@@ -3134,9 +3094,9 @@ quality factor (Qf) = 2.5
 
 <a id="driven_amplitude"></a>
 
-#### Steady-state amplitude of a driven damped oscillator — `driven_amplitude`
+#### Steady-state amplitude of a driven damped oscillator, `driven_amplitude`
 
-One equation links steady-state amplitude (A), driving force amplitude (F0), spring constant (k), oscillating mass (m), viscous damping coefficient (b) and driving angular frequency (w). Give all but one of them and it is solved for the one left out — by default steady-state amplitude (A).
+One equation links steady-state amplitude (A), driving force amplitude (F0), spring constant (k), oscillating mass (m), viscous damping coefficient (b) and driving angular frequency (w). Give all but one of them and it is solved for the one left out, by default steady-state amplitude (A).
 
 $$
 A = \frac{F_{0}}{\sqrt{\left(k - m \omega^{2}\right)^{2} + \left(b \omega\right)^{2}}}
@@ -3171,9 +3131,9 @@ steady-state amplitude (A) = 0.292602868 m
 
 <a id="de_broglie"></a>
 
-#### De Broglie wavelength — `de_broglie`
+#### De Broglie wavelength: `de_broglie`
 
-One equation links de Broglie wavelength (lam), momentum of the particle (p) and Planck constant (h). Give all but one of them and it is solved for the one left out — by default de Broglie wavelength (lam).
+One equation links de Broglie wavelength (lam), momentum of the particle (p) and Planck constant (h). Give all but one of them and it is solved for the one left out, by default de Broglie wavelength (lam).
 
 $$
 \lambda = \frac{h}{p}
@@ -3200,9 +3160,9 @@ de Broglie wavelength (lam) = 6.62607015e-10 m
 
 <a id="photon_energy"></a>
 
-#### Energy of a photon — `photon_energy`
+#### Energy of a photon: `photon_energy`
 
-One equation links photon energy (E), frequency of the light (f) and Planck constant (h). Give all but one of them and it is solved for the one left out — by default photon energy (E).
+One equation links photon energy (E), frequency of the light (f) and Planck constant (h). Give all but one of them and it is solved for the one left out, by default photon energy (E).
 
 $$
 E = h f
@@ -3229,9 +3189,9 @@ photon energy (E) = 3.313035075e-19 J
 
 <a id="photon_momentum"></a>
 
-#### Momentum of a photon — `photon_momentum`
+#### Momentum of a photon: `photon_momentum`
 
-One equation links photon momentum (p), Length (lam) and Planck constant (h). Give all but one of them and it is solved for the one left out — by default photon momentum (p).
+One equation links photon momentum (p), Length (lam) and Planck constant (h). Give all but one of them and it is solved for the one left out, by default photon momentum (p).
 
 $$
 p = \frac{h}{\lambda}
@@ -3258,9 +3218,9 @@ photon momentum (p) = 1.32521403e-27 kg*m/s
 
 <a id="photon_energy_wavelength"></a>
 
-#### Photon energy from wavelength — `photon_energy_wavelength`
+#### Photon energy from wavelength: `photon_energy_wavelength`
 
-One equation links Energy (E), wavelength in vacuum (lam), Planck constant (h) and Speed (c). Give all but one of them and it is solved for the one left out — by default Energy (E).
+One equation links Energy (E), wavelength in vacuum (lam), Planck constant (h) and Speed (c). Give all but one of them and it is solved for the one left out, by default Energy (E).
 
 $$
 E = \frac{h c}{\lambda}
@@ -3291,9 +3251,9 @@ energy (E) = 3.972891714e-19 J
 
 <a id="rc_time_constant"></a>
 
-#### Time constant of an RC circuit — `rc_time_constant`
+#### Time constant of an RC circuit: `rc_time_constant`
 
-One equation links time constant (tau), resistance (R) and capacitance (C). Give all but one of them and it is solved for the one left out — by default time constant (tau).
+One equation links time constant (tau), resistance (R) and capacitance (C). Give all but one of them and it is solved for the one left out, by default time constant (tau).
 
 $$
 \tau = R C
@@ -3320,9 +3280,9 @@ time constant (tau) = 0.008 s
 
 <a id="rc_charging"></a>
 
-#### Voltage of a charging capacitor — `rc_charging`
+#### Voltage of a charging capacitor: `rc_charging`
 
-One equation links voltage across the capacitor at time t (V), emf of the source (emf), time since charging began (t), resistance (R) and capacitance (C). Give all but one of them and it is solved for the one left out — by default voltage across the capacitor at time t (V).
+One equation links voltage across the capacitor at time t (V), emf of the source (emf), time since charging began (t), resistance (R) and capacitance (C). Give all but one of them and it is solved for the one left out, by default voltage across the capacitor at time t (V).
 
 $$
 V = \text{emf} \left(1 - e^{\frac{-t}{R C}}\right)
@@ -3353,9 +3313,9 @@ voltage across the capacitor at time t (V) = 5.689085029 V
 
 <a id="rc_discharging"></a>
 
-#### Voltage of a discharging capacitor — `rc_discharging`
+#### Voltage of a discharging capacitor: `rc_discharging`
 
-One equation links voltage across the capacitor at time t (V), initial voltage across the capacitor (V0), time since the discharge began (t), resistance (R) and capacitance (C). Give all but one of them and it is solved for the one left out — by default voltage across the capacitor at time t (V).
+One equation links voltage across the capacitor at time t (V), initial voltage across the capacitor (V0), time since the discharge began (t), resistance (R) and capacitance (C). Give all but one of them and it is solved for the one left out, by default voltage across the capacitor at time t (V).
 
 $$
 V = V_{0} e^{\frac{-t}{R C}}
@@ -3388,9 +3348,9 @@ voltage across the capacitor at time t (V) = 4.414553294 V
 
 <a id="rest_energy"></a>
 
-#### Rest energy — `rest_energy`
+#### Rest energy: `rest_energy`
 
-One equation links rest energy (E0), rest mass (m) and Speed (c). Give all but one of them and it is solved for the one left out — by default rest energy (E0).
+One equation links rest energy (E0), rest mass (m) and Speed (c). Give all but one of them and it is solved for the one left out, by default rest energy (E0).
 
 $$
 E_{0} = m c^{2}
@@ -3419,9 +3379,9 @@ rest energy (E0) = 8.987551787e+13 J
 
 <a id="rolling_incline_acceleration"></a>
 
-#### Acceleration of a body rolling without slipping down an incline — `rolling_incline_acceleration`
+#### Acceleration of a body rolling without slipping down an incline, `rolling_incline_acceleration`
 
-One equation links acceleration of the center of mass along the incline (a), Acceleration (g), angle of the incline (theta), moment of inertia about the center (Ir), mass (m) and rolling radius (R). Give all but one of them and it is solved for the one left out — by default acceleration of the center of mass along the incline (a).
+One equation links acceleration of the center of mass along the incline (a), Acceleration (g), angle of the incline (theta), moment of inertia about the center (Ir), mass (m) and rolling radius (R). Give all but one of them and it is solved for the one left out, by default acceleration of the center of mass along the incline (a).
 
 $$
 a = \frac{g \sin\left(\theta\right)}{1 + \frac{I_{r}}{m R^{2}}}
@@ -3454,9 +3414,9 @@ acceleration of the center of mass along the incline (a) = 3.268883333 m/s^2
 
 <a id="atwood_massive_pulley"></a>
 
-#### Acceleration of an Atwood machine with a massive pulley — `atwood_massive_pulley`
+#### Acceleration of an Atwood machine with a massive pulley, `atwood_massive_pulley`
 
-One equation links acceleration of each mass (a), heavier mass (m1), lighter mass (m2), Acceleration (g), moment of inertia of the pulley (Ir) and radius of the pulley (R). Give all but one of them and it is solved for the one left out — by default acceleration of each mass (a).
+One equation links acceleration of each mass (a), heavier mass (m1), lighter mass (m2), Acceleration (g), moment of inertia of the pulley (Ir) and radius of the pulley (R). Give all but one of them and it is solved for the one left out, by default acceleration of each mass (a).
 
 $$
 a = \frac{\left(m_{1} - m_{2}\right) g}{m_{1} + m_{2} + \frac{I_{r}}{R^{2}}}
@@ -3489,9 +3449,9 @@ acceleration of each mass (a) = 1.40095 m/s^2
 
 <a id="torque_free_precession"></a>
 
-#### Body-frame precession rate of a torque-free symmetric body — `torque_free_precession`
+#### Body-frame precession rate of a torque-free symmetric body, `torque_free_precession`
 
-One equation links precession rate seen in the body frame (Wp), spin angular velocity about the symmetry axis (w3), moment of inertia about a transverse axis (I1) and moment of inertia about the symmetry axis (I3). Give all but one of them and it is solved for the one left out — by default precession rate seen in the body frame (Wp).
+One equation links precession rate seen in the body frame (Wp), spin angular velocity about the symmetry axis (w3), moment of inertia about a transverse axis (I1) and moment of inertia about the symmetry axis (I3). Give all but one of them and it is solved for the one left out, by default precession rate seen in the body frame (Wp).
 
 $$
 \Omega_{p} = \frac{\omega_{3} \left(I_{3} - I_{1}\right)}{I_{1}}
@@ -3520,9 +3480,9 @@ precession rate seen in the body frame (Wp) = 5 rad/s
 
 <a id="inertia_solid_disk"></a>
 
-#### Moment of inertia of a solid disk about its axis — `inertia_solid_disk`
+#### Moment of inertia of a solid disk about its axis, `inertia_solid_disk`
 
-One equation links moment of inertia about the central axis (Ir), mass (m) and radius (R). Give all but one of them and it is solved for the one left out — by default moment of inertia about the central axis (Ir).
+One equation links moment of inertia about the central axis (Ir), mass (m) and radius (R). Give all but one of them and it is solved for the one left out, by default moment of inertia about the central axis (Ir).
 
 $$
 I_{r} = \frac{m R^{2}}{2}
@@ -3549,9 +3509,9 @@ moment of inertia about the central axis (Ir) = 0.25 kg*m^2
 
 <a id="inertia_solid_sphere"></a>
 
-#### Moment of inertia of a solid sphere — `inertia_solid_sphere`
+#### Moment of inertia of a solid sphere: `inertia_solid_sphere`
 
-One equation links moment of inertia about the central axis (Ir), mass (m) and radius (R). Give all but one of them and it is solved for the one left out — by default moment of inertia about the central axis (Ir).
+One equation links moment of inertia about the central axis (Ir), mass (m) and radius (R). Give all but one of them and it is solved for the one left out, by default moment of inertia about the central axis (Ir).
 
 $$
 I_{r} = \frac{2 m R^{2}}{5}
@@ -3578,9 +3538,9 @@ moment of inertia about the central axis (Ir) = 0.2 kg*m^2
 
 <a id="inertia_rod_center"></a>
 
-#### Moment of inertia of a thin rod about its center — `inertia_rod_center`
+#### Moment of inertia of a thin rod about its center, `inertia_rod_center`
 
-One equation links moment of inertia about its center (Ir), mass of the rod (m) and length of the rod (Lr). Give all but one of them and it is solved for the one left out — by default moment of inertia about its center (Ir).
+One equation links moment of inertia about its center (Ir), mass of the rod (m) and length of the rod (Lr). Give all but one of them and it is solved for the one left out, by default moment of inertia about its center (Ir).
 
 $$
 I_{r} = \frac{m L_{r}^{2}}{12}
@@ -3607,9 +3567,9 @@ moment of inertia about its center (Ir) = 1 kg*m^2
 
 <a id="inertia_rod_end"></a>
 
-#### Moment of inertia of a thin rod about one end — `inertia_rod_end`
+#### Moment of inertia of a thin rod about one end, `inertia_rod_end`
 
-One equation links moment of inertia about one end (Ir), mass of the rod (m) and length of the rod (Lr). Give all but one of them and it is solved for the one left out — by default moment of inertia about one end (Ir).
+One equation links moment of inertia about one end (Ir), mass of the rod (m) and length of the rod (Lr). Give all but one of them and it is solved for the one left out, by default moment of inertia about one end (Ir).
 
 $$
 I_{r} = \frac{m L_{r}^{2}}{3}
@@ -3636,9 +3596,9 @@ moment of inertia about one end (Ir) = 4 kg*m^2
 
 <a id="inertia_hollow_sphere"></a>
 
-#### Moment of inertia of a thin spherical shell — `inertia_hollow_sphere`
+#### Moment of inertia of a thin spherical shell, `inertia_hollow_sphere`
 
-One equation links moment of inertia about the central axis (Ir), mass (m) and radius (R). Give all but one of them and it is solved for the one left out — by default moment of inertia about the central axis (Ir).
+One equation links moment of inertia about the central axis (Ir), mass (m) and radius (R). Give all but one of them and it is solved for the one left out, by default moment of inertia about the central axis (Ir).
 
 $$
 I_{r} = \frac{2 m R^{2}}{3}
@@ -3667,9 +3627,9 @@ moment of inertia about the central axis (Ir) = 0.3333333333 kg*m^2
 
 <a id="bead_hoop_equilibrium"></a>
 
-#### Off-axis equilibrium of a bead on a rotating hoop — `bead_hoop_equilibrium`
+#### Off-axis equilibrium of a bead on a rotating hoop, `bead_hoop_equilibrium`
 
-One equation links equilibrium angle from the bottom (theta), Acceleration (g), angular velocity of the hoop (w) and radius of the hoop (R). Give all but one of them and it is solved for the one left out — by default equilibrium angle from the bottom (theta).
+One equation links equilibrium angle from the bottom (theta), Acceleration (g), angular velocity of the hoop (w) and radius of the hoop (R). Give all but one of them and it is solved for the one left out, by default equilibrium angle from the bottom (theta).
 
 $$
 \theta = \arccos\left(\frac{g}{\omega^{2} R}\right)
@@ -3698,9 +3658,9 @@ equilibrium angle from the bottom (theta) = 1.058325104 rad
 
 <a id="foucault_precession_period"></a>
 
-#### Precession period of a Foucault pendulum — `foucault_precession_period`
+#### Precession period of a Foucault pendulum: `foucault_precession_period`
 
-One equation links time for the swing plane to turn once (T), Angular frequency (W) and latitude (phi). Give all but one of them and it is solved for the one left out — by default time for the swing plane to turn once (T).
+One equation links time for the swing plane to turn once (T), Angular frequency (W) and latitude (phi). Give all but one of them and it is solved for the one left out, by default time for the swing plane to turn once (T).
 
 $$
 T = \frac{2 \pi}{\Omega \sin\left(\phi\right)}
@@ -3729,9 +3689,9 @@ time for the swing plane to turn once (T) = 114429.3475 s
 
 <a id="angular_momentum_point_mass"></a>
 
-#### Angular momentum of a point mass on a circle — `angular_momentum_point_mass`
+#### Angular momentum of a point mass on a circle, `angular_momentum_point_mass`
 
-One equation links angular momentum about the centre (L), Mass (m), speed on the circle (v) and radius of the circle (r). Give all but one of them and it is solved for the one left out — by default angular momentum about the centre (L).
+One equation links angular momentum about the centre (L), Mass (m), speed on the circle (v) and radius of the circle (r). Give all but one of them and it is solved for the one left out, by default angular momentum about the centre (L).
 
 $$
 L = m v r
@@ -3760,9 +3720,9 @@ angular momentum about the centre (L) = 24 kg*m^2/s
 
 <a id="angular_momentum"></a>
 
-#### Angular momentum of a rotating body — `angular_momentum`
+#### Angular momentum of a rotating body: `angular_momentum`
 
-One equation links Angular momentum (L), Moment of inertia (Ir) and angular velocity (omega). Give all but one of them and it is solved for the one left out — by default Angular momentum (L).
+One equation links Angular momentum (L), Moment of inertia (Ir) and angular velocity (omega). Give all but one of them and it is solved for the one left out, by default Angular momentum (L).
 
 $$
 L = I_{r} \omega
@@ -3789,9 +3749,9 @@ angular momentum (L) = 4 kg*m^2/s
 
 <a id="angular_velocity_angle"></a>
 
-#### Angular velocity and angle turned under constant angular acceleration — `angular_velocity_angle`
+#### Angular velocity and angle turned under constant angular acceleration, `angular_velocity_angle`
 
-One equation links final angular speed (omega), initial angular speed (omega0), constant angular acceleration (alpha) and angle turned (theta). Give all but one of them and it is solved for the one left out — by default .
+One equation links final angular speed (omega), initial angular speed (omega0), constant angular acceleration (alpha) and angle turned (theta). Give all but one of them and it is solved for the one left out, by default .
 
 $$
 \omega^{2} = \omega_{0}^{2} + 2 \alpha \theta
@@ -3820,9 +3780,9 @@ final angular speed (omega) = 10 rad/s
 
 <a id="angular_velocity_time"></a>
 
-#### Angular velocity under constant angular acceleration — `angular_velocity_time`
+#### Angular velocity under constant angular acceleration, `angular_velocity_time`
 
-One equation links final angular velocity (omega), initial angular velocity (omega0), constant angular acceleration (alpha) and elapsed time (t). Give all but one of them and it is solved for the one left out — by default final angular velocity (omega).
+One equation links final angular velocity (omega), initial angular velocity (omega0), constant angular acceleration (alpha) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default final angular velocity (omega).
 
 $$
 \omega = \omega_{0} + \alpha t
@@ -3851,9 +3811,9 @@ In the worked example, omega0 = 2 rad/s, alpha = 3 rad/s^2, t = 4 s go through t
 
 <a id="centripetal_acceleration_omega"></a>
 
-#### Centripetal acceleration from angular velocity — `centripetal_acceleration_omega`
+#### Centripetal acceleration from angular velocity, `centripetal_acceleration_omega`
 
-One equation links centripetal acceleration (a), radius of the circle (r) and angular velocity (omega). Give all but one of them and it is solved for the one left out — by default centripetal acceleration (a).
+One equation links centripetal acceleration (a), radius of the circle (r) and angular velocity (omega). Give all but one of them and it is solved for the one left out, by default centripetal acceleration (a).
 
 $$
 a = r \omega^{2}
@@ -3880,9 +3840,9 @@ centripetal acceleration (a) = 18 m/s^2
 
 <a id="rotational_kinetic_energy"></a>
 
-#### Rotational kinetic energy — `rotational_kinetic_energy`
+#### Rotational kinetic energy: `rotational_kinetic_energy`
 
-One equation links rotational kinetic energy (KR), Moment of inertia (Ir) and angular velocity (omega). Give all but one of them and it is solved for the one left out — by default rotational kinetic energy (KR).
+One equation links rotational kinetic energy (KR), Moment of inertia (Ir) and angular velocity (omega). Give all but one of them and it is solved for the one left out, by default rotational kinetic energy (KR).
 
 $$
 K_{R} = \frac{I_{r} \omega^{2}}{2}
@@ -3909,9 +3869,9 @@ rotational kinetic energy (KR) = 100 J
 
 <a id="tangential_acceleration"></a>
 
-#### Tangential acceleration of a point on a rotating body — `tangential_acceleration`
+#### Tangential acceleration of a point on a rotating body, `tangential_acceleration`
 
-One equation links tangential acceleration (a), distance from the axis (r) and angular acceleration (alpha). Give all but one of them and it is solved for the one left out — by default tangential acceleration (a).
+One equation links tangential acceleration (a), distance from the axis (r) and angular acceleration (alpha). Give all but one of them and it is solved for the one left out, by default tangential acceleration (a).
 
 $$
 a = r \alpha
@@ -3938,9 +3898,9 @@ tangential acceleration (a) = 2 m/s^2
 
 <a id="torque_lever"></a>
 
-#### Torque of a force — `torque_lever`
+#### Torque of a force: `torque_lever`
 
-One equation links torque about the pivot (tau), distance from the pivot to the point of application (r), applied force (F) and angle between r and F (theta). Give all but one of them and it is solved for the one left out — by default torque about the pivot (tau).
+One equation links torque about the pivot (tau), distance from the pivot to the point of application (r), applied force (F) and angle between r and F (theta). Give all but one of them and it is solved for the one left out, by default torque about the pivot (tau).
 
 $$
 \tau = r F \sin\left(\theta\right)
@@ -3971,9 +3931,9 @@ torque about the pivot (tau) = 15 N*m
 
 <a id="carnot_efficiency"></a>
 
-#### Carnot (maximum) efficiency — `carnot_efficiency`
+#### Carnot (maximum) efficiency: `carnot_efficiency`
 
-One equation links maximum efficiency (eff), cold reservoir temperature (absolute) (Tc) and hot reservoir temperature (absolute) (Th). Give all but one of them and it is solved for the one left out — by default maximum efficiency (eff).
+One equation links maximum efficiency (eff), cold reservoir temperature (absolute) (Tc) and hot reservoir temperature (absolute) (Th). Give all but one of them and it is solved for the one left out, by default maximum efficiency (eff).
 
 $$
 \text{eff} = 1 - \frac{T_{c}}{T_{h}}
@@ -3983,7 +3943,7 @@ $$
 |---|---|---|---|
 | `Tc` | in | cold reservoir temperature (absolute) | K |
 | `Th` | in | hot reservoir temperature (absolute) | K |
-| `eff` | out | maximum efficiency | — |
+| `eff` | out | maximum efficiency | - |
 
 **Applies when:** a reversible engine between two reservoirs; absolute temperatures; an ideal engine between two reservoirs.
 
@@ -4000,9 +3960,9 @@ maximum efficiency (eff) = 0.5
 
 <a id="cop_heat_pump"></a>
 
-#### Coefficient of performance of a heat pump — `cop_heat_pump`
+#### Coefficient of performance of a heat pump: `cop_heat_pump`
 
-One equation links coefficient of performance (cop), heat delivered to the warm space (Qh) and work input (W). Give all but one of them and it is solved for the one left out — by default coefficient of performance (cop).
+One equation links coefficient of performance (cop), heat delivered to the warm space (Qh) and work input (W). Give all but one of them and it is solved for the one left out, by default coefficient of performance (cop).
 
 $$
 \text{cop} = \frac{Q_{h}}{W}
@@ -4012,7 +3972,7 @@ $$
 |---|---|---|---|
 | `Qh` | in | heat delivered to the warm space | J |
 | `W` | in | work input | J |
-| `cop` | out | coefficient of performance | — |
+| `cop` | out | coefficient of performance | - |
 
 **Applies when:** a cyclic heat pump; heat pumps heating a building.
 
@@ -4029,9 +3989,9 @@ coefficient of performance (cop) = 3
 
 <a id="cop_refrigerator"></a>
 
-#### Coefficient of performance of a refrigerator — `cop_refrigerator`
+#### Coefficient of performance of a refrigerator, `cop_refrigerator`
 
-One equation links coefficient of performance (cop), heat removed from the cold space (Qc) and work input (W). Give all but one of them and it is solved for the one left out — by default coefficient of performance (cop).
+One equation links coefficient of performance (cop), heat removed from the cold space (Qc) and work input (W). Give all but one of them and it is solved for the one left out, by default coefficient of performance (cop).
 
 $$
 \text{cop} = \frac{Q_{c}}{W}
@@ -4041,7 +4001,7 @@ $$
 |---|---|---|---|
 | `Qc` | in | heat removed from the cold space | J |
 | `W` | in | work input | J |
-| `cop` | out | coefficient of performance | — |
+| `cop` | out | coefficient of performance | - |
 
 **Applies when:** a cyclic refrigerator; refrigerators and air conditioners.
 
@@ -4058,9 +4018,9 @@ coefficient of performance (cop) = 3
 
 <a id="engine_efficiency"></a>
 
-#### Efficiency of a heat engine — `engine_efficiency`
+#### Efficiency of a heat engine: `engine_efficiency`
 
-One equation links efficiency (a fraction) (eff), work output per cycle (W) and heat taken in from the hot reservoir (Qh). Give all but one of them and it is solved for the one left out — by default efficiency (a fraction) (eff).
+One equation links efficiency (a fraction) (eff), work output per cycle (W) and heat taken in from the hot reservoir (Qh). Give all but one of them and it is solved for the one left out, by default efficiency (a fraction) (eff).
 
 $$
 \text{eff} = \frac{W}{Q_{h}}
@@ -4070,7 +4030,7 @@ $$
 |---|---|---|---|
 | `W` | in | work output per cycle | J |
 | `Qh` | in | heat taken in from the hot reservoir | J |
-| `eff` | out | efficiency (a fraction) | — |
+| `eff` | out | efficiency (a fraction) | - |
 
 **Applies when:** a cyclic engine; efficiency as a fraction, not a percentage; a heat engine over whole cycles.
 
@@ -4087,9 +4047,9 @@ efficiency (a fraction) (eff) = 0.3
 
 <a id="engine_energy_balance"></a>
 
-#### Energy balance of a cyclic heat engine — `engine_energy_balance`
+#### Energy balance of a cyclic heat engine: `engine_energy_balance`
 
-One equation links net work output per cycle (W), heat in from the hot reservoir (Qh) and heat out to the cold reservoir (Qc). Give all but one of them and it is solved for the one left out — by default net work output per cycle (W).
+One equation links net work output per cycle (W), heat in from the hot reservoir (Qh) and heat out to the cold reservoir (Qc). Give all but one of them and it is solved for the one left out, by default net work output per cycle (W).
 
 $$
 W = Q_{h} - Q_{c}
@@ -4116,9 +4076,9 @@ net work output per cycle (W) = 300 J
 
 <a id="heat"></a>
 
-#### Heat for a temperature change — `heat`
+#### Heat for a temperature change: `heat`
 
-One equation links heat transferred (Q), mass (m), specific heat capacity (c) and temperature change (dT). Give all but one of them and it is solved for the one left out — by default heat transferred (Q).
+One equation links heat transferred (Q), mass (m), specific heat capacity (c) and temperature change (dT). Give all but one of them and it is solved for the one left out, by default heat transferred (Q).
 
 $$
 Q = m c \Delta T
@@ -4147,9 +4107,9 @@ heat transferred (Q) = 20000 J
 
 <a id="latent_heat_vaporization"></a>
 
-#### Heat to boil or condense — `latent_heat_vaporization`
+#### Heat to boil or condense: `latent_heat_vaporization`
 
-One equation links Energy (Q), Mass (m) and latent heat of vaporization (Lv). Give all but one of them and it is solved for the one left out — by default Energy (Q).
+One equation links Energy (Q), Mass (m) and latent heat of vaporization (Lv). Give all but one of them and it is solved for the one left out, by default Energy (Q).
 
 $$
 Q = m L_{v}
@@ -4176,9 +4136,9 @@ energy (Q) = 1130000 J
 
 <a id="latent_heat_fusion"></a>
 
-#### Heat to melt or freeze — `latent_heat_fusion`
+#### Heat to melt or freeze: `latent_heat_fusion`
 
-One equation links heat absorbed or released (Q), Mass (m) and latent heat of fusion (Lf). Give all but one of them and it is solved for the one left out — by default heat absorbed or released (Q).
+One equation links heat absorbed or released (Q), Mass (m) and latent heat of fusion (Lf). Give all but one of them and it is solved for the one left out, by default heat absorbed or released (Q).
 
 $$
 Q = m L_{f}
@@ -4205,9 +4165,9 @@ In the worked example, m = 2 kg, Lf = 334000 J/kg go through the equation above 
 
 <a id="ideal_gas_moles"></a>
 
-#### Ideal gas law — `ideal_gas_moles`
+#### Ideal gas law: `ideal_gas_moles`
 
-One equation links absolute pressure (P), Volume (V), amount of gas (n), absolute temperature (T) and Gas constant (R). Give all but one of them and it is solved for the one left out — by default .
+One equation links absolute pressure (P), Volume (V), amount of gas (n), absolute temperature (T) and Gas constant (R). Give all but one of them and it is solved for the one left out, by default .
 
 $$
 P V = n R T
@@ -4238,9 +4198,9 @@ In the worked example, V = 0.05 m^3, n = 2 mol, T = 300 K, R = 8.314462618 J/(mo
 
 <a id="linear_expansion"></a>
 
-#### Linear thermal expansion — `linear_expansion`
+#### Linear thermal expansion: `linear_expansion`
 
-One equation links change in length (dL), coefficient of linear expansion (alpha_t), original length (L) and change in temperature (dT). Give all but one of them and it is solved for the one left out — by default change in length (dL).
+One equation links change in length (dL), coefficient of linear expansion (alpha_t), original length (L) and change in temperature (dT). Give all but one of them and it is solved for the one left out, by default change in length (dL).
 
 $$
 d_{L} = \alpha_{t} L d_{T}
@@ -4269,9 +4229,9 @@ change in length (dL) = 0.036 m
 
 <a id="area_expansion"></a>
 
-#### Thermal expansion of an area — `area_expansion`
+#### Thermal expansion of an area: `area_expansion`
 
-One equation links change in area (dA), coefficient of linear expansion (alpha_t), original area (A) and change in temperature (dT). Give all but one of them and it is solved for the one left out — by default change in area (dA).
+One equation links change in area (dA), coefficient of linear expansion (alpha_t), original area (A) and change in temperature (dT). Give all but one of them and it is solved for the one left out, by default change in area (dA).
 
 $$
 d_{A} = 2 \alpha_{t} A d_{T}
@@ -4300,9 +4260,9 @@ change in area (dA) = 0.0024 m^2
 
 <a id="volume_expansion"></a>
 
-#### Thermal expansion of volume — `volume_expansion`
+#### Thermal expansion of volume: `volume_expansion`
 
-One equation links change in volume (dV), coefficient of volume expansion (beta), original volume (V0) and temperature change (dT). Give all but one of them and it is solved for the one left out — by default change in volume (dV).
+One equation links change in volume (dV), coefficient of volume expansion (beta), original volume (V0) and temperature change (dT). Give all but one of them and it is solved for the one left out, by default change in volume (dV).
 
 $$
 d_{V} = \beta V_{0} d_{T}
@@ -4333,9 +4293,9 @@ change in volume (dV) = 1.05e-05 m^3
 
 <a id="rocket_delta_v"></a>
 
-#### Velocity change of a rocket (Tsiolkovsky) — `rocket_delta_v`
+#### Velocity change of a rocket (Tsiolkovsky): `rocket_delta_v`
 
-One equation links change in velocity (dv), exhaust velocity (ve), initial mass (m0) and final mass (mf). Give all but one of them and it is solved for the one left out — by default change in velocity (dv).
+One equation links change in velocity (dv), exhaust velocity (ve), initial mass (m0) and final mass (mf). Give all but one of them and it is solved for the one left out, by default change in velocity (dv).
 
 $$
 \Delta v = v_{e} \ln\left(\frac{m_{0}}{m_{f}}\right)
@@ -4366,9 +4326,9 @@ change in velocity (dv) = 2748.872196 m/s
 
 <a id="intensity_power_area"></a>
 
-#### Intensity as power per area — `intensity_power_area`
+#### Intensity as power per area: `intensity_power_area`
 
-One equation links intensity (I), power crossing the area (P) and area perpendicular to the flow of energy (A). Give all but one of them and it is solved for the one left out — by default intensity (I).
+One equation links intensity (I), power crossing the area (P) and area perpendicular to the flow of energy (A). Give all but one of them and it is solved for the one left out, by default intensity (I).
 
 $$
 I = \frac{P}{A}
@@ -4395,9 +4355,9 @@ intensity (I) = 50 W/m^2
 
 <a id="wave_speed"></a>
 
-#### Speed of a periodic wave — `wave_speed`
+#### Speed of a periodic wave: `wave_speed`
 
-One equation links wave speed (v), frequency (f) and wavelength (lam). Give all but one of them and it is solved for the one left out — by default wave speed (v).
+One equation links wave speed (v), frequency (f) and wavelength (lam). Give all but one of them and it is solved for the one left out, by default wave speed (v).
 
 $$
 v = f \lambda
@@ -4422,4 +4382,4 @@ wave speed (v) = 20 m/s
 
 **What the worked example means:** This calculation determines the propagation speed of a periodic wave by multiplying its frequency by its wavelength. The resulting value of 20 m/s indicates how fast the wave travels through the medium, assuming uniform properties and no dispersion. This relationship holds for standard sound or light waves in consistent environments.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

@@ -222,7 +222,7 @@ result.show()
 
 <a id="uniform_motion"></a>
 
-### Motion at constant velocity — `uniform_motion`
+### Motion at constant velocity: `uniform_motion`
 
 $$
 d = v t
@@ -258,7 +258,7 @@ $$
 
 <a id="velocity_time"></a>
 
-### Velocity under constant acceleration — `velocity_time`
+### Velocity under constant acceleration: `velocity_time`
 
 $$
 v = v_0 + a t
@@ -295,7 +295,7 @@ $$
 
 <a id="displacement_time"></a>
 
-### Displacement under constant acceleration — `displacement_time`
+### Displacement under constant acceleration: `displacement_time`
 
 $$
 x = v_0 t + \frac{a t^{2}}{2}
@@ -314,7 +314,7 @@ $$
 
 ![Trajectories of a projectile launched at 20 m/s (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/displacement-time-drawing.svg)
 
-*Trajectories of a projectile launched at 20 m/s (g = 9.81 m/s², no air resistance) at three angles: each point's horizontal distance and height computed by the package (uniform motion and constant acceleration), the top from its maximum-height formula, and on the 45° path the velocity vectors (horizontal part constant, vertical part from v = v₀ + a t) — θ = 30°: range 35.3119 m, top 5.09684 m; θ = 45°: range 40.7747 m, top 10.1937 m; θ = 60°: range 35.3119 m, top 15.2905 m.*
+*Trajectories of a projectile launched at 20 m/s (g = 9.81 m/s², no air resistance) at three angles: each point's horizontal distance and height computed by the package (uniform motion and constant acceleration), the top from its maximum-height formula, and on the 45° path the velocity vectors (horizontal part constant, vertical part from v = v₀ + a t), θ = 30°: range 35.3119 m, top 5.09684 m; θ = 45°: range 40.7747 m, top 10.1937 m; θ = 60°: range 35.3119 m, top 15.2905 m.*
 
 ![Displacement against time for v₀ = 3 m/s and a = 2 m/s² (20 times from the package), beside the straight line the same start speed gives without acceleration (uniform motion, also from the package); the gap between them at t = 4 s is the part due to the acceleration (derived as the difference)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/displacement-time-graph)
 
@@ -336,7 +336,7 @@ $$
 
 <a id="velocity_displacement"></a>
 
-### Speed after a displacement under constant acceleration — `velocity_displacement`
+### Speed after a displacement under constant acceleration, `velocity_displacement`
 
 $$
 v^{2} = v_0^{2} + 2 a x
@@ -373,7 +373,7 @@ $$
 
 <a id="average_velocity_displacement"></a>
 
-### Displacement from the mean of initial and final velocity — `average_velocity_displacement`
+### Displacement from the mean of initial and final velocity, `average_velocity_displacement`
 
 $$
 x = \frac{\left(v_0 + v\right) t}{2}
@@ -409,7 +409,7 @@ $$
 
 <a id="newton_second"></a>
 
-### Net force and acceleration — `newton_second`
+### Net force and acceleration: `newton_second`
 
 $$
 F = m a
@@ -448,7 +448,7 @@ $$
 
 <a id="weight"></a>
 
-### Weight in a uniform gravitational field — `weight`
+### Weight in a uniform gravitational field: `weight`
 
 $$
 W = m g
@@ -465,7 +465,7 @@ $$
 
 ![Weight of the same 10 kg mass where the gravitational acceleration is 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-bars)
 
-*Weight of the same 10 kg mass where the gravitational acceleration is 1.62 (Moon), 3.71 (Mars), 9.8 (Earth) and 24.79 m/s² (Jupiter), each from the package: the mass is the same, the weight scales with g. Marked: each weight.*
+*Weight of the same 10 kg mass where the gravitational acceleration is 1.62 m/s² (Moon), 3.71 m/s² (Mars), 9.8 m/s² (Earth), 24.79 m/s² (Jupiter), each from the package: the mass is the same, the weight scales with g. Marked: each weight.*
 
 ![W (weight) against m (mass) from 5 kg to 15 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-curve)
 
@@ -487,7 +487,7 @@ $$
 
 <a id="net_force_friction"></a>
 
-### Net force with an opposing friction force — `net_force_friction`
+### Net force with an opposing friction force: `net_force_friction`
 
 $$
 F = P - f
@@ -522,7 +522,7 @@ $$
 
 <a id="kinetic_friction"></a>
 
-### Sliding friction — `kinetic_friction`
+### Sliding friction: `kinetic_friction`
 
 $$
 f = \mu N
@@ -561,7 +561,7 @@ $$
 
 <a id="normal_on_level"></a>
 
-### Normal force on a level surface — `normal_on_level`
+### Normal force on a level surface: `normal_on_level`
 
 $$
 N = W
@@ -596,7 +596,7 @@ $$
 
 <a id="momentum"></a>
 
-### Linear momentum — `momentum`
+### Linear momentum: `momentum`
 
 $$
 p = m v
@@ -635,7 +635,7 @@ $$
 
 <a id="impulse"></a>
 
-### Impulse of a constant force — `impulse`
+### Impulse of a constant force: `impulse`
 
 $$
 J = F t
@@ -674,7 +674,7 @@ $$
 
 <a id="work"></a>
 
-### Work by a constant force — `work`
+### Work by a constant force: `work`
 
 $$
 W = F d \cos\left(\theta\right)
@@ -715,7 +715,7 @@ $$
 
 <a id="kinetic_energy"></a>
 
-### Translational kinetic energy — `kinetic_energy`
+### Translational kinetic energy: `kinetic_energy`
 
 $$
 K = \frac{m v^{2}}{2}
@@ -732,7 +732,7 @@ $$
 
 ![Energy of a 1 kg body falling from rest from 20 m (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/kinetic-energy-bars.svg)
 
-*Energy of a 1 kg body falling from rest from 20 m (g = 9.81 m/s², no air resistance): potential energy and kinetic energy (from the speed after the fall), each computed by the package, stacked — their sum stays 196.2 J: h = 20 m: U = 196.2 J, K = 0 J (v = 0 m/s); h = 15 m: U = 147.15 J, K = 49.05 J (v = 9.90454 m/s); h = 10 m: U = 98.1 J, K = 98.1 J (v = 14.0071 m/s); h = 5 m: U = 49.05 J, K = 147.15 J (v = 17.1552 m/s); h = 0 m: U = 0 J, K = 196.2 J (v = 19.8091 m/s).*
+*Energy of a 1 kg body falling from rest from 20 m (g = 9.81 m/s², no air resistance): potential energy and kinetic energy (from the speed after the fall), each computed by the package, stacked, their sum stays 196.2 J: h = 20 m: U = 196.2 J, K = 0 J (v = 0 m/s); h = 15 m: U = 147.15 J, K = 49.05 J (v = 9.90454 m/s); h = 10 m: U = 98.1 J, K = 98.1 J (v = 14.0071 m/s); h = 5 m: U = 49.05 J, K = 147.15 J (v = 17.1552 m/s); h = 0 m: U = 0 J, K = 196.2 J (v = 19.8091 m/s).*
 
 ![K (kinetic energy) against v (speed) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-energy-curve)
 
@@ -758,7 +758,7 @@ $$
 
 <a id="gravitational_pe"></a>
 
-### Gravitational potential energy near the surface — `gravitational_pe`
+### Gravitational potential energy near the surface, `gravitational_pe`
 
 $$
 U = m g h
@@ -794,7 +794,7 @@ $$
 
 <a id="spring_force"></a>
 
-### Force of a linear spring — `spring_force`
+### Force of a linear spring: `spring_force`
 
 $$
 F = k x
@@ -829,7 +829,7 @@ $$
 
 <a id="spring_energy"></a>
 
-### Energy stored in a linear spring — `spring_energy`
+### Energy stored in a linear spring: `spring_energy`
 
 $$
 U = \frac{k x^{2}}{2}
@@ -868,7 +868,7 @@ $$
 
 <a id="power_energy"></a>
 
-### Average power — `power_energy`
+### Average power: `power_energy`
 
 $$
 P = \frac{E}{t}
@@ -907,7 +907,7 @@ $$
 
 <a id="power_force_speed"></a>
 
-### Power of a force on a moving body — `power_force_speed`
+### Power of a force on a moving body: `power_force_speed`
 
 $$
 P = F v
@@ -947,7 +947,7 @@ $$
 
 <a id="centripetal_acceleration"></a>
 
-### Centripetal acceleration — `centripetal_acceleration`
+### Centripetal acceleration: `centripetal_acceleration`
 
 $$
 a = \frac{v^{2}}{r}
@@ -986,7 +986,7 @@ $$
 
 <a id="centripetal_force"></a>
 
-### Centripetal force — `centripetal_force`
+### Centripetal force: `centripetal_force`
 
 $$
 F = \frac{m v^{2}}{r}
@@ -1026,7 +1026,7 @@ $$
 
 <a id="tangential_speed"></a>
 
-### Speed on a circle from angular speed — `tangential_speed`
+### Speed on a circle from angular speed: `tangential_speed`
 
 $$
 v = \omega r
@@ -1043,7 +1043,7 @@ $$
 
 ![A disc of radius 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-diagram)
 
-*A disc of radius 0.5 m turning at ω = 4 rad/s: the speed of a point grows in proportion to its distance from the axis (arrows to scale; the dashed line joins their tips). Marked: the tangential speed the package returns at r = 0.125, 0.25, 0.375 and 0.5 m — 0.5 m/s, 1 m/s, 1.5 m/s, 2 m/s.*
+*A disc of radius 0.5 m turning at ω = 4 rad/s: the speed of a point grows in proportion to its distance from the axis (arrows to scale; the dashed line joins their tips). Marked: the tangential speed the package returns at r = 0.125, 0.25, 0.375, 0.5 m, 0.5 m/s, 1 m/s, 1.5 m/s, 2 m/s.*
 
 ![v (speed) against omega (angular speed) from 2 rad/s to 6 rad/s](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-curve)
 
@@ -1065,7 +1065,7 @@ $$
 
 <a id="angular_frequency"></a>
 
-### Angular frequency and frequency — `angular_frequency`
+### Angular frequency and frequency: `angular_frequency`
 
 $$
 \omega = 2 \pi f
@@ -1080,7 +1080,7 @@ $$
 
 ![A point turning round a circle at f = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-frequency-diagram)
 
-*A point turning round a circle at f = 0.5 revolutions per second: in one second it sweeps the angle ω × 1 s (shaded), with ω = 2π f the angular frequency the package returns; dots every 0.25 s for one period T = 2 s (from its period formula). Marked: ω = 3.14159 rad/s.*
+*A point turning round a circle at f = 0.5 revolutions per second: in 1 s it sweeps the angle ω × 1 s (shaded), with ω = 2π f the angular frequency the package returns; dots every 0.25 s for one period T = 2 s (from its period formula). Marked: ω = 3.14159 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_frequency', f='0.5 Hz', target='omega')
@@ -1098,7 +1098,7 @@ $$
 
 <a id="period_frequency"></a>
 
-### Period and frequency — `period_frequency`
+### Period and frequency: `period_frequency`
 
 $$
 T = \frac{1}{f}
@@ -1132,7 +1132,7 @@ $$
 
 <a id="density"></a>
 
-### Mass density — `density`
+### Mass density: `density`
 
 $$
 \rho = \frac{m}{V}
@@ -1172,7 +1172,7 @@ $$
 
 <a id="pressure_force"></a>
 
-### Pressure of a force on an area — `pressure_force`
+### Pressure of a force on an area: `pressure_force`
 
 $$
 P = \frac{F}{A}
@@ -1211,7 +1211,7 @@ $$
 
 <a id="hydrostatic_pressure"></a>
 
-### Pressure of a column of fluid — `hydrostatic_pressure`
+### Pressure of a column of fluid: `hydrostatic_pressure`
 
 $$
 P = \rho g h
@@ -1227,9 +1227,9 @@ $$
 - **Assumes:** fluid at rest with uniform density; pressure measured relative to the surface
 - **Evidence:** hand-checked pack
 
-![Gauge pressure on the wall of a tank of water (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-diagram)
+![Gauge pressure on the wall of a tank of liquid (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-diagram)
 
-*Gauge pressure on the wall of a tank of water (ρ = 1000 kg/m³, g = 9.8 m/s²) at depths 0.5, 1, 1.5 and 2 m, arrows to scale: the pressure grows linearly with depth (dashed line). Marked: the pressure the package returns at each depth, 4900 Pa, 9800 Pa, 14700 Pa, 19600 Pa.*
+*Gauge pressure on the wall of a tank of liquid (ρ = 1000 kg/m³, g = 9.8 m/s²) at depths 0.5, 1, 1.5 and 2 m, arrows to scale: the pressure grows linearly with depth (dashed line). Marked: the pressure the package returns at each depth, 4900 Pa, 9800 Pa, 14700 Pa, 19600 Pa.*
 
 ![P (gauge pressure) against rho (fluid density) from 500 kg/m^3 to 1500 kg/m^3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-curve)
 
@@ -1251,7 +1251,7 @@ $$
 
 <a id="ohm"></a>
 
-### Voltage across an ohmic resistance — `ohm`
+### Voltage across an ohmic resistance: `ohm`
 
 $$
 V = I R
@@ -1290,7 +1290,7 @@ $$
 
 <a id="electric_power"></a>
 
-### Electric power — `electric_power`
+### Electric power: `electric_power`
 
 $$
 P = V I
@@ -1330,7 +1330,7 @@ $$
 
 <a id="charge_current"></a>
 
-### Charge carried by a steady current — `charge_current`
+### Charge carried by a steady current: `charge_current`
 
 $$
 Q = I t
@@ -1369,7 +1369,7 @@ $$
 
 <a id="wave_speed"></a>
 
-### Speed of a periodic wave — `wave_speed`
+### Speed of a periodic wave: `wave_speed`
 
 $$
 v = f \lambda
@@ -1408,7 +1408,7 @@ $$
 
 <a id="heat"></a>
 
-### Heat for a temperature change — `heat`
+### Heat for a temperature change: `heat`
 
 $$
 Q = m c \Delta T
@@ -1444,7 +1444,7 @@ $$
 
 <a id="max_height_vertical_throw"></a>
 
-### Maximum height of a vertical throw — `max_height_vertical_throw`
+### Maximum height of a vertical throw: `max_height_vertical_throw`
 
 $$
 h = \frac{v_0^{2}}{2 g}
@@ -1464,7 +1464,7 @@ $$
 
 ![Height against time of a body thrown straight up (g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/max-height-vertical-throw-graph)
 
-*Height against time of a body thrown straight up (g = 9.8 m/s², no air resistance) at three launch speeds: each point from the package's constant-acceleration displacement, the tops (dots) from its maximum-height and time-to-top formulas — doubling v₀ quadruples the height. Marked: v₀ = 7 m/s: top 2.5 m at 0.714286 s; v₀ = 14 m/s: top 10 m at 1.42857 s; v₀ = 21 m/s: top 22.5 m at 2.14286 s.*
+*Height against time of a body thrown straight up (g = 9.8 m/s², no air resistance) at three launch speeds: each point from the package's constant-acceleration displacement, the tops (dots) from its maximum-height and time-to-top formulas, doubling v₀ quadruples the height. Marked: v₀ = 7 m/s: top 2.5 m at 0.714286 s; v₀ = 14 m/s: top 10 m at 1.42857 s; v₀ = 21 m/s: top 22.5 m at 2.14286 s.*
 
 ![h (maximum height above the launch point) against g (gravitational acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/max-height-vertical-throw-curve)
 
@@ -1486,7 +1486,7 @@ $$
 
 <a id="time_to_top_vertical_throw"></a>
 
-### Time to the top of a vertical throw — `time_to_top_vertical_throw`
+### Time to the top of a vertical throw: `time_to_top_vertical_throw`
 
 $$
 t = \frac{v_0}{g}
@@ -1528,7 +1528,7 @@ $$
 
 <a id="normal_force_incline"></a>
 
-### Normal force on an incline — `normal_force_incline`
+### Normal force on an incline: `normal_force_incline`
 
 $$
 N = m g \cos\left(\theta\right)
@@ -1571,7 +1571,7 @@ $$
 
 <a id="weight_component_along_incline"></a>
 
-### Component of the weight along an incline — `weight_component_along_incline`
+### Component of the weight along an incline: `weight_component_along_incline`
 
 $$
 F = m g \sin\left(\theta\right)
@@ -1610,7 +1610,7 @@ $$
 
 <a id="acceleration_frictionless_incline"></a>
 
-### Acceleration down a frictionless incline — `acceleration_frictionless_incline`
+### Acceleration down a frictionless incline: `acceleration_frictionless_incline`
 
 $$
 a = g \sin\left(\theta\right)
@@ -1653,7 +1653,7 @@ $$
 
 <a id="spring_launch_speed"></a>
 
-### Speed of a body launched by a spring — `spring_launch_speed`
+### Speed of a body launched by a spring: `spring_launch_speed`
 
 $$
 \frac{k x^{2}}{2} = \frac{m v^{2}}{2}
@@ -1697,7 +1697,7 @@ $$
 
 <a id="net_work_kinetic_energy"></a>
 
-### Work-energy theorem — `net_work_kinetic_energy`
+### Work-energy theorem: `net_work_kinetic_energy`
 
 $$
 W = \frac{m \left(v^{2} - v_0^{2}\right)}{2}
@@ -1735,7 +1735,7 @@ $$
 
 <a id="tension_hanging_at_rest"></a>
 
-### Tension in a rope holding a hanging body — `tension_hanging_at_rest`
+### Tension in a rope holding a hanging body: `tension_hanging_at_rest`
 
 $$
 T = m g
@@ -1778,7 +1778,7 @@ $$
 
 <a id="average_force_from_momentum_change"></a>
 
-### Average net force from a change of momentum — `average_force_from_momentum_change`
+### Average net force from a change of momentum, `average_force_from_momentum_change`
 
 $$
 F = \frac{p_2 - p_1}{t}
@@ -1816,7 +1816,7 @@ $$
 
 <a id="speed_after_fall_from_rest"></a>
 
-### Speed after falling from rest — `speed_after_fall_from_rest`
+### Speed after falling from rest: `speed_after_fall_from_rest`
 
 $$
 v = \sqrt{2 g h}
@@ -1858,7 +1858,7 @@ $$
 
 <a id="electric_force_in_field"></a>
 
-### Force on a charge in an electric field — `electric_force_in_field`
+### Force on a charge in an electric field: `electric_force_in_field`
 
 $$
 F = q E_{f}
@@ -1878,7 +1878,7 @@ $$
 
 ![A charge q = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-diagram)
 
-*A charge q = 2.0000e-06 C in a uniform field E = 30000 N/C between two plates: it is pushed along the field lines. Marked: the force the package returns, F = qE = 0.06 N; a negative charge would be pushed the other way.*
+*A charge q = 2.0000e-06 C in a uniform field E = 30000 N/C between two plates: it is pushed along the field lines (a negative charge would be pushed the other way). Marked: the force the package returns, F = qE = 0.06 N.*
 
 ![F (magnitude of the electric force) against q (magnitude of the charge) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-curve)
 
@@ -1905,7 +1905,7 @@ $$
 
 <a id="point_charge_field"></a>
 
-### Electric field of a point charge — `point_charge_field`
+### Electric field of a point charge: `point_charge_field`
 
 $$
 E_{f} = \frac{k_{e} Q}{r^{2}}
@@ -1926,7 +1926,7 @@ $$
 
 ![Electric field lines of a point charge Q = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-diagram)
 
-*Electric field lines of a point charge Q = 2.0000e-06 C (pointing away from a positive charge), with the field strength the package returns at three distances — doubling the distance quarters the field (inverse square). Marked: 798893 N/C at 0.15 m; 199723 N/C at 0.3 m; 49930.8 N/C at 0.6 m.*
+*Electric field lines of a point charge Q = 2.0000e-06 C (pointing away from a positive charge), with the field strength the package returns at three distances, doubling the distance quarters the field (inverse square). Marked: 798893 N/C at 0.15 m; 199723 N/C at 0.3 m; 49930.8 N/C at 0.6 m.*
 
 ![Ef (field strength at distance r) against r (distance from the charge) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-curve)
 
@@ -1953,7 +1953,7 @@ $$
 
 <a id="point_charge_potential"></a>
 
-### Electric potential of a point charge — `point_charge_potential`
+### Electric potential of a point charge: `point_charge_potential`
 
 $$
 V = \frac{k_{e} Q}{r}
@@ -1997,7 +1997,7 @@ $$
 
 <a id="uniform_field_potential"></a>
 
-### Potential difference in a uniform field — `uniform_field_potential`
+### Potential difference in a uniform field: `uniform_field_potential`
 
 $$
 V = E_{f} d
@@ -2044,7 +2044,7 @@ $$
 
 <a id="capacitance_definition"></a>
 
-### Charge on a capacitor — `capacitance_definition`
+### Charge on a capacitor: `capacitance_definition`
 
 $$
 Q = C V
@@ -2087,7 +2087,7 @@ $$
 
 <a id="capacitor_energy"></a>
 
-### Energy stored in a capacitor — `capacitor_energy`
+### Energy stored in a capacitor: `capacitor_energy`
 
 $$
 \text{Ecap} = \frac{C V^{2}}{2}
@@ -2134,7 +2134,7 @@ $$
 
 <a id="parallel_plate_capacitor"></a>
 
-### Capacitance of parallel plates — `parallel_plate_capacitor`
+### Capacitance of parallel plates: `parallel_plate_capacitor`
 
 $$
 C = \frac{\varepsilon_{0} A}{d}
@@ -2178,7 +2178,7 @@ $$
 
 <a id="ohm_power_current"></a>
 
-### Power from current and resistance — `ohm_power_current`
+### Power from current and resistance: `ohm_power_current`
 
 $$
 P = I^{2} R
@@ -2226,7 +2226,7 @@ $$
 
 <a id="ohm_power_voltage"></a>
 
-### Power from voltage and resistance — `ohm_power_voltage`
+### Power from voltage and resistance: `ohm_power_voltage`
 
 $$
 P = \frac{V^{2}}{R}
@@ -2274,7 +2274,7 @@ $$
 
 <a id="resistivity"></a>
 
-### Resistance of a uniform wire — `resistivity`
+### Resistance of a uniform wire: `resistivity`
 
 $$
 R = \frac{\rho_{e} L}{A}
@@ -2318,7 +2318,7 @@ $$
 
 <a id="magnetic_force_charge"></a>
 
-### Magnetic force on a moving charge — `magnetic_force_charge`
+### Magnetic force on a moving charge: `magnetic_force_charge`
 
 $$
 F = q v B \sin\left(\theta\right)
@@ -2338,9 +2338,9 @@ $$
 - **Assumes:** a uniform magnetic field; no electric field
 - **Evidence:** fundamental_law
 
-![A positive charge q = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-diagram)
+![A charge q = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-diagram)
 
-*A positive charge q = 1.6000e-19 C moving at v = 2e+06 m/s through a uniform magnetic field B = 0.5 T pointing into the page (×), at 90° to the velocity: the force is perpendicular to both (F = q v × B). Marked: the force the package returns, F = q v B sin θ = 1.6000e-13 N.*
+*A charge q = 1.6000e-19 C moving at v = 2e+06 m/s through a uniform magnetic field B = 0.5 T pointing into the page (×), at 90° to the velocity: the force is perpendicular to both (F = q v × B). Marked: the force the package returns, F = q v B sin θ = 1.6000e-13 N.*
 
 ![F (magnitude of the magnetic force) against q (Charge) from 8](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-curve)
 
@@ -2367,7 +2367,7 @@ $$
 
 <a id="magnetic_force_wire"></a>
 
-### Magnetic force on a current-carrying wire — `magnetic_force_wire`
+### Magnetic force on a current-carrying wire: `magnetic_force_wire`
 
 $$
 F = I L B \sin\left(\theta\right)
@@ -2416,7 +2416,7 @@ $$
 
 <a id="long_wire_field"></a>
 
-### Magnetic field of a long straight wire — `long_wire_field`
+### Magnetic field of a long straight wire: `long_wire_field`
 
 $$
 B = \frac{\mu_{0} I}{2 \pi r}
@@ -2438,7 +2438,7 @@ $$
 
 ![Magnetic field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-diagram)
 
-*Magnetic field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule). Marked: the field strength the package returns at 2, 5 and 10 cm — 0.0001 T, 4.0000e-05 T, 2.0000e-05 T — falling as 1/r.*
+*Magnetic field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule). Marked: the field strength the package returns at 2, 5 and 10 cm (0.0001 T, 4.0000e-05 T, 2.0000e-05 T), falling as 1/r.*
 
 ![B (Magnetic field) against r (distance from the wire) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-curve)
 
@@ -2465,7 +2465,7 @@ $$
 
 <a id="solenoid_field"></a>
 
-### Magnetic field inside a long solenoid — `solenoid_field`
+### Magnetic field inside a long solenoid: `solenoid_field`
 
 $$
 B = \mu_{0} n_{t} I
@@ -2513,7 +2513,7 @@ $$
 
 <a id="surface_gravity"></a>
 
-### Gravitational acceleration at a distance from a mass — `surface_gravity`
+### Gravitational acceleration at a distance from a mass, `surface_gravity`
 
 $$
 g = \frac{G M}{r^{2}}
@@ -2532,9 +2532,9 @@ $$
 - **Assumes:** a spherically symmetric body; outside the body
 - **Evidence:** fundamental_law
 
-![Surface gravity of four bodies from their mass and radius (stated: Moon 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-bars)
+![Surface gravity of 4 bodies from their mass and radius (stated: Moon 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-bars)
 
-*Surface gravity of four bodies from their mass and radius (stated: Moon 7.3500e+22 kg, 1.737e+06 m; Mars 6.4200e+23 kg, 3.39e+06 m; Earth 5.9700e+24 kg, 6.37e+06 m; Jupiter 1.8980e+27 kg, 6.9900e+07 m; Earth is the worked example), each from the package. Marked: Moon 1.6259 m/s², Mars 3.72856 m/s², Earth 9.81977 m/s², Jupiter 25.9267 m/s².*
+*Surface gravity of 4 bodies from their mass and radius (stated: Moon 7.3500e+22 kg, 1.737e+06 m; Mars 6.4200e+23 kg, 3.39e+06 m; Earth 5.9700e+24 kg, 6.37e+06 m; Jupiter 1.8980e+27 kg, 6.9900e+07 m; Earth is the worked example), each from the package. Marked: Moon 1.6259 m/s², Mars 3.72856 m/s², Earth 9.81977 m/s², Jupiter 25.9267 m/s².*
 
 ![g (gravitational acceleration) against r (distance from the centre) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-curve)
 
@@ -2561,7 +2561,7 @@ $$
 
 <a id="orbital_speed"></a>
 
-### Speed in a circular orbit — `orbital_speed`
+### Speed in a circular orbit: `orbital_speed`
 
 $$
 v = \sqrt{\frac{G M}{r}}
@@ -2580,9 +2580,9 @@ $$
 - **Assumes:** a circular orbit; the orbiting body much lighter than the central one
 - **Evidence:** fundamental_law
 
-![Circular orbits round the Earth (M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-orbit)
+![Circular orbits round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-orbit)
 
-*Circular orbits round the Earth (M = 5.9720e+24 kg, radius 6.371e+06 m) drawn to scale at orbital radii 6,770 km (the worked example, low orbit), 26,560 km and 42,200 km, with velocity arrows to scale: the farther out, the slower. Marked: the orbital speeds the package returns, 7673.06 m/s, 3873.9 m/s, 3073.31 m/s.*
+*Circular orbits round a body of mass M = 5.9700e+24 kg (the Earth, radius 6.371e+06 m) drawn to scale at orbital radii 6770 km, 26560 km, 42200 km (the first is the worked example), with velocity arrows to scale: the farther out, the slower. Marked: the orbital speeds the package returns, 7671.77 m/s, 3873.25 m/s, 3072.8 m/s.*
 
 ![v (orbital speed) against r (orbital radius) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-curve)
 
@@ -2609,7 +2609,7 @@ $$
 
 <a id="orbital_period"></a>
 
-### Period of a circular orbit — `orbital_period`
+### Period of a circular orbit: `orbital_period`
 
 $$
 T = 2 \pi \sqrt{\frac{r^{3}}{G M}}
@@ -2628,9 +2628,9 @@ $$
 - **Assumes:** a circular orbit; the orbiting body much lighter than the central one
 - **Evidence:** fundamental_law
 
-![Period of a circular orbit round the Earth (M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-period-graph)
+![Period of a circular orbit round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-period-graph)
 
-*Period of a circular orbit round the Earth (M = 5.9720e+24 kg) against its radius, 40 radii from 6,600 to 45,000 km from the package (T ∝ r^(3/2); hours = seconds / 3600). Marked: low orbit 5543.7 s, navigation 43078.4 s, geostationary 86275.2 s — the geostationary orbit takes one day.*
+*Period of a circular orbit round a body of mass M = 5.9700e+24 kg against its radius, 40 radii from 6600 to 63300 km from the package (T ∝ r^(3/2); hours = seconds / 3600). Marked: low orbit 5544.63 s; navigation 43085.6 s; geostationary 86289.6 s; the given orbit 86289.6 s at r = 4.2200e+07 m.*
 
 ```python
 classical_physics_ai999x.solve('orbital_period', r='4.22e+07 m', M='5.97e+24 kg', target='T')
@@ -2653,7 +2653,7 @@ $$
 
 <a id="ideal_gas_moles"></a>
 
-### Ideal gas law — `ideal_gas_moles`
+### Ideal gas law: `ideal_gas_moles`
 
 $$
 P V = n R T
@@ -2698,7 +2698,7 @@ $$
 
 <a id="latent_heat_fusion"></a>
 
-### Heat to melt or freeze — `latent_heat_fusion`
+### Heat to melt or freeze: `latent_heat_fusion`
 
 $$
 Q = m L_{f}
@@ -2717,9 +2717,9 @@ $$
 - **Assumes:** at the melting point; no temperature change during the phase change
 - **Evidence:** fundamental_law
 
-![Heating curve of 1 kg of water from ice at −20 °C to steam at 120 °C at atmospheric pressure (stated: c_ice = 2100, c_water = 4186, c_steam = 2010 J/(kg·K), L_f = 334000 J/kg, L_v = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-graph)
+![Heating curve of 2 kg of water from ice at −20 °C to steam at 120 °C at atmospheric pressure (stated: c_ice = 2100, c_water = 4186, c_steam = 2010 J/(kg·K), L_f = 334000 J/kg, L_v = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-graph)
 
-*Heating curve of 1 kg of water from ice at −20 °C to steam at 120 °C at atmospheric pressure (stated: c_ice = 2100, c_water = 4186, c_steam = 2010 J/(kg·K), L_f = 334000 J/kg, L_v = 2.26e+06 J/kg): each stage's heat from the package (heat = m c ΔT; latent heats m L), accumulated; the temperature stays put while the phase changes. Marked: melting needs 334000 J, boiling 2.26e+06 J.*
+*Heating curve of 2 kg of water from ice at −20 °C to steam at 120 °C at atmospheric pressure (stated: c_ice = 2100, c_water = 4186, c_steam = 2010 J/(kg·K), L_f = 334000 J/kg, L_v = 2.26e+06 J/kg): each stage's heat from the package (heat = m c ΔT; latent heats m L), accumulated; the temperature stays put while the phase changes. Marked: melting needs 668000 J, boiling 4.52e+06 J.*
 
 ![Q (heat absorbed or released) against m (Mass) from 1 kg to 3 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-curve)
 
@@ -2746,7 +2746,7 @@ $$
 
 <a id="latent_heat_vaporization"></a>
 
-### Heat to boil or condense — `latent_heat_vaporization`
+### Heat to boil or condense: `latent_heat_vaporization`
 
 $$
 Q = m L_{v}
@@ -2794,7 +2794,7 @@ $$
 
 <a id="linear_expansion"></a>
 
-### Linear thermal expansion — `linear_expansion`
+### Linear thermal expansion: `linear_expansion`
 
 $$
 d_{L} = \alpha_{t} L d_{T}
@@ -2838,7 +2838,7 @@ $$
 
 <a id="thin_lens"></a>
 
-### Thin lens equation — `thin_lens`
+### Thin lens equation: `thin_lens`
 
 $$
 \frac{1}{d_{o}} + \frac{1}{d_{i}} = \frac{1}{f}
@@ -2889,7 +2889,7 @@ $$
 
 <a id="photon_energy"></a>
 
-### Energy of a photon — `photon_energy`
+### Energy of a photon: `photon_energy`
 
 $$
 E = h f
@@ -2932,7 +2932,7 @@ $$
 
 <a id="photon_energy_wavelength"></a>
 
-### Photon energy from wavelength — `photon_energy_wavelength`
+### Photon energy from wavelength: `photon_energy_wavelength`
 
 $$
 E = \frac{h c}{\lambda}
@@ -2976,7 +2976,7 @@ $$
 
 <a id="photon_momentum"></a>
 
-### Momentum of a photon — `photon_momentum`
+### Momentum of a photon: `photon_momentum`
 
 $$
 p = \frac{h}{\lambda}
@@ -3019,7 +3019,7 @@ $$
 
 <a id="de_broglie"></a>
 
-### De Broglie wavelength — `de_broglie`
+### De Broglie wavelength: `de_broglie`
 
 $$
 \lambda = \frac{h}{p}
@@ -3063,7 +3063,7 @@ $$
 
 <a id="rest_energy"></a>
 
-### Rest energy — `rest_energy`
+### Rest energy: `rest_energy`
 
 $$
 E_{0} = m c^{2}
@@ -3106,7 +3106,7 @@ $$
 
 <a id="pendulum_period"></a>
 
-### Period of a simple pendulum — `pendulum_period`
+### Period of a simple pendulum: `pendulum_period`
 
 $$
 T = 2 \pi \sqrt{\frac{L_{p}}{g}}
@@ -3153,7 +3153,7 @@ $$
 
 <a id="spring_oscillation_period"></a>
 
-### Period of a mass on a spring — `spring_oscillation_period`
+### Period of a mass on a spring: `spring_oscillation_period`
 
 $$
 T = 2 \pi \sqrt{\frac{m}{k}}
@@ -3200,7 +3200,7 @@ $$
 
 <a id="torque_lever"></a>
 
-### Torque of a force — `torque_lever`
+### Torque of a force: `torque_lever`
 
 $$
 \tau = r F \sin\left(\theta\right)
@@ -3221,7 +3221,7 @@ $$
 
 ![A force F = 50 N applied at r = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-diagram)
 
-*A force F = 50 N applied at r = 0.3 m from a pivot at θ = 60° to the lever: only its component perpendicular to the lever, F sin θ, turns it. Marked: the torque the package returns, τ = 12.9904 N·m (at 90° it would be 15 N·m, also returned).*
+*A force F = 50 N applied at r = 0.3 m from a pivot at θ = 90° to the lever: only its component perpendicular to the lever, F sin θ, turns it. Marked: the torque the package returns, τ = 15 N·m (at 90° it would be 15 N·m, also returned).*
 
 ![tau (torque about the pivot) against r (distance from the pivot to the point of application) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-curve)
 
@@ -3248,7 +3248,7 @@ $$
 
 <a id="rotational_kinetic_energy"></a>
 
-### Rotational kinetic energy — `rotational_kinetic_energy`
+### Rotational kinetic energy: `rotational_kinetic_energy`
 
 $$
 K_{R} = \frac{I_{r} \omega^{2}}{2}
@@ -3295,7 +3295,7 @@ $$
 
 <a id="angular_momentum"></a>
 
-### Angular momentum of a rotating body — `angular_momentum`
+### Angular momentum of a rotating body: `angular_momentum`
 
 $$
 L = I_{r} \omega
@@ -3342,7 +3342,7 @@ $$
 
 <a id="tangential_acceleration"></a>
 
-### Tangential acceleration of a point on a rotating body — `tangential_acceleration`
+### Tangential acceleration of a point on a rotating body, `tangential_acceleration`
 
 $$
 a = r \alpha
@@ -3389,7 +3389,7 @@ $$
 
 <a id="centripetal_acceleration_omega"></a>
 
-### Centripetal acceleration from angular velocity — `centripetal_acceleration_omega`
+### Centripetal acceleration from angular velocity, `centripetal_acceleration_omega`
 
 $$
 a = r \omega^{2}
@@ -3436,7 +3436,7 @@ $$
 
 <a id="angular_momentum_point_mass"></a>
 
-### Angular momentum of a point mass on a circle — `angular_momentum_point_mass`
+### Angular momentum of a point mass on a circle, `angular_momentum_point_mass`
 
 $$
 L = m v r
@@ -3484,7 +3484,7 @@ $$
 
 <a id="absolute_pressure_depth"></a>
 
-### Absolute pressure at a depth in a fluid — `absolute_pressure_depth`
+### Absolute pressure at a depth in a fluid: `absolute_pressure_depth`
 
 $$
 P = P_{0} + \rho g h
@@ -3504,9 +3504,9 @@ $$
 - **Assumes:** an incompressible fluid at rest; uniform gravity
 - **Evidence:** fundamental_law
 
-![Absolute pressure under water (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-graph)
+![Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-graph)
 
-*Absolute pressure under water (ρ = 1000 kg/m³, g = 9.8 m/s²) with P₀ = 101325 Pa at the surface, 31 depths from the package (shown in kPa): the atmosphere's share is constant, the water column adds about one atmosphere every 10 m. Marked: 199325 Pa at 10 m.*
+*Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9.8 m/s²) with P₀ = 101325 Pa at the surface, 31 depths from the package (shown in kPa): the surface pressure's share is constant, the liquid column adds ρ g h. Marked: 199325 Pa at 10 m.*
 
 ```python
 classical_physics_ai999x.solve('absolute_pressure_depth', P0='101325 Pa', rho='1000 kg/m^3', h='10 m', g='9.8 m/s^2', target='P')
@@ -3529,7 +3529,7 @@ $$
 
 <a id="flow_rate_volume_time"></a>
 
-### Flow rate as volume per time — `flow_rate_volume_time`
+### Flow rate as volume per time: `flow_rate_volume_time`
 
 $$
 Q = \frac{V}{t}
@@ -3576,7 +3576,7 @@ $$
 
 <a id="flow_rate_area_speed"></a>
 
-### Flow rate through a cross section — `flow_rate_area_speed`
+### Flow rate through a cross section: `flow_rate_area_speed`
 
 $$
 Q = A v
@@ -3623,7 +3623,7 @@ $$
 
 <a id="volume_expansion"></a>
 
-### Thermal expansion of volume — `volume_expansion`
+### Thermal expansion of volume: `volume_expansion`
 
 $$
 d_{V} = \beta V_{0} d_{T}
@@ -3667,7 +3667,7 @@ $$
 
 <a id="engine_efficiency"></a>
 
-### Efficiency of a heat engine — `engine_efficiency`
+### Efficiency of a heat engine: `engine_efficiency`
 
 $$
 \text{eff} = \frac{W}{Q_{h}}
@@ -3714,7 +3714,7 @@ $$
 
 <a id="carnot_efficiency"></a>
 
-### Carnot (maximum) efficiency — `carnot_efficiency`
+### Carnot (maximum) efficiency: `carnot_efficiency`
 
 $$
 \text{eff} = 1 - \frac{T_{c}}{T_{h}}
@@ -3761,7 +3761,7 @@ $$
 
 <a id="shm_max_speed"></a>
 
-### Maximum speed of a mass on a spring — `shm_max_speed`
+### Maximum speed of a mass on a spring: `shm_max_speed`
 
 $$
 v = X \sqrt{\frac{k}{m}}
@@ -3805,7 +3805,7 @@ $$
 
 <a id="intensity_power_area"></a>
 
-### Intensity as power per area — `intensity_power_area`
+### Intensity as power per area: `intensity_power_area`
 
 $$
 I = \frac{P}{A}
@@ -3852,7 +3852,7 @@ $$
 
 <a id="wavelength_in_medium"></a>
 
-### Wavelength of light in a medium — `wavelength_in_medium`
+### Wavelength of light in a medium: `wavelength_in_medium`
 
 $$
 \lambda_{n} = \frac{\lambda}{n}
@@ -3899,7 +3899,7 @@ $$
 
 <a id="index_of_refraction"></a>
 
-### Index of refraction — `index_of_refraction`
+### Index of refraction: `index_of_refraction`
 
 $$
 n = \frac{c}{v}
@@ -3917,9 +3917,9 @@ $$
 - **Assumes:** light in a transparent medium
 - **Evidence:** definition
 
-![Refractive index n = c/v of three transparent media from the speed of light in each (stated: water 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/index-of-refraction-bars)
+![Refractive index n = c/v of transparent media from the speed of light in each (stated: water 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/index-of-refraction-bars)
 
-*Refractive index n = c/v of three transparent media from the speed of light in each (stated: water 2.2500e+08 m/s, glass 2.0000e+08 m/s, diamond 1.2400e+08 m/s; glass is the worked example), each from the package. Marked: water 1.33241, glass 1.49896, diamond 2.41768.*
+*Refractive index n = c/v of transparent media from the speed of light in each (stated: water 2.2500e+08 m/s, glass 2.0000e+08 m/s, diamond 1.2400e+08 m/s; glass is the worked example), each from the package. Marked: water 1.33241, glass 1.49896, diamond 2.41768.*
 
 ```python
 classical_physics_ai999x.solve('index_of_refraction', v='2e+08 m/s', target='n')
@@ -3942,7 +3942,7 @@ $$
 
 <a id="mirror_focal_length"></a>
 
-### Focal length of a spherical mirror — `mirror_focal_length`
+### Focal length of a spherical mirror: `mirror_focal_length`
 
 $$
 f = \frac{R}{2}
@@ -3984,7 +3984,7 @@ $$
 
 <a id="rms_voltage"></a>
 
-### Rms voltage of a sinusoidal supply — `rms_voltage`
+### Rms voltage of a sinusoidal supply: `rms_voltage`
 
 $$
 V_{\text{rms}} = \frac{V_{0}}{\sqrt{2}}
@@ -4026,7 +4026,7 @@ $$
 
 <a id="rms_current"></a>
 
-### Rms current of a sinusoidal supply — `rms_current`
+### Rms current of a sinusoidal supply: `rms_current`
 
 $$
 I_{\text{rms}} = \frac{I_{0}}{\sqrt{2}}
@@ -4068,7 +4068,7 @@ $$
 
 <a id="loop_center_field"></a>
 
-### Magnetic field at the centre of a circular loop — `loop_center_field`
+### Magnetic field at the centre of a circular loop, `loop_center_field`
 
 $$
 B = \frac{\mu_{0} I}{2 r}
@@ -4089,7 +4089,7 @@ $$
 
 ![Circular loops of radius 5, 10 and 20 cm each carrying I = 5 A anticlockwise: the field at the centre points out of the page (⊙)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-diagram)
 
-*Circular loops of radius 5, 10 and 20 cm each carrying I = 5 A anticlockwise: the field at the centre points out of the page (⊙). Marked: the field strength at the centre the package returns, 6.2832e-05 T for r = 0.05 m, 3.1416e-05 T for r = 0.1 m, 1.5708e-05 T for r = 0.2 m — halving the radius doubles it.*
+*Circular loops of radius 5, 10 and 20 cm each carrying I = 5 A anticlockwise: the field at the centre points out of the page (⊙). Marked: the field strength at the centre the package returns, 6.2832e-05 T for r = 0.05 m, 3.1416e-05 T for r = 0.1 m, 1.5708e-05 T for r = 0.2 m, halving the radius doubles it.*
 
 ![B (field at the centre) against r (radius of the loop) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-curve)
 
@@ -4116,7 +4116,7 @@ $$
 
 <a id="rl_time_constant"></a>
 
-### Time constant of an RL circuit — `rl_time_constant`
+### Time constant of an RL circuit: `rl_time_constant`
 
 $$
 \tau = \frac{L}{R}
@@ -4163,7 +4163,7 @@ $$
 
 <a id="inductive_reactance"></a>
 
-### Reactance of an inductor — `inductive_reactance`
+### Reactance of an inductor: `inductive_reactance`
 
 $$
 X = 2 \pi f L
@@ -4211,7 +4211,7 @@ $$
 
 <a id="capacitive_reactance"></a>
 
-### Reactance of a capacitor — `capacitive_reactance`
+### Reactance of a capacitor: `capacitive_reactance`
 
 $$
 X = \frac{1}{2 \pi f C}
@@ -4259,7 +4259,7 @@ $$
 
 <a id="lc_resonance"></a>
 
-### Resonant frequency of an LC circuit — `lc_resonance`
+### Resonant frequency of an LC circuit: `lc_resonance`
 
 $$
 f = \frac{1}{2 \pi \sqrt{L C}}
@@ -4306,7 +4306,7 @@ $$
 
 <a id="angular_velocity_time"></a>
 
-### Angular velocity under constant angular acceleration — `angular_velocity_time`
+### Angular velocity under constant angular acceleration, `angular_velocity_time`
 
 $$
 \omega = \omega_{0} + \alpha t
@@ -4350,7 +4350,7 @@ $$
 
 <a id="angular_velocity_angle"></a>
 
-### Angular velocity and angle turned under constant angular acceleration — `angular_velocity_angle`
+### Angular velocity and angle turned under constant angular acceleration, `angular_velocity_angle`
 
 $$
 \omega^{2} = \omega_{0}^{2} + 2 \alpha \theta
@@ -4394,7 +4394,7 @@ $$
 
 <a id="engine_energy_balance"></a>
 
-### Energy balance of a cyclic heat engine — `engine_energy_balance`
+### Energy balance of a cyclic heat engine: `engine_energy_balance`
 
 $$
 W = Q_{h} - Q_{c}
@@ -4441,7 +4441,7 @@ $$
 
 <a id="cop_refrigerator"></a>
 
-### Coefficient of performance of a refrigerator — `cop_refrigerator`
+### Coefficient of performance of a refrigerator, `cop_refrigerator`
 
 $$
 \text{cop} = \frac{Q_{c}}{W}
@@ -4489,7 +4489,7 @@ $$
 
 <a id="cop_heat_pump"></a>
 
-### Coefficient of performance of a heat pump — `cop_heat_pump`
+### Coefficient of performance of a heat pump: `cop_heat_pump`
 
 $$
 \text{cop} = \frac{Q_{h}}{W}
@@ -4537,7 +4537,7 @@ $$
 
 <a id="cyclotron_radius"></a>
 
-### Radius of a charged particle's circle in a magnetic field — `cyclotron_radius`
+### Radius of a charged particle's circle in a magnetic field, `cyclotron_radius`
 
 $$
 r = \frac{m v}{q B \sin\left(\theta\right)}
@@ -4558,9 +4558,9 @@ $$
 - **Assumes:** a uniform field; non-relativistic speed; the path is the circle traced by the perpendicular velocity component
 - **Evidence:** derived
 
-![Circular paths of a proton (m = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-drawing)
+![Circular paths of a charged particle (m = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-drawing)
 
-*Circular paths of a proton (m = 1.6700e-27 kg, q = 1.6000e-19 C) launched upwards from the same point at 500000, 1e+06 (the worked example) and 2e+06 m/s across a uniform field B = 0.5 T out of the page (·), drawn to scale: the radius grows in proportion to the speed. Marked: the radii the package returns, 0.0104375 m, 0.020875 m, 0.04175 m.*
+*Circular paths of a charged particle (m = 1.6700e-27 kg, q = 1.6000e-19 C) launched upwards from the same point at 500000, 1e+06 (the worked example) and 2e+06 m/s across a uniform field B = 0.5 T out of the page (·), drawn to scale: the radius grows in proportion to the speed. Marked: the radii the package returns, 0.0104375 m, 0.020875 m, 0.04175 m.*
 
 ![r (radius of the circular path) against theta (angle between the velocity and the field) from 0 deg to 90 deg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-curve)
 
@@ -4587,7 +4587,7 @@ $$
 
 <a id="rc_time_constant"></a>
 
-### Time constant of an RC circuit — `rc_time_constant`
+### Time constant of an RC circuit: `rc_time_constant`
 
 $$
 \tau = R C
@@ -4635,7 +4635,7 @@ $$
 
 <a id="rc_discharging"></a>
 
-### Voltage of a discharging capacitor — `rc_discharging`
+### Voltage of a discharging capacitor: `rc_discharging`
 
 $$
 V = V_{0} e^{\frac{-t}{R C}}
@@ -4658,7 +4658,7 @@ $$
 
 ![A capacitor C = 8](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-discharging-schematic)
 
-*A capacitor C = 8.0000e-06 F charged to V₀ = 12 V discharging through R = 1000 Ω (sketch above), and its voltage against time, 40 times from the package (time shown in ms); time constant τ = RC = 0.008 s from its formula. Marked: 1τ: 4.41455 V, 2τ: 1.62402 V, 3τ: 0.597445 V — about 37 % is left after each τ.*
+*A capacitor C = 8.0000e-06 F charged to V₀ = 12 V discharging through R = 1000 Ω (sketch above), and its voltage against time, 40 times from the package (time shown in ms); time constant τ = RC = 0.008 s from its formula. Marked: 1τ: 4.41455 V, 2τ: 1.62402 V, 3τ: 0.597445 V, at t = 0.008 s: 4.41455 V, about 37 % is left after each τ.*
 
 ```python
 classical_physics_ai999x.solve('rc_discharging', V0='12 V', t='0.008 s', R='1000 ohm', C='8e-06 F', target='V')
@@ -4681,7 +4681,7 @@ $$
 
 <a id="rc_charging"></a>
 
-### Voltage of a charging capacitor — `rc_charging`
+### Voltage of a charging capacitor: `rc_charging`
 
 $$
 V = \text{emf} \left(1 - e^{\frac{-t}{R C}}\right)
@@ -4731,7 +4731,7 @@ $$
 
 <a id="area_expansion"></a>
 
-### Thermal expansion of an area — `area_expansion`
+### Thermal expansion of an area: `area_expansion`
 
 $$
 d_{A} = 2 \alpha_{t} A d_{T}
@@ -4775,7 +4775,7 @@ $$
 
 <a id="motional_emf"></a>
 
-### Emf of a rod moving through a magnetic field — `motional_emf`
+### Emf of a rod moving through a magnetic field, `motional_emf`
 
 $$
 \text{emf} = B l v
@@ -4823,7 +4823,7 @@ $$
 
 <a id="rl_current_decay"></a>
 
-### Current dying away in an RL circuit — `rl_current_decay`
+### Current dying away in an RL circuit: `rl_current_decay`
 
 $$
 I = I_{0} e^{\frac{-t}{\tau}}
@@ -4867,7 +4867,7 @@ $$
 
 <a id="damped_angular_frequency"></a>
 
-### Angular frequency of a damped oscillator — `damped_angular_frequency`
+### Angular frequency of a damped oscillator: `damped_angular_frequency`
 
 $$
 \omega_{d} = \sqrt{\frac{k}{m} - \frac{b^{2}}{4 m^{2}}}
@@ -4915,7 +4915,7 @@ $$
 
 <a id="damping_ratio"></a>
 
-### Damping ratio — `damping_ratio`
+### Damping ratio: `damping_ratio`
 
 $$
 \zeta = \frac{b}{2 \sqrt{k m}}
@@ -4959,7 +4959,7 @@ $$
 
 <a id="quality_factor"></a>
 
-### Quality factor of a damped oscillator — `quality_factor`
+### Quality factor of a damped oscillator: `quality_factor`
 
 $$
 Q_{f} = \frac{\sqrt{k m}}{b}
@@ -5003,7 +5003,7 @@ $$
 
 <a id="driven_amplitude"></a>
 
-### Steady-state amplitude of a driven damped oscillator — `driven_amplitude`
+### Steady-state amplitude of a driven damped oscillator, `driven_amplitude`
 
 $$
 A = \frac{F_{0}}{\sqrt{\left(k - m \omega^{2}\right)^{2} + \left(b \omega\right)^{2}}}
@@ -5024,9 +5024,9 @@ $$
 - **Assumes:** sinusoidal driving force; linear viscous damping; steady state (transients have died out)
 - **Evidence:** theorem
 
-![Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes — b = 0](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/driven-amplitude-curve.svg)
+![Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes, b = 0](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/driven-amplitude-curve.svg)
 
-*Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes — b = 0.25: ω_r = 1.99217 rad/s, A = 2.00392 m; b = 0.5: ω_r = 1.9685 rad/s, A = 1.00791 m; b = 1: ω_r = 1.87083 rad/s, A = 0.516398 m; b = 2: ω_r = 1.41421 rad/s, A = 0.288675 m.*
+*Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes, b = 0.25: ω_r = 1.99217 rad/s, A = 2.00392 m; b = 0.5: ω_r = 1.9685 rad/s, A = 1.00791 m; b = 1: ω_r = 1.87083 rad/s, A = 0.516398 m; b = 2: ω_r = 1.41421 rad/s, A = 0.288675 m.*
 
 ![A (steady-state amplitude) against m (oscillating mass) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/driven-amplitude-curve-2)
 
@@ -5053,7 +5053,7 @@ $$
 
 <a id="amplitude_resonance_frequency"></a>
 
-### Amplitude-resonance frequency of a driven damped oscillator — `amplitude_resonance_frequency`
+### Amplitude-resonance frequency of a driven damped oscillator, `amplitude_resonance_frequency`
 
 $$
 \omega_{r} = \sqrt{\frac{k}{m} - \frac{b^{2}}{2 m^{2}}}
@@ -5097,7 +5097,7 @@ $$
 
 <a id="coupled_fast_mode"></a>
 
-### Higher normal-mode frequency of two coupled oscillators — `coupled_fast_mode`
+### Higher normal-mode frequency of two coupled oscillators, `coupled_fast_mode`
 
 $$
 \omega_{2} = \sqrt{\frac{k + 2 k_{c}}{m}}
@@ -5141,7 +5141,7 @@ $$
 
 <a id="physical_pendulum_period"></a>
 
-### Period of a physical pendulum — `physical_pendulum_period`
+### Period of a physical pendulum: `physical_pendulum_period`
 
 $$
 T = 2 \pi \sqrt{\frac{I_{r}}{m g d}}
@@ -5186,7 +5186,7 @@ $$
 
 <a id="double_pendulum_slow_mode"></a>
 
-### Lower normal mode of a double pendulum — `double_pendulum_slow_mode`
+### Lower normal mode of a double pendulum: `double_pendulum_slow_mode`
 
 $$
 \omega = \sqrt{\frac{\left(2 - \sqrt{2}\right) g}{L}}
@@ -5229,7 +5229,7 @@ $$
 
 <a id="double_pendulum_fast_mode"></a>
 
-### Higher normal mode of a double pendulum — `double_pendulum_fast_mode`
+### Higher normal mode of a double pendulum: `double_pendulum_fast_mode`
 
 $$
 \omega = \sqrt{\frac{\left(2 + \sqrt{2}\right) g}{L}}
@@ -5272,7 +5272,7 @@ $$
 
 <a id="vis_viva"></a>
 
-### Orbital speed on an elliptical orbit (vis-viva) — `vis_viva`
+### Orbital speed on an elliptical orbit (vis-viva), `vis_viva`
 
 $$
 v = \sqrt{G M \left(\frac{2}{r} - \frac{1}{a}\right)}
@@ -5292,9 +5292,9 @@ $$
 - **Assumes:** two bodies, the orbiting one much lighter; a bound (elliptical) orbit
 - **Evidence:** theorem
 
-![Three orbits round the Earth (M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-orbit)
+![2 orbits round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-orbit)
 
-*Three orbits round the Earth (M = 5.9720e+24 kg) with the same semi-major axis a = 8e+06 m but eccentricities 0.125, 0.3 and 0.5, each passing through the point at r = 7e+06 m (the ellipses and the directions of motion there are drawn from that geometry). The vis-viva equation gives every one the same speed at that radius, whatever its shape. Marked: v = 8003.69 m/s (returned).*
+*2 orbits round a body of mass M = 5.9720e+24 kg with the same semi-major axis a = 8e+06 m but eccentricities 0.3, 0.5, each passing through the point at r = 7e+06 m (the ellipses and the directions of motion there are drawn from that geometry). The vis-viva equation gives every one the same speed at that radius, whatever its shape. Marked: v = 8003.69 m/s (returned).*
 
 ![v (orbital speed at distance r) against r (distance from the center of the central body) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-curve)
 
@@ -5321,7 +5321,7 @@ $$
 
 <a id="escape_speed"></a>
 
-### Escape speed — `escape_speed`
+### Escape speed: `escape_speed`
 
 $$
 v = \sqrt{\frac{2 G M}{r}}
@@ -5340,9 +5340,9 @@ $$
 - **Assumes:** no air resistance; a spherically symmetric body; starting from rest relative to it
 - **Evidence:** theorem
 
-![Escape speed and circular orbital speed against distance from the centre of the Earth (M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/escape-speed-comparison)
+![Escape speed and circular orbital speed against distance from the centre of a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/escape-speed-comparison)
 
-*Escape speed and circular orbital speed against distance from the centre of the Earth (M = 5.9720e+24 kg), from its surface (6.371e+06 m) to ten Earth radii, 30 distances each from the package (km/s): the escape speed is always √2 times the circular speed. Marked: escape speed 11186 m/s at the surface.*
+*Escape speed and circular orbital speed against distance from the centre of a body of mass M = 5.9720e+24 kg, from r = 6.371e+06 m to ten times that, 30 distances each from the package (km/s): the escape speed is always √2 times the circular speed. Marked: escape speed 11186 m/s at r = 6.371e+06 m.*
 
 ```python
 classical_physics_ai999x.solve('escape_speed', M='5.972e+24 kg', r='6.371e+06 m', target='v')
@@ -5365,7 +5365,7 @@ $$
 
 <a id="kepler_period_semi_major"></a>
 
-### Orbital period from the semi-major axis (Kepler's third law) — `kepler_period_semi_major`
+### Orbital period from the semi-major axis (Kepler's third law), `kepler_period_semi_major`
 
 $$
 T = 2 \pi \sqrt{\frac{a^{3}}{G M}}
@@ -5384,9 +5384,9 @@ $$
 - **Assumes:** two bodies, the orbiting one much lighter
 - **Evidence:** theorem
 
-![Kepler's third law for the eight planets: orbital period against semi-major axis (stated, from Mercury 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kepler-period-semi-major-graph)
+![Kepler's third law for the eight planets' distances: orbital period against semi-major axis (stated, from Mercury 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kepler-period-semi-major-graph)
 
-*Kepler's third law for the eight planets: orbital period against semi-major axis (stated, from Mercury 5.79e10 m to Neptune 4.495e12 m) round a Sun of M = 1.9890e+30 kg, each period from the package (shown in years of 3.1558e+07 s, distances in AU): on logarithmic axes the points lie on one straight line of slope 3/2. Marked: Earth, T = 3.1554e+07 s = 0.999892 years.*
+*Kepler's third law for the eight planets' distances: orbital period against semi-major axis (stated, from Mercury 5.79e10 m to Neptune 4.495e12 m) round a central mass M = 1.9890e+30 kg, each period from the package (shown in years of 3.1558e+07 s, distances in AU): on logarithmic axes the points lie on one straight line of slope 3/2. Marked: Earth, T = 3.1554e+07 s = 0.999892 years.*
 
 ```python
 classical_physics_ai999x.solve('kepler_period_semi_major', a='1.496e+11 m', M='1.989e+30 kg', target='T')
@@ -5409,7 +5409,7 @@ $$
 
 <a id="inertia_solid_sphere"></a>
 
-### Moment of inertia of a solid sphere — `inertia_solid_sphere`
+### Moment of inertia of a solid sphere: `inertia_solid_sphere`
 
 $$
 I_{r} = \frac{2 m R^{2}}{5}
@@ -5429,7 +5429,7 @@ $$
 
 ![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's — the farther the mass from the axis, the larger I. Marked: I = 0.2 kg·m².*
+*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 0.2 kg·m².*
 
 ![Ir (moment of inertia about the central axis) against R (radius) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-curve)
 
@@ -5456,7 +5456,7 @@ $$
 
 <a id="inertia_hollow_sphere"></a>
 
-### Moment of inertia of a thin spherical shell — `inertia_hollow_sphere`
+### Moment of inertia of a thin spherical shell, `inertia_hollow_sphere`
 
 $$
 I_{r} = \frac{2 m R^{2}}{3}
@@ -5476,7 +5476,7 @@ $$
 
 ![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's — the farther the mass from the axis, the larger I. Marked: I = 0.333333 kg·m².*
+*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 0.333333 kg·m².*
 
 ![Ir (moment of inertia about the central axis) against R (radius) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-curve)
 
@@ -5503,7 +5503,7 @@ $$
 
 <a id="inertia_solid_disk"></a>
 
-### Moment of inertia of a solid disk about its axis — `inertia_solid_disk`
+### Moment of inertia of a solid disk about its axis, `inertia_solid_disk`
 
 $$
 I_{r} = \frac{m R^{2}}{2}
@@ -5523,7 +5523,7 @@ $$
 
 ![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's — the farther the mass from the axis, the larger I. Marked: I = 0.25 kg·m².*
+*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 0.25 kg·m².*
 
 ![Ir (moment of inertia about the central axis) against R (radius) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-curve)
 
@@ -5550,7 +5550,7 @@ $$
 
 <a id="inertia_rod_center"></a>
 
-### Moment of inertia of a thin rod about its center — `inertia_rod_center`
+### Moment of inertia of a thin rod about its center, `inertia_rod_center`
 
 $$
 I_{r} = \frac{m L_{r}^{2}}{12}
@@ -5568,9 +5568,9 @@ $$
 - **Assumes:** a thin uniform rod; the axis perpendicular to the rod
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-comparison)
+![Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's — the farther the mass from the axis, the larger I. Marked: I = 0.166667 kg·m².*
+*Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 1 kg·m².*
 
 ![Ir (moment of inertia about its center) against Lr (length of the rod) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-curve)
 
@@ -5597,7 +5597,7 @@ $$
 
 <a id="inertia_rod_end"></a>
 
-### Moment of inertia of a thin rod about one end — `inertia_rod_end`
+### Moment of inertia of a thin rod about one end, `inertia_rod_end`
 
 $$
 I_{r} = \frac{m L_{r}^{2}}{3}
@@ -5615,9 +5615,9 @@ $$
 - **Assumes:** a thin uniform rod; the axis perpendicular to the rod
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-comparison)
+![Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's — the farther the mass from the axis, the larger I. Marked: I = 0.666667 kg·m².*
+*Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 4 kg·m².*
 
 ![Ir (moment of inertia about one end) against Lr (length of the rod) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-curve)
 
@@ -5644,7 +5644,7 @@ $$
 
 <a id="rolling_incline_acceleration"></a>
 
-### Acceleration of a body rolling without slipping down an incline — `rolling_incline_acceleration`
+### Acceleration of a body rolling without slipping down an incline, `rolling_incline_acceleration`
 
 $$
 a = \frac{g \sin\left(\theta\right)}{1 + \frac{I_{r}}{m R^{2}}}
@@ -5665,9 +5665,9 @@ $$
 - **Assumes:** rolling without slipping; no rolling resistance
 - **Evidence:** theorem
 
-![Acceleration of bodies rolling without slipping down a 30° incline (m = 2 kg, R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-comparison)
+![Acceleration down a 30° incline (m = 2 kg, R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-comparison)
 
-*Acceleration of bodies rolling without slipping down a 30° incline (m = 2 kg, R = 0.2 m, g = 9.81 m/s²), with each moment of inertia from the package's inertia formulas (solid sphere, I = 0.032; solid disc, I = 0.04; hollow sphere, I = 0.0533333 kg·m²) and the rolling acceleration from its formula; grey: a block sliding without friction (no rotation). Marked: each acceleration.*
+*Acceleration down a 30° incline (m = 2 kg, R = 0.2 m, g = 9.81 m/s²) of the body as given (I = 0.04 kg·m², highlighted) and of a solid sphere, a solid disc and a hollow sphere of the same mass and radius rolling without slipping, with each moment of inertia from the package's inertia formulas (solid sphere, I = 0.032; solid disc, I = 0.04; hollow sphere, I = 0.0533333 kg·m²) and the rolling acceleration from its formula; grey: a block sliding without friction (no rotation). Marked: each acceleration.*
 
 ![a (acceleration of the center of mass along the incline) against theta (angle of the incline) from 0 deg to 90 deg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-curve)
 
@@ -5694,7 +5694,7 @@ $$
 
 <a id="atwood_massive_pulley"></a>
 
-### Acceleration of an Atwood machine with a massive pulley — `atwood_massive_pulley`
+### Acceleration of an Atwood machine with a massive pulley, `atwood_massive_pulley`
 
 $$
 a = \frac{\left(m_{1} - m_{2}\right) g}{m_{1} + m_{2} + \frac{I_{r}}{R^{2}}}
@@ -5744,7 +5744,7 @@ $$
 
 <a id="torque_free_precession"></a>
 
-### Body-frame precession rate of a torque-free symmetric body — `torque_free_precession`
+### Body-frame precession rate of a torque-free symmetric body, `torque_free_precession`
 
 $$
 \Omega_{p} = \frac{\omega_{3} \left(I_{3} - I_{1}\right)}{I_{1}}
@@ -5788,7 +5788,7 @@ $$
 
 <a id="foucault_precession_period"></a>
 
-### Precession period of a Foucault pendulum — `foucault_precession_period`
+### Precession period of a Foucault pendulum: `foucault_precession_period`
 
 $$
 T = \frac{2 \pi}{\Omega \sin\left(\phi\right)}
@@ -5831,7 +5831,7 @@ $$
 
 <a id="bead_hoop_equilibrium"></a>
 
-### Off-axis equilibrium of a bead on a rotating hoop — `bead_hoop_equilibrium`
+### Off-axis equilibrium of a bead on a rotating hoop, `bead_hoop_equilibrium`
 
 $$
 \theta = \arccos\left(\frac{g}{\omega^{2} R}\right)
@@ -5879,7 +5879,7 @@ $$
 
 <a id="elastic_collision_first_final"></a>
 
-### Final velocity of the first body in a one-dimensional elastic collision — `elastic_collision_first_final`
+### Final velocity of the first body in a one-dimensional elastic collision, `elastic_collision_first_final`
 
 $$
 v_{1f} = \frac{\left(m_{1} - m_{2}\right) v_{1} + 2 m_{2} v_{2}}{m_{1} + m_{2}}
@@ -5928,7 +5928,7 @@ $$
 
 <a id="elastic_collision_second_final"></a>
 
-### Final velocity of the second body in a one-dimensional elastic collision — `elastic_collision_second_final`
+### Final velocity of the second body in a one-dimensional elastic collision, `elastic_collision_second_final`
 
 $$
 v_{2f} = \frac{\left(m_{2} - m_{1}\right) v_{2} + 2 m_{1} v_{1}}{m_{1} + m_{2}}
@@ -5973,7 +5973,7 @@ $$
 
 <a id="rocket_delta_v"></a>
 
-### Velocity change of a rocket (Tsiolkovsky) — `rocket_delta_v`
+### Velocity change of a rocket (Tsiolkovsky): `rocket_delta_v`
 
 $$
 \Delta v = v_{e} \ln\left(\frac{m_{0}}{m_{f}}\right)
@@ -6021,7 +6021,7 @@ These answer questions in words only; each states its model, assumptions and the
 
 <a id="atwood"></a>
 
-### Two masses over a pulley — `atwood`
+### Two masses over a pulley: `atwood`
 
 Builds on: `newton_second`, `tension_hanging_at_rest`, `weight`
 
@@ -6032,7 +6032,7 @@ Builds on: `newton_second`, `tension_hanging_at_rest`, `weight`
 
 <a id="banked_curve"></a>
 
-### Ideal banking of a curve — `banked_curve`
+### Ideal banking of a curve: `banked_curve`
 
 Builds on: `centripetal_acceleration`, `centripetal_force`, `weight`
 
@@ -6042,7 +6042,7 @@ Builds on: `centripetal_acceleration`, `centripetal_force`, `weight`
 
 <a id="calorimetry"></a>
 
-### Mixing to thermal equilibrium — `calorimetry`
+### Mixing to thermal equilibrium: `calorimetry`
 
 Builds on: `heat`
 
@@ -6053,7 +6053,7 @@ Builds on: `heat`
 
 <a id="collision_1d"></a>
 
-### Collisions along a line — `collision_1d`
+### Collisions along a line: `collision_1d`
 
 Builds on: `impulse`, `kinetic_energy`, `momentum`
 
@@ -6066,7 +6066,7 @@ Builds on: `impulse`, `kinetic_energy`, `momentum`
 
 <a id="doppler"></a>
 
-### Doppler effect for sound — `doppler`
+### Doppler effect for sound: `doppler`
 
 Builds on: `period_frequency`, `wave_speed`
 
@@ -6076,7 +6076,7 @@ Builds on: `period_frequency`, `wave_speed`
 
 <a id="elevator"></a>
 
-### Apparent weight in an elevator — `elevator`
+### Apparent weight in an elevator: `elevator`
 
 Builds on: `newton_second`, `normal_on_level`, `weight`
 
@@ -6087,7 +6087,7 @@ Builds on: `newton_second`, `normal_on_level`, `weight`
 
 <a id="flat_curve"></a>
 
-### Maximum speed on a flat curve — `flat_curve`
+### Maximum speed on a flat curve: `flat_curve`
 
 Builds on: `centripetal_acceleration`, `centripetal_force`, `kinetic_friction`, `weight`
 
@@ -6097,7 +6097,7 @@ Builds on: `centripetal_acceleration`, `centripetal_force`, `kinetic_friction`, 
 
 <a id="gas_two_states"></a>
 
-### A gas between two states — `gas_two_states`
+### A gas between two states: `gas_two_states`
 
 Builds on: `ideal_gas_moles`
 
@@ -6107,7 +6107,7 @@ Builds on: `ideal_gas_moles`
 
 <a id="half_life"></a>
 
-### Radioactive decay — `half_life`
+### Radioactive decay: `half_life`
 
 Builds on: 
 
@@ -6117,7 +6117,7 @@ Builds on:
 
 <a id="network"></a>
 
-### Series and parallel resistor and capacitor networks — `network`
+### Series and parallel resistor and capacitor networks, `network`
 
 Builds on: `capacitance_definition`, `capacitor_energy`, `electric_power`, `ohm`, `ohm_power_current`, `ohm_power_voltage`
 
@@ -6128,7 +6128,7 @@ Builds on: `capacitance_definition`, `capacitor_energy`, `electric_power`, `ohm`
 
 <a id="projectile"></a>
 
-### Projectile motion — `projectile`
+### Projectile motion: `projectile`
 
 Builds on: `displacement_time`, `uniform_motion`, `velocity_displacement`, `velocity_time`
 
@@ -6139,7 +6139,7 @@ Builds on: `displacement_time`, `uniform_motion`, `velocity_displacement`, `velo
 
 <a id="pulley_table"></a>
 
-### Block on a surface pulled over a pulley — `pulley_table`
+### Block on a surface pulled over a pulley: `pulley_table`
 
 Builds on: `kinetic_friction`, `newton_second`, `normal_on_level`, `tension_hanging_at_rest`, `weight`
 
@@ -6149,7 +6149,7 @@ Builds on: `kinetic_friction`, `newton_second`, `normal_on_level`, `tension_hang
 
 <a id="rc_circuit"></a>
 
-### RC circuits — `rc_circuit`
+### RC circuits: `rc_circuit`
 
 Builds on: `capacitance_definition`, `ohm`
 
@@ -6159,7 +6159,7 @@ Builds on: `capacitance_definition`, `ohm`
 
 <a id="recoil"></a>
 
-### Recoil from rest — `recoil`
+### Recoil from rest: `recoil`
 
 Builds on: `momentum`
 
@@ -6169,7 +6169,7 @@ Builds on: `momentum`
 
 <a id="rolling"></a>
 
-### Rolling from a height — `rolling`
+### Rolling from a height: `rolling`
 
 Builds on: `gravitational_pe`, `kinetic_energy`, `rotational_kinetic_energy`
 
@@ -6179,7 +6179,7 @@ Builds on: `gravitational_pe`, `kinetic_energy`, `rotational_kinetic_energy`
 
 <a id="stages"></a>
 
-### Motion in stages — `stages`
+### Motion in stages: `stages`
 
 Builds on: `average_velocity_displacement`, `displacement_time`, `uniform_motion`, `velocity_displacement`, `velocity_time`
 
@@ -6198,7 +6198,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="two_resistors_series_parallel"></a>
 
-### Two resistors in series and in parallel — `two_resistors_series_parallel`
+### Two resistors in series and in parallel: `two_resistors_series_parallel`
 
 The equivalent resistance of two resistors connected in series and connected in parallel.
 
@@ -6246,7 +6246,7 @@ classical_physics_ai999x.solve('two_resistors_series_parallel', r1=100.0, r2=100
 
 <a id="uniform_acceleration_state"></a>
 
-### Velocity and displacement after constant acceleration — `uniform_acceleration_state`
+### Velocity and displacement after constant acceleration, `uniform_acceleration_state`
 
 The final velocity and the displacement of a body that starts at velocity u and accelerates uniformly at a for a time t.
 
