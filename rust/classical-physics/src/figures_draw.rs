@@ -11,7 +11,9 @@ pub fn live(s: &Solved) -> Vec<Figure> {
     let v: Vec<Option<Figure>> = match s.key {
         "two_resistors_series_parallel" => vec![resistor_pair(s)],
         "uniform_motion" => vec![uniform_steps(s)],
-        "displacement_time" => vec![projectiles(s)],
+        // (no projectile drawing: this is straight-line motion; throws at three angles with an invented g = 9.81 drew
+        // another calculation — classical physics reviews 2026-11-12/13. Its x-t parabola chart stays.)
+        "displacement_time" => vec![],
         "newton_second" => vec![net_force_block(s)],
         "net_force_friction" => vec![friction_push(s)],
         "kinetic_friction" => vec![sliding_block(s)],
@@ -236,6 +238,7 @@ fn uniform_steps(s: &Solved) -> Option<Figure> {
         qv(v, "m/s"), k::q(d, "m"), k::q(t, "s")), &cv)
 }
 
+#[allow(dead_code)] // kept for a projectile capability; displacement_time no longer draws it
 fn projectiles(s: &Solved) -> Option<Figure> {
     // the visitor's start speed thrown at three angles: horizontal by uniform motion, vertical by this formula
     let (v0, a) = (s.inp("v0")?, s.inp("a")?);
