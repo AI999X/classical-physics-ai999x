@@ -15,7 +15,7 @@ def _bind(product) -> None:
     _P = product
 
 
-CapabilityId = Literal["absolute_pressure_depth", "acceleration_frictionless_incline", "amplitude_resonance_frequency", "angular_frequency", "angular_momentum", "angular_momentum_point_mass", "angular_velocity_angle", "angular_velocity_time", "area_expansion", "atwood_massive_pulley", "average_force_from_momentum_change", "average_velocity_displacement", "bead_hoop_equilibrium", "capacitance_definition", "capacitive_reactance", "capacitor_energy", "carnot_efficiency", "centripetal_acceleration", "centripetal_acceleration_omega", "centripetal_force", "charge_current", "cop_heat_pump", "cop_refrigerator", "coupled_fast_mode", "cyclotron_radius", "damped_angular_frequency", "damping_ratio", "de_broglie", "density", "displacement_time", "double_pendulum_fast_mode", "double_pendulum_slow_mode", "driven_amplitude", "elastic_collision_first_final", "elastic_collision_second_final", "electric_force_in_field", "electric_power", "engine_efficiency", "engine_energy_balance", "escape_speed", "flow_rate_area_speed", "flow_rate_volume_time", "foucault_precession_period", "gravitational_pe", "heat", "hydrostatic_pressure", "ideal_gas_moles", "impulse", "index_of_refraction", "inductive_reactance", "inertia_hollow_sphere", "inertia_rod_center", "inertia_rod_end", "inertia_solid_disk", "inertia_solid_sphere", "intensity_power_area", "kepler_period_semi_major", "kinetic_energy", "kinetic_friction", "latent_heat_fusion", "latent_heat_vaporization", "lc_resonance", "linear_expansion", "long_wire_field", "loop_center_field", "magnetic_force_charge", "magnetic_force_wire", "max_height_vertical_throw", "mirror_focal_length", "momentum", "motional_emf", "net_force_friction", "net_work_kinetic_energy", "newton_second", "normal_force_incline", "normal_on_level", "ohm", "ohm_power_current", "ohm_power_voltage", "orbital_period", "orbital_speed", "parallel_plate_capacitor", "pendulum_period", "period_frequency", "photon_energy", "photon_energy_wavelength", "photon_momentum", "physical_pendulum_period", "point_charge_field", "point_charge_potential", "power_energy", "power_force_speed", "pressure_force", "quality_factor", "rc_charging", "rc_discharging", "rc_time_constant", "resistivity", "rest_energy", "rl_current_decay", "rl_time_constant", "rms_current", "rms_voltage", "rocket_delta_v", "rolling_incline_acceleration", "rotational_kinetic_energy", "shm_max_speed", "solenoid_field", "speed_after_fall_from_rest", "spring_energy", "spring_force", "spring_launch_speed", "spring_oscillation_period", "surface_gravity", "tangential_acceleration", "tangential_speed", "tension_hanging_at_rest", "thin_lens", "time_to_top_vertical_throw", "torque_free_precession", "torque_lever", "two_resistors_series_parallel", "uniform_acceleration_state", "uniform_field_potential", "uniform_motion", "velocity_displacement", "velocity_time", "vis_viva", "volume_expansion", "wave_speed", "wavelength_in_medium", "weight", "weight_component_along_incline", "work"]
+CapabilityId = Literal["absolute_pressure_depth", "acceleration_frictionless_incline", "amplitude_resonance_frequency", "angular_frequency", "angular_momentum", "angular_momentum_conservation", "angular_momentum_point_mass", "angular_velocity_angle", "angular_velocity_time", "area_expansion", "atwood_massive_pulley", "average_force_from_momentum_change", "average_velocity_displacement", "bead_hoop_equilibrium", "beam_support_reactions", "bulk_modulus_compression", "capacitance_definition", "capacitive_reactance", "capacitor_energy", "carnot_efficiency", "centre_of_mass_point_masses", "centripetal_acceleration", "centripetal_acceleration_omega", "centripetal_force", "charge_current", "cop_heat_pump", "cop_refrigerator", "coulomb_force", "coupled_fast_mode", "critical_angle_total_internal_reflection", "cyclotron_radius", "damped_angular_frequency", "damping_ratio", "de_broglie", "density", "diffraction_grating_order", "displacement_time", "double_pendulum_fast_mode", "double_pendulum_slow_mode", "double_slit_bright_fringe", "driven_amplitude", "elastic_collision_first_final", "elastic_collision_second_final", "electric_force_in_field", "electric_power", "engine_efficiency", "engine_energy_balance", "escape_speed", "faraday_induced_emf", "flow_rate_area_speed", "flow_rate_volume_time", "foucault_precession_period", "gauss_law_symmetric_field", "gravitational_force_two_masses", "gravitational_pe", "heat", "hydrostatic_pressure", "ideal_gas_moles", "ideal_transformer_secondary", "impulse", "index_of_refraction", "inductive_reactance", "inertia_hollow_sphere", "inertia_rod_center", "inertia_rod_end", "inertia_solid_disk", "inertia_solid_sphere", "intensity_power_area", "kepler_period_semi_major", "kinetic_energy", "kinetic_friction", "latent_heat_fusion", "latent_heat_vaporization", "lc_resonance", "lens_mirror_magnification", "linear_expansion", "long_wire_field", "loop_center_field", "magnetic_force_charge", "magnetic_force_wire", "malus_law_polarizer", "max_height_vertical_throw", "mirror_focal_length", "momentum", "motional_emf", "net_force_friction", "net_work_kinetic_energy", "newton_second", "normal_force_incline", "normal_on_level", "ohm", "ohm_power_current", "ohm_power_voltage", "orbital_period", "orbital_speed", "parallel_plate_capacitor", "pendulum_period", "period_frequency", "photon_energy", "photon_energy_wavelength", "photon_momentum", "physical_pendulum_period", "point_charge_field", "point_charge_potential", "power_energy", "power_force_speed", "pressure_force", "quality_factor", "rc_charging", "rc_discharging", "rc_time_constant", "resistivity", "rest_energy", "rl_current_decay", "rl_time_constant", "rms_current", "rms_voltage", "rocket_delta_v", "rolling_incline_acceleration", "rotational_kinetic_energy", "rotational_second_law", "series_rlc_ac_circuit", "shear_modulus_deformation", "shm_max_speed", "single_slit_minimum", "snell_refraction_angle", "solenoid_field", "sound_intensity_level", "sound_level_change", "speed_after_fall_from_rest", "spring_energy", "spring_force", "spring_launch_speed", "spring_oscillation_period", "standing_wave_harmonics", "static_friction_incline", "static_friction_limit", "string_wave_speed", "surface_gravity", "tangential_acceleration", "tangential_speed", "tension_hanging_at_rest", "terminal_voltage_internal_resistance", "thin_lens", "time_to_top_vertical_throw", "torque_free_precession", "torque_lever", "two_resistors_series_parallel", "uniform_acceleration_state", "uniform_field_potential", "uniform_motion", "vector_components_resultant", "velocity_displacement", "velocity_time", "vis_viva", "volume_expansion", "wave_speed", "wavelength_in_medium", "weight", "weight_component_along_incline", "work", "youngs_modulus_deformation"]
 
 
 def solve(find: CapabilityId | str, given: dict | None = None, conditions=(), *, target: str | None = None, **inputs):
@@ -100,6 +100,19 @@ def angular_momentum(L=None, Ir=None, omega=None, *, target: str | None = None):
     """
     given = {k: v for k, v in dict(L=L, Ir=Ir, omega=omega).items() if v is not None}
     return _P.solve("angular_momentum", target=target, **given)
+
+def angular_momentum_conservation(I1=None, omega1=None, I2=None):
+    """Conservation of angular momentum: change of spin rate. The new angular velocity of a body whose moment of inertia changes with no external torque (a spinning skater pulling in the arms), with its rotational kinetic energy before and after.
+    Formula: I_1\\omega_1 = I_2\\omega_2
+    Inputs:
+        I1: initial moment of inertia
+        omega1: initial angular velocity
+        I2: final moment of inertia
+    Outputs: omega2 (final angular velocity), L (angular momentum (conserved)), K1 (initial rotational kinetic energy), K2 (final rotational kinetic energy), dK (change of rotational kinetic energy)
+    See also: help("angular_momentum_conservation")
+    """
+    given = {k: v for k, v in dict(I1=I1, omega1=omega1, I2=I2).items() if v is not None}
+    return _P.solve("angular_momentum_conservation", **given)
 
 def angular_momentum_point_mass(L=None, m=None, v=None, r=None, *, target: str | None = None):
     """Angular momentum of a point mass on a circle: L = m*v*r
@@ -222,6 +235,33 @@ def bead_hoop_equilibrium(theta=None, g=None, w=None, R=None, *, target: str | N
     given = {k: v for k, v in dict(theta=theta, g=g, w=w, R=R).items() if v is not None}
     return _P.solve("bead_hoop_equilibrium", target=target, **given)
 
+def beam_support_reactions(loads=None, positions=None, xA=None, xB=None):
+    """Static equilibrium of a beam on two supports: support reactions. The vertical reactions of the two supports of a beam carrying point loads, from the balance of forces and of moments.
+    Formula: \\sum F = R_A + R_B,\\quad R_B(x_B - x_A) = \\sum_i F_i (x_i - x_A)
+    Inputs:
+        loads: point loads in newtons, downward positive (include the beam's weight at its centre)
+        positions: position of each load along the beam in metres
+        xA: position of support A
+        xB: position of support B
+    Outputs: RA (upward reaction of support A), RB (upward reaction of support B), total (total load)
+    See also: help("beam_support_reactions")
+    """
+    given = {k: v for k, v in dict(loads=loads, positions=positions, xA=xA, xB=xB).items() if v is not None}
+    return _P.solve("beam_support_reactions", **given)
+
+def bulk_modulus_compression(dP=None, V0=None, B=None):
+    """Bulk compression: volume change under a pressure change (bulk modulus). Volumetric strain, change of volume and final volume of a body of volume V0 when the pressure on it rises by dP.
+    Formula: \\Delta V = -\\frac{V_0\\,\\Delta P}{B}
+    Inputs:
+        dP: increase of pressure (negative: decrease)
+        V0: original volume
+        B: bulk modulus
+    Outputs: dV (change of volume (negative: compression)), strain (volumetric strain dV / V0), V (final volume)
+    See also: help("bulk_modulus_compression")
+    """
+    given = {k: v for k, v in dict(dP=dP, V0=V0, B=B).items() if v is not None}
+    return _P.solve("bulk_modulus_compression", **given)
+
 def capacitance_definition(Q=None, C=None, V=None, *, target: str | None = None):
     """Charge on a capacitor: Q = C*V
     Formula: Q = C V
@@ -277,6 +317,19 @@ def carnot_efficiency(eff=None, Tc=None, Th=None, *, target: str | None = None):
     """
     given = {k: v for k, v in dict(eff=eff, Tc=Tc, Th=Th).items() if v is not None}
     return _P.solve("carnot_efficiency", target=target, **given)
+
+def centre_of_mass_point_masses(masses=None, x=None, y=None):
+    """Centre of mass of a set of point masses. The coordinates of the centre of mass of point masses on a line or in a plane, and the total mass.
+    Formula: x_{cm} = \\frac{\\sum_i m_i x_i}{\\sum_i m_i}
+    Inputs:
+        masses: masses in kilograms
+        x: x coordinate of each mass in metres
+        y: y coordinate of each mass in metres (for masses in a plane) (optional)
+    Outputs: x_cm (x coordinate of the centre of mass), y_cm (y coordinate of the centre of mass (when y is given)), M (total mass)
+    See also: help("centre_of_mass_point_masses")
+    """
+    given = {k: v for k, v in dict(masses=masses, x=x, y=y).items() if v is not None}
+    return _P.solve("centre_of_mass_point_masses", **given)
 
 def centripetal_acceleration(a=None, v=None, r=None, *, target: str | None = None):
     """Centripetal acceleration: a = v**2/r
@@ -360,6 +413,19 @@ def cop_refrigerator(cop=None, Qc=None, W=None, *, target: str | None = None):
     given = {k: v for k, v in dict(cop=cop, Qc=Qc, W=W).items() if v is not None}
     return _P.solve("cop_refrigerator", target=target, **given)
 
+def coulomb_force(q1=None, q2=None, r=None):
+    """Coulomb's law: force between two point charges. The electrostatic force between two point charges a distance r apart: its magnitude and its sign along the line joining them (positive: repulsion, negative: attraction).
+    Formula: F = k\\,\\frac{|q_1 q_2|}{r^2}
+    Inputs:
+        q1: first charge (with its sign)
+        q2: second charge (with its sign)
+        r: distance between the charges (condition: r != 0)
+    Outputs: F (magnitude of the electrostatic force), F_radial (force along the line joining the charges (positive: repulsion))
+    See also: help("coulomb_force")
+    """
+    given = {k: v for k, v in dict(q1=q1, q2=q2, r=r).items() if v is not None}
+    return _P.solve("coulomb_force", **given)
+
 def coupled_fast_mode(w2=None, k=None, kc=None, m=None, *, target: str | None = None):
     """Higher normal-mode frequency of two coupled oscillators: w2 = sqrt((k + 2*kc)/m)
     Formula: \\omega_{2} = \\sqrt{\\frac{k + 2 k_{c}}{m}}
@@ -374,6 +440,18 @@ def coupled_fast_mode(w2=None, k=None, kc=None, m=None, *, target: str | None = 
     """
     given = {k: v for k, v in dict(w2=w2, k=k, kc=kc, m=m).items() if v is not None}
     return _P.solve("coupled_fast_mode", target=target, **given)
+
+def critical_angle_total_internal_reflection(n1=None, n2=None):
+    """Critical angle for total internal reflection. The smallest angle of incidence (from the normal) at which light in the denser medium is totally reflected at the boundary with a less dense one.
+    Formula: \\sin\\theta_c = \\frac{n_2}{n_1}
+    Inputs:
+        n1: refractive index of the medium the light travels in (the denser one)
+        n2: refractive index of the medium beyond the boundary
+    Outputs: theta_c (critical angle from the normal), theta_c_deg (critical angle in degrees)
+    See also: help("critical_angle_total_internal_reflection")
+    """
+    given = {k: v for k, v in dict(n1=n1, n2=n2).items() if v is not None}
+    return _P.solve("critical_angle_total_internal_reflection", **given)
 
 def cyclotron_radius(r=None, m=None, v=None, q=None, B=None, theta=None, *, target: str | None = None):
     """Radius of a charged particle's circle in a magnetic field: r = m*v/(q*B*sin(theta))
@@ -449,6 +527,20 @@ def density(rho=None, m=None, V=None, *, target: str | None = None):
     given = {k: v for k, v in dict(rho=rho, m=m, V=V).items() if v is not None}
     return _P.solve("density", target=target, **given)
 
+def diffraction_grating_order(lam=None, m=None, d=None, N=None):
+    """Diffraction grating: angle of an order and the highest visible order. The angle of the m-th order line of a diffraction grating, the line spacing and the highest order that can be seen.
+    Formula: d\\sin\\theta = m\\lambda,\\quad m_{max} = \\max\\{m : m\\lambda < d\\}
+    Inputs:
+        lam: wavelength
+        m: order of the line (1, 2, ...)
+        d: line spacing, if given instead of N (optional)
+        N: number of lines per millimetre, if given instead of d (optional)
+    Outputs: theta (angle of the m-th order from the central axis), theta_deg (that angle in degrees), m_max (highest order that can be seen), d (line spacing)
+    See also: help("diffraction_grating_order")
+    """
+    given = {k: v for k, v in dict(lam=lam, m=m, d=d, N=N).items() if v is not None}
+    return _P.solve("diffraction_grating_order", **given)
+
 def displacement_time(x=None, v0=None, a=None, t=None, *, target: str | None = None):
     """Displacement under constant acceleration: x = v0*t + a*t**2/2
     Formula: x = v_0 t + \\frac{a t^{2}}{2}
@@ -490,6 +582,20 @@ def double_pendulum_slow_mode(w=None, g=None, L=None, *, target: str | None = No
     """
     given = {k: v for k, v in dict(w=w, g=g, L=L).items() if v is not None}
     return _P.solve("double_pendulum_slow_mode", target=target, **given)
+
+def double_slit_bright_fringe(d=None, lam=None, m=None, L=None):
+    """Double-slit interference: angle and position of a bright fringe. The angle and the position on the screen of the m-th bright fringe of a double slit, and the fringe spacing near the centre.
+    Formula: d\\sin\\theta = m\\lambda,\\quad y = L\\tan\\theta,\\quad \\Delta y \\approx \\frac{\\lambda L}{d}
+    Inputs:
+        d: slit separation
+        lam: wavelength
+        m: order of the bright fringe (0 for the central maximum)
+        L: distance from the slits to the screen
+    Outputs: y (position of the m-th bright fringe on the screen, from the central maximum), theta (angle of the m-th bright fringe from the central axis), theta_deg (that angle in degrees), dy (fringe spacing near the centre (small-angle, lambda L / d))
+    See also: help("double_slit_bright_fringe")
+    """
+    given = {k: v for k, v in dict(d=d, lam=lam, m=m, L=L).items() if v is not None}
+    return _P.solve("double_slit_bright_fringe", **given)
 
 def driven_amplitude(A=None, F0=None, k=None, m=None, b=None, w=None, *, target: str | None = None):
     """Steady-state amplitude of a driven damped oscillator: A = F0/sqrt((k - m*w**2)**2 + (b*w)**2)
@@ -610,6 +716,23 @@ def escape_speed(v=None, G=None, M=None, r=None, *, target: str | None = None):
     given = {k: v for k, v in dict(v=v, G=G, M=M, r=r).items() if v is not None}
     return _P.solve("escape_speed", target=target, **given)
 
+def faraday_induced_emf(N=None, A1=None, B1=None, B2=None, dt=None, A2=None, theta=None):
+    """Faraday's law: average emf induced by a change of magnetic flux. The flux through a coil before and after a change of field or area, and the average emf induced in its N turns during the change (with Lenz's sign).
+    Formula: \\mathcal{E} = -N\\,\\frac{\\Delta\\Phi}{\\Delta t},\\quad \\Phi = BA\\cos\\theta
+    Inputs:
+        N: number of turns
+        A1: initial area of the coil
+        B1: initial magnetic field
+        B2: final magnetic field
+        dt: duration of the change (condition: dt != 0)
+        A2: final area of the coil (default: unchanged) (optional)
+        theta: angle between the field and the coil's axis (default 0) (optional)
+    Outputs: emf (magnitude of the average induced emf), emf_signed (average induced emf with Lenz's sign, -N dPhi/dt), phi1 (initial flux through one turn), phi2 (final flux through one turn), dphi (change of flux through one turn)
+    See also: help("faraday_induced_emf")
+    """
+    given = {k: v for k, v in dict(N=N, A1=A1, B1=B1, B2=B2, dt=dt, A2=A2, theta=theta).items() if v is not None}
+    return _P.solve("faraday_induced_emf", **given)
+
 def flow_rate_area_speed(Q=None, A=None, v=None, *, target: str | None = None):
     """Flow rate through a cross section: Q = A*v
     Formula: Q = A v
@@ -651,6 +774,35 @@ def foucault_precession_period(T=None, W=None, phi=None, *, target: str | None =
     """
     given = {k: v for k, v in dict(T=T, W=W, phi=phi).items() if v is not None}
     return _P.solve("foucault_precession_period", target=target, **given)
+
+def gauss_law_symmetric_field(geometry=None, Q=None, r=None, L=None, A=None, R=None):
+    """Gauss's law: electric field of a line, a plane, a charged sphere or a shell. The electric field of a symmetric charge distribution by Gauss's law: an infinite line (charge Q on a length L), an infinite plane sheet (charge Q on an area A), a uniformly charged solid sphere or a thin spherical shell of radius R, inside or outside; with the enclosed charge, the flux through the Gaussian surface and the charge density.
+    Formula: \\oint \\vec E\\cdot d\\vec A = \\frac{Q_{enc}}{\\varepsilon_0}:\\quad E_{line} = \\frac{\\lambda}{2\\pi\\varepsilon_0 r},\\ E_{plane} = \\frac{\\sigma}{2\\varepsilon_0},\\ E_{sphere} = \\frac{kQr}{R^3}\\ (r<R)
+    Inputs:
+        geometry: line, plane, sphere (uniformly charged solid ball) or shell (thin shell, or a conducting sphere)
+        Q: charge (with its sign): on the length L, the area A, or the whole sphere or shell
+        r: distance from the line, or from the centre (not needed for a plane) (optional)
+        L: length of line that carries Q (line only; lambda = Q/L) (optional)
+        A: area of plane that carries Q (plane only; sigma = Q/A) (optional)
+        R: radius of the sphere or shell (sphere and shell only) (optional)
+    Outputs: E (magnitude of the electric field), E_radial (field component away from the line, plane or centre), Q_enc (charge enclosed by the Gaussian surface through the point), flux (electric flux through the Gaussian surface, Q_enc/eps0 in N m^2/C), density (charge density: lambda in C/m (line), sigma in C/m^2 (plane, shell), rho in C/m^3 (sphere))
+    See also: help("gauss_law_symmetric_field")
+    """
+    given = {k: v for k, v in dict(geometry=geometry, Q=Q, r=r, L=L, A=A, R=R).items() if v is not None}
+    return _P.solve("gauss_law_symmetric_field", **given)
+
+def gravitational_force_two_masses(m1=None, m2=None, r=None):
+    """Newton's law of universal gravitation: force between two masses. The attractive gravitational force between two masses (point masses or spheres) whose centres are r apart.
+    Formula: F = G\\,\\frac{m_1 m_2}{r^2}
+    Inputs:
+        m1: first mass
+        m2: second mass
+        r: distance between the centres (condition: r != 0)
+    Outputs: F (magnitude of the gravitational attraction)
+    See also: help("gravitational_force_two_masses")
+    """
+    given = {k: v for k, v in dict(m1=m1, m2=m2, r=r).items() if v is not None}
+    return _P.solve("gravitational_force_two_masses", **given)
 
 def gravitational_pe(U=None, m=None, g=None, h=None, *, target: str | None = None):
     """Gravitational potential energy near the surface: U = m*g*h
@@ -709,6 +861,20 @@ def ideal_gas_moles(P=None, V=None, n=None, T=None, R=None, *, target: str | Non
     """
     given = {k: v for k, v in dict(P=P, V=V, n=n, T=T, R=R).items() if v is not None}
     return _P.solve("ideal_gas_moles", target=target, **given)
+
+def ideal_transformer_secondary(Np=None, Ns=None, Vp=None, Ip=None):
+    """Ideal transformer: secondary voltage and current. Secondary voltage (and, when the primary current is given, the secondary current) of an ideal transformer from its turns, and whether it steps the voltage up or down.
+    Formula: \\frac{V_s}{V_p} = \\frac{N_s}{N_p} = \\frac{I_p}{I_s}
+    Inputs:
+        Np: number of turns of the primary
+        Ns: number of turns of the secondary
+        Vp: primary voltage (rms)
+        Ip: primary current (rms), if known (optional)
+    Outputs: Vs (secondary voltage), Is (secondary current (when Ip is given)), ratio (turns ratio Ns / Np), type (step-up, step-down or isolation)
+    See also: help("ideal_transformer_secondary")
+    """
+    given = {k: v for k, v in dict(Np=Np, Ns=Ns, Vp=Vp, Ip=Ip).items() if v is not None}
+    return _P.solve("ideal_transformer_secondary", **given)
 
 def impulse(J=None, F=None, t=None, *, target: str | None = None):
     """Impulse of a constant force: J = F*t
@@ -918,6 +1084,20 @@ def lc_resonance(f=None, L=None, C=None, *, target: str | None = None):
     given = {k: v for k, v in dict(f=f, L=L, C=C).items() if v is not None}
     return _P.solve("lc_resonance", target=target, **given)
 
+def lens_mirror_magnification(d_o=None, h_o=None, d_i=None, f=None):
+    """Magnification and image height of a thin lens or a spherical mirror. Magnification, image height, image distance and the nature of the image (real or virtual, upright or inverted) from the object distance and either the image distance or the focal length.
+    Formula: m = \\frac{h_i}{h_o} = -\\frac{d_i}{d_o},\\quad \\frac{1}{d_o} + \\frac{1}{d_i} = \\frac{1}{f}
+    Inputs:
+        d_o: object distance (positive)
+        h_o: object height
+        d_i: image distance (positive: real image), if known (optional)
+        f: focal length (positive: converging lens or concave mirror), if d_i is not given (optional)
+    Outputs: m (magnification (negative: inverted image)), h_i (image height (negative: inverted)), d_i (image distance (positive: real, negative: virtual)), image (real or virtual, upright or inverted)
+    See also: help("lens_mirror_magnification")
+    """
+    given = {k: v for k, v in dict(d_o=d_o, h_o=h_o, d_i=d_i, f=f).items() if v is not None}
+    return _P.solve("lens_mirror_magnification", **given)
+
 def linear_expansion(dL=None, alpha_t=None, L=None, dT=None, *, target: str | None = None):
     """Linear thermal expansion: dL = alpha_t*L*dT
     Formula: d_{L} = \\alpha_{t} L d_{T}
@@ -994,6 +1174,19 @@ def magnetic_force_wire(F=None, I=None, L=None, B=None, theta=None, *, target: s
     """
     given = {k: v for k, v in dict(F=F, I=I, L=L, B=B, theta=theta).items() if v is not None}
     return _P.solve("magnetic_force_wire", target=target, **given)
+
+def malus_law_polarizer(I0=None, theta=None, light=None):
+    """Malus's law: intensity through a polarizer. Intensity of light after an analyser whose transmission axis makes an angle theta with the light's polarization (or, for unpolarized light, with a first polarizer it passed through).
+    Formula: I = I_0\\cos^2\\theta
+    Inputs:
+        I0: intensity of the incident light
+        theta: angle between the polarization (or first polarizer) and the analyser's axis
+        light: incident light (default polarized) (optional)
+    Outputs: I (transmitted intensity), fraction (transmitted fraction I / I0)
+    See also: help("malus_law_polarizer")
+    """
+    given = {k: v for k, v in dict(I0=I0, theta=theta, light=light).items() if v is not None}
+    return _P.solve("malus_law_polarizer", **given)
 
 def max_height_vertical_throw(h=None, v0=None, g=None, *, target: str | None = None):
     """Maximum height of a vertical throw: h = v0**2/(2*g)
@@ -1549,6 +1742,47 @@ def rotational_kinetic_energy(KR=None, Ir=None, omega=None, *, target: str | Non
     given = {k: v for k, v in dict(KR=KR, Ir=Ir, omega=omega).items() if v is not None}
     return _P.solve("rotational_kinetic_energy", target=target, **given)
 
+def rotational_second_law(tau=None, I=None):
+    """Newton's second law for rotation: angular acceleration from torque. The angular acceleration of a rigid body about a fixed axis under a net torque.
+    Formula: \\tau = I\\alpha
+    Inputs:
+        tau: net torque about the axis
+        I: moment of inertia about the same axis (condition: I != 0)
+    Outputs: alpha (angular acceleration)
+    See also: help("rotational_second_law")
+    """
+    given = {k: v for k, v in dict(tau=tau, I=I).items() if v is not None}
+    return _P.solve("rotational_second_law", **given)
+
+def series_rlc_ac_circuit(R=None, L=None, C=None, f=None, V=None):
+    """Series RLC circuit on an AC supply: impedance, current, phase and power. Reactances, impedance, rms current, phase angle, power factor and average power of a resistor, an inductor and a capacitor in series across a sinusoidal supply.
+    Formula: Z = \\sqrt{R^2 + (X_L - X_C)^2},\\quad I = \\frac{V}{Z},\\quad \\tan\\varphi = \\frac{X_L - X_C}{R},\\quad P = I^2R
+    Inputs:
+        R: resistance
+        L: inductance
+        C: capacitance
+        f: supply frequency
+        V: rms supply voltage
+    Outputs: I (rms current), Z (impedance), phi (phase angle of the voltage ahead of the current (positive: inductive)), phi_deg (phase angle in degrees), pf (power factor cos(phi)), P (average power), XL (inductive reactance), XC (capacitive reactance)
+    See also: help("series_rlc_ac_circuit")
+    """
+    given = {k: v for k, v in dict(R=R, L=L, C=C, f=f, V=V).items() if v is not None}
+    return _P.solve("series_rlc_ac_circuit", **given)
+
+def shear_modulus_deformation(F=None, A=None, h=None, S=None):
+    """Shear: shear stress, shear strain and displacement (shear modulus). Shear stress, shear strain and the sideways displacement of one face of a block of height h when a force F acts parallel to a face of area A.
+    Formula: \\Delta x = \\frac{F h}{A S}
+    Inputs:
+        F: force parallel to the face
+        A: area of the face the force acts on
+        h: distance between the sheared faces
+        S: shear modulus
+    Outputs: dx (sideways displacement of the face), stress (shear stress F / A), strain (shear strain dx / h)
+    See also: help("shear_modulus_deformation")
+    """
+    given = {k: v for k, v in dict(F=F, A=A, h=h, S=S).items() if v is not None}
+    return _P.solve("shear_modulus_deformation", **given)
+
 def shm_max_speed(v=None, X=None, k=None, m=None, *, target: str | None = None):
     """Maximum speed of a mass on a spring: v = X*sqrt(k/m)
     Formula: v = X \\sqrt{\\frac{k}{m}}
@@ -1564,6 +1798,33 @@ def shm_max_speed(v=None, X=None, k=None, m=None, *, target: str | None = None):
     given = {k: v for k, v in dict(v=v, X=X, k=k, m=m).items() if v is not None}
     return _P.solve("shm_max_speed", target=target, **given)
 
+def single_slit_minimum(a=None, lam=None, m=None, L=None):
+    """Single-slit diffraction: dark fringes and the width of the central maximum. The angle and screen position of the m-th dark fringe of a single slit, and the angular and linear width of the central bright maximum.
+    Formula: a\\sin\\theta = m\\lambda,\\quad W = 2L\\tan\\theta_1
+    Inputs:
+        a: slit width
+        lam: wavelength
+        m: order of the dark fringe (1, 2, ...)
+        L: distance from the slit to the screen
+    Outputs: theta (angle of the m-th dark fringe from the central axis), theta_deg (that angle in degrees), y (position of the m-th dark fringe on the screen, from the centre), W (width of the central maximum on the screen), W_angle (angular width of the central maximum)
+    See also: help("single_slit_minimum")
+    """
+    given = {k: v for k, v in dict(a=a, lam=lam, m=m, L=L).items() if v is not None}
+    return _P.solve("single_slit_minimum", **given)
+
+def snell_refraction_angle(n1=None, n2=None, theta1=None):
+    """Snell's law: angle of refraction. The angle of refraction of a ray passing from a medium of index n1 into one of index n2; refused with a reason when the ray is totally internally reflected.
+    Formula: n_1\\sin\\theta_1 = n_2\\sin\\theta_2
+    Inputs:
+        n1: refractive index of the incident medium
+        n2: refractive index of the second medium
+        theta1: angle of incidence from the normal (deg or rad)
+    Outputs: theta2 (angle of refraction from the normal), theta2_deg (angle of refraction in degrees)
+    See also: help("snell_refraction_angle")
+    """
+    given = {k: v for k, v in dict(n1=n1, n2=n2, theta1=theta1).items() if v is not None}
+    return _P.solve("snell_refraction_angle", **given)
+
 def solenoid_field(B=None, nt=None, I=None, mu0=None, *, target: str | None = None):
     """Magnetic field inside a long solenoid: B = mu0*nt*I
     Formula: B = \\mu_{0} n_{t} I
@@ -1578,6 +1839,31 @@ def solenoid_field(B=None, nt=None, I=None, mu0=None, *, target: str | None = No
     """
     given = {k: v for k, v in dict(B=B, nt=nt, I=I, mu0=mu0).items() if v is not None}
     return _P.solve("solenoid_field", target=target, **given)
+
+def sound_intensity_level(I=None, beta=None):
+    """Sound intensity level in decibels. The intensity level in decibels of a sound of given intensity, or the intensity of a sound of given level (reference: the threshold of hearing, 1e-12 W/m^2).
+    Formula: \\beta = 10\\log_{10}\\frac{I}{I_0}
+    Inputs:
+        I: sound intensity, if known (optional)
+        beta: sound level in dB, if known (optional)
+    Outputs: beta (intensity level in dB), I (sound intensity)
+    See also: help("sound_intensity_level")
+    """
+    given = {k: v for k, v in dict(I=I, beta=beta).items() if v is not None}
+    return _P.solve("sound_intensity_level", **given)
+
+def sound_level_change(beta1=None, beta2=None, ratio=None):
+    """Change of sound level and the ratio of two intensities. The ratio of the intensities of two sounds from their levels, or the change of level (and the new level) for a given ratio of intensities.
+    Formula: \\beta_2 - \\beta_1 = 10\\log_{10}\\frac{I_2}{I_1}
+    Inputs:
+        beta1: first sound level in dB (optional)
+        beta2: second sound level in dB (optional)
+        ratio: intensity ratio I2 / I1, if given instead of the second level (optional)
+    Outputs: d_beta (change of level beta2 - beta1 in dB), ratio (intensity ratio I2 / I1), beta2 (second level in dB (when the first is given))
+    See also: help("sound_level_change")
+    """
+    given = {k: v for k, v in dict(beta1=beta1, beta2=beta2, ratio=ratio).items() if v is not None}
+    return _P.solve("sound_level_change", **given)
 
 def speed_after_fall_from_rest(v=None, g=None, h=None, *, target: str | None = None):
     """Speed after falling from rest: v = sqrt(2*g*h)
@@ -1648,6 +1934,58 @@ def spring_oscillation_period(T=None, m=None, k=None, *, target: str | None = No
     given = {k: v for k, v in dict(T=T, m=m, k=k).items() if v is not None}
     return _P.solve("spring_oscillation_period", target=target, **given)
 
+def standing_wave_harmonics(system=None, L=None, v=None, n=None):
+    """Standing waves: harmonics of a string and of open or closed pipes. The frequency and wavelength of the n-th harmonic, and the fundamental, of a string fixed at both ends, a pipe open at both ends or a pipe closed at one end.
+    Formula: f_n = \\frac{n v}{2L}\\ \\text{(string, open pipe)},\\qquad f_n = \\frac{n v}{4L},\\ n\\ \\text{odd (closed pipe)}
+    Inputs:
+        system: string fixed at both ends, pipe open at both ends, or pipe closed at one end
+        L: length of the string or pipe
+        v: wave speed
+        n: harmonic number (f_n = n f_1); odd only for a closed pipe
+    Outputs: f_n (frequency of the n-th harmonic), lam_n (wavelength of the n-th harmonic), f1 (fundamental frequency)
+    See also: help("standing_wave_harmonics")
+    """
+    given = {k: v for k, v in dict(system=system, L=L, v=v, n=n).items() if v is not None}
+    return _P.solve("standing_wave_harmonics", **given)
+
+def static_friction_incline(mu_s=None, theta=None, m=None):
+    """Static friction on an incline: critical angle and whether a body slides. The steepest incline on which a body can rest (tan(theta_c) = mu_s), whether it slides at the given angle and, with its mass, the normal force, the friction needed and the friction available.
+    Formula: \\tan\\theta_c = \\mu_s
+    Inputs:
+        mu_s: coefficient of static friction
+        theta: angle of the incline above the horizontal
+        m: mass of the body, if the forces are wanted (optional)
+    Outputs: theta_c (critical (steepest holding) angle), theta_c_deg (critical angle in degrees), slips (whether the body slides at the given angle), N (normal force (when m is given)), f_needed (friction needed to hold it (when m is given)), f_max (maximum static friction available (when m is given))
+    See also: help("static_friction_incline")
+    """
+    given = {k: v for k, v in dict(mu_s=mu_s, theta=theta, m=m).items() if v is not None}
+    return _P.solve("static_friction_incline", **given)
+
+def static_friction_limit(mu_s=None, N=None, F=None):
+    """Static friction: maximum friction force and whether a body slips. The largest static friction force mu_s N and whether an applied force parallel to the surface makes the body slip.
+    Formula: f_s \\le \\mu_s N
+    Inputs:
+        mu_s: coefficient of static friction
+        N: normal force
+        F: applied force parallel to the surface (magnitude)
+    Outputs: f_max (maximum static friction force), slips (whether the body slips), margin (f_max - F (positive: it holds))
+    See also: help("static_friction_limit")
+    """
+    given = {k: v for k, v in dict(mu_s=mu_s, N=N, F=F).items() if v is not None}
+    return _P.solve("static_friction_limit", **given)
+
+def string_wave_speed(T=None, mu=None):
+    """Wave speed on a stretched string. The speed of transverse waves on a string from its tension and its mass per unit length.
+    Formula: v = \\sqrt{\\frac{T}{\\mu}}
+    Inputs:
+        T: tension in the string
+        mu: mass per unit length of the string (condition: mu != 0)
+    Outputs: v (speed of transverse waves)
+    See also: help("string_wave_speed")
+    """
+    given = {k: v for k, v in dict(T=T, mu=mu).items() if v is not None}
+    return _P.solve("string_wave_speed", **given)
+
 def surface_gravity(g=None, M=None, r=None, G=None, *, target: str | None = None):
     """Gravitational acceleration at a distance from a mass: g = G*M/r**2
     Formula: g = \\frac{G M}{r^{2}}
@@ -1703,6 +2041,19 @@ def tension_hanging_at_rest(T=None, m=None, g=None, *, target: str | None = None
     """
     given = {k: v for k, v in dict(T=T, m=m, g=g).items() if v is not None}
     return _P.solve("tension_hanging_at_rest", target=target, **given)
+
+def terminal_voltage_internal_resistance(emf=None, r=None, R=None):
+    """Terminal voltage of a source with internal resistance. Current, terminal voltage, lost volts, load power and efficiency of a source of emf with internal resistance r driving a load resistance R.
+    Formula: I = \\frac{\\mathcal{E}}{R + r},\\quad V_t = \\mathcal{E} - Ir
+    Inputs:
+        emf: emf of the source
+        r: internal resistance
+        R: load resistance
+    Outputs: I (current in the circuit), V_t (terminal voltage (across the load)), V_lost (voltage lost inside the source (I r)), P_load (power delivered to the load), efficiency (fraction of the source's power delivered to the load)
+    See also: help("terminal_voltage_internal_resistance")
+    """
+    given = {k: v for k, v in dict(emf=emf, r=r, R=R).items() if v is not None}
+    return _P.solve("terminal_voltage_internal_resistance", **given)
 
 def thin_lens(d_o=None, d_i=None, f=None, *, target: str | None = None):
     """Thin lens equation: 1/d_o + 1/d_i = 1/f
@@ -1813,6 +2164,18 @@ def uniform_motion(d=None, v=None, t=None, *, target: str | None = None):
     """
     given = {k: v for k, v in dict(d=d, v=v, t=t).items() if v is not None}
     return _P.solve("uniform_motion", target=target, **given)
+
+def vector_components_resultant(magnitudes=None, directions=None):
+    """Vector components and the resultant of two-dimensional vectors. The x and y components of each vector given by magnitude and direction, and the magnitude and direction of their sum (forces, displacements, velocities: any one unit for all).
+    Formula: R = \\sqrt{R_x^2 + R_y^2},\\quad \\theta_R = \\operatorname{atan2}(R_y, R_x)
+    Inputs:
+        magnitudes: magnitude of each vector (all in one unit)
+        directions: direction of each vector in degrees, counterclockwise from +x
+    Outputs: R (magnitude of the resultant), direction_deg (direction of the resultant in degrees from +x (0 to 360)), Rx (x component of the resultant), Ry (y component of the resultant), x_components (x component of each vector), y_components (y component of each vector)
+    See also: help("vector_components_resultant")
+    """
+    given = {k: v for k, v in dict(magnitudes=magnitudes, directions=directions).items() if v is not None}
+    return _P.solve("vector_components_resultant", **given)
 
 def velocity_displacement(v=None, v0=None, a=None, x=None, *, target: str | None = None):
     """Speed after a displacement under constant acceleration: v**2 = v0**2 + 2*a*x
@@ -1942,5 +2305,19 @@ def work(W=None, F=None, d=None, theta=None, *, target: str | None = None):
     given = {k: v for k, v in dict(W=W, F=F, d=d, theta=theta).items() if v is not None}
     return _P.solve("work", target=target, **given)
 
+def youngs_modulus_deformation(F=None, A=None, L0=None, E=None):
+    """Tension or compression: stress, strain and change of length (Young's modulus). Stress, strain and change of length of a rod or wire of original length L0 and cross-section A under an axial force F.
+    Formula: \\Delta L = \\frac{F L_0}{A E}
+    Inputs:
+        F: axial force (positive: tension, negative: compression)
+        A: cross-sectional area
+        L0: original length
+        E: Young's modulus
+    Outputs: dL (change of length (positive: extension)), stress (tensile stress F / A), strain (strain dL / L0)
+    See also: help("youngs_modulus_deformation")
+    """
+    given = {k: v for k, v in dict(F=F, A=A, L0=L0, E=E).items() if v is not None}
+    return _P.solve("youngs_modulus_deformation", **given)
 
-__all__ = ["CapabilityId", "solve", "help", "absolute_pressure_depth", "acceleration_frictionless_incline", "amplitude_resonance_frequency", "angular_frequency", "angular_momentum", "angular_momentum_point_mass", "angular_velocity_angle", "angular_velocity_time", "area_expansion", "atwood_massive_pulley", "average_force_from_momentum_change", "average_velocity_displacement", "bead_hoop_equilibrium", "capacitance_definition", "capacitive_reactance", "capacitor_energy", "carnot_efficiency", "centripetal_acceleration", "centripetal_acceleration_omega", "centripetal_force", "charge_current", "cop_heat_pump", "cop_refrigerator", "coupled_fast_mode", "cyclotron_radius", "damped_angular_frequency", "damping_ratio", "de_broglie", "density", "displacement_time", "double_pendulum_fast_mode", "double_pendulum_slow_mode", "driven_amplitude", "elastic_collision_first_final", "elastic_collision_second_final", "electric_force_in_field", "electric_power", "engine_efficiency", "engine_energy_balance", "escape_speed", "flow_rate_area_speed", "flow_rate_volume_time", "foucault_precession_period", "gravitational_pe", "heat", "hydrostatic_pressure", "ideal_gas_moles", "impulse", "index_of_refraction", "inductive_reactance", "inertia_hollow_sphere", "inertia_rod_center", "inertia_rod_end", "inertia_solid_disk", "inertia_solid_sphere", "intensity_power_area", "kepler_period_semi_major", "kinetic_energy", "kinetic_friction", "latent_heat_fusion", "latent_heat_vaporization", "lc_resonance", "linear_expansion", "long_wire_field", "loop_center_field", "magnetic_force_charge", "magnetic_force_wire", "max_height_vertical_throw", "mirror_focal_length", "momentum", "motional_emf", "net_force_friction", "net_work_kinetic_energy", "newton_second", "normal_force_incline", "normal_on_level", "ohm", "ohm_power_current", "ohm_power_voltage", "orbital_period", "orbital_speed", "parallel_plate_capacitor", "pendulum_period", "period_frequency", "photon_energy", "photon_energy_wavelength", "photon_momentum", "physical_pendulum_period", "point_charge_field", "point_charge_potential", "power_energy", "power_force_speed", "pressure_force", "quality_factor", "rc_charging", "rc_discharging", "rc_time_constant", "resistivity", "rest_energy", "rl_current_decay", "rl_time_constant", "rms_current", "rms_voltage", "rocket_delta_v", "rolling_incline_acceleration", "rotational_kinetic_energy", "shm_max_speed", "solenoid_field", "speed_after_fall_from_rest", "spring_energy", "spring_force", "spring_launch_speed", "spring_oscillation_period", "surface_gravity", "tangential_acceleration", "tangential_speed", "tension_hanging_at_rest", "thin_lens", "time_to_top_vertical_throw", "torque_free_precession", "torque_lever", "two_resistors_series_parallel", "uniform_acceleration_state", "uniform_field_potential", "uniform_motion", "velocity_displacement", "velocity_time", "vis_viva", "volume_expansion", "wave_speed", "wavelength_in_medium", "weight", "weight_component_along_incline", "work"]
+
+__all__ = ["CapabilityId", "solve", "help", "absolute_pressure_depth", "acceleration_frictionless_incline", "amplitude_resonance_frequency", "angular_frequency", "angular_momentum", "angular_momentum_conservation", "angular_momentum_point_mass", "angular_velocity_angle", "angular_velocity_time", "area_expansion", "atwood_massive_pulley", "average_force_from_momentum_change", "average_velocity_displacement", "bead_hoop_equilibrium", "beam_support_reactions", "bulk_modulus_compression", "capacitance_definition", "capacitive_reactance", "capacitor_energy", "carnot_efficiency", "centre_of_mass_point_masses", "centripetal_acceleration", "centripetal_acceleration_omega", "centripetal_force", "charge_current", "cop_heat_pump", "cop_refrigerator", "coulomb_force", "coupled_fast_mode", "critical_angle_total_internal_reflection", "cyclotron_radius", "damped_angular_frequency", "damping_ratio", "de_broglie", "density", "diffraction_grating_order", "displacement_time", "double_pendulum_fast_mode", "double_pendulum_slow_mode", "double_slit_bright_fringe", "driven_amplitude", "elastic_collision_first_final", "elastic_collision_second_final", "electric_force_in_field", "electric_power", "engine_efficiency", "engine_energy_balance", "escape_speed", "faraday_induced_emf", "flow_rate_area_speed", "flow_rate_volume_time", "foucault_precession_period", "gauss_law_symmetric_field", "gravitational_force_two_masses", "gravitational_pe", "heat", "hydrostatic_pressure", "ideal_gas_moles", "ideal_transformer_secondary", "impulse", "index_of_refraction", "inductive_reactance", "inertia_hollow_sphere", "inertia_rod_center", "inertia_rod_end", "inertia_solid_disk", "inertia_solid_sphere", "intensity_power_area", "kepler_period_semi_major", "kinetic_energy", "kinetic_friction", "latent_heat_fusion", "latent_heat_vaporization", "lc_resonance", "lens_mirror_magnification", "linear_expansion", "long_wire_field", "loop_center_field", "magnetic_force_charge", "magnetic_force_wire", "malus_law_polarizer", "max_height_vertical_throw", "mirror_focal_length", "momentum", "motional_emf", "net_force_friction", "net_work_kinetic_energy", "newton_second", "normal_force_incline", "normal_on_level", "ohm", "ohm_power_current", "ohm_power_voltage", "orbital_period", "orbital_speed", "parallel_plate_capacitor", "pendulum_period", "period_frequency", "photon_energy", "photon_energy_wavelength", "photon_momentum", "physical_pendulum_period", "point_charge_field", "point_charge_potential", "power_energy", "power_force_speed", "pressure_force", "quality_factor", "rc_charging", "rc_discharging", "rc_time_constant", "resistivity", "rest_energy", "rl_current_decay", "rl_time_constant", "rms_current", "rms_voltage", "rocket_delta_v", "rolling_incline_acceleration", "rotational_kinetic_energy", "rotational_second_law", "series_rlc_ac_circuit", "shear_modulus_deformation", "shm_max_speed", "single_slit_minimum", "snell_refraction_angle", "solenoid_field", "sound_intensity_level", "sound_level_change", "speed_after_fall_from_rest", "spring_energy", "spring_force", "spring_launch_speed", "spring_oscillation_period", "standing_wave_harmonics", "static_friction_incline", "static_friction_limit", "string_wave_speed", "surface_gravity", "tangential_acceleration", "tangential_speed", "tension_hanging_at_rest", "terminal_voltage_internal_resistance", "thin_lens", "time_to_top_vertical_throw", "torque_free_precession", "torque_lever", "two_resistors_series_parallel", "uniform_acceleration_state", "uniform_field_potential", "uniform_motion", "vector_components_resultant", "velocity_displacement", "velocity_time", "vis_viva", "volume_expansion", "wave_speed", "wavelength_in_medium", "weight", "weight_component_along_incline", "work", "youngs_modulus_deformation"]

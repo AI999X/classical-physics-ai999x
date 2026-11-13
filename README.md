@@ -4,11 +4,11 @@
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/classical-physics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/classical-physics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/classical-physics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.5.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.6.0
 
 Field: **Physical Sciences** · Tasks: Question Answering
 
-classical-physics-ai999x is an offline, deterministic classical physics solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers classical physics questions with verified results from 196 certified capabilities, gives 1177 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
+classical-physics-ai999x is an offline, deterministic classical physics solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers classical physics questions with verified results from 224 certified capabilities, gives 1347 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
 **classical-physics-ai999x** reads a question in plain English (or a typed call), picks a certified classical physics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions, or a refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
@@ -20,13 +20,13 @@ classical-physics-ai999x is an offline, deterministic classical physics solver w
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Classical Physics desktop app** 1.5.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.5.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz) |
-| **Command line** (`classical-physics`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz) |
+| **AI999X Classical Physics desktop app** 1.6.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.6.0/ai999x-classical-physics-1.6.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.6.0/ai999x-classical-physics-1.6.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.6.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz) |
+| **Command line** (`classical-physics`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz) |
 | **In your browser** | any device. Nothing to install | [Compute on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install classical-physics-ai999x` |
 
-Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -37,11 +37,11 @@ Download **AI999X Classical Physics** for your system (above), unpack it and sta
 Linux, from a terminal:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-classical-physics-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
-./ai999x-classical-physics-1.5.0-linux-x86_64/ai999x-classical-physics
+tar xzf ai999x-classical-physics-1.6.0-linux-x86_64.tar.gz
+./ai999x-classical-physics-1.6.0-linux-x86_64/ai999x-classical-physics
 ```
 
 ### Command line
@@ -49,23 +49,23 @@ tar xzf ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 classical-physics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.6.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 classical-physics --version
 ```
@@ -87,25 +87,43 @@ kinetic energy (K) = 24 J
 **What a capability needs**: The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
 ```console
-$ classical-physics info two_resistors_series_parallel
-Two resistors in series and in parallel
-  series resistances add; parallel conductances add
-  in   r1       first resistance [ohm]
-  in   r2       second resistance [ohm]
-  out  rs       series equivalent [ohm]
-  out  rp       parallel equivalent [ohm]
+$ classical-physics info series_rlc_ac_circuit
+Series RLC circuit on an AC supply: impedance, current, phase and power
+  XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R
+  in   R        resistance [ohm]
+  in   L        inductance [H]
+  in   C        capacitance [F]
+  in   f        supply frequency [Hz]
+  in   V        rms supply voltage [V]
+  out  I        rms current [A]
+  out  Z        impedance [ohm]
+  out  phi      phase angle of the voltage ahead of the current (positive: inductive) [rad]
+  out  phi_deg  phase angle in degrees []
+  out  pf       power factor cos(phi) []
+  out  P        average power [W]
+  out  XL       inductive reactance [ohm]
+  out  XC       capacitive reactance [ohm]
 ```
 
 **Solve**: Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
 ```console
-$ classical-physics solve two_resistors_series_parallel "r1=6 ohm" "r2=3 ohm"
-rs = 9 ohm
-rp = 2 ohm
-  by: Two resistors in series and in parallel  (series resistances add; parallel conductances add)
-  r1 = 6 ohm
-  r2 = 3 ohm
-  assumes: r1 > 0; r2 > 0
+$ classical-physics solve series_rlc_ac_circuit "R=30 ohm" "L=0.1 H" "C=10 uF" "f=50 Hz" "V=230 V"
+Z = 288.458219 ohm
+I = 0.7973425089 A
+phi = -1.466606728 rad
+phi_deg = -84.0303757
+pf = 0.1040011968
+P = 19.07265229 W
+XL = 31.41592654 ohm
+XC = 318.3098862 ohm
+  by: Series RLC circuit on an AC supply: impedance, current, phase and power  (XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R)
+  R = 30 ohm
+  L = 0.1 H
+  C = 1e-05 F
+  f = 50 Hz
+  V = 230 V
+  assumes: R, L, C, f, V > 0; sinusoidal steady state
 ```
 
 **Many questions at once**: One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | classical-physics batch
@@ -113,13 +131,13 @@ rp = 2 ohm
 `cases.jsonl`:
 
 ```json
-{"key": "two_resistors_series_parallel", "inputs": {"r1": "6 ohm", "r2": "3 ohm"}}
+{"key": "series_rlc_ac_circuit", "inputs": {"R": "30 ohm", "L": "0.1 H", "C": "10 uF", "f": "50 Hz", "V": "230 V"}}
 {"key": "rocket_delta_v", "inputs": {"ve": "3000 m/s", "m0": "1000 kg", "mf": "400 kg"}}
 ```
 
 ```console
 $ classical-physics batch < cases.jsonl
-{"outcome":"SOLVED","message":"","value":9.0,"unit":"ohm","solved_for":"rs","si":[["r1",6.0],["r2",3.0]],"values":[["rs",9.0,"ohm"],["rp",2.0,"ohm"]],"target":"rs","phrase":"series equivalent","assumptions":["r1 > 0","r2 > 0"],"name":"Two resistors in series and in parallel","equation":"series resistances add; parallel conductances add"}
+{"outcome":"SOLVED","message":"","value":0.797342508851,"unit":"A","solved_for":"I","si":[["R",30.0],["L",0.1],["C",9.999999999999999e-6],["f",50.0],["V",230.0]],"values":[["Z",288.458218955,"ohm"],["I",0.797342508851,"A"],["phi",-1.46660672772,"rad"],["phi_deg",-84.0303757039,""],["pf",0.104001196807,""],["P",19.0726522926,"W"],["XL",31.415926535897935,"ohm"],["XC",318.3098861837907,"ohm"]],"target":"I","phrase":"rms current","assumptions":["R, L, C, f, V > 0","sinusoidal steady state"],"name":"Series RLC circuit on an AC supply: impedance, current, phase and power","equation":"XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R"}
 {"outcome":"SOLVED","message":"","value":2748.8721956224654,"unit":"m/s","solved_for":"dv","si":[["ve",3000.0],["m0",1000.0],["mf",400.0]],"target":"dv","phrase":"change in velocity","assumptions":["no gravity or drag during the burn","a constant exhaust velocity","the situation is: rocket"],"name":"Velocity change of a rocket (Tsiolkovsky)","equation":"dv = ve*log(m0/mf)"}
 ```
 
@@ -252,7 +270,7 @@ _What this means:_ This calculation determines the effective current value for a
 ## Highlights
 
 - **Verified, not generated.** Every answer is computed by a certified classical physics capability and checked (substituted back, dimension-checked or compared with an independent computation) before it is returned.
-- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 1177 documented answers is reproduced exactly on every tested platform.
+- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 1347 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
 - **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `classical-physics` command line for Windows and Linux, and WebAssembly on the model page, no Python, no network.
@@ -263,11 +281,11 @@ _What this means:_ This calculation determines the effective current value for a
 
 | Property | Value |
 |---|---|
-| Package | `classical-physics-ai999x` 1.5.0 (import `classical_physics_ai999x`) |
+| Package | `classical-physics-ai999x` 1.6.0 (import `classical_physics_ai999x`) |
 | Type | Deterministic neuro-symbolic classical physics engine (rule-based reading + certified symbolic capabilities) |
-| Capabilities | 46 certified derivations, 16 certified model_familys, 2 certified procedures, 132 certified relations |
+| Capabilities | 46 certified derivations, 16 certified model_familys, 30 certified procedures, 132 certified relations |
 | Knowledge pack | version 1.0.2 |
-| Golden answers | 1177 documented answers, identical on every tested platform |
+| Golden answers | 1347 documented answers, identical on every tested platform |
 | Platforms tested | Windows (Python 3.13), Linux x86-64 (Python 3.10, 3.11, 3.12, 3.13, 3.14) |
 | Runtime | CPU only, offline; no GPU, no network, no API key |
 | License | Apache-2.0 |
@@ -297,7 +315,7 @@ classical_physics.ask("Who created you?").message
 # -> classical-physics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `classical-physics-ai999x "<question>"`; for the native program use `classical-physics` (above). The outputs above were produced by running this exact code on classical-physics-ai999x 1.5.0.
+The Python package also installs a Python command, `classical-physics-ai999x "<question>"`; for the native program use `classical-physics` (above). The outputs above were produced by running this exact code on classical-physics-ai999x 1.6.0.
 
 ## Draw the answer
 
@@ -431,11 +449,11 @@ _Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0.001 F, source 10 V) char
 
 ## Capabilities
 
-46 certified derivations, 16 certified model_familys, 2 certified procedures, 132 certified relations. A few of them:
+46 certified derivations, 16 certified model_familys, 30 certified procedures, 132 certified relations. A few of them:
 
 - **Derivations:** acceleration with friction level; angular acceleration from tangential; angular frequency period; average speed equal instantaneous; centripetal acceleration from period; derive absolute pressure depth; derive acceleration frictionless incline; derive centripetal acceleration omega; derive centripetal force; derive charge current; derive cyclotron radius; derive electric power; derive impulse; derive inductive reactance; derive lc resonance; derive long wire field; derive normal on level; derive ohm power current; derive ohm power voltage; derive orbital period; derive photon energy; derive photon energy wavelength; derive photon momentum; derive rl time constant …
 - **Model_familys:** A gas between two states; Apparent weight in an elevator; Block on a surface pulled over a pulley; Collisions along a line; Doppler effect for sound; Ideal banking of a curve; Maximum speed on a flat curve; Mixing to thermal equilibrium; Motion in stages; Projectile motion; RC circuits; Radioactive decay; Recoil from rest; Rolling from a height; Series and parallel resistor and capacitor networks; Two masses over a pulley
-- **Procedures:** Two resistors in series and in parallel; Velocity and displacement after constant acceleration
+- **Procedures:** Bulk compression: volume change under a pressure change (bulk modulus); Centre of mass of a set of point masses; Change of sound level and the ratio of two intensities; Conservation of angular momentum: change of spin rate; Coulomb's law: force between two point charges; Critical angle for total internal reflection; Diffraction grating: angle of an order and the highest visible order; Double-slit interference: angle and position of a bright fringe; Faraday's law: average emf induced by a change of magnetic flux; Gauss's law: electric field of a line, a plane, a charged sphere or a shell; Ideal transformer: secondary voltage and current; Magnification and image height of a thin lens or a spherical mirror; Malus's law: intensity through a polarizer; Newton's law of universal gravitation: force between two masses; Newton's second law for rotation: angular acceleration from torque; Series RLC circuit on an AC supply: impedance, current, phase and power; Shear: shear stress, shear strain and displacement (shear modulus); Single-slit diffraction: dark fringes and the width of the central maximum; Snell's law: angle of refraction; Sound intensity level in decibels; Standing waves: harmonics of a string and of open or closed pipes; Static equilibrium of a beam on two supports: support reactions; Static friction on an incline: critical angle and whether a body slides; Static friction: maximum friction force and whether a body slips …
 - **Relations:** Absolute pressure at a depth in a fluid; Acceleration down a frictionless incline; Acceleration of a body rolling without slipping down an incline; Acceleration of an Atwood machine with a massive pulley; Amplitude-resonance frequency of a driven damped oscillator; Angular frequency and frequency; Angular frequency of a damped oscillator; Angular momentum of a point mass on a circle; Angular momentum of a rotating body; Angular velocity and angle turned under constant angular acceleration; Angular velocity under constant angular acceleration; Average net force from a change of momentum; Average power; Body-frame precession rate of a torque-free symmetric body; Capacitance of parallel plates; Carnot (maximum) efficiency; Centripetal acceleration; Centripetal acceleration from angular velocity; Centripetal force; Charge carried by a steady current; Charge on a capacitor; Coefficient of performance of a heat pump; Coefficient of performance of a refrigerator; Component of the weight along an incline …
 
 `classical_physics_ai999x.templates()` lists every question form `ask()` reads; the capability guide (PDF, every example executed) is included in this repository.
@@ -455,10 +473,10 @@ _Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0.001 F, source 10 V) char
 ## Citation
 
 ```bibtex
-@software{classical_physics_ai999x_1_5_0,
+@software{classical_physics_ai999x_1_6_0,
   title  = {classical-physics-ai999x: an offline, verified classical physics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.5.0},
+  year   = {2026}, version = {1.6.0},
   url    = {https://huggingface.co/AI999X/classical-physics-ai999x}
 }
 ```
@@ -475,7 +493,7 @@ Created and engineered by **Ibnul Jaif Farabi** · **[AI999X](https://huggingfac
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/classical-physics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.5.0`; the [GitHub release](https://github.com/AI999X/classical-physics-ai999x/releases/tag/v1.5.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/classical-physics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.0`; the [GitHub release](https://github.com/AI999X/classical-physics-ai999x/releases/tag/v1.6.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 

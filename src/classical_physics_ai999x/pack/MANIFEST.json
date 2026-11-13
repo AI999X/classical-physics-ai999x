@@ -1,19 +1,20 @@
 {
- "package": "1.5.0",
+ "package": "1.6.0",
  "pack": "1.0.2",
  "knowledge_db": null,
  "files": {
-  "dictionary/kinds.json": "b90724ee53e26121e44ffbcbff41075c48158da9c7fb6462425a4cde1f2476b0",
+  "dictionary/kinds.json": "e1a103173a9579937de4d73bdaf916e2632262400faeb925bb4d97f937b5dec7",
   "dictionary/terms.json": "daaec55379a151db25fcacabdb6af3eb27c58dc82108152731b4139125fcc512",
-  "knowledge/relations.json": "5da1c130a76d11bfd1b79cb401f928866bb0a2c66cd584bf64b7e90bf7bc9745",
+  "knowledge/relations.json": "ae4ef010aa87ca52477ae9c8019e12e4d0fb9af2b3362821b6b1b50c279aee98",
   "knowledge/reference_cases.json": "bf5016add133458cd6bb01f8c681a4fc1cd71db4f2a72ab0eb8acd73f42b1aaa",
   "knowledge/question_examples.json": "53f0f1c7f24739acf4dcb11dd4b87f06cd2cb93ac735455879aaac221fa377ac",
   "capabilities/families.py": "54d0b860ef2f56e0719bc9e423ffb2563e3a0da323bcb7e9888057145302dce7",
-  "capabilities/procedures_certified.json": "38a6991fc2f903bc1bdcd728a5b3832de073cb4aa9ed08b7a24a502443989c48",
+  "capabilities/procedures.py": "1b1d8f1236f64e031f6bb7417efb8f3aa3c1f7120ba98be0ab9ecd474fc66169",
+  "capabilities/procedures_certified.json": "dd1363cd59b949000bf10d93fefa822245155aa8f211953eecdba2f7505ed896",
   "capabilities/procedures_compiled.json": "d7943aa9a77a7b6d313c3e1b3c2ef3a96f0844ac310afd749260b514e2188f55",
   "capabilities/derivations_certified.json": "4bea34dd43d405f99260c5622bfa78d46737944f6f4aff78235194817aacc1eb",
   "classical_physics_knowledge_public.sqlite": "1d9c54794ac1beeac7f65c6794e3578e35b33906bf3b2c1e6e91fc5ec66e91fb",
-  "templates.json": "dbb305c118e61bd8081eb5c34d5d36de42d6ca05463895d7564cd4086212ad93",
+  "templates.json": "289baac54e76b59ffa5215f05e06bf82ed6e1e6540aac90e77083599afefd9f3",
   "topics.json": "e49da6ae57720b57ecb881d354084401e776f71f72fca035b807f707a26688e5"
  },
  "engine": [

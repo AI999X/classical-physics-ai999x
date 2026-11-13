@@ -11,11 +11,13 @@ pub mod figures;
 mod figs_common;
 mod figures_charts;
 mod figures_draw;
+pub mod procedures;
 
 pub fn pack() -> &'static Pack {
     static P: OnceLock<Pack> = OnceLock::new();
     P.get_or_init(|| {
         let mut p = Pack::from_json(PACK_JSON).expect("the bundled model data is valid");
+        p.native = Some(procedures::native);       // the hand-written procedures, ported (src/procedures.rs)
         p.figures = Some(figures::live);           // the model's own live figures (ax_engine::figkit)
         p
     })

@@ -307,8 +307,9 @@ fn friction_push(s: &Solved) -> Option<Figure> {
     c::rect(&mut cv, 210.0, 100.0, 100.0, 70.0);
     arrow_lab(&mut cv, (210.0 - p * sc, 135.0), (210.0, 135.0), "axp-c2", "");
     cv.value(210.0 - p * sc / 2.0, 125.0, "middle", &format!("P = {}", k::q(p, "N")));
-    arrow_lab(&mut cv, (310.0, 160.0), (310.0 + f * sc, 160.0), "axp-c3", "");
-    cv.value(310.0 + f * sc / 2.0, 152.0, "middle", &format!("f = {}", k::q(f, "N")));
+    // friction acts at the floor, against the push (it once pointed the same way as P: classical physics review)
+    arrow_lab(&mut cv, (260.0, 166.0), (260.0 - f * sc, 166.0), "axp-c3", "");
+    cv.value(260.0 - f * sc / 2.0, 188.0, "middle", &format!("f = {}", k::q(f, "N")));
     // the net force below, from the block's centre
     arrow_lab(&mut cv, (260.0, 230.0), (260.0 + net * sc, 230.0), "axp-c", &format!("net {}", k::q(net, "N")));
     cv.name(260.0, 270.0, "middle", "net horizontal force F = P - f");
@@ -796,8 +797,9 @@ fn plate_potentials(s: &Solved) -> Option<Figure> {
     let mut cv = Canvas::new(320.0);
     let (x0, x1) = (80.0, 440.0);
     cv.raw(&format!("<rect class=\"axp-b\" x=\"{}\" y=\"50\" width=\"10\" height=\"220\"/><rect class=\"axp-b3\" x=\"{x1}\" y=\"50\" width=\"10\" height=\"220\"/>", x0 - 10.0));
+    // the field points from the high-potential plate (right, V) to the 0 V plate (left); it once pointed the other way
     for i in 0..5 {
-        c::varrow(&mut cv, (x0 + 2.0, 70.0 + 45.0 * i as f64), (x1 - 2.0, 70.0 + 45.0 * i as f64), "axp-c4");
+        c::varrow(&mut cv, (x1 - 2.0, 70.0 + 45.0 * i as f64), (x0 + 2.0, 70.0 + 45.0 * i as f64), "axp-c4");
     }
     for f in [0.25, 0.5, 0.75] {
         let vv = c::at(s, &[("d", d * f)], "V")?;

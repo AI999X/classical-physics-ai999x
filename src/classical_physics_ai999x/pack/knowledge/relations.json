@@ -3705,7 +3705,7 @@
     "eff": {
      "kind": "efficiency",
      "role": "plain",
-     "sign": "positive",
+     "sign": "fraction",
      "desc": "efficiency (a fraction)"
     },
     "W": {
@@ -3751,7 +3751,7 @@
     "eff": {
      "kind": "efficiency",
      "role": "carnot",
-     "sign": "positive",
+     "sign": "fraction",
      "desc": "maximum efficiency"
     },
     "Tc": {
@@ -3907,7 +3907,7 @@
     "n": {
      "kind": "refractive_index",
      "role": "plain",
-     "sign": "positive",
+     "sign": "at_least_one",
      "desc": "index of refraction"
     }
    },
@@ -3940,7 +3940,7 @@
     "n": {
      "kind": "refractive_index",
      "role": "plain",
-     "sign": "positive",
+     "sign": "at_least_one",
      "desc": "index of refraction"
     },
     "c": {

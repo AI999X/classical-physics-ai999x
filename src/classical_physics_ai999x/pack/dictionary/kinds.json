@@ -180,5 +180,8 @@
  },
  "quality_factor": {
   "unit": "1"
+ },
+ "linear_mass_density": {
+  "unit": "kg/m"
  }
 }

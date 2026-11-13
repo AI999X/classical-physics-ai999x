@@ -21,42 +21,42 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>classical-physics: the Classical Physics program, user guide</h1>
-<p><strong>classical-physics-ai999x 1.1.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
-<p>Classical Physics covers kinematics, dynamics, energy, momentum, rotation, gravitation, oscillations, waves and sound, optics, thermodynamics, electricity and magnetism. This guide is about <code>classical-physics</code>, the model as a self-contained program for Windows and Linux: 134 capabilities in 26 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/classical-physics-ai999x/); the Python package (<code>pip install classical-physics-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
+<p><strong>classical-physics-ai999x 1.6.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p>Classical Physics covers kinematics, dynamics, energy, momentum, rotation, gravitation, oscillations, waves and sound, optics, thermodynamics, electricity and magnetism. This guide is about <code>classical-physics</code>, the model as a self-contained program for Windows and Linux: 162 capabilities in 37 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/classical-physics-ai999x/); the Python package (<code>pip install classical-physics-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
 <h2>1. Get it</h2>
-<p>Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
-<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Classical Physics</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Classical Physics</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
+<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Classical Physics</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-classical-physics-1.6.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Classical Physics</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-classical-physics-1.6.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz</td></tr></tbody></table>
 <h3>Desktop app</h3>
-<p>Classical Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-classical-physics-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-classical-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+<p>Classical Physics in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-classical-physics-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-classical-physics.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-classical-physics-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-classical-physics-1.5.0-linux-x86_64.tar.gz
-./ai999x-classical-physics-1.5.0-linux-x86_64/ai999x-classical-physics</code></pre>
-<p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+tar xzf ai999x-classical-physics-1.6.0-linux-x86_64.tar.gz
+./ai999x-classical-physics-1.6.0-linux-x86_64/ai999x-classical-physics</code></pre>
+<p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x</code></pre>
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x</code></pre>
 <h3>Command line, Linux</h3>
 <p>The bundle holds one program per model; <code>classical-physics</code> is this one. The checksum line should print OK.</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
+mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
 classical-physics --version</code></pre>
 <h3>Command line, Windows (PowerShell)</h3>
 <p>The fourth line should print True.</p>
-<pre><code class="powershell">$F = &quot;ai999x-cli-1.5.0-windows-x86_64.zip&quot;
-Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.5.0/$F&quot; -OutFile $F
-Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS&quot; -OutFile SHA256SUMS
+<pre><code class="powershell">$F = &quot;ai999x-cli-1.6.0-windows-x86_64.zip&quot;
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.6.0/$F&quot; -OutFile $F
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS&quot; -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split &#x27; &#x27;)[0]
 Expand-Archive $F -DestinationPath &quot;$env:LOCALAPPDATA\AI999X&quot; -Force
-$D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
+$D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
 [Environment]::SetEnvironmentVariable(&quot;Path&quot;, [Environment]::GetEnvironmentVariable(&quot;Path&quot;, &quot;User&quot;) + &quot;;$D&quot;, &quot;User&quot;)
 classical-physics --version</code></pre>
 <h3>In your browser</h3>
@@ -67,7 +67,7 @@ classical-physics --version</code></pre>
 <h3>2.1 Check the install</h3>
 <p>Prints the model, its version and that this is the Rust build.</p>
 <pre><code class="shell">$ classical-physics --version
-classical-physics-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)</code></pre>
+classical-physics-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)</code></pre>
 <h3>2.2 Ask in words</h3>
 <p>Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.</p>
 <pre><code class="shell">$ classical-physics ask &quot;A 3 kg object moves at 4 m/s. What is its kinetic energy?&quot;
@@ -79,16 +79,16 @@ kinetic energy (K) = 24 J
   assumes: speeds far below the speed of light</code></pre>
 <h3>2.3 Find a capability</h3>
 <p>Search the capabilities by what you want to know; the first column is the id to pass to info and solve.</p>
-<pre><code class="shell">$ classical-physics search &quot;two resistors in series and in parallel&quot;
-two_resistors_series_parallel        Two resistors in series and in parallel  (circuits)
-parallel_plate_capacitor             Capacitance of parallel plates  (capacitors)
-coupled_fast_mode                    Higher normal-mode frequency of two coupled oscillators  (oscillations)
-rl_time_constant                     Time constant of an RL circuit  (induction)
-uniform_field_potential              Potential difference in a uniform field  (electrostatics)
-elastic_collision_first_final        Final velocity of the first body in a one-dimensional elastic collision  (collisions)
-elastic_collision_second_final       Final velocity of the second body in a one-dimensional elastic collision  (collisions)
+<pre><code class="shell">$ classical-physics search &quot;series rlc circuit on an ac supply: impedance, current, phase and power&quot;
+series_rlc_ac_circuit                Series RLC circuit on an AC supply: impedance, current, phase and power  (AC circuits / series RLC)
+rms_current                          Rms current of a sinusoidal supply  (ac circuits)
 ohm_power_current                    Power from current and resistance  (circuits)
-… 9 more</code></pre>
+rms_voltage                          Rms voltage of a sinusoidal supply  (ac circuits)
+two_resistors_series_parallel        Two resistors in series and in parallel  (circuits)
+rl_current_decay                     Current dying away in an RL circuit  (induction)
+ohm_power_voltage                    Power from voltage and resistance  (circuits)
+electric_power                       Electric power  (electricity)
+… 12 more</code></pre>
 <h3>2.4 List the capabilities</h3>
 <p>Every capability the program answers: its id (what you pass to solve) and its name.</p>
 <pre><code class="shell">$ classical-physics list
@@ -100,33 +100,51 @@ average_velocity_displacement            Displacement from the mean of initial a
 newton_second                            Net force and acceleration
 weight                                   Weight in a uniform gravitational field
 net_force_friction                       Net force with an opposing friction force
-… 126 more</code></pre>
+… 154 more</code></pre>
 <h3>2.5 What a capability needs</h3>
 <p>The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.</p>
-<pre><code class="shell">$ classical-physics info two_resistors_series_parallel
-Two resistors in series and in parallel
-  series resistances add; parallel conductances add
-  in   r1       first resistance [ohm]
-  in   r2       second resistance [ohm]
-  out  rs       series equivalent [ohm]
-  out  rp       parallel equivalent [ohm]</code></pre>
+<pre><code class="shell">$ classical-physics info series_rlc_ac_circuit
+Series RLC circuit on an AC supply: impedance, current, phase and power
+  XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R
+  in   R        resistance [ohm]
+  in   L        inductance [H]
+  in   C        capacitance [F]
+  in   f        supply frequency [Hz]
+  in   V        rms supply voltage [V]
+  out  I        rms current [A]
+  out  Z        impedance [ohm]
+  out  phi      phase angle of the voltage ahead of the current (positive: inductive) [rad]
+  out  phi_deg  phase angle in degrees []
+  out  pf       power factor cos(phi) []
+  out  P        average power [W]
+  out  XL       inductive reactance [ohm]
+  out  XC       capacitive reactance [ohm]</code></pre>
 <h3>2.6 Solve</h3>
 <p>Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.</p>
-<pre><code class="shell">$ classical-physics solve two_resistors_series_parallel &quot;r1=6 ohm&quot; &quot;r2=3 ohm&quot;
-rs = 9 ohm
-rp = 2 ohm
-  by: Two resistors in series and in parallel  (series resistances add; parallel conductances add)
-  r1 = 6 ohm
-  r2 = 3 ohm
-  assumes: r1 &gt; 0; r2 &gt; 0</code></pre>
+<pre><code class="shell">$ classical-physics solve series_rlc_ac_circuit &quot;R=30 ohm&quot; &quot;L=0.1 H&quot; &quot;C=10 uF&quot; &quot;f=50 Hz&quot; &quot;V=230 V&quot;
+Z = 288.458219 ohm
+I = 0.7973425089 A
+phi = -1.466606728 rad
+phi_deg = -84.0303757
+pf = 0.1040011968
+P = 19.07265229 W
+XL = 31.41592654 ohm
+XC = 318.3098862 ohm
+  by: Series RLC circuit on an AC supply: impedance, current, phase and power  (XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R)
+  R = 30 ohm
+  L = 0.1 H
+  C = 1e-05 F
+  f = 50 Hz
+  V = 230 V
+  assumes: R, L, C, f, V &gt; 0; sinusoidal steady state</code></pre>
 <h3>2.7 Machine-readable answer</h3>
 <p>--json prints the same answer as one line of JSON (values in SI): for scripts and other programs.</p>
-<pre><code class="shell">$ classical-physics solve two_resistors_series_parallel &quot;r1=6 ohm&quot; &quot;r2=3 ohm&quot; --json
-{&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:9.0,&quot;unit&quot;:&quot;ohm&quot;,&quot;solved_for&quot;:&quot;rs&quot;,&quot;si&quot;:[[&quot;r1&quot;,6.0],[&quot;r2&quot;,3.0]],&quot;values&quot;:[[&quot;rs&quot;,9.0,&quot;ohm&quot;],[&quot;rp&quot;,2.0,&quot;ohm&quot;]],&quot;target&quot;:&quot;rs&quot;,&quot;phrase&quot;:&quot;series equivalent&quot;,&quot;assumptions&quot;:[&quot;r1 &gt; 0&quot;,&quot;r2 &gt; 0&quot;],&quot;name&quot;:&quot;Two resistors in series and in parallel&quot;,&quot;equation&quot;:&quot;series resistances add; parallel conductances add&quot;}</code></pre>
+<pre><code class="shell">$ classical-physics solve series_rlc_ac_circuit &quot;R=30 ohm&quot; &quot;L=0.1 H&quot; &quot;C=10 uF&quot; &quot;f=50 Hz&quot; &quot;V=230 V&quot; --json
+{&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:0.797342508851,&quot;unit&quot;:&quot;A&quot;,&quot;solved_for&quot;:&quot;I&quot;,&quot;si&quot;:[[&quot;R&quot;,30.0],[&quot;L&quot;,0.1],[&quot;C&quot;,9.999999999999999e-6],[&quot;f&quot;,50.0],[&quot;V&quot;,230.0]],&quot;values&quot;:[[&quot;Z&quot;,288.458218955,&quot;ohm&quot;],[&quot;I&quot;,0.797342508851,&quot;A&quot;],[&quot;phi&quot;,-1.46660672772,&quot;rad&quot;],[&quot;phi_deg&quot;,-84.0303757039,&quot;&quot;],[&quot;pf&quot;,0.104001196807,&quot;&quot;],[&quot;P&quot;,19.0726522926,&quot;W&quot;],[&quot;XL&quot;,31.415926535897935,&quot;ohm&quot;],[&quot;XC&quot;,318.3098861837907,&quot;ohm&quot;]],&quot;target&quot;:&quot;I&quot;,&quot;phrase&quot;:&quot;rms current&quot;,&quot;assumptions&quot;:[&quot;R, L, C, f, V &gt; 0&quot;,&quot;sinusoidal steady state&quot;],&quot;name&quot;:&quot;Series RLC circuit on an AC supply: impedance, current, phase and power&quot;,&quot;equation&quot;:&quot;XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R&quot;}</code></pre>
 <h3>2.8 When an input is missing</h3>
 <p>No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.</p>
-<pre><code class="shell">$ classical-physics solve two_resistors_series_parallel &quot;r1=6 ohm&quot;
-NEEDS_INPUT: two_resistors_series_parallel needs r2 (second resistance). Example: solve(&#x27;two_resistors_series_parallel&#x27;, r1=&#x27;6 ohm&#x27;, r2=&#x27;3 ohm&#x27;).</code></pre>
+<pre><code class="shell">$ classical-physics solve series_rlc_ac_circuit &quot;R=30 ohm&quot; &quot;L=0.1 H&quot; &quot;C=10 uF&quot; &quot;f=50 Hz&quot;
+NEEDS_INPUT: series_rlc_ac_circuit needs V (rms supply voltage). Example: solve(&#x27;series_rlc_ac_circuit&#x27;, R=&#x27;30 ohm&#x27;, L=&#x27;0.1 H&#x27;, C=&#x27;1.66667e-05 F&#x27;, f=&#x27;159.155 Hz&#x27;, V=&#x27;100 V&#x27;).</code></pre>
 <h3>2.9 Solve an equation for another quantity</h3>
 <p>An equation can be solved for any of its quantities: give the others and name the one you want with --target (here ve).</p>
 <pre><code class="shell">$ classical-physics solve rocket_delta_v &quot;m0=1000 kg&quot; &quot;mf=400 kg&quot; &quot;dv=2748.87 m/s&quot; --target ve
@@ -139,10 +157,10 @@ exhaust velocity (ve) = 2999.997604 m/s
 <h3>2.10 Many questions at once</h3>
 <p>One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | classical-physics batch</p>
 <p><code>cases.jsonl</code>:</p>
-<pre><code class="json">{&quot;key&quot;: &quot;two_resistors_series_parallel&quot;, &quot;inputs&quot;: {&quot;r1&quot;: &quot;6 ohm&quot;, &quot;r2&quot;: &quot;3 ohm&quot;}}
+<pre><code class="json">{&quot;key&quot;: &quot;series_rlc_ac_circuit&quot;, &quot;inputs&quot;: {&quot;R&quot;: &quot;30 ohm&quot;, &quot;L&quot;: &quot;0.1 H&quot;, &quot;C&quot;: &quot;10 uF&quot;, &quot;f&quot;: &quot;50 Hz&quot;, &quot;V&quot;: &quot;230 V&quot;}}
 {&quot;key&quot;: &quot;rocket_delta_v&quot;, &quot;inputs&quot;: {&quot;ve&quot;: &quot;3000 m/s&quot;, &quot;m0&quot;: &quot;1000 kg&quot;, &quot;mf&quot;: &quot;400 kg&quot;}}</code></pre>
 <pre><code class="shell">$ classical-physics batch &lt; cases.jsonl
-{&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:9.0,&quot;unit&quot;:&quot;ohm&quot;,&quot;solved_for&quot;:&quot;rs&quot;,&quot;si&quot;:[[&quot;r1&quot;,6.0],[&quot;r2&quot;,3.0]],&quot;values&quot;:[[&quot;rs&quot;,9.0,&quot;ohm&quot;],[&quot;rp&quot;,2.0,&quot;ohm&quot;]],&quot;target&quot;:&quot;rs&quot;,&quot;phrase&quot;:&quot;series equivalent&quot;,&quot;assumptions&quot;:[&quot;r1 &gt; 0&quot;,&quot;r2 &gt; 0&quot;],&quot;name&quot;:&quot;Two resistors in series and in parallel&quot;,&quot;equation&quot;:&quot;series resistances add; parallel conductances add&quot;}
+{&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:0.797342508851,&quot;unit&quot;:&quot;A&quot;,&quot;solved_for&quot;:&quot;I&quot;,&quot;si&quot;:[[&quot;R&quot;,30.0],[&quot;L&quot;,0.1],[&quot;C&quot;,9.999999999999999e-6],[&quot;f&quot;,50.0],[&quot;V&quot;,230.0]],&quot;values&quot;:[[&quot;Z&quot;,288.458218955,&quot;ohm&quot;],[&quot;I&quot;,0.797342508851,&quot;A&quot;],[&quot;phi&quot;,-1.46660672772,&quot;rad&quot;],[&quot;phi_deg&quot;,-84.0303757039,&quot;&quot;],[&quot;pf&quot;,0.104001196807,&quot;&quot;],[&quot;P&quot;,19.0726522926,&quot;W&quot;],[&quot;XL&quot;,31.415926535897935,&quot;ohm&quot;],[&quot;XC&quot;,318.3098861837907,&quot;ohm&quot;]],&quot;target&quot;:&quot;I&quot;,&quot;phrase&quot;:&quot;rms current&quot;,&quot;assumptions&quot;:[&quot;R, L, C, f, V &gt; 0&quot;,&quot;sinusoidal steady state&quot;],&quot;name&quot;:&quot;Series RLC circuit on an AC supply: impedance, current, phase and power&quot;,&quot;equation&quot;:&quot;XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R&quot;}
 {&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:2748.8721956224654,&quot;unit&quot;:&quot;m/s&quot;,&quot;solved_for&quot;:&quot;dv&quot;,&quot;si&quot;:[[&quot;ve&quot;,3000.0],[&quot;m0&quot;,1000.0],[&quot;mf&quot;,400.0]],&quot;target&quot;:&quot;dv&quot;,&quot;phrase&quot;:&quot;change in velocity&quot;,&quot;assumptions&quot;:[&quot;no gravity or drag during the burn&quot;,&quot;a constant exhaust velocity&quot;,&quot;the situation is: rocket&quot;],&quot;name&quot;:&quot;Velocity change of a rocket (Tsiolkovsky)&quot;,&quot;equation&quot;:&quot;dv = ve*log(m0/mf)&quot;}</code></pre>
 <h2>3. Writing inputs</h2>
 <p>Inputs are written <code>name=value</code>, one per argument; <code>classical-physics info &lt;capability&gt;</code> lists the names. Quote an argument that holds a space or brackets (bash, zsh and PowerShell all accept double quotes). The answer always states each input as it was read, converted to SI, so a misread unit is visible at once.</p>
@@ -174,7 +192,7 @@ answers = [json.loads(line) for line in out.splitlines()]</code></pre>
 &lt;/script&gt;</code></pre>
 <h2>8. Every capability</h2>
 <p>By topic. For each: what it does, what it needs and gives, when it applies, and a command with what the program printed for it. <code>classical-physics info &lt;id&gt;</code> shows the same inputs and outputs in the terminal.</p>
-<h3>AC circuits (5)</h3>
+<h3>AC circuits (6)</h3>
 <h4 id="capacitive_reactance">Reactance of a capacitor, <code>capacitive_reactance</code></h4>
 <p>One equation links capacitive reactance (X), Frequency (f) and Capacitance (C). Give all but one of them and it is solved for the one left out, by default capacitive reactance (X).</p>
 <div class="math">\[X = \frac{1}{2 \pi f C}\]</div>
@@ -233,6 +251,28 @@ rms voltage (Vrms) = 120.2081528 V
   V0 = 170 V   [170 V]
   assumes: a sinusoidal waveform; the situation is: alternating current</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the root mean square voltage of a sinusoidal alternating current supply using the peak voltage. The result, 120.208 V, represents the effective voltage that delivers the same power to a resistive load as a direct current source of the same magnitude. This value is derived from the peak voltage 170 V, which is divided by the square root of two.</p>
+<h4 id="series_rlc_ac_circuit">Series RLC circuit on an AC supply: impedance, current, phase and power, <code>series_rlc_ac_circuit</code></h4>
+<p>Reactances, impedance, rms current, phase angle, power factor and average power of a resistor, an inductor and a capacitor in series across a sinusoidal supply.</p>
+<div class="math">\[Z = \sqrt{R^2 + (X_L - X_C)^2},\quad I = \frac{V}{Z},\quad \tan\varphi = \frac{X_L - X_C}{R},\quad P = I^2R\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>R</code></td><td>in</td><td>resistance</td><td>ohm</td></tr><tr><td><code>L</code></td><td>in</td><td>inductance</td><td>H</td></tr><tr><td><code>C</code></td><td>in</td><td>capacitance</td><td>F</td></tr><tr><td><code>f</code></td><td>in</td><td>supply frequency</td><td>Hz</td></tr><tr><td><code>V</code></td><td>in</td><td>rms supply voltage</td><td>V</td></tr><tr><td><code>I</code></td><td>out</td><td>rms current</td><td>A</td></tr><tr><td><code>Z</code></td><td>out</td><td>impedance</td><td>ohm</td></tr><tr><td><code>phi</code></td><td>out</td><td>phase angle of the voltage ahead of the current (positive: inductive)</td><td>rad</td></tr><tr><td><code>phi_deg</code></td><td>out</td><td>phase angle in degrees</td><td>, </td></tr><tr><td><code>pf</code></td><td>out</td><td>power factor cos(phi)</td><td>, </td></tr><tr><td><code>P</code></td><td>out</td><td>average power</td><td>W</td></tr><tr><td><code>XL</code></td><td>out</td><td>inductive reactance</td><td>ohm</td></tr><tr><td><code>XC</code></td><td>out</td><td>capacitive reactance</td><td>ohm</td></tr></tbody></table>
+<p><strong>Applies when:</strong> R, L, C, f, V &gt; 0; sinusoidal steady state.</p>
+<pre><code class="shell">$ classical-physics solve series_rlc_ac_circuit &quot;R=30 ohm&quot; &quot;L=0.1 H&quot; &quot;C=10 uF&quot; &quot;f=50 Hz&quot; &quot;V=230 V&quot;
+Z = 288.458219 ohm
+I = 0.7973425089 A
+phi = -1.466606728 rad
+phi_deg = -84.0303757
+pf = 0.1040011968
+P = 19.07265229 W
+XL = 31.41592654 ohm
+XC = 318.3098862 ohm
+  by: Series RLC circuit on an AC supply: impedance, current, phase and power  (XL = 2 pi f L, XC = 1/(2 pi f C), Z = sqrt(R^2 + (XL - XC)^2), I = V/Z, tan(phi) = (XL - XC)/R, P = I^2 R)
+  R = 30 ohm
+  L = 0.1 H
+  C = 1e-05 F
+  f = 50 Hz
+  V = 230 V
+  assumes: R, L, C, f, V &gt; 0; sinusoidal steady state</code></pre>
+<p>In the worked example, R = 30 ohm, L = 0.1 H, C = 10 uF, f = 50 Hz, V = 230 V go through the equation above and give Z = 288.458219 ohm, I = 0.7973425089 A, phi = -1.466606728 rad, phi_deg = -84.0303757. It applies only when R, L, C, f, V &gt; 0; sinusoidal steady state: outside that it says what is wrong instead of returning a number.</p>
 <h3>Capacitors (3)</h3>
 <h4 id="parallel_plate_capacitor">Capacitance of parallel plates, <code>parallel_plate_capacitor</code></h4>
 <p>One equation links Capacitance (C), area of each plate (A), plate separation (d) and Permittivity (eps0). Give all but one of them and it is solved for the one left out, by default Capacitance (C).</p>
@@ -409,6 +449,24 @@ final velocity of the second body (v2f) = 4 m/s
   v2 = 0 m/s   [0 m/s]
   assumes: a head-on (one-dimensional) collision; kinetic energy conserved; no external forces; the situation is: elastic collision</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the final velocity of the second body after a one-dimensional elastic collision. It uses the masses of both bodies and their initial velocities to find that the second body ends up moving at 4 m/s. This result assumes kinetic energy is conserved and no external forces act on the system.</p>
+<h3>DC circuits (1)</h3>
+<h4 id="terminal_voltage_internal_resistance">Terminal voltage of a source with internal resistance, <code>terminal_voltage_internal_resistance</code></h4>
+<p>Current, terminal voltage, lost volts, load power and efficiency of a source of emf with internal resistance r driving a load resistance R.</p>
+<div class="math">\[I = \frac{\mathcal{E}}{R + r},\quad V_t = \mathcal{E} - Ir\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>emf</code></td><td>in</td><td>emf of the source</td><td>V</td></tr><tr><td><code>r</code></td><td>in</td><td>internal resistance</td><td>ohm</td></tr><tr><td><code>R</code></td><td>in</td><td>load resistance</td><td>ohm</td></tr><tr><td><code>I</code></td><td>out</td><td>current in the circuit</td><td>A</td></tr><tr><td><code>V_t</code></td><td>out</td><td>terminal voltage (across the load)</td><td>V</td></tr><tr><td><code>V_lost</code></td><td>out</td><td>voltage lost inside the source (I r)</td><td>V</td></tr><tr><td><code>P_load</code></td><td>out</td><td>power delivered to the load</td><td>W</td></tr><tr><td><code>efficiency</code></td><td>out</td><td>fraction of the source&#x27;s power delivered to the load</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> emf &gt; 0; r, R &gt;= 0 and not both 0.</p>
+<pre><code class="shell">$ classical-physics solve terminal_voltage_internal_resistance &quot;emf=12 V&quot; &quot;r=0.5 ohm&quot; &quot;R=5.5 ohm&quot;
+I = 2 A
+V_t = 11 V
+V_lost = 1 V
+P_load = 22 W
+efficiency = 0.9166666667
+  by: Terminal voltage of a source with internal resistance  (I = emf / (R + r); V_t = emf - I r = I R)
+  emf = 12 V
+  r = 0.5 ohm
+  R = 5.5 ohm
+  assumes: emf &gt; 0; r, R &gt;= 0 and not both 0</code></pre>
+<p>In the worked example, emf = 12 V, r = 0.5 ohm, R = 5.5 ohm go through the equation above and give I = 2 A, V_t = 11 V, V_lost = 1 V, P_load = 22 W. It applies only when emf &gt; 0; r, R &gt;= 0 and not both 0: outside that it says what is wrong instead of returning a number.</p>
 <h3>Dynamics (12)</h3>
 <h4 id="acceleration_frictionless_incline">Acceleration down a frictionless incline, <code>acceleration_frictionless_incline</code></h4>
 <p>One equation links acceleration down the incline (a), gravitational acceleration (g) and angle of the incline to the horizontal (theta). Give all but one of them and it is solved for the one left out, by default acceleration down the incline (a).</p>
@@ -556,6 +614,54 @@ weight (W) = 98 N
   g = 9.8 m/s^2   [9.8 m/s^2]
   assumes: uniform gravitational field</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the weight, which is the force of gravity acting on an object. It is derived by multiplying the object&#x27;s mass, representing its inertia, by the local gravitational acceleration. The result, 98 N, indicates how strongly gravity pulls on the body in this uniform field.</p>
+<h3>Elasticity (3)</h3>
+<h4 id="bulk_modulus_compression">Bulk compression: volume change under a pressure change (bulk modulus), <code>bulk_modulus_compression</code></h4>
+<p>Volumetric strain, change of volume and final volume of a body of volume V0 when the pressure on it rises by dP.</p>
+<div class="math">\[\Delta V = -\frac{V_0\,\Delta P}{B}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>dP</code></td><td>in</td><td>increase of pressure (negative: decrease)</td><td>Pa</td></tr><tr><td><code>V0</code></td><td>in</td><td>original volume</td><td>m^3</td></tr><tr><td><code>B</code></td><td>in</td><td>bulk modulus</td><td>Pa</td></tr><tr><td><code>dV</code></td><td>out</td><td>change of volume (negative: compression)</td><td>m^3</td></tr><tr><td><code>strain</code></td><td>out</td><td>volumetric strain dV / V0</td><td>, </td></tr><tr><td><code>V</code></td><td>out</td><td>final volume</td><td>m^3</td></tr></tbody></table>
+<p><strong>Applies when:</strong> V0, B &gt; 0; linear elastic (|dP / B| &lt; 1).</p>
+<pre><code class="shell">$ classical-physics solve bulk_modulus_compression &quot;dP=20 MPa&quot; &quot;V0=1 m^3&quot; &quot;B=2.2 GPa&quot;
+dV = -0.009090909091 m^3
+strain = -0.009090909091
+V = 0.9909090909 m^3
+  by: Bulk compression: volume change under a pressure change (bulk modulus)  (dV = -V0 dP / B)
+  dP = 20000000 Pa
+  V0 = 1 m^3
+  B = 2200000000 Pa
+  assumes: V0, B &gt; 0; linear elastic (|dP / B| &lt; 1)</code></pre>
+<p>In the worked example, dP = 20 MPa, V0 = 1 m^3, B = 2.2 GPa go through the equation above and give dV = -0.009090909091 m^3, strain = -0.009090909091, V = 0.9909090909 m^3. It applies only when V0, B &gt; 0; linear elastic (|dP / B| &lt; 1): outside that it says what is wrong instead of returning a number.</p>
+<h4 id="shear_modulus_deformation">Shear: shear stress, shear strain and displacement (shear modulus), <code>shear_modulus_deformation</code></h4>
+<p>Shear stress, shear strain and the sideways displacement of one face of a block of height h when a force F acts parallel to a face of area A.</p>
+<div class="math">\[\Delta x = \frac{F h}{A S}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>F</code></td><td>in</td><td>force parallel to the face</td><td>N</td></tr><tr><td><code>A</code></td><td>in</td><td>area of the face the force acts on</td><td>m^2</td></tr><tr><td><code>h</code></td><td>in</td><td>distance between the sheared faces</td><td>m</td></tr><tr><td><code>S</code></td><td>in</td><td>shear modulus</td><td>Pa</td></tr><tr><td><code>dx</code></td><td>out</td><td>sideways displacement of the face</td><td>m</td></tr><tr><td><code>stress</code></td><td>out</td><td>shear stress F / A</td><td>Pa</td></tr><tr><td><code>strain</code></td><td>out</td><td>shear strain dx / h</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> A, h, S &gt; 0; linear elastic (|strain| &lt; 1).</p>
+<pre><code class="shell">$ classical-physics solve shear_modulus_deformation &quot;F=40 kN&quot; &quot;A=20 cm^2&quot; &quot;h=10 cm&quot; &quot;S=25 GPa&quot;
+stress = 20000000 Pa
+strain = 0.0008
+dx = 8e-05 m
+  by: Shear: shear stress, shear strain and displacement (shear modulus)  (stress = F/A; strain = stress/S; dx = strain h)
+  F = 40000 N
+  A = 0.002 m^2
+  h = 0.1 m
+  S = 2.5e+10 Pa
+  assumes: A, h, S &gt; 0; linear elastic (|strain| &lt; 1)</code></pre>
+<p>In the worked example, F = 40 kN, A = 20 cm^2, h = 10 cm, S = 25 GPa go through the equation above and give stress = 20000000 Pa, strain = 0.0008, dx = 8e-05 m. It applies only when A, h, S &gt; 0; linear elastic (|strain| &lt; 1): outside that it says what is wrong instead of returning a number.</p>
+<h4 id="youngs_modulus_deformation">Tension or compression: stress, strain and change of length (Young&#x27;s modulus), <code>youngs_modulus_deformation</code></h4>
+<p>Stress, strain and change of length of a rod or wire of original length L0 and cross-section A under an axial force F.</p>
+<div class="math">\[\Delta L = \frac{F L_0}{A E}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>F</code></td><td>in</td><td>axial force (positive: tension, negative: compression)</td><td>N</td></tr><tr><td><code>A</code></td><td>in</td><td>cross-sectional area</td><td>m^2</td></tr><tr><td><code>L0</code></td><td>in</td><td>original length</td><td>m</td></tr><tr><td><code>E</code></td><td>in</td><td>Young&#x27;s modulus</td><td>Pa</td></tr><tr><td><code>dL</code></td><td>out</td><td>change of length (positive: extension)</td><td>m</td></tr><tr><td><code>stress</code></td><td>out</td><td>tensile stress F / A</td><td>Pa</td></tr><tr><td><code>strain</code></td><td>out</td><td>strain dL / L0</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> A, L0, E &gt; 0; linear elastic (|strain| &lt; 1).</p>
+<pre><code class="shell">$ classical-physics solve youngs_modulus_deformation &quot;F=1000 N&quot; &quot;A=1 mm^2&quot; &quot;L0=2 m&quot; &quot;E=200 GPa&quot;
+stress = 1000000000 Pa
+strain = 0.005
+dL = 0.01 m
+  by: Tension or compression: stress, strain and change of length (Young&#x27;s modulus)  (stress = F/A; strain = stress/E; dL = strain L0)
+  F = 1000 N
+  A = 1e-06 m^2
+  L0 = 2 m
+  E = 2e+11 Pa
+  assumes: A, L0, E &gt; 0; linear elastic (|strain| &lt; 1)</code></pre>
+<p>In the worked example, F = 1000 N, A = 1 mm^2, L0 = 2 m, E = 200 GPa go through the equation above and give stress = 1000000000 Pa, strain = 0.005, dL = 0.01 m. It applies only when A, L0, E &gt; 0; linear elastic (|strain| &lt; 1): outside that it says what is wrong instead of returning a number.</p>
 <h3>Electricity (3)</h3>
 <h4 id="charge_current">Charge carried by a steady current, <code>charge_current</code></h4>
 <p>One equation links charge (Q), current (I) and elapsed time (t). Give all but one of them and it is solved for the one left out, by default charge (Q).</p>
@@ -593,7 +699,55 @@ voltage (V) = 12 V
   R = 4 ohm   [4 ohm]
   assumes: ohmic element at a fixed temperature</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the electrical potential difference, or voltage, that develops across a resistive component when a specific electric current passes through it. Multiplying the measured current 3 A flowing through the element by its resistance value 4 ohm gives the resulting voltage drop 12 V. This relationship assumes the material behaves linearly at a constant temperature, meaning the resistance does not change as the current varies. The result indicates how much energy per unit charge is dissipated as heat within the resistor due to the flow of electrons.</p>
-<h3>Electrostatics (4)</h3>
+<h3>Electromagnetic induction (2)</h3>
+<h4 id="faraday_induced_emf">Faraday&#x27;s law: average emf induced by a change of magnetic flux, <code>faraday_induced_emf</code></h4>
+<p>The flux through a coil before and after a change of field or area, and the average emf induced in its N turns during the change (with Lenz&#x27;s sign).</p>
+<div class="math">\[\mathcal{E} = -N\,\frac{\Delta\Phi}{\Delta t},\quad \Phi = BA\cos\theta\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>N</code></td><td>in</td><td>number of turns</td><td>, </td></tr><tr><td><code>A1</code></td><td>in</td><td>initial area of the coil</td><td>m^2</td></tr><tr><td><code>B1</code></td><td>in</td><td>initial magnetic field</td><td>T</td></tr><tr><td><code>B2</code></td><td>in</td><td>final magnetic field</td><td>T</td></tr><tr><td><code>dt</code></td><td>in</td><td>duration of the change</td><td>s</td></tr><tr><td><code>A2</code></td><td>in</td><td>final area of the coil (default: unchanged) (optional)</td><td>m^2</td></tr><tr><td><code>theta</code></td><td>in</td><td>angle between the field and the coil&#x27;s axis (default 0) (optional)</td><td>rad</td></tr><tr><td><code>emf</code></td><td>out</td><td>magnitude of the average induced emf</td><td>V</td></tr><tr><td><code>emf_signed</code></td><td>out</td><td>average induced emf with Lenz&#x27;s sign, -N dPhi/dt</td><td>V</td></tr><tr><td><code>phi1</code></td><td>out</td><td>initial flux through one turn</td><td>Wb</td></tr><tr><td><code>phi2</code></td><td>out</td><td>final flux through one turn</td><td>Wb</td></tr><tr><td><code>dphi</code></td><td>out</td><td>change of flux through one turn</td><td>Wb</td></tr></tbody></table>
+<p><strong>Applies when:</strong> N &gt;= 1; dt &gt; 0; areas &gt;= 0; uniform field over the coil.</p>
+<pre><code class="shell">$ classical-physics solve faraday_induced_emf N=200 &quot;A1=100 cm^2&quot; &quot;B1=0 T&quot; &quot;B2=0.5 T&quot; &quot;dt=0.1 s&quot;
+phi1 = 0 Wb
+phi2 = 0.005 Wb
+dphi = 0.005 Wb
+emf = 10 V
+emf_signed = -10 V
+  by: Faraday&#x27;s law: average emf induced by a change of magnetic flux  (Phi = B A cos(theta); emf = -N (Phi2 - Phi1) / dt)
+  A1 = 0.01 m^2
+  B1 = 0 T
+  B2 = 0.5 T
+  dt = 0.1 s
+  assumes: N &gt;= 1; dt &gt; 0; areas &gt;= 0; uniform field over the coil</code></pre>
+<p>In the worked example, N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T, dt = 0.1 s go through the equation above and give phi1 = 0 Wb, phi2 = 0.005 Wb, dphi = 0.005 Wb, emf = 10 V. It applies only when N &gt;= 1; dt &gt; 0; areas &gt;= 0; uniform field over the coil: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="ideal_transformer_secondary">Ideal transformer: secondary voltage and current, <code>ideal_transformer_secondary</code></h4>
+<p>Secondary voltage (and, when the primary current is given, the secondary current) of an ideal transformer from its turns, and whether it steps the voltage up or down.</p>
+<div class="math">\[\frac{V_s}{V_p} = \frac{N_s}{N_p} = \frac{I_p}{I_s}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>Np</code></td><td>in</td><td>number of turns of the primary</td><td>, </td></tr><tr><td><code>Ns</code></td><td>in</td><td>number of turns of the secondary</td><td>, </td></tr><tr><td><code>Vp</code></td><td>in</td><td>primary voltage (rms)</td><td>V</td></tr><tr><td><code>Ip</code></td><td>in</td><td>primary current (rms), if known (optional)</td><td>A</td></tr><tr><td><code>Vs</code></td><td>out</td><td>secondary voltage</td><td>V</td></tr><tr><td><code>Is</code></td><td>out</td><td>secondary current (when Ip is given)</td><td>A</td></tr><tr><td><code>ratio</code></td><td>out</td><td>turns ratio Ns / Np</td><td>, </td></tr><tr><td><code>type</code></td><td>out</td><td>step-up, step-down or isolation</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> Np, Ns &gt;= 1; Vp &gt; 0; ideal: no losses, no magnetizing current.</p>
+<pre><code class="shell">$ classical-physics solve ideal_transformer_secondary Np=500 Ns=50 &quot;Vp=230 V&quot; &quot;Ip=0.5 A&quot;
+Vs = 23 V
+ratio = 0.1
+type = step-down
+Is = 5 A
+  by: Ideal transformer: secondary voltage and current  (Vs / Vp = Ns / Np; Np Ip = Ns Is)
+  Vp = 230 V
+  Ip = 0.5 A
+  assumes: Np, Ns &gt;= 1; Vp &gt; 0; ideal: no losses, no magnetizing current</code></pre>
+<p>In the worked example, Np = 500, Ns = 50, Vp = 230 V, Ip = 0.5 A go through the equation above and give Vs = 23 V, ratio = 0.1, type = step-down, Is = 5 A. It applies only when Np, Ns &gt;= 1; Vp &gt; 0; ideal: no losses, no magnetizing current: outside that it says what is wrong instead of returning a number.</p>
+<h3>Electrostatics (6)</h3>
+<h4 id="coulomb_force">Coulomb&#x27;s law: force between two point charges, <code>coulomb_force</code></h4>
+<p>The electrostatic force between two point charges a distance r apart: its magnitude and its sign along the line joining them (positive: repulsion, negative: attraction).</p>
+<div class="math">\[F = k\,\frac{|q_1 q_2|}{r^2}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>q1</code></td><td>in</td><td>first charge (with its sign)</td><td>C</td></tr><tr><td><code>q2</code></td><td>in</td><td>second charge (with its sign)</td><td>C</td></tr><tr><td><code>r</code></td><td>in</td><td>distance between the charges</td><td>m</td></tr><tr><td><code>F</code></td><td>out</td><td>magnitude of the electrostatic force</td><td>N</td></tr><tr><td><code>F_radial</code></td><td>out</td><td>force along the line joining the charges (positive: repulsion)</td><td>N</td></tr></tbody></table>
+<p><strong>Applies when:</strong> r &gt; 0; point charges in vacuum (or air).</p>
+<pre><code class="shell">$ classical-physics solve coulomb_force &quot;q1=2 uC&quot; &quot;q2=3 uC&quot; &quot;r=10 cm&quot;
+F = 5.392531075 N
+F_radial = 5.392531075 N
+  by: Coulomb&#x27;s law: force between two point charges  (F = k q1 q2 / r^2 with k = 8.9875517923e9 N m^2/C^2; the sign of q1 q2 tells repulsion or attraction)
+  q1 = 2e-06 C
+  q2 = 3e-06 C
+  r = 0.1 m
+  assumes: r &gt; 0; point charges in vacuum (or air)</code></pre>
+<p>In the worked example, q1 = 2 uC, q2 = 3 uC, r = 10 cm go through the equation above and give F = 5.392531075 N, F_radial = 5.392531075 N. It applies only when r &gt; 0; point charges in vacuum (or air): outside that it says what is wrong instead of returning a number.</p>
 <h4 id="point_charge_field">Electric field of a point charge, <code>point_charge_field</code></h4>
 <p>One equation links field strength at distance r (Ef), magnitude of the source charge (Q), distance from the charge (r) and Coulomb constant (ke). Give all but one of them and it is solved for the one left out, by default field strength at distance r (Ef).</p>
 <div class="math">\[E_{f} = \frac{k_{e} Q}{r^{2}}\]</div>
@@ -632,6 +786,24 @@ magnitude of the electric force (F) = 0.06 N
   Ef = 30000 N/C   [30000 N/C]
   assumes: magnitudes only; the situation is: electric</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the magnitude of the electric force exerted on a charged particle situated within an external electric field. The result, 0.06 N, is derived by multiplying the magnitude of the charge, 2e-06 C, by the electric field strength at that location, 30000 N/C. This relationship defines how strongly the field acts upon the charge, which is essential for predicting particle motion in devices like capacitors.</p>
+<h4 id="gauss_law_symmetric_field">Gauss&#x27;s law: electric field of a line, a plane, a charged sphere or a shell, <code>gauss_law_symmetric_field</code></h4>
+<p>The electric field of a symmetric charge distribution by Gauss&#x27;s law: an infinite line (charge Q on a length L), an infinite plane sheet (charge Q on an area A), a uniformly charged solid sphere or a thin spherical shell of radius R, inside or outside; with the enclosed charge, the flux through the Gaussian surface and the charge density.</p>
+<div class="math">\[\oint \vec E\cdot d\vec A = \frac{Q_{enc}}{\varepsilon_0}:\quad E_{line} = \frac{\lambda}{2\pi\varepsilon_0 r},\ E_{plane} = \frac{\sigma}{2\varepsilon_0},\ E_{sphere} = \frac{kQr}{R^3}\ (r&lt;R)\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>geometry</code></td><td>in</td><td>line, plane, sphere (uniformly charged solid ball) or shell (thin shell, or a conducting sphere)</td><td>, </td></tr><tr><td><code>Q</code></td><td>in</td><td>charge (with its sign): on the length L, the area A, or the whole sphere or shell</td><td>C</td></tr><tr><td><code>r</code></td><td>in</td><td>distance from the line, or from the centre (not needed for a plane) (optional)</td><td>m</td></tr><tr><td><code>L</code></td><td>in</td><td>length of line that carries Q (line only; lambda = Q/L) (optional)</td><td>m</td></tr><tr><td><code>A</code></td><td>in</td><td>area of plane that carries Q (plane only; sigma = Q/A) (optional)</td><td>m^2</td></tr><tr><td><code>R</code></td><td>in</td><td>radius of the sphere or shell (sphere and shell only) (optional)</td><td>m</td></tr><tr><td><code>E</code></td><td>out</td><td>magnitude of the electric field</td><td>N/C</td></tr><tr><td><code>E_radial</code></td><td>out</td><td>field component away from the line, plane or centre</td><td>N/C</td></tr><tr><td><code>Q_enc</code></td><td>out</td><td>charge enclosed by the Gaussian surface through the point</td><td>C</td></tr><tr><td><code>flux</code></td><td>out</td><td>electric flux through the Gaussian surface, Q_enc/eps0 in N m^2/C</td><td>, </td></tr><tr><td><code>density</code></td><td>out</td><td>charge density: lambda in C/m (line), sigma in C/m^2 (plane, shell), rho in C/m^3 (sphere)</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> r &gt; 0, L &gt; 0, A &gt; 0, R &gt; 0; line and plane treated as infinite; uniform charge; on a shell (r = R) the field is refused; charges in vacuum (or air).</p>
+<pre><code class="shell">$ classical-physics solve gauss_law_symmetric_field geometry=line &quot;Q=2 uC&quot; &quot;L=1 m&quot; &quot;r=10 cm&quot;
+E = 359502.0717 N/C
+E_radial = 359502.0717 N/C
+Q_enc = 2e-06 C
+flux = 225881.8135
+density = 2e-06
+  by: Gauss&#x27;s law: electric field of a line, a plane, a charged sphere or a shell  (line E = lambda/(2 pi eps0 r); plane E = sigma/(2 eps0); sphere E = k Q r/R^3 inside, k Q/r^2 outside; shell E = 0 inside, k Q/r^2 outside; flux = Q_enc/eps0)
+  Q = 2e-06 C
+  L = 1 m
+  r = 0.1 m
+  geometry = line
+  assumes: r &gt; 0, L &gt; 0, A &gt; 0, R &gt; 0; line and plane treated as infinite; uniform charge; on a shell (r = R) the field is refused; charges in vacuum (or air)</code></pre>
+<p>In the worked example, geometry = line, Q = 2 uC, L = 1 m, r = 10 cm go through the equation above and give E = 359502.0717 N/C, E_radial = 359502.0717 N/C, Q_enc = 2e-06 C, flux = 225881.8135. It applies only when r &gt; 0, L &gt; 0, A &gt; 0, R &gt; 0; line and plane treated as infinite; uniform charge; on a shell (r = R) the field is refused; charges in vacuum (or air): outside that it says what is wrong instead of returning a number.</p>
 <h4 id="uniform_field_potential">Potential difference in a uniform field, <code>uniform_field_potential</code></h4>
 <p>One equation links potential difference between the plates (V), uniform field strength (Ef) and separation along the field (d). Give all but one of them and it is solved for the one left out, by default potential difference between the plates (V).</p>
 <div class="math">\[V = E_{f} d\]</div>
@@ -833,7 +1005,81 @@ pressure (P) = 5000 Pa
   A = 0.04 m^2   [0.04 m^2]
   assumes: force spread evenly and normal to the surface</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the pressure exerted by a normal force distributed evenly over a specific surface area. The result, 5000 Pa, indicates how concentrated the force of 200 N is across the area of 0.04 m^2. A higher value signifies that the same force is applied over a smaller region, leading to greater intensity per unit area.</p>
-<h3>Gravitation (3)</h3>
+<h3>Forces (2)</h3>
+<h4 id="static_friction_incline">Static friction on an incline: critical angle and whether a body slides, <code>static_friction_incline</code></h4>
+<p>The steepest incline on which a body can rest (tan(theta_c) = mu_s), whether it slides at the given angle and, with its mass, the normal force, the friction needed and the friction available.</p>
+<div class="math">\[\tan\theta_c = \mu_s\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>mu_s</code></td><td>in</td><td>coefficient of static friction</td><td>, </td></tr><tr><td><code>theta</code></td><td>in</td><td>angle of the incline above the horizontal</td><td>rad</td></tr><tr><td><code>m</code></td><td>in</td><td>mass of the body, if the forces are wanted (optional)</td><td>kg</td></tr><tr><td><code>theta_c</code></td><td>out</td><td>critical (steepest holding) angle</td><td>rad</td></tr><tr><td><code>theta_c_deg</code></td><td>out</td><td>critical angle in degrees</td><td>, </td></tr><tr><td><code>slips</code></td><td>out</td><td>whether the body slides at the given angle</td><td>, </td></tr><tr><td><code>N</code></td><td>out</td><td>normal force (when m is given)</td><td>N</td></tr><tr><td><code>f_needed</code></td><td>out</td><td>friction needed to hold it (when m is given)</td><td>N</td></tr><tr><td><code>f_max</code></td><td>out</td><td>maximum static friction available (when m is given)</td><td>N</td></tr></tbody></table>
+<p><strong>Applies when:</strong> mu_s &gt;= 0; 0 &lt;= theta &lt; 90 degrees; g = 9.80665 m/s^2.</p>
+<pre><code class="shell">$ classical-physics solve static_friction_incline &quot;mu_s=0.5 1&quot; &quot;theta=20 deg&quot;
+theta_c = 0.463647609 rad
+theta_c_deg = 26.56505118
+slips = false
+  by: Static friction on an incline: critical angle and whether a body slides  (theta_c = atan(mu_s); slides when tan(theta) &gt; mu_s; N = m g cos(theta), f_needed = m g sin(theta), f_max = mu_s N)
+  mu_s = 0.5
+  theta = 0.3490658504 rad
+  assumes: mu_s &gt;= 0; 0 &lt;= theta &lt; 90 degrees; g = 9.80665 m/s^2</code></pre>
+<p>In the worked example, mu_s = 0.5 1, theta = 20 deg go through the equation above and give theta_c = 0.463647609 rad, theta_c_deg = 26.56505118, slips = False. It applies only when mu_s &gt;= 0; 0 &lt;= theta &lt; 90 degrees; g = 9.80665 m/s^2: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="static_friction_limit">Static friction: maximum friction force and whether a body slips, <code>static_friction_limit</code></h4>
+<p>The largest static friction force mu_s N and whether an applied force parallel to the surface makes the body slip.</p>
+<div class="math">\[f_s \le \mu_s N\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>mu_s</code></td><td>in</td><td>coefficient of static friction</td><td>, </td></tr><tr><td><code>N</code></td><td>in</td><td>normal force</td><td>N</td></tr><tr><td><code>F</code></td><td>in</td><td>applied force parallel to the surface (magnitude)</td><td>N</td></tr><tr><td><code>f_max</code></td><td>out</td><td>maximum static friction force</td><td>N</td></tr><tr><td><code>slips</code></td><td>out</td><td>whether the body slips</td><td>, </td></tr><tr><td><code>margin</code></td><td>out</td><td>f_max - F (positive: it holds)</td><td>N</td></tr></tbody></table>
+<p><strong>Applies when:</strong> mu_s &gt;= 0; N &gt; 0; F &gt;= 0.</p>
+<pre><code class="shell">$ classical-physics solve static_friction_limit &quot;mu_s=0.5 1&quot; &quot;N=100 N&quot; &quot;F=40 N&quot;
+f_max = 50 N
+slips = false
+margin = 10 N
+  by: Static friction: maximum friction force and whether a body slips  (f_max = mu_s N; it slips when F &gt; f_max (a force equal to the limit holds it on the verge))
+  mu_s = 0.5
+  N = 100 N
+  F = 40 N
+  assumes: mu_s &gt;= 0; N &gt; 0; F &gt;= 0</code></pre>
+<p>In the worked example, mu_s = 0.5 1, N = 100 N, F = 40 N go through the equation above and give f_max = 50 N, slips = False, margin = 10 N. It applies only when mu_s &gt;= 0; N &gt; 0; F &gt;= 0: outside that it says what is wrong instead of returning a number.</p>
+<h3>Geometric optics (3)</h3>
+<h4 id="critical_angle_total_internal_reflection">Critical angle for total internal reflection, <code>critical_angle_total_internal_reflection</code></h4>
+<p>The smallest angle of incidence (from the normal) at which light in the denser medium is totally reflected at the boundary with a less dense one.</p>
+<div class="math">\[\sin\theta_c = \frac{n_2}{n_1}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>n1</code></td><td>in</td><td>refractive index of the medium the light travels in (the denser one)</td><td>, </td></tr><tr><td><code>n2</code></td><td>in</td><td>refractive index of the medium beyond the boundary</td><td>, </td></tr><tr><td><code>theta_c</code></td><td>out</td><td>critical angle from the normal</td><td>rad</td></tr><tr><td><code>theta_c_deg</code></td><td>out</td><td>critical angle in degrees</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> n1 &gt; n2 &gt;= 1.</p>
+<pre><code class="shell">$ classical-physics solve critical_angle_total_internal_reflection &quot;n1=1.5 1&quot; &quot;n2=1 1&quot;
+theta_c = 0.7297276562 rad
+theta_c_deg = 41.8103149
+  by: Critical angle for total internal reflection  (sin(theta_c) = n2 / n1)
+  n1 = 1.5
+  n2 = 1
+  assumes: n1 &gt; n2 &gt;= 1</code></pre>
+<p>In the worked example, n1 = 1.5 1, n2 = 1 1 go through the equation above and give theta_c = 0.7297276562 rad, theta_c_deg = 41.8103149. It applies only when n1 &gt; n2 &gt;= 1: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="lens_mirror_magnification">Magnification and image height of a thin lens or a spherical mirror, <code>lens_mirror_magnification</code></h4>
+<p>Magnification, image height, image distance and the nature of the image (real or virtual, upright or inverted) from the object distance and either the image distance or the focal length.</p>
+<div class="math">\[m = \frac{h_i}{h_o} = -\frac{d_i}{d_o},\quad \frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>d_o</code></td><td>in</td><td>object distance (positive)</td><td>m</td></tr><tr><td><code>h_o</code></td><td>in</td><td>object height</td><td>m</td></tr><tr><td><code>d_i</code></td><td>in</td><td>image distance (positive: real image), if known (optional)</td><td>m</td></tr><tr><td><code>f</code></td><td>in</td><td>focal length (positive: converging lens or concave mirror), if d_i is not given (optional)</td><td>m</td></tr><tr><td><code>m</code></td><td>out</td><td>magnification (negative: inverted image)</td><td>, </td></tr><tr><td><code>h_i</code></td><td>out</td><td>image height (negative: inverted)</td><td>m</td></tr><tr><td><code>d_i</code></td><td>out</td><td>image distance (positive: real, negative: virtual)</td><td>m</td></tr><tr><td><code>image</code></td><td>out</td><td>real or virtual, upright or inverted</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> d_o &gt; 0, h_o &gt; 0; exactly one of d_i and f; the object not at the focal point.</p>
+<pre><code class="shell">$ classical-physics solve lens_mirror_magnification &quot;d_o=30 cm&quot; &quot;f=10 cm&quot; &quot;h_o=2 cm&quot;
+m = -0.5
+h_i = -0.01 m
+d_i = 0.15 m
+image = real, inverted
+  by: Magnification and image height of a thin lens or a spherical mirror  (d_i = d_o f / (d_o - f) when f is given; m = -d_i / d_o; h_i = m h_o)
+  d_o = 0.3 m
+  f = 0.1 m
+  h_o = 0.02 m
+  assumes: d_o &gt; 0, h_o &gt; 0; exactly one of d_i and f; the object not at the focal point</code></pre>
+<p>In the worked example, d_o = 30 cm, f = 10 cm, h_o = 2 cm go through the equation above and give m = -0.5 1, h_i = -0.01 m, d_i = 0.15 m, image = real, inverted. It applies only when d_o &gt; 0, h_o &gt; 0; exactly one of d_i and f; the object not at the focal point: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="snell_refraction_angle">Snell&#x27;s law: angle of refraction, <code>snell_refraction_angle</code></h4>
+<p>The angle of refraction of a ray passing from a medium of index n1 into one of index n2; refused with a reason when the ray is totally internally reflected.</p>
+<div class="math">\[n_1\sin\theta_1 = n_2\sin\theta_2\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>n1</code></td><td>in</td><td>refractive index of the incident medium</td><td>, </td></tr><tr><td><code>n2</code></td><td>in</td><td>refractive index of the second medium</td><td>, </td></tr><tr><td><code>theta1</code></td><td>in</td><td>angle of incidence from the normal (deg or rad)</td><td>rad</td></tr><tr><td><code>theta2</code></td><td>out</td><td>angle of refraction from the normal</td><td>rad</td></tr><tr><td><code>theta2_deg</code></td><td>out</td><td>angle of refraction in degrees</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> n1, n2 &gt;= 1; 0 &lt;= theta1 &lt;= 90 degrees; n1 sin(theta1) &lt;= n2 (no total internal reflection).</p>
+<pre><code class="shell">$ classical-physics solve snell_refraction_angle &quot;n1=1 1&quot; &quot;n2=1.5 1&quot; &quot;theta1=30 deg&quot;
+theta2 = 0.3398369095 rad
+theta2_deg = 19.47122063
+  by: Snell&#x27;s law: angle of refraction  (sin(theta2) = n1 sin(theta1) / n2)
+  n1 = 1
+  n2 = 1.5
+  theta1 = 0.5235987756 rad
+  assumes: n1, n2 &gt;= 1; 0 &lt;= theta1 &lt;= 90 degrees; n1 sin(theta1) &lt;= n2 (no total internal reflection)</code></pre>
+<p>In the worked example, n1 = 1 1, n2 = 1.5 1, theta1 = 30 deg go through the equation above and give theta2 = 0.3398369095 rad, theta2_deg = 19.47122063. It applies only when n1, n2 &gt;= 1; 0 &lt;= theta1 &lt;= 90 degrees; n1 sin(theta1) &lt;= n2 (no total internal reflection): outside that it says what is wrong instead of returning a number.</p>
+<h3>Gravitation (4)</h3>
 <h4 id="surface_gravity">Gravitational acceleration at a distance from a mass, <code>surface_gravity</code></h4>
 <p>One equation links gravitational acceleration (g), mass of the planet or star (M), distance from the centre (r) and Gravitational constant (G). Give all but one of them and it is solved for the one left out, by default gravitational acceleration (g).</p>
 <div class="math">\[g = \frac{G M}{r^{2}}\]</div>
@@ -847,6 +1093,19 @@ gravitational acceleration (g) = 9.819767158 m/s^2
   G = 6.6743e-11 N*m^2/kg^2   [6.6743e-11 N*m^2/kg^2]
   assumes: a spherically symmetric body; outside the body; the situation is: celestial</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the gravitational acceleration 9.81977 m/s^2 at a specific location. It uses the universal gravitational constant, the mass of the central body 5.97e+24 kg, and the distance from its center 6.37e+06 m. The result indicates how strongly gravity pulls on an object placed at that point in space.</p>
+<h4 id="gravitational_force_two_masses">Newton&#x27;s law of universal gravitation: force between two masses, <code>gravitational_force_two_masses</code></h4>
+<p>The attractive gravitational force between two masses (point masses or spheres) whose centres are r apart.</p>
+<div class="math">\[F = G\,\frac{m_1 m_2}{r^2}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>m1</code></td><td>in</td><td>first mass</td><td>kg</td></tr><tr><td><code>m2</code></td><td>in</td><td>second mass</td><td>kg</td></tr><tr><td><code>r</code></td><td>in</td><td>distance between the centres</td><td>m</td></tr><tr><td><code>F</code></td><td>out</td><td>magnitude of the gravitational attraction</td><td>N</td></tr></tbody></table>
+<p><strong>Applies when:</strong> m1 &gt; 0, m2 &gt; 0, r &gt; 0; point masses or spherically symmetric bodies.</p>
+<pre><code class="shell">$ classical-physics solve gravitational_force_two_masses &quot;m1=100 kg&quot; &quot;m2=50 kg&quot; &quot;r=2 m&quot;
+F = 8.342875e-08 N
+  by: Newton&#x27;s law of universal gravitation: force between two masses  (F = G m1 m2 / r^2 with G = 6.6743e-11 N m^2/kg^2)
+  m1 = 100 kg
+  m2 = 50 kg
+  r = 2 m
+  assumes: m1 &gt; 0, m2 &gt; 0, r &gt; 0; point masses or spherically symmetric bodies</code></pre>
+<p>In the worked example, m1 = 100 kg, m2 = 50 kg, r = 2 m go through the equation above and give F = 8.342875e-08 N. It applies only when m1 &gt; 0, m2 &gt; 0, r &gt; 0; point masses or spherically symmetric bodies: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="orbital_period">Period of a circular orbit, <code>orbital_period</code></h4>
 <p>One equation links orbital period (T), orbital radius (r), mass of the central body (M) and Gravitational constant (G). Give all but one of them and it is solved for the one left out, by default orbital period (T).</p>
 <div class="math">\[T = 2 \pi \sqrt{\frac{r^{3}}{G M}}\]</div>
@@ -1690,6 +1949,90 @@ torque about the pivot (tau) = 15 N*m
   theta = 1.570796327 rad   [1.5708 rad]
   assumes: a rigid body; a fixed pivot; the situation is: pivot</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the rotational effect, or torque 15 N*m, produced by a force 50 N applied at a distance 0.3 m from a fixed pivot. The magnitude depends on the sine of the angle 1.5708 rad between the lever arm and the force direction, meaning that only the perpendicular component of the force contributes to rotation. A larger force, longer lever arm, or more favorable angle increases this turning effect.</p>
+<h3>Rotational dynamics (2)</h3>
+<h4 id="angular_momentum_conservation">Conservation of angular momentum: change of spin rate, <code>angular_momentum_conservation</code></h4>
+<p>The new angular velocity of a body whose moment of inertia changes with no external torque (a spinning skater pulling in the arms), with its rotational kinetic energy before and after.</p>
+<div class="math">\[I_1\omega_1 = I_2\omega_2\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>I1</code></td><td>in</td><td>initial moment of inertia</td><td>kg*m^2</td></tr><tr><td><code>omega1</code></td><td>in</td><td>initial angular velocity</td><td>rad/s</td></tr><tr><td><code>I2</code></td><td>in</td><td>final moment of inertia</td><td>kg*m^2</td></tr><tr><td><code>omega2</code></td><td>out</td><td>final angular velocity</td><td>rad/s</td></tr><tr><td><code>L</code></td><td>out</td><td>angular momentum (conserved)</td><td>kg*m^2/s</td></tr><tr><td><code>K1</code></td><td>out</td><td>initial rotational kinetic energy</td><td>J</td></tr><tr><td><code>K2</code></td><td>out</td><td>final rotational kinetic energy</td><td>J</td></tr><tr><td><code>dK</code></td><td>out</td><td>change of rotational kinetic energy</td><td>J</td></tr></tbody></table>
+<p><strong>Applies when:</strong> I1, I2 &gt; 0; no external torque about the axis.</p>
+<pre><code class="shell">$ classical-physics solve angular_momentum_conservation &quot;I1=4 kg*m^2&quot; &quot;omega1=2 rad/s&quot; &quot;I2=1.6 kg*m^2&quot;
+omega2 = 5 rad/s
+L = 8 kg*m^2/s
+K1 = 8 J
+K2 = 20 J
+dK = 12 J
+  by: Conservation of angular momentum: change of spin rate  (I1 omega1 = I2 omega2; K = I omega^2 / 2)
+  I1 = 4 kg*m^2
+  omega1 = 2 rad/s
+  I2 = 1.6 kg*m^2
+  assumes: I1, I2 &gt; 0; no external torque about the axis</code></pre>
+<p>In the worked example, I1 = 4 kg*m^2, omega1 = 2 rad/s, I2 = 1.6 kg*m^2 go through the equation above and give omega2 = 5 rad/s, L = 8 kg*m^2/s, K1 = 8 J, K2 = 20 J. It applies only when I1, I2 &gt; 0; no external torque about the axis: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="rotational_second_law">Newton&#x27;s second law for rotation: angular acceleration from torque, <code>rotational_second_law</code></h4>
+<p>The angular acceleration of a rigid body about a fixed axis under a net torque.</p>
+<div class="math">\[\tau = I\alpha\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>tau</code></td><td>in</td><td>net torque about the axis</td><td>N*m</td></tr><tr><td><code>I</code></td><td>in</td><td>moment of inertia about the same axis</td><td>kg*m^2</td></tr><tr><td><code>alpha</code></td><td>out</td><td>angular acceleration</td><td>rad/s^2</td></tr></tbody></table>
+<p><strong>Applies when:</strong> I &gt; 0; rigid body, fixed axis.</p>
+<pre><code class="shell">$ classical-physics solve rotational_second_law &quot;tau=12 N*m&quot; &quot;I=3 kg*m^2&quot;
+alpha = 4 rad/s^2
+  by: Newton&#x27;s second law for rotation: angular acceleration from torque  (alpha = tau / I)
+  tau = 12 N*m
+  I = 3 kg*m^2
+  assumes: I &gt; 0; rigid body, fixed axis</code></pre>
+<p>In the worked example, tau = 12 N*m, I = 3 kg*m^2 go through the equation above and give alpha = 4 rad/s^2. It applies only when I &gt; 0; rigid body, fixed axis: outside that it says what is wrong instead of returning a number.</p>
+<h3>Sound (2)</h3>
+<h4 id="sound_level_change">Change of sound level and the ratio of two intensities, <code>sound_level_change</code></h4>
+<p>The ratio of the intensities of two sounds from their levels, or the change of level (and the new level) for a given ratio of intensities.</p>
+<div class="math">\[\beta_2 - \beta_1 = 10\log_{10}\frac{I_2}{I_1}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>beta1</code></td><td>in</td><td>first sound level in dB (optional)</td><td>, </td></tr><tr><td><code>beta2</code></td><td>in</td><td>second sound level in dB (optional)</td><td>, </td></tr><tr><td><code>ratio</code></td><td>in</td><td>intensity ratio I2 / I1, if given instead of the second level (optional)</td><td>, </td></tr><tr><td><code>d_beta</code></td><td>out</td><td>change of level beta2 - beta1 in dB</td><td>, </td></tr><tr><td><code>ratio</code></td><td>out</td><td>intensity ratio I2 / I1</td><td>, </td></tr><tr><td><code>beta2</code></td><td>out</td><td>second level in dB (when the first is given)</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> both levels, or the ratio (with or without the first level); ratio &gt; 0.</p>
+<pre><code class="shell">$ classical-physics solve sound_level_change beta1=60 beta2=80
+d_beta = 20
+ratio = 100
+beta2 = 80
+  by: Change of sound level and the ratio of two intensities  (beta2 - beta1 = 10 log10(I2 / I1))
+  beta1 = 60
+  beta2 = 80
+  assumes: both levels, or the ratio (with or without the first level); ratio &gt; 0</code></pre>
+<p>In the worked example, beta1 = 60, beta2 = 80 go through the equation above and give d_beta = 20, ratio = 100, beta2 = 80. It applies only when both levels, or the ratio (with or without the first level); ratio &gt; 0: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="sound_intensity_level">Sound intensity level in decibels, <code>sound_intensity_level</code></h4>
+<p>The intensity level in decibels of a sound of given intensity, or the intensity of a sound of given level (reference: the threshold of hearing, 1e-12 W/m^2).</p>
+<div class="math">\[\beta = 10\log_{10}\frac{I}{I_0}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>I</code></td><td>in</td><td>sound intensity, if known (optional)</td><td>W/m^2</td></tr><tr><td><code>beta</code></td><td>in</td><td>sound level in dB, if known (optional)</td><td>, </td></tr><tr><td><code>beta</code></td><td>out</td><td>intensity level in dB</td><td>, </td></tr><tr><td><code>I</code></td><td>out</td><td>sound intensity</td><td>W/m^2</td></tr></tbody></table>
+<p><strong>Applies when:</strong> exactly one of I and beta; I &gt; 0.</p>
+<pre><code class="shell">$ classical-physics solve sound_intensity_level &quot;I=1e-05 W/m^2&quot;
+beta = 70
+I = 1e-05 W/m^2
+  by: Sound intensity level in decibels  (beta = 10 log10(I / I0); I = I0 10^(beta/10); I0 = 1e-12 W/m^2)
+  I = 1e-05 W/m^2
+  assumes: exactly one of I and beta; I &gt; 0</code></pre>
+<p>In the worked example, I = 1e-05 W/m^2 go through the equation above and give beta = 70, I = 1e-05 W/m^2. It applies only when exactly one of I and beta; I &gt; 0: outside that it says what is wrong instead of returning a number.</p>
+<h3>Statics (1)</h3>
+<h4 id="beam_support_reactions">Static equilibrium of a beam on two supports: support reactions, <code>beam_support_reactions</code></h4>
+<p>The vertical reactions of the two supports of a beam carrying point loads, from the balance of forces and of moments.</p>
+<div class="math">\[\sum F = R_A + R_B,\quad R_B(x_B - x_A) = \sum_i F_i (x_i - x_A)\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>loads</code></td><td>in</td><td>point loads in newtons, downward positive (include the beam&#x27;s weight at its centre)</td><td>, </td></tr><tr><td><code>positions</code></td><td>in</td><td>position of each load along the beam in metres</td><td>, </td></tr><tr><td><code>xA</code></td><td>in</td><td>position of support A</td><td>m</td></tr><tr><td><code>xB</code></td><td>in</td><td>position of support B</td><td>m</td></tr><tr><td><code>RA</code></td><td>out</td><td>upward reaction of support A</td><td>N</td></tr><tr><td><code>RB</code></td><td>out</td><td>upward reaction of support B</td><td>N</td></tr><tr><td><code>total</code></td><td>out</td><td>total load</td><td>N</td></tr></tbody></table>
+<p><strong>Applies when:</strong> one position per load; xA != xB; a rigid beam in equilibrium, vertical loads.</p>
+<pre><code class="shell">$ classical-physics solve beam_support_reactions &quot;loads=[200, 300]&quot; &quot;positions=[1, 3]&quot; &quot;xA=0 m&quot; &quot;xB=4 m&quot;
+RA = 225 N
+RB = 275 N
+total = 500 N
+  by: Static equilibrium of a beam on two supports: support reactions  (moments about A: RB (xB - xA) = sum F (x - xA); forces: RA = sum F - RB)
+  xA = 0 m
+  xB = 4 m
+  assumes: one position per load; xA != xB; a rigid beam in equilibrium, vertical loads</code></pre>
+<p>In the worked example, loads = [200, 300], positions = [1, 3], xA = 0 m, xB = 4 m go through the equation above and give RA = 225 N, RB = 275 N, total = 500 N. It applies only when one position per load; xA != xB; a rigid beam in equilibrium, vertical loads: outside that it says what is wrong instead of returning a number.</p>
+<h3>Systems of particles (1)</h3>
+<h4 id="centre_of_mass_point_masses">Centre of mass of a set of point masses, <code>centre_of_mass_point_masses</code></h4>
+<p>The coordinates of the centre of mass of point masses on a line or in a plane, and the total mass.</p>
+<div class="math">\[x_{cm} = \frac{\sum_i m_i x_i}{\sum_i m_i}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>masses</code></td><td>in</td><td>masses in kilograms</td><td>, </td></tr><tr><td><code>x</code></td><td>in</td><td>x coordinate of each mass in metres</td><td>, </td></tr><tr><td><code>y</code></td><td>in</td><td>y coordinate of each mass in metres (for masses in a plane) (optional)</td><td>, </td></tr><tr><td><code>x_cm</code></td><td>out</td><td>x coordinate of the centre of mass</td><td>m</td></tr><tr><td><code>y_cm</code></td><td>out</td><td>y coordinate of the centre of mass (when y is given)</td><td>m</td></tr><tr><td><code>M</code></td><td>out</td><td>total mass</td><td>kg</td></tr></tbody></table>
+<p><strong>Applies when:</strong> every mass &gt; 0; one coordinate per mass.</p>
+<pre><code class="shell">$ classical-physics solve centre_of_mass_point_masses &quot;masses=[2, 3]&quot; &quot;x=[0, 5]&quot;
+M = 5 kg
+x_cm = 3 m
+  by: Centre of mass of a set of point masses  (x_cm = sum m x / sum m (and the same for y))
+  assumes: every mass &gt; 0; one coordinate per mass</code></pre>
+<p>In the worked example, masses = [2, 3], x = [0, 5] go through the equation above and give M = 5 kg, x_cm = 3 m. It applies only when every mass &gt; 0; one coordinate per mass: outside that it says what is wrong instead of returning a number.</p>
 <h3>Thermal (12)</h3>
 <h4 id="carnot_efficiency">Carnot (maximum) efficiency, <code>carnot_efficiency</code></h4>
 <p>One equation links maximum efficiency (eff), cold reservoir temperature (absolute) (Tc) and hot reservoir temperature (absolute) (Th). Give all but one of them and it is solved for the one left out, by default maximum efficiency (eff).</p>
@@ -1855,7 +2198,85 @@ change in velocity (dv) = 2748.872196 m/s
   mf = 400 kg   [400 kg]
   assumes: no gravity or drag during the burn; a constant exhaust velocity; the situation is: rocket</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the change in velocity a rocket achieves by expelling mass. It uses the exhaust velocity and the ratio of initial to final mass. The result, 2748.87 m/s, represents the speed gained in free space assuming no external forces like gravity or drag act during the burn.</p>
-<h3>Waves (2)</h3>
+<h3>Vectors (1)</h3>
+<h4 id="vector_components_resultant">Vector components and the resultant of two-dimensional vectors, <code>vector_components_resultant</code></h4>
+<p>The x and y components of each vector given by magnitude and direction, and the magnitude and direction of their sum (forces, displacements, velocities: any one unit for all).</p>
+<div class="math">\[R = \sqrt{R_x^2 + R_y^2},\quad \theta_R = \operatorname{atan2}(R_y, R_x)\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>magnitudes</code></td><td>in</td><td>magnitude of each vector (all in one unit)</td><td>, </td></tr><tr><td><code>directions</code></td><td>in</td><td>direction of each vector in degrees, counterclockwise from +x</td><td>, </td></tr><tr><td><code>R</code></td><td>out</td><td>magnitude of the resultant</td><td>, </td></tr><tr><td><code>direction_deg</code></td><td>out</td><td>direction of the resultant in degrees from +x (0 to 360)</td><td>, </td></tr><tr><td><code>Rx</code></td><td>out</td><td>x component of the resultant</td><td>, </td></tr><tr><td><code>Ry</code></td><td>out</td><td>y component of the resultant</td><td>, </td></tr><tr><td><code>x_components</code></td><td>out</td><td>x component of each vector</td><td>, </td></tr><tr><td><code>y_components</code></td><td>out</td><td>y component of each vector</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> one direction per magnitude; magnitudes &gt;= 0.</p>
+<pre><code class="shell">$ classical-physics solve vector_components_resultant &quot;magnitudes=[3, 4]&quot; &quot;directions=[0, 90]&quot;
+x_components = [3.0,0.0]
+y_components = [0.0,4.0]
+Rx = 3
+Ry = 4
+R = 5
+direction_deg = 53.13010235
+  by: Vector components and the resultant of two-dimensional vectors  (components m cos(theta), m sin(theta); sums Rx, Ry; R = sqrt(Rx^2 + Ry^2); direction atan2(Ry, Rx))
+  assumes: one direction per magnitude; magnitudes &gt;= 0</code></pre>
+<p>In the worked example, magnitudes = [3, 4], directions = [0, 90] go through the equation above and give x_components = [3, 0], y_components = [0, 4], Rx = 3, Ry = 4. It applies only when one direction per magnitude; magnitudes &gt;= 0: outside that it says what is wrong instead of returning a number.</p>
+<h3>Wave optics (4)</h3>
+<h4 id="diffraction_grating_order">Diffraction grating: angle of an order and the highest visible order, <code>diffraction_grating_order</code></h4>
+<p>The angle of the m-th order line of a diffraction grating, the line spacing and the highest order that can be seen.</p>
+<div class="math">\[d\sin\theta = m\lambda,\quad m_{max} = \max\{m : m\lambda &lt; d\}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>lam</code></td><td>in</td><td>wavelength</td><td>m</td></tr><tr><td><code>m</code></td><td>in</td><td>order of the line (1, 2, ...)</td><td>, </td></tr><tr><td><code>d</code></td><td>in</td><td>line spacing, if given instead of N (optional)</td><td>m</td></tr><tr><td><code>N</code></td><td>in</td><td>number of lines per millimetre, if given instead of d (optional)</td><td>, </td></tr><tr><td><code>theta</code></td><td>out</td><td>angle of the m-th order from the central axis</td><td>rad</td></tr><tr><td><code>theta_deg</code></td><td>out</td><td>that angle in degrees</td><td>, </td></tr><tr><td><code>m_max</code></td><td>out</td><td>highest order that can be seen</td><td>, </td></tr><tr><td><code>d</code></td><td>out</td><td>line spacing</td><td>m</td></tr></tbody></table>
+<p><strong>Applies when:</strong> exactly one of d and N; d &gt; lambda; 1 &lt;= m &lt;= the highest order.</p>
+<pre><code class="shell">$ classical-physics solve diffraction_grating_order N=600 &quot;lam=500 nm&quot; m=2
+theta = 0.6435011088 rad
+theta_deg = 36.86989765
+m_max = 3
+d = 1.666666667e-06 m
+  by: Diffraction grating: angle of an order and the highest visible order  (d = 1 mm / N; d sin(theta) = m lambda; highest order: largest m with m lambda &lt; d)
+  N = 600
+  lam = 5e-07 m
+  assumes: exactly one of d and N; d &gt; lambda; 1 &lt;= m &lt;= the highest order</code></pre>
+<p>In the worked example, N = 600, lam = 500 nm, m = 2 go through the equation above and give theta = 0.6435011088 rad, theta_deg = 36.86989765, m_max = 3, d = 1.666666667e-06 m. It applies only when exactly one of d and N; d &gt; lambda; 1 &lt;= m &lt;= the highest order: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="double_slit_bright_fringe">Double-slit interference: angle and position of a bright fringe, <code>double_slit_bright_fringe</code></h4>
+<p>The angle and the position on the screen of the m-th bright fringe of a double slit, and the fringe spacing near the centre.</p>
+<div class="math">\[d\sin\theta = m\lambda,\quad y = L\tan\theta,\quad \Delta y \approx \frac{\lambda L}{d}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>d</code></td><td>in</td><td>slit separation</td><td>m</td></tr><tr><td><code>lam</code></td><td>in</td><td>wavelength</td><td>m</td></tr><tr><td><code>m</code></td><td>in</td><td>order of the bright fringe (0 for the central maximum)</td><td>, </td></tr><tr><td><code>L</code></td><td>in</td><td>distance from the slits to the screen</td><td>m</td></tr><tr><td><code>y</code></td><td>out</td><td>position of the m-th bright fringe on the screen, from the central maximum</td><td>m</td></tr><tr><td><code>theta</code></td><td>out</td><td>angle of the m-th bright fringe from the central axis</td><td>rad</td></tr><tr><td><code>theta_deg</code></td><td>out</td><td>that angle in degrees</td><td>, </td></tr><tr><td><code>dy</code></td><td>out</td><td>fringe spacing near the centre (small-angle, lambda L / d)</td><td>m</td></tr></tbody></table>
+<p><strong>Applies when:</strong> d, lam, L &gt; 0; m a whole number with m lambda &lt; d.</p>
+<pre><code class="shell">$ classical-physics solve double_slit_bright_fringe &quot;d=0.1 mm&quot; &quot;lam=600 nm&quot; m=2 &quot;L=1.5 m&quot;
+theta = 0.01200028802 rad
+theta_deg = 0.6875658564
+y = 0.01800129614 m
+dy = 0.009 m
+  by: Double-slit interference: angle and position of a bright fringe  (d sin(theta) = m lambda; y = L tan(theta); spacing lambda L / d)
+  d = 0.0001 m
+  lam = 6e-07 m
+  L = 1.5 m
+  assumes: d, lam, L &gt; 0; m a whole number with m lambda &lt; d</code></pre>
+<p>In the worked example, d = 0.1 mm, lam = 600 nm, m = 2, L = 1.5 m go through the equation above and give theta = 0.01200028802 rad, theta_deg = 0.6875658564, y = 0.01800129614 m, dy = 0.009 m. It applies only when d, lam, L &gt; 0; m a whole number with m lambda &lt; d: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="malus_law_polarizer">Malus&#x27;s law: intensity through a polarizer, <code>malus_law_polarizer</code></h4>
+<p>Intensity of light after an analyser whose transmission axis makes an angle theta with the light&#x27;s polarization (or, for unpolarized light, with a first polarizer it passed through).</p>
+<div class="math">\[I = I_0\cos^2\theta\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>I0</code></td><td>in</td><td>intensity of the incident light</td><td>W/m^2</td></tr><tr><td><code>theta</code></td><td>in</td><td>angle between the polarization (or first polarizer) and the analyser&#x27;s axis</td><td>rad</td></tr><tr><td><code>light</code></td><td>in</td><td>incident light (default polarized) (optional)</td><td>, </td></tr><tr><td><code>I</code></td><td>out</td><td>transmitted intensity</td><td>W/m^2</td></tr><tr><td><code>fraction</code></td><td>out</td><td>transmitted fraction I / I0</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> I0 &gt; 0; ideal polarizers.</p>
+<pre><code class="shell">$ classical-physics solve malus_law_polarizer &quot;I0=100 W/m^2&quot; &quot;theta=60 deg&quot;
+I = 25 W/m^2
+fraction = 0.25
+  by: Malus&#x27;s law: intensity through a polarizer  (I = I0 cos^2(theta); unpolarized light first loses half at the first polarizer)
+  I0 = 100 W/m^2
+  theta = 1.047197551 rad
+  assumes: I0 &gt; 0; ideal polarizers</code></pre>
+<p>In the worked example, I0 = 100 W/m^2, theta = 60 deg go through the equation above and give I = 25 W/m^2, fraction = 0.25. It applies only when I0 &gt; 0; ideal polarizers: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="single_slit_minimum">Single-slit diffraction: dark fringes and the width of the central maximum, <code>single_slit_minimum</code></h4>
+<p>The angle and screen position of the m-th dark fringe of a single slit, and the angular and linear width of the central bright maximum.</p>
+<div class="math">\[a\sin\theta = m\lambda,\quad W = 2L\tan\theta_1\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>a</code></td><td>in</td><td>slit width</td><td>m</td></tr><tr><td><code>lam</code></td><td>in</td><td>wavelength</td><td>m</td></tr><tr><td><code>m</code></td><td>in</td><td>order of the dark fringe (1, 2, ...)</td><td>, </td></tr><tr><td><code>L</code></td><td>in</td><td>distance from the slit to the screen</td><td>m</td></tr><tr><td><code>theta</code></td><td>out</td><td>angle of the m-th dark fringe from the central axis</td><td>rad</td></tr><tr><td><code>theta_deg</code></td><td>out</td><td>that angle in degrees</td><td>, </td></tr><tr><td><code>y</code></td><td>out</td><td>position of the m-th dark fringe on the screen, from the centre</td><td>m</td></tr><tr><td><code>W</code></td><td>out</td><td>width of the central maximum on the screen</td><td>m</td></tr><tr><td><code>W_angle</code></td><td>out</td><td>angular width of the central maximum</td><td>rad</td></tr></tbody></table>
+<p><strong>Applies when:</strong> a, lam, L &gt; 0; lambda &lt; a; m lambda &lt; a.</p>
+<pre><code class="shell">$ classical-physics solve single_slit_minimum &quot;a=0.01 mm&quot; &quot;lam=500 nm&quot; m=1 &quot;L=2 m&quot;
+theta = 0.05002085681 rad
+theta_deg = 2.865983983
+y = 0.1001252349 m
+W = 0.2002504697 m
+W_angle = 0.1000417136 rad
+  by: Single-slit diffraction: dark fringes and the width of the central maximum  (a sin(theta) = m lambda; y = L tan(theta); central width 2 L tan(theta_1))
+  a = 1e-05 m
+  lam = 5e-07 m
+  L = 2 m
+  assumes: a, lam, L &gt; 0; lambda &lt; a; m lambda &lt; a</code></pre>
+<p>In the worked example, a = 0.01 mm, lam = 500 nm, m = 1, L = 2 m go through the equation above and give theta = 0.05002085681 rad, theta_deg = 2.865983983, y = 0.1001252349 m, W = 0.2002504697 m. It applies only when a, lam, L &gt; 0; lambda &lt; a; m lambda &lt; a: outside that it says what is wrong instead of returning a number.</p>
+<h3>Waves (4)</h3>
 <h4 id="intensity_power_area">Intensity as power per area, <code>intensity_power_area</code></h4>
 <p>One equation links intensity (I), power crossing the area (P) and area perpendicular to the flow of energy (A). Give all but one of them and it is solved for the one left out, by default intensity (I).</p>
 <div class="math">\[I = \frac{P}{A}\]</div>
@@ -1880,4 +2301,31 @@ wave speed (v) = 20 m/s
   lam = 0.4 m   [0.4 m]
   assumes: periodic wave in a uniform medium</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the propagation speed of a periodic wave by multiplying its frequency by its wavelength. The resulting value of 20 m/s indicates how fast the wave travels through the medium, assuming uniform properties and no dispersion. This relationship holds for standard sound or light waves in consistent environments.</p>
+<h4 id="standing_wave_harmonics">Standing waves: harmonics of a string and of open or closed pipes, <code>standing_wave_harmonics</code></h4>
+<p>The frequency and wavelength of the n-th harmonic, and the fundamental, of a string fixed at both ends, a pipe open at both ends or a pipe closed at one end.</p>
+<div class="math">\[f_n = \frac{n v}{2L}\ \text{(string, open pipe)},\qquad f_n = \frac{n v}{4L},\ n\ \text{odd (closed pipe)}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>system</code></td><td>in</td><td>string fixed at both ends, pipe open at both ends, or pipe closed at one end</td><td>, </td></tr><tr><td><code>L</code></td><td>in</td><td>length of the string or pipe</td><td>m</td></tr><tr><td><code>v</code></td><td>in</td><td>wave speed</td><td>m/s</td></tr><tr><td><code>n</code></td><td>in</td><td>harmonic number (f_n = n f_1); odd only for a closed pipe</td><td>, </td></tr><tr><td><code>f_n</code></td><td>out</td><td>frequency of the n-th harmonic</td><td>Hz</td></tr><tr><td><code>lam_n</code></td><td>out</td><td>wavelength of the n-th harmonic</td><td>m</td></tr><tr><td><code>f1</code></td><td>out</td><td>fundamental frequency</td><td>Hz</td></tr></tbody></table>
+<p><strong>Applies when:</strong> L, v &gt; 0; n &gt;= 1; n odd for a pipe closed at one end; no end correction.</p>
+<pre><code class="shell">$ classical-physics solve standing_wave_harmonics &quot;L=25 cm&quot; &quot;v=340 m/s&quot; n=3 &quot;system=closed pipe&quot;
+f_n = 1020 Hz
+lam_n = 0.3333333333 m
+f1 = 340 Hz
+  by: Standing waves: harmonics of a string and of open or closed pipes  (string and open pipe: f_n = n v / (2L); closed pipe: f_n = n v / (4L), n odd; lambda_n = v / f_n)
+  L = 0.25 m
+  v = 340 m/s
+  system = closed pipe
+  assumes: L, v &gt; 0; n &gt;= 1; n odd for a pipe closed at one end; no end correction</code></pre>
+<p>In the worked example, L = 25 cm, v = 340 m/s, n = 3, system = closed pipe go through the equation above and give f_n = 1020 Hz, lam_n = 0.3333333333 m, f1 = 340 Hz. It applies only when L, v &gt; 0; n &gt;= 1; n odd for a pipe closed at one end; no end correction: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="string_wave_speed">Wave speed on a stretched string, <code>string_wave_speed</code></h4>
+<p>The speed of transverse waves on a string from its tension and its mass per unit length.</p>
+<div class="math">\[v = \sqrt{\frac{T}{\mu}}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>T</code></td><td>in</td><td>tension in the string</td><td>N</td></tr><tr><td><code>mu</code></td><td>in</td><td>mass per unit length of the string</td><td>kg/m</td></tr><tr><td><code>v</code></td><td>out</td><td>speed of transverse waves</td><td>m/s</td></tr></tbody></table>
+<p><strong>Applies when:</strong> T &gt; 0, mu &gt; 0; a perfectly flexible string, small amplitudes.</p>
+<pre><code class="shell">$ classical-physics solve string_wave_speed &quot;T=100 N&quot; &quot;mu=0.01 kg/m&quot;
+v = 100 m/s
+  by: Wave speed on a stretched string  (v = sqrt(T / mu))
+  T = 100 N
+  mu = 0.01 kg/m
+  assumes: T &gt; 0, mu &gt; 0; a perfectly flexible string, small amplitudes</code></pre>
+<p>In the worked example, T = 100 N, mu = 0.01 kg/m go through the equation above and give v = 100 m/s. It applies only when T &gt; 0, mu &gt; 0; a perfectly flexible string, small amplitudes: outside that it says what is wrong instead of returning a number.</p>
 <p>Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.</p></body></html>

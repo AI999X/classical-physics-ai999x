@@ -9,9 +9,9 @@ Every capability classical-physics-ai999x supports, generated from its certified
 ```python
 import classical_physics_ai999x
 
-result = classical_physics_ai999x.solve('two_resistors_series_parallel', r1='6 ohm', r2='3 ohm')
+result = classical_physics_ai999x.solve('coulomb_force', q1='2e-06 C', q2='3e-06 C', r='0.1 m')
 result.show()
-# rs = 9 ohm, rp = 2 ohm
+# F = 5.39253 N, F_radial = 5.39253 N
 ```
 
 ## By topic
@@ -19,16 +19,30 @@ result.show()
 | topic | capabilities |
 |---|---|
 | Ac circuits | [Rms voltage of a sinusoidal supply](#rms_voltage), [Rms current of a sinusoidal supply](#rms_current), [Reactance of an inductor](#inductive_reactance), [Reactance of a capacitor](#capacitive_reactance), [Resonant frequency of an LC circuit](#lc_resonance) |
+| AC circuits / series RLC | [Series RLC circuit on an AC supply: impedance, current, phase and power](#series_rlc_ac_circuit) |
 | Capacitors | [Charge on a capacitor](#capacitance_definition), [Energy stored in a capacitor](#capacitor_energy), [Capacitance of parallel plates](#parallel_plate_capacitor) |
 | Circuits | [Power from current and resistance](#ohm_power_current), [Power from voltage and resistance](#ohm_power_voltage), [Resistance of a uniform wire](#resistivity), [Two resistors in series and in parallel](#two_resistors_series_parallel) |
 | Circular | [Centripetal acceleration](#centripetal_acceleration), [Centripetal force](#centripetal_force), [Speed on a circle from angular speed](#tangential_speed), [Angular frequency and frequency](#angular_frequency), [Period and frequency](#period_frequency) |
 | Collisions | [Final velocity of the first body in a one-dimensional elastic collision](#elastic_collision_first_final), [Final velocity of the second body in a one-dimensional elastic collision](#elastic_collision_second_final) |
+| DC circuits / emf and internal resistance | [Terminal voltage of a source with internal resistance](#terminal_voltage_internal_resistance) |
 | Dynamics | [Net force and acceleration](#newton_second), [Weight in a uniform gravitational field](#weight), [Net force with an opposing friction force](#net_force_friction), [Sliding friction](#kinetic_friction), [Normal force on a level surface](#normal_on_level), [Linear momentum](#momentum), [Impulse of a constant force](#impulse), [Normal force on an incline](#normal_force_incline), [Component of the weight along an incline](#weight_component_along_incline), [Acceleration down a frictionless incline](#acceleration_frictionless_incline), [Tension in a rope holding a hanging body](#tension_hanging_at_rest), [Average net force from a change of momentum](#average_force_from_momentum_change) |
+| Elasticity / bulk modulus | [Bulk compression: volume change under a pressure change (bulk modulus)](#bulk_modulus_compression) |
+| Elasticity / shear modulus | [Shear: shear stress, shear strain and displacement (shear modulus)](#shear_modulus_deformation) |
+| Elasticity / Young's modulus | [Tension or compression: stress, strain and change of length (Young's modulus)](#youngs_modulus_deformation) |
 | Electricity | [Voltage across an ohmic resistance](#ohm), [Electric power](#electric_power), [Charge carried by a steady current](#charge_current) |
+| Electromagnetic induction / Faraday's law | [Faraday's law: average emf induced by a change of magnetic flux](#faraday_induced_emf) |
+| Electromagnetic induction / transformers | [Ideal transformer: secondary voltage and current](#ideal_transformer_secondary) |
 | Electrostatics | [Force on a charge in an electric field](#electric_force_in_field), [Electric field of a point charge](#point_charge_field), [Electric potential of a point charge](#point_charge_potential), [Potential difference in a uniform field](#uniform_field_potential) |
+| Electrostatics / Coulomb's law | [Coulomb's law: force between two point charges](#coulomb_force) |
+| Electrostatics / Gauss's law | [Gauss's law: electric field of a line, a plane, a charged sphere or a shell](#gauss_law_symmetric_field) |
 | Energy | [Work by a constant force](#work), [Translational kinetic energy](#kinetic_energy), [Gravitational potential energy near the surface](#gravitational_pe), [Force of a linear spring](#spring_force), [Energy stored in a linear spring](#spring_energy), [Average power](#power_energy), [Power of a force on a moving body](#power_force_speed), [Speed of a body launched by a spring](#spring_launch_speed), [Work-energy theorem](#net_work_kinetic_energy) |
 | Fluids | [Mass density](#density), [Pressure of a force on an area](#pressure_force), [Pressure of a column of fluid](#hydrostatic_pressure), [Absolute pressure at a depth in a fluid](#absolute_pressure_depth), [Flow rate as volume per time](#flow_rate_volume_time), [Flow rate through a cross section](#flow_rate_area_speed) |
+| Forces / static friction | [Static friction: maximum friction force and whether a body slips](#static_friction_limit), [Static friction on an incline: critical angle and whether a body slides](#static_friction_incline) |
+| Geometric optics / images | [Magnification and image height of a thin lens or a spherical mirror](#lens_mirror_magnification) |
+| Geometric optics / refraction | [Snell's law: angle of refraction](#snell_refraction_angle) |
+| Geometric optics / total internal reflection | [Critical angle for total internal reflection](#critical_angle_total_internal_reflection) |
 | Gravitation | [Gravitational acceleration at a distance from a mass](#surface_gravity), [Speed in a circular orbit](#orbital_speed), [Period of a circular orbit](#orbital_period) |
+| Gravitation / universal gravitation | [Newton's law of universal gravitation: force between two masses](#gravitational_force_two_masses) |
 | Induction | [Time constant of an RL circuit](#rl_time_constant), [Emf of a rod moving through a magnetic field](#motional_emf), [Current dying away in an RL circuit](#rl_current_decay) |
 | Kinematics | [Motion at constant velocity](#uniform_motion), [Velocity under constant acceleration](#velocity_time), [Displacement under constant acceleration](#displacement_time), [Speed after a displacement under constant acceleration](#velocity_displacement), [Displacement from the mean of initial and final velocity](#average_velocity_displacement), [Maximum height of a vertical throw](#max_height_vertical_throw), [Time to the top of a vertical throw](#time_to_top_vertical_throw), [Speed after falling from rest](#speed_after_fall_from_rest), [Velocity and displacement after constant acceleration](#uniform_acceleration_state) |
 | Magnetism | [Magnetic force on a moving charge](#magnetic_force_charge), [Magnetic force on a current-carrying wire](#magnetic_force_wire), [Magnetic field of a long straight wire](#long_wire_field), [Magnetic field inside a long solenoid](#solenoid_field), [Magnetic field at the centre of a circular loop](#loop_center_field), [Radius of a charged particle's circle in a magnetic field](#cyclotron_radius) |
@@ -42,10 +56,22 @@ result.show()
 | Rigid body | [Moment of inertia of a solid sphere](#inertia_solid_sphere), [Moment of inertia of a thin spherical shell](#inertia_hollow_sphere), [Moment of inertia of a solid disk about its axis](#inertia_solid_disk), [Moment of inertia of a thin rod about its center](#inertia_rod_center), [Moment of inertia of a thin rod about one end](#inertia_rod_end), [Acceleration of a body rolling without slipping down an incline](#rolling_incline_acceleration), [Acceleration of an Atwood machine with a massive pulley](#atwood_massive_pulley), [Body-frame precession rate of a torque-free symmetric body](#torque_free_precession) |
 | Rotating frames | [Precession period of a Foucault pendulum](#foucault_precession_period), [Off-axis equilibrium of a bead on a rotating hoop](#bead_hoop_equilibrium) |
 | Rotation | [Torque of a force](#torque_lever), [Rotational kinetic energy](#rotational_kinetic_energy), [Angular momentum of a rotating body](#angular_momentum), [Tangential acceleration of a point on a rotating body](#tangential_acceleration), [Centripetal acceleration from angular velocity](#centripetal_acceleration_omega), [Angular momentum of a point mass on a circle](#angular_momentum_point_mass), [Angular velocity under constant angular acceleration](#angular_velocity_time), [Angular velocity and angle turned under constant angular acceleration](#angular_velocity_angle) |
+| Rotational dynamics / conservation of angular momentum | [Conservation of angular momentum: change of spin rate](#angular_momentum_conservation) |
+| Rotational dynamics / torque and angular acceleration | [Newton's second law for rotation: angular acceleration from torque](#rotational_second_law) |
 | Several bodies, states or stages | [Two masses over a pulley](#atwood), [Ideal banking of a curve](#banked_curve), [Mixing to thermal equilibrium](#calorimetry), [Collisions along a line](#collision_1d), [Doppler effect for sound](#doppler), [Apparent weight in an elevator](#elevator), [Maximum speed on a flat curve](#flat_curve), [A gas between two states](#gas_two_states), [Radioactive decay](#half_life), [Series and parallel resistor and capacitor networks](#network), [Projectile motion](#projectile), [Block on a surface pulled over a pulley](#pulley_table), [RC circuits](#rc_circuit), [Recoil from rest](#recoil), [Rolling from a height](#rolling), [Motion in stages](#stages) |
+| Sound / intensity level | [Sound intensity level in decibels](#sound_intensity_level), [Change of sound level and the ratio of two intensities](#sound_level_change) |
+| Statics / equilibrium of a beam | [Static equilibrium of a beam on two supports: support reactions](#beam_support_reactions) |
+| Systems of particles / centre of mass | [Centre of mass of a set of point masses](#centre_of_mass_point_masses) |
 | Thermal | [Heat for a temperature change](#heat), [Ideal gas law](#ideal_gas_moles), [Heat to melt or freeze](#latent_heat_fusion), [Heat to boil or condense](#latent_heat_vaporization), [Linear thermal expansion](#linear_expansion), [Thermal expansion of volume](#volume_expansion), [Efficiency of a heat engine](#engine_efficiency), [Carnot (maximum) efficiency](#carnot_efficiency), [Energy balance of a cyclic heat engine](#engine_energy_balance), [Coefficient of performance of a refrigerator](#cop_refrigerator), [Coefficient of performance of a heat pump](#cop_heat_pump), [Thermal expansion of an area](#area_expansion) |
 | Variable mass | [Velocity change of a rocket (Tsiolkovsky)](#rocket_delta_v) |
+| Vectors / two-dimensional vectors | [Vector components and the resultant of two-dimensional vectors](#vector_components_resultant) |
+| Wave optics / diffraction | [Single-slit diffraction: dark fringes and the width of the central maximum](#single_slit_minimum) |
+| Wave optics / diffraction grating | [Diffraction grating: angle of an order and the highest visible order](#diffraction_grating_order) |
+| Wave optics / interference | [Double-slit interference: angle and position of a bright fringe](#double_slit_bright_fringe) |
+| Wave optics / polarization | [Malus's law: intensity through a polarizer](#malus_law_polarizer) |
 | Waves | [Speed of a periodic wave](#wave_speed), [Intensity as power per area](#intensity_power_area) |
+| Waves / standing waves and harmonics | [Standing waves: harmonics of a string and of open or closed pipes](#standing_wave_harmonics) |
+| Waves / wave speed on a string | [Wave speed on a stretched string](#string_wave_speed) |
 
 ## Outcomes
 
@@ -3734,11 +3760,11 @@ $$
 
 ![eff (maximum efficiency) against Th (hot reservoir temperature (absolute)) from 300 K to 900 K](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-curve)
 
-*eff (maximum efficiency) against Th (hot reservoir temperature (absolute)) from 300 K to 900 K. One curve for each value of Tc (cold reservoir temperature (absolute)): 300 K, 150 K, 600 K. 30 points per curve computed by classical-physics-ai999x; marked: the worked example, Th = 600 K, eff = 0.5.*
+*eff (maximum efficiency) against Th (hot reservoir temperature (absolute)) from 300 K to 900 K. One curve for each value of Tc (cold reservoir temperature (absolute)): 300 K, 150 K, 600 K. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Th = 600 K, eff = 0.5.*
 
-![eff (maximum efficiency) over Tc (cold reservoir temperature (absolute)) from 150 K to 450 K and Th (hot reservoir temperature (absolute)) from 300 K to 900 K: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-field)
+![eff (maximum efficiency) over Th (hot reservoir temperature (absolute)) from 300 K to 900 K and Tc (cold reservoir temperature (absolute)) from 150 K to 450 K: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0 to dark 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-field)
 
-*eff (maximum efficiency) over Tc (cold reservoir temperature (absolute)) from 150 K to 450 K and Th (hot reservoir temperature (absolute)) from 300 K to 900 K: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0.02 to dark 0.833333); iso-lines at eff = 0.2, 0.4, 0.6, 0.8; blank cells: inputs the capability refuses. Marked: the worked example, Tc = 300 K, Th = 600 K, eff = 0.5.*
+*eff (maximum efficiency) over Th (hot reservoir temperature (absolute)) from 300 K to 900 K and Tc (cold reservoir temperature (absolute)) from 150 K to 450 K: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0 to dark 0.833333); iso-lines at eff = 0.2, 0.4, 0.6, 0.8; blank cells: inputs the capability refuses. Marked: the worked example, Th = 600 K, Tc = 300 K, eff = 0.5.*
 
 ```python
 classical_physics_ai999x.solve('carnot_efficiency', Tc='300 K', Th='600 K', target='eff')
@@ -3874,9 +3900,9 @@ $$
 
 *Light of vacuum wavelength λ = 6.0000e-07 m entering a medium of refractive index n = 1.5 (shaded) at x = 0, drawn as a sine wave of each wavelength: the frequency is unchanged, so the waves are compressed. Marked: the wavelength in the medium the package returns, λₙ = λ/n = 4.0000e-07 m.*
 
-![lam_n (wavelength in the medium) against n (index of refraction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-curve)
+![lam_n (wavelength in the medium) against lam (wavelength in vacuum) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-curve)
 
-*lam_n (wavelength in the medium) against n (index of refraction) from 0.75 to 2.25. One curve for each value of lam (wavelength in vacuum): 6.0000e-07 m, 3.0000e-07 m, 1.2000e-06 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, n = 1.5, lam_n = 4.0000e-07 m.*
+*lam_n (wavelength in the medium) against lam (wavelength in vacuum) from 3.0000e-07 m to 9.0000e-07 m. One curve for each value of n (index of refraction): 1.5, 3. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, lam = 6.0000e-07 m, lam_n = 4.0000e-07 m.*
 
 ```python
 classical_physics_ai999x.solve('wavelength_in_medium', lam='6e-07 m', n='1.5 1', target='lam_n')
@@ -6193,8 +6219,1509 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 | id | operation | inputs | outputs |
 |---|---|---|---|
+| coulomb_force | Coulomb's law: force between two point charges | q1, q2, r | F, F_radial |
+| gravitational_force_two_masses | Newton's law of universal gravitation: force between two masses | m1, m2, r | F |
+| snell_refraction_angle | Snell's law: angle of refraction | n1, n2, theta1 | theta2, theta2_deg |
+| critical_angle_total_internal_reflection | Critical angle for total internal reflection | n1, n2 | theta_c, theta_c_deg |
+| lens_mirror_magnification | Magnification and image height of a thin lens or a spherical mirror | d_o, h_o, d_i, f | m, h_i, d_i, image |
+| double_slit_bright_fringe | Double-slit interference: angle and position of a bright fringe | d, lam, m, L | y, theta, theta_deg, dy |
+| diffraction_grating_order | Diffraction grating: angle of an order and the highest visible order | lam, m, d, N | theta, theta_deg, m_max, d |
+| single_slit_minimum | Single-slit diffraction: dark fringes and the width of the central maximum | a, lam, m, L | theta, theta_deg, y, W, W_angle |
+| malus_law_polarizer | Malus's law: intensity through a polarizer | I0, theta, light | I, fraction |
+| faraday_induced_emf | Faraday's law: average emf induced by a change of magnetic flux | N, A1, B1, B2, dt, A2, theta | emf, emf_signed, phi1, phi2, dphi |
+| ideal_transformer_secondary | Ideal transformer: secondary voltage and current | Np, Ns, Vp, Ip | Vs, Is, ratio, type |
+| series_rlc_ac_circuit | Series RLC circuit on an AC supply: impedance, current, phase and power | R, L, C, f, V | I, Z, phi, phi_deg, pf, P, XL, XC |
+| terminal_voltage_internal_resistance | Terminal voltage of a source with internal resistance | emf, r, R | I, V_t, V_lost, P_load, efficiency |
+| static_friction_limit | Static friction: maximum friction force and whether a body slips | mu_s, N, F | f_max, slips, margin |
+| static_friction_incline | Static friction on an incline: critical angle and whether a body slides | mu_s, theta, m | theta_c, theta_c_deg, slips, N, f_needed, f_max |
+| youngs_modulus_deformation | Tension or compression: stress, strain and change of length (Young's modulus) | F, A, L0, E | dL, stress, strain |
+| shear_modulus_deformation | Shear: shear stress, shear strain and displacement (shear modulus) | F, A, h, S | dx, stress, strain |
+| bulk_modulus_compression | Bulk compression: volume change under a pressure change (bulk modulus) | dP, V0, B | dV, strain, V |
+| beam_support_reactions | Static equilibrium of a beam on two supports: support reactions | loads, positions, xA, xB | RA, RB, total |
+| centre_of_mass_point_masses | Centre of mass of a set of point masses | masses, x, y | x_cm, y_cm, M |
+| vector_components_resultant | Vector components and the resultant of two-dimensional vectors | magnitudes, directions | R, direction_deg, Rx, Ry, x_components, y_components |
+| rotational_second_law | Newton's second law for rotation: angular acceleration from torque | tau, I | alpha |
+| angular_momentum_conservation | Conservation of angular momentum: change of spin rate | I1, omega1, I2 | omega2, L, K1, K2, dK |
+| sound_intensity_level | Sound intensity level in decibels | I, beta | beta, I |
+| sound_level_change | Change of sound level and the ratio of two intensities | beta1, beta2, ratio | d_beta, ratio, beta2 |
+| standing_wave_harmonics | Standing waves: harmonics of a string and of open or closed pipes | system, L, v, n | f_n, lam_n, f1 |
+| string_wave_speed | Wave speed on a stretched string | T, mu | v |
+| gauss_law_symmetric_field | Gauss's law: electric field of a line, a plane, a charged sphere or a shell | geometry, Q, r, L, A, R | E, E_radial, Q_enc, flux, density |
 | two_resistors_series_parallel | Two resistors in series and in parallel | r1, r2 | rs, rp |
 | uniform_acceleration_state | Velocity and displacement after constant acceleration | u, a, t | v, s |
+
+<a id="coulomb_force"></a>
+
+### Coulomb's law: force between two point charges, `coulomb_force`
+
+The electrostatic force between two point charges a distance r apart: its magnitude and its sign along the line joining them (positive: repulsion, negative: attraction).
+
+$$
+F = k\,\frac{|q_1 q_2|}{r^2}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `q1` | first charge (with its sign) |  |
+| `q2` | second charge (with its sign) |  |
+| `r` | distance between the charges | $r  \neq  0$ |
+
+| output | meaning |
+|---|---|
+| `F` | magnitude of the electrostatic force |
+| `F_radial` | force along the line joining the charges (positive: repulsion) |
+
+- **Method:** $F = k$ q1 $q_{2} / r^{2}$ with $k = 8.9875517923e9$ N $m^{2}/C^{2}$; the sign of q1 q2 tells repulsion or attraction
+- **Assumes:** $r > 0$; point charges in vacuum (or air)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![F (magnitude of the electrostatic force) against r (distance between the charges) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coulomb-force-curve)
+
+*F (magnitude of the electrostatic force) against r (distance between the charges) from 0.05 m to 0.15 m. One curve for each value of q1 (first charge (with its sign)): 2.0000e-06 C, 1.0000e-06 C, 4.0000e-06 C. Other inputs as in the worked example: q2 = 3e-06 C. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.1 m, F = 5.39253 N.*
+
+```python
+classical_physics_ai999x.solve('coulomb_force', q1=2e-06, q2=3e-06, r=0.1)
+# -> F = 5.39253 N, F_radial = 5.39253 N   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('coulomb_force', q1=1e-06, q2=-4e-06, r=0.2)
+# -> F = 0.898755 N, F_radial = -0.898755 N   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Coulomb's law: q1 = 2 uC, q2 = 3 uC, r = 10 cm | SOLVED | F = 5.39253 N, F_radial = 5.39253 N |
+| Coulomb's law: q1 = 1 uC, q2 = -4 uC, r = 20 cm | SOLVED | F = 0.898755 N, F_radial = -0.898755 N |
+| Coulomb's law: q1 = 2 uC, q2 = 3 uC, r = 0 m | INVALID_INPUT | Coulomb's law: force between two point charges: the separation r must be positive. |
+| Coulomb's law: q1 = 2 uC, q2 = 3 uC | NEEDS_INPUT | coulomb_force needs r (distance between the charges). Example: solve('coulomb_force', q1='2e-06 C', q2='3e-06 C', r='0.1 |
+
+<a id="gravitational_force_two_masses"></a>
+
+### Newton's law of universal gravitation: force between two masses, `gravitational_force_two_masses`
+
+The attractive gravitational force between two masses (point masses or spheres) whose centres are r apart.
+
+$$
+F = G\,\frac{m_1 m_2}{r^2}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `m1` | first mass |  |
+| `m2` | second mass |  |
+| `r` | distance between the centres | $r  \neq  0$ |
+
+| output | meaning |
+|---|---|
+| `F` | magnitude of the gravitational attraction |
+
+- **Method:** $F = G$ m1 $m_{2} / r^{2}$ with $G = 6.6743e-11$ N $m^{2}/kg^{2}$
+- **Assumes:** $m_{1} > 0$, $m_{2} > 0$, $r > 0$; point masses or spherically symmetric bodies
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![F (magnitude of the gravitational attraction) against r (distance between the centres) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-force-two-masses-curve)
+
+*F (magnitude of the gravitational attraction) against r (distance between the centres) from 1 m to 3 m. One curve for each value of m1 (first mass): 100 kg, 50 kg, 200 kg. Other inputs as in the worked example: m2 = 50.0 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 2 m, F = 8.3429e-08 N.*
+
+```python
+classical_physics_ai999x.solve('gravitational_force_two_masses', m1=100.0, m2=50.0, r=2.0)
+# -> F = 8.34287e-08 N   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('gravitational_force_two_masses', m1=5.972e+24, m2=7.348e+22, r=384400000.0)
+# -> F = 1.98211e+20 N   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Gravitational force: m1 = 100 kg, m2 = 50 kg, r = 2 m | SOLVED | F = 8.34287e-08 N |
+| Gravitational force: m1 = 100 kg, m2 = 50 kg, r = 0 m | INVALID_INPUT | Newton's law of universal gravitation: force between two masses: the separation r must be positive. |
+| Gravitational force: m1 = 100 kg, r = 2 m | NEEDS_INPUT | gravitational_force_two_masses needs m2 (second mass). Example: solve('gravitational_force_two_masses', m1='100 kg', m2= |
+
+<a id="snell_refraction_angle"></a>
+
+### Snell's law: angle of refraction, `snell_refraction_angle`
+
+The angle of refraction of a ray passing from a medium of index n1 into one of index n2; refused with a reason when the ray is totally internally reflected.
+
+$$
+n_1\sin\theta_1 = n_2\sin\theta_2
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `n1` | refractive index of the incident medium |  |
+| `n2` | refractive index of the second medium |  |
+| `theta1` | angle of incidence from the normal (deg or rad) |  |
+
+| output | meaning |
+|---|---|
+| `theta2` | angle of refraction from the normal |
+| `theta2_deg` | angle of refraction in degrees |
+
+- **Method:** sin(theta2) = n1 sin(theta1) / n2
+- **Assumes:** n1, $n_{2}  \geq  1$; $0  \leq  theta1  \leq  90$ degrees; n1 sin(theta1) <= n2 (no total internal reflection)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![theta2 (angle of refraction from the normal) against theta1 (angle of incidence from the normal (deg or rad)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/snell-refraction-angle-curve)
+
+*theta2 (angle of refraction from the normal) against theta1 (angle of incidence from the normal (deg or rad)) from 0 rad to 1.5708 rad. One curve for each value of n2 (refractive index of the second medium): 1.5, 3. Other inputs as in the worked example: n1 = 1.0. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta1 = 0.523599 rad, theta2 = 0.339837 rad.*
+
+```python
+classical_physics_ai999x.solve('snell_refraction_angle', n1=1.0, n2=1.5, theta1=0.5235987755982988)
+# -> theta2 = 0.339837 rad, theta2_deg = 19.4712   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('snell_refraction_angle', n1=1.33, n2=1.0, theta1=0.5235987755982988)
+# -> theta2 = 0.727494 rad, theta2_deg = 41.6823   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Snell's law: n1 = 1, n2 = 1.5, theta1 = 30 deg | SOLVED | theta2 = 0.339837 rad, theta2_deg = 19.4712 |
+| Snell's law: n1 = 1.5, n2 = 1, theta1 = 60 deg | INVALID_INPUT | Snell's law: angle of refraction: total internal reflection: n1 sin(theta1) exceeds n2, so there is no refracted ray. |
+| Snell's law: n1 = 1, n2 = 1.5, theta1 = 30 | UNRECOGNIZED_FORMAT | The number '1' has no unit I recognise, so I cannot tell what it measures. |
+| Snell's law: n1 = 1, n2 = 1.5 | NEEDS_INPUT | snell_refraction_angle needs theta1 (angle of incidence from the normal (deg or rad)). Example: solve('snell_refraction_ |
+
+<a id="critical_angle_total_internal_reflection"></a>
+
+### Critical angle for total internal reflection, `critical_angle_total_internal_reflection`
+
+The smallest angle of incidence (from the normal) at which light in the denser medium is totally reflected at the boundary with a less dense one.
+
+$$
+\sin\theta_c = \frac{n_2}{n_1}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `n1` | refractive index of the medium the light travels in (the denser one) |  |
+| `n2` | refractive index of the medium beyond the boundary |  |
+
+| output | meaning |
+|---|---|
+| `theta_c` | critical angle from the normal |
+| `theta_c_deg` | critical angle in degrees |
+
+- **Method:** sin(theta_c) = n2 / n1
+- **Assumes:** $n_{1} > n_{2}  \geq  1$
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![theta_c (critical angle from the normal) against n1 (refractive index of the medium the light travels in (the denser one)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/critical-angle-total-internal-reflection-curve)
+
+*theta_c (critical angle from the normal) against n1 (refractive index of the medium the light travels in (the denser one)) from 0.75 to 2.25. Other inputs as in the worked example: n2 = 1.0. 25 points computed by classical-physics-ai999x; marked: the worked example, n1 = 1.5, theta_c = 0.729728 rad.*
+
+```python
+classical_physics_ai999x.solve('critical_angle_total_internal_reflection', n1=1.5, n2=1.0)
+# -> theta_c = 0.729728 rad, theta_c_deg = 41.8103   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('critical_angle_total_internal_reflection', n1=2.42, n2=1.0)
+# -> theta_c = 0.425991 rad, theta_c_deg = 24.4075   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Critical angle: n1 = 1.5, n2 = 1 | SOLVED | theta_c = 0.729728 rad, theta_c_deg = 41.8103 |
+| Critical angle: n1 = 1, n2 = 1.5 | INVALID_INPUT | Critical angle for total internal reflection: total internal reflection needs light going from a denser medium (n1) into |
+| Critical angle: n1 = 1.5 | NEEDS_INPUT | critical_angle_total_internal_reflection needs n2 (refractive index of the medium beyond the boundary). Example: solve(' |
+
+<a id="lens_mirror_magnification"></a>
+
+### Magnification and image height of a thin lens or a spherical mirror, `lens_mirror_magnification`
+
+Magnification, image height, image distance and the nature of the image (real or virtual, upright or inverted) from the object distance and either the image distance or the focal length.
+
+$$
+m = \frac{h_i}{h_o} = -\frac{d_i}{d_o},\quad \frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `d_o` | object distance (positive) |  |
+| `h_o` | object height |  |
+| `d_i` | image distance (positive: real image), if known |  |
+| `f` | focal length (positive: converging lens or concave mirror), if d_i is not given |  |
+
+| output | meaning |
+|---|---|
+| `m` | magnification (negative: inverted image) |
+| `h_i` | image height (negative: inverted) |
+| `d_i` | image distance (positive: real, negative: virtual) |
+| `image` | real or virtual, upright or inverted |
+
+- **Method:** $d_i = d_o$ f / (d_o - f) when f is given; $m = -d_i / d_o$; $h_i = m$ h_o
+- **Assumes:** $d_o > 0$, $h_o > 0$; exactly one of d_i and f; the object not at the focal point
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![real or virtual, upright or inverted (image) over d_o (object distance (positive)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lens-mirror-magnification-decision)
+
+*real or virtual, upright or inverted (image) over d_o (object distance (positive)) from 0.03 m to 3 m and f (focal length (positive: converging lens or concave mirror), if d_i is not given) from 0.01 m to 1 m (logarithmic axes): each of the 31 × 21 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, real, inverted: 459 cells, virtual, upright: 192 cells. Other inputs as in the worked example: h_o = 0.02 m. Marked: the worked example, d_o = 0.3 m, f = 0.1 m → real, inverted.*
+
+![m (magnification (negative: inverted image)) against d_o (object distance (positive)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lens-mirror-magnification-curve)
+
+*m (magnification (negative: inverted image)) against d_o (object distance (positive)) from 0.106444 m to 3 m on a logarithmic axis. One curve for each value of f (focal length (positive: converging lens or concave mirror), if d_i is not given): 0.1 m, 0.05 m, 0.2 m. Other inputs as in the worked example: h_o = 0.02 m. 30 points per curve computed by classical-physics-ai999x; marked: the worked example, d_o = 0.3 m, m = -0.5.*
+
+```python
+classical_physics_ai999x.solve('lens_mirror_magnification', d_o=0.3, h_o=0.02, f=0.1)
+# -> m = -0.5 1, h_i = -0.01 m, d_i = 0.15 m, image = real, inverted   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('lens_mirror_magnification', d_o=0.05, h_o=0.02, f=0.1)
+# -> m = 2 1, h_i = 0.04 m, d_i = -0.1 m, image = virtual, upright   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('lens_mirror_magnification', d_o=0.4, h_o=0.05, d_i=0.2)
+# -> m = -0.5 1, h_i = -0.025 m, d_i = 0.2 m, image = real, inverted   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Image magnification: d_o = 30 cm, f = 10 cm, h_o = 2 cm | SOLVED | m = -0.5 1, h_i = -0.01 m, d_i = 0.15 m, image = real, inverted |
+| Image magnification: d_o = 5 cm, f = 10 cm, h_o = 2 cm | SOLVED | m = 2 1, h_i = 0.04 m, d_i = -0.1 m, image = virtual, upright |
+| Image magnification: d_o = 10 cm, f = 10 cm, h_o = 2 cm | INVALID_INPUT | Magnification and image height of a thin lens or a spherical mirror: the object is at the focal point: the image is at i |
+| Image magnification: d_o = 30 cm, f = 10 cm, d_i = 15 cm, h_o = 2 cm | INVALID_INPUT | Magnification and image height of a thin lens or a spherical mirror: give exactly one of the image distance d_i or the f |
+| Image magnification: d_o = 30 cm, f = 10 cm | NEEDS_INPUT | lens_mirror_magnification needs h_o (object height). Example: solve('lens_mirror_magnification', d_o='0.3 m', h_o='0.02  |
+
+<a id="double_slit_bright_fringe"></a>
+
+### Double-slit interference: angle and position of a bright fringe, `double_slit_bright_fringe`
+
+The angle and the position on the screen of the m-th bright fringe of a double slit, and the fringe spacing near the centre.
+
+$$
+d\sin\theta = m\lambda,\quad y = L\tan\theta,\quad \Delta y \approx \frac{\lambda L}{d}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `d` | slit separation |  |
+| `lam` | wavelength |  |
+| `m` | order of the bright fringe (0 for the central maximum) |  |
+| `L` | distance from the slits to the screen |  |
+
+| output | meaning |
+|---|---|
+| `y` | position of the m-th bright fringe on the screen, from the central maximum |
+| `theta` | angle of the m-th bright fringe from the central axis |
+| `theta_deg` | that angle in degrees |
+| `dy` | fringe spacing near the centre (small-angle, lambda L / d) |
+
+- **Method:** d sin(theta) = m lambda; $y = L$ tan(theta); spacing lambda L / d
+- **Assumes:** d, lam, $L > 0$; m a whole number with m $\lambda < d$
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![y (position of the m-th bright fringe on the screen, from the central maximum) against d (slit separation) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-slit-bright-fringe-curve)
+
+*y (position of the m-th bright fringe on the screen, from the central maximum) against d (slit separation) from 5.0000e-05 m to 0.00015 m. One curve for each value of lam (wavelength): 6.0000e-07 m, 3.0000e-07 m, 1.2000e-06 m. Other inputs as in the worked example: m = 2, L = 1.5 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, d = 0.0001 m, y = 0.0180013 m.*
+
+```python
+classical_physics_ai999x.solve('double_slit_bright_fringe', d=0.0001, lam=6e-07, m=2, L=1.5)
+# -> theta = 0.0120003 rad, theta_deg = 0.687566, y = 0.0180013 m, dy = 0.009 m   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('double_slit_bright_fringe', d=5e-05, lam=5e-07, m=0, L=2.0)
+# -> theta = 0 rad, theta_deg = 0, y = 0 m, dy = 0.02 m   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Double slit: d = 0.1 mm, lam = 600 nm, m = 2, L = 1.5 m | SOLVED | theta = 0.0120003 rad, theta_deg = 0.687566, y = 0.0180013 m, dy = 0.009 m |
+| Double slit: d = 1 um, lam = 600 nm, m = 2, L = 1 m | INVALID_INPUT | Double-slit interference: angle and position of a bright fringe: order 2 does not exist: m lambda must be smaller than t |
+| Double slit: d = 0.1 mm, lam = 600 nm, m = 2.5, L = 1.5 m | INVALID_INPUT | m: expected a whole number written exactly, got '2.5'. |
+| Double slit: d = 0.1 mm, lam = 600 nm, m = 2 | NEEDS_INPUT | double_slit_bright_fringe needs L (distance from the slits to the screen). Example: solve('double_slit_bright_fringe', d |
+
+<a id="diffraction_grating_order"></a>
+
+### Diffraction grating: angle of an order and the highest visible order, `diffraction_grating_order`
+
+The angle of the m-th order line of a diffraction grating, the line spacing and the highest order that can be seen.
+
+$$
+d\sin\theta = m\lambda,\quad m_{max} = \max\{m : m\lambda < d\}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `lam` | wavelength |  |
+| `m` | order of the line (1, 2, ...) |  |
+| `d` | line spacing, if given instead of N |  |
+| `N` | number of lines per millimetre, if given instead of d |  |
+
+| output | meaning |
+|---|---|
+| `theta` | angle of the m-th order from the central axis |
+| `theta_deg` | that angle in degrees |
+| `m_max` | highest order that can be seen |
+| `d` | line spacing |
+
+- **Method:** $d = 1$ mm / N; d sin(theta) = m lambda; highest order: largest m with m $\lambda < d$
+- **Assumes:** exactly one of d and N; $d > \lambda$; 1 <= m <= the highest order
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![theta (angle of the m-th order from the central axis) against lam (wavelength) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/diffraction-grating-order-curve)
+
+*theta (angle of the m-th order from the central axis) against lam (wavelength) from 2.5000e-07 m to 7.5000e-07 m. One curve for each value of N (number of lines per millimetre, if given instead of d): 600, 300, 1200. Other inputs as in the worked example: m = 2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, lam = 5.0000e-07 m, theta = 0.643501 rad.*
+
+```python
+classical_physics_ai999x.solve('diffraction_grating_order', lam=5e-07, m=2, N=600.0)
+# -> theta = 0.643501 rad, theta_deg = 36.8699, m_max = 3, d = 1.66667e-06 m   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('diffraction_grating_order', lam=5e-07, m=1, d=2e-06)
+# -> theta = 0.25268 rad, theta_deg = 14.4775, m_max = 3, d = 2e-06 m   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Diffraction grating: N = 600 lines/mm, lam = 500 nm, m = 2 | SOLVED | theta = 0.643501 rad, theta_deg = 36.8699, m_max = 3, d = 1.66667e-06 m |
+| Diffraction grating: d = 2 um, lam = 500 nm, m = 4 | INVALID_INPUT | Diffraction grating: angle of an order and the highest visible order: order 4 is not seen: the highest order is 3. |
+| Diffraction grating: N = 600 lines/mm, m = 2 | NEEDS_INPUT | diffraction_grating_order needs lam (wavelength). Example: solve('diffraction_grating_order', lam='5e-07 m', m=2, N=600) |
+
+<a id="single_slit_minimum"></a>
+
+### Single-slit diffraction: dark fringes and the width of the central maximum, `single_slit_minimum`
+
+The angle and screen position of the m-th dark fringe of a single slit, and the angular and linear width of the central bright maximum.
+
+$$
+a\sin\theta = m\lambda,\quad W = 2L\tan\theta_1
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `a` | slit width |  |
+| `lam` | wavelength |  |
+| `m` | order of the dark fringe (1, 2, ...) |  |
+| `L` | distance from the slit to the screen |  |
+
+| output | meaning |
+|---|---|
+| `theta` | angle of the m-th dark fringe from the central axis |
+| `theta_deg` | that angle in degrees |
+| `y` | position of the m-th dark fringe on the screen, from the centre |
+| `W` | width of the central maximum on the screen |
+| `W_angle` | angular width of the central maximum |
+
+- **Method:** a sin(theta) = m lambda; $y = L$ tan(theta); central width 2 L tan(theta_1)
+- **Assumes:** a, lam, $L > 0$; $\lambda < a$; m $\lambda < a$
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![theta (angle of the m-th dark fringe from the central axis) against a (slit width) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/single-slit-minimum-curve)
+
+*theta (angle of the m-th dark fringe from the central axis) against a (slit width) from 5.0000e-06 m to 1.5000e-05 m. One curve for each value of lam (wavelength): 5.0000e-07 m, 2.5000e-07 m, 1.0000e-06 m. Other inputs as in the worked example: m = 1, L = 2.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, a = 1.0000e-05 m, theta = 0.0500209 rad.*
+
+```python
+classical_physics_ai999x.solve('single_slit_minimum', a=1e-05, lam=5e-07, m=1, L=2.0)
+# -> theta = 0.0500209 rad, theta_deg = 2.86598, y = 0.100125 m, W = 0.20025 m, W_angle = 0.100042 rad   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('single_slit_minimum', a=1e-05, lam=5e-07, m=3, L=2.0)
+# -> theta = 0.150568 rad, theta_deg = 8.62693, y = 0.303433 m, W = 0.20025 m, W_angle = 0.100042 rad   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Single slit: a = 0.01 mm, lam = 500 nm, m = 1, L = 2 m | SOLVED | theta = 0.0500209 rad, theta_deg = 2.86598, y = 0.100125 m, W = 0.20025 m, W_angle = 0.100042 rad |
+| Single slit: a = 400 nm, lam = 500 nm, m = 1, L = 1 m | INVALID_INPUT | Single-slit diffraction: dark fringes and the width of the central maximum: the slit must be wider than the wavelength f |
+| Single slit: a = 0.01 mm, lam = 500 nm, m = 1 | NEEDS_INPUT | single_slit_minimum needs L (distance from the slit to the screen). Example: solve('single_slit_minimum', a='1e-05 m', l |
+
+<a id="malus_law_polarizer"></a>
+
+### Malus's law: intensity through a polarizer, `malus_law_polarizer`
+
+Intensity of light after an analyser whose transmission axis makes an angle theta with the light's polarization (or, for unpolarized light, with a first polarizer it passed through).
+
+$$
+I = I_0\cos^2\theta
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `I0` | intensity of the incident light |  |
+| `theta` | angle between the polarization (or first polarizer) and the analyser's axis |  |
+| `light` | incident light (default polarized) |  |
+
+| output | meaning |
+|---|---|
+| `I` | transmitted intensity |
+| `fraction` | transmitted fraction $I / I_{0}$ |
+
+- **Method:** $I = I_{0}$ $cos^{2}$(theta); unpolarized light first loses half at the first polarizer
+- **Assumes:** $I_{0} > 0$; ideal polarizers
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![I (transmitted intensity) against theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/malus-law-polarizer-curve)
+
+*I (transmitted intensity) against theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1.5708 rad. One curve for each value of I0 (intensity of the incident light): 100 W/m^2, 50 W/m^2, 200 W/m^2. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 1.0472 rad, I = 25 W/m^2.*
+
+![I (transmitted intensity) over I0 (intensity of the incident light) from 50 W/m^2 to 150 W/m^2 and theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/malus-law-polarizer-field)
+
+*I (transmitted intensity) over I0 (intensity of the incident light) from 50 W/m^2 to 150 W/m^2 and theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1.5708 rad: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1.1988e-21 W/m^2 to dark 150 W/m^2); iso-lines at I = 25, 50, 75, 100, 125 W/m^2. Marked: the worked example, I0 = 100 W/m^2, theta = 1.0472 rad, I = 25 W/m^2.*
+
+```python
+classical_physics_ai999x.solve('malus_law_polarizer', I0=100.0, theta=1.0471975511965976)
+# -> I = 25 W/m^2, fraction = 0.25   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('malus_law_polarizer', I0=100.0, theta=0.7853981633974483, light='unpolarized')
+# -> I = 25 W/m^2, fraction = 0.25   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('malus_law_polarizer', I0=80.0, theta=1.5707963267948966)
+# -> I = 0 W/m^2, fraction = 0   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Malus's law: I0 = 100 W/m^2, theta = 60 deg | SOLVED | I = 25 W/m^2, fraction = 0.25 |
+| Malus's law: I0 = 100 W/m^2, theta = 45 deg, light = unpolarized | SOLVED | I = 25 W/m^2, fraction = 0.25 |
+| Malus's law: I0 = -5 W/m^2, theta = 30 deg | INVALID_INPUT | Malus's law: intensity through a polarizer: the incident intensity I0 must be positive. |
+| Malus's law: I0 = 100 W/m^2 | NEEDS_INPUT | malus_law_polarizer needs theta (angle between the polarization (or first polarizer) and the analyser's axis). Example:  |
+
+<a id="faraday_induced_emf"></a>
+
+### Faraday's law: average emf induced by a change of magnetic flux, `faraday_induced_emf`
+
+The flux through a coil before and after a change of field or area, and the average emf induced in its N turns during the change (with Lenz's sign).
+
+$$
+\mathcal{E} = -N\,\frac{\Delta\Phi}{\Delta t},\quad \Phi = BA\cos\theta
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `N` | number of turns |  |
+| `A1` | initial area of the coil |  |
+| `B1` | initial magnetic field |  |
+| `B2` | final magnetic field |  |
+| `dt` | duration of the change | $dt  \neq  0$ |
+| `A2` | final area of the coil (default: unchanged) |  |
+| `theta` | angle between the field and the coil's axis (default 0) |  |
+
+| output | meaning |
+|---|---|
+| `emf` | magnitude of the average induced emf |
+| `emf_signed` | average induced emf with Lenz's sign, -N dPhi/dt |
+| `phi1` | initial flux through one turn |
+| `phi2` | final flux through one turn |
+| `dphi` | change of flux through one turn |
+
+- **Method:** $Phi = B$ A cos(theta); emf = -N $(Phi2 - Phi1) / dt$
+- **Assumes:** $N  \geq  1$; $dt > 0$; areas >= 0; uniform field over the coil
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![emf (magnitude of the average induced emf) against N (number of turns) from 1 to 400 on a logarithmic axis](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/faraday-induced-emf-curve)
+
+*emf (magnitude of the average induced emf) against N (number of turns) from 1 to 400 on a logarithmic axis. One curve for each value of A1 (initial area of the coil): 0.01 m^2, 0.005 m^2, 0.02 m^2. Other inputs as in the worked example: B1 = 0.0 T, B2 = 0.5 T, dt = 0.1 s. 35 points per curve computed by classical-physics-ai999x; marked: the worked example, N = 200, emf = 10 V.*
+
+```python
+classical_physics_ai999x.solve('faraday_induced_emf', N=200, A1=0.01, B1=0.0, B2=0.5, dt=0.1)
+# -> phi1 = 0 Wb, phi2 = 0.005 Wb, dphi = 0.005 Wb, emf = 10 V, emf_signed = -10 V   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('faraday_induced_emf', N=1, A1=0.02, A2=0.005, B1=0.4, B2=0.4, dt=0.25)
+# -> phi1 = 0.008 Wb, phi2 = 0.002 Wb, dphi = -0.006 Wb, emf = 0.024 V, emf_signed = 0.024 V   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('faraday_induced_emf', N=50, A1=0.04, B1=0.2, B2=0.0, dt=0.5, theta=1.0471975511965976)
+# -> phi1 = 0.004 Wb, phi2 = 0 Wb, dphi = -0.004 Wb, emf = 0.4 V, emf_signed = 0.4 V   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Faraday induced emf: N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T, dt = 0.1 s | SOLVED | phi1 = 0 Wb, phi2 = 0.005 Wb, dphi = 0.005 Wb, emf = 10 V, emf_signed = -10 V |
+| Faraday induced emf: N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T, dt = 0 s | INVALID_INPUT | Faraday's law: average emf induced by a change of magnetic flux: the time interval dt must be positive. |
+| Faraday induced emf: N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T | NEEDS_INPUT | faraday_induced_emf needs dt (duration of the change). Example: solve('faraday_induced_emf', N=200, A1='0.01 m^2', B1='0 |
+
+<a id="ideal_transformer_secondary"></a>
+
+### Ideal transformer: secondary voltage and current, `ideal_transformer_secondary`
+
+Secondary voltage (and, when the primary current is given, the secondary current) of an ideal transformer from its turns, and whether it steps the voltage up or down.
+
+$$
+\frac{V_s}{V_p} = \frac{N_s}{N_p} = \frac{I_p}{I_s}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `Np` | number of turns of the primary |  |
+| `Ns` | number of turns of the secondary |  |
+| `Vp` | primary voltage (rms) |  |
+| `Ip` | primary current (rms), if known |  |
+
+| output | meaning |
+|---|---|
+| `Vs` | secondary voltage |
+| `Is` | secondary current (when Ip is given) |
+| `ratio` | turns ratio Ns / Np |
+| `type` | step-up, step-down or isolation |
+
+- **Method:** $Vs / Vp = Ns / Np$; Np $Ip = Ns$ Is
+- **Assumes:** Np, $Ns  \geq  1$; $Vp > 0$; ideal: no losses, no magnetizing current
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![step-up, step-down or isolation (type) over Np (number of turns of the primary) from 1 to 1000 and Ns (number of turns of the secondary) from 1 to 100 (logarithmic axes): each of the 29 × 18 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, isolation (1:1): 18 cells, step-down: 351 cells, step-up: 153 cells](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-transformer-secondary-decision)
+
+*step-up, step-down or isolation (type) over Np (number of turns of the primary) from 1 to 1000 and Ns (number of turns of the secondary) from 1 to 100 (logarithmic axes): each of the 29 × 18 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, isolation (1:1): 18 cells, step-down: 351 cells, step-up: 153 cells. Other inputs as in the worked example: Vp = 230.0 V, Ip = 0.5 A. Marked: the worked example, Np = 500, Ns = 50 → step-down.*
+
+![Vs (secondary voltage) against Np (number of turns of the primary) from 1 to 1000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-transformer-secondary-curve)
+
+*Vs (secondary voltage) against Np (number of turns of the primary) from 1 to 1000 on a logarithmic axis. One curve for each value of Vp (primary voltage (rms)): 230 V, 115 V, 460 V. Other inputs as in the worked example: Ns = 50, Ip = 0.5 A. 37 points per curve computed by classical-physics-ai999x; marked: the worked example, Np = 500, Vs = 23 V.*
+
+```python
+classical_physics_ai999x.solve('ideal_transformer_secondary', Np=500, Ns=50, Vp=230.0, Ip=0.5)
+# -> Vs = 23 V, ratio = 0.1, type = step-down, Is = 5 A   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('ideal_transformer_secondary', Np=100, Ns=2500, Vp=12.0)
+# -> Vs = 300 V, ratio = 25, type = step-up   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Ideal transformer: Np = 500, Ns = 50, Vp = 230 V, Ip = 0.5 A | SOLVED | Vs = 23 V, ratio = 0.1, type = step-down, Is = 5 A |
+| Ideal transformer: Np = 100 turns, Ns = 2500 turns, Vp = 12 V | SOLVED | Vs = 300 V, ratio = 25, type = step-up |
+| Ideal transformer: Np = 500, Ns = 0, Vp = 230 V | INVALID_INPUT | Ns: must be at least 1, got 0. |
+| Ideal transformer: Np = 500, Vp = 230 V | NEEDS_INPUT | ideal_transformer_secondary needs Ns (number of turns of the secondary). Example: solve('ideal_transformer_secondary', N |
+
+<a id="series_rlc_ac_circuit"></a>
+
+### Series RLC circuit on an AC supply: impedance, current, phase and power, `series_rlc_ac_circuit`
+
+Reactances, impedance, rms current, phase angle, power factor and average power of a resistor, an inductor and a capacitor in series across a sinusoidal supply.
+
+$$
+Z = \sqrt{R^2 + (X_L - X_C)^2},\quad I = \frac{V}{Z},\quad \tan\varphi = \frac{X_L - X_C}{R},\quad P = I^2R
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `R` | resistance |  |
+| `L` | inductance |  |
+| `C` | capacitance |  |
+| `f` | supply frequency |  |
+| `V` | rms supply voltage |  |
+
+| output | meaning |
+|---|---|
+| `I` | rms current |
+| `Z` | impedance |
+| `phi` | phase angle of the voltage ahead of the current (positive: inductive) |
+| `phi_deg` | phase angle in degrees |
+| `pf` | power factor cos(phi) |
+| `P` | average power |
+| `XL` | inductive reactance |
+| `XC` | capacitive reactance |
+
+- **Method:** $XL = 2$ pi f L, XC = 1/(2 pi f C), $Z = \sqrt{R^{2} + \left(X_{L} - X_{C}\right)^{2}}$, $I = V/Z$, tan(phi) = (XL - XC)/R, $P = I^{2}$ R
+- **Assumes:** R, L, C, f, $V > 0$; sinusoidal steady state
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![I (rms current) against f (supply frequency) from 15](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/series-rlc-ac-circuit-curve)
+
+*I (rms current) against f (supply frequency) from 15.9155 Hz to 1591.55 Hz on a logarithmic axis. One curve for each value of V (rms supply voltage): 100 V, 50 V, 200 V. Other inputs as in the worked example: R = 30.0 ohm, L = 0.1 H, C = 1.6666666666666667e-05 F. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, f = 159.155 Hz, I = 2 A.*
+
+```python
+classical_physics_ai999x.solve('series_rlc_ac_circuit', R=30.0, L=0.1, C=1.6666666666666667e-05, f=159.15494309189535, V=100.0)
+# -> Z = 50 ohm, I = 2 A, phi = 0.927295 rad, phi_deg = 53.1301, pf = 0.6, P = 120 W, XL = 100 ohm, XC = 60 ohm   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('series_rlc_ac_circuit', R=10.0, L=0.1, C=1e-05, f=159.15494309189532, V=5.0)
+# -> Z = 10 ohm, I = 0.5 A, phi = 0 rad, phi_deg = 0, pf = 1, P = 2.5 W, XL = 100 ohm, XC = 100 ohm   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Series RLC circuit: R = 30 ohm, L = 0.1 H, C = 10 uF, f = 50 Hz, V = 230 V | SOLVED | Z = 288.458 ohm, I = 0.797343 A, phi = -1.46661 rad, phi_deg = -84.0304, pf = 0.104001, P = 19.0727 W, XL = 31.4159 ohm, XC = 318.31 ohm |
+| Series RLC circuit: R = 30 ohm, L = 0.1 H, C = 0 uF, f = 50 Hz, V = 230 V | INVALID_INPUT | Series RLC circuit on an AC supply: impedance, current, phase and power: the capacitance C must be positive. |
+| Series RLC circuit: R = 30 ohm, L = 0.1 H, C = 10 uF, f = 50 Hz | NEEDS_INPUT | series_rlc_ac_circuit needs V (rms supply voltage). Example: solve('series_rlc_ac_circuit', R='30 ohm', L='0.1 H', C='1. |
+
+<a id="terminal_voltage_internal_resistance"></a>
+
+### Terminal voltage of a source with internal resistance, `terminal_voltage_internal_resistance`
+
+Current, terminal voltage, lost volts, load power and efficiency of a source of emf with internal resistance r driving a load resistance R.
+
+$$
+I = \frac{\mathcal{E}}{R + r},\quad V_t = \mathcal{E} - Ir
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `emf` | emf of the source |  |
+| `r` | internal resistance |  |
+| `R` | load resistance |  |
+
+| output | meaning |
+|---|---|
+| `I` | current in the circuit |
+| `V_t` | terminal voltage (across the load) |
+| `V_lost` | voltage lost inside the source (I r) |
+| `P_load` | power delivered to the load |
+| `efficiency` | fraction of the source's power delivered to the load |
+
+- **Method:** I = emf / (R + r); V_t = emf - I $r = I$ R
+- **Assumes:** emf > 0; r, $R  \geq  0$ and not both 0
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![I (current in the circuit) against R (load resistance) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/terminal-voltage-internal-resistance-curve)
+
+*I (current in the circuit) against R (load resistance) from 0.55 ohm to 55 ohm on a logarithmic axis. One curve for each value of emf (emf of the source): 12 V, 6 V, 24 V. Other inputs as in the worked example: r = 0.5 ohm. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 5.5 ohm, I = 2 A.*
+
+```python
+classical_physics_ai999x.solve('terminal_voltage_internal_resistance', emf=12.0, r=0.5, R=5.5)
+# -> I = 2 A, V_t = 11 V, V_lost = 1 V, P_load = 22 W, efficiency = 0.916667 1   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('terminal_voltage_internal_resistance', emf=9.0, r=1.0, R=0.0)
+# -> I = 9 A, V_t = 0 V, V_lost = 9 V, P_load = 0 W, efficiency = 0 1   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Terminal voltage: emf = 12 V, r = 0.5 ohm, R = 5.5 ohm | SOLVED | I = 2 A, V_t = 11 V, V_lost = 1 V, P_load = 22 W, efficiency = 0.916667 1 |
+| Terminal voltage: emf = 12 V, r = 0 ohm, R = 0 ohm | INVALID_INPUT | Terminal voltage of a source with internal resistance: a short circuit with no internal resistance would draw an unlimit |
+| Terminal voltage: emf = 12 V, r = 0.5 ohm | NEEDS_INPUT | terminal_voltage_internal_resistance needs R (load resistance). Example: solve('terminal_voltage_internal_resistance', e |
+
+<a id="static_friction_limit"></a>
+
+### Static friction: maximum friction force and whether a body slips, `static_friction_limit`
+
+The largest static friction force mu_s N and whether an applied force parallel to the surface makes the body slip.
+
+$$
+f_s \le \mu_s N
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `mu_s` | coefficient of static friction |  |
+| `N` | normal force |  |
+| `F` | applied force parallel to the surface (magnitude) |  |
+
+| output | meaning |
+|---|---|
+| `f_max` | maximum static friction force |
+| `slips` | whether the body slips |
+| `margin` | f_max - F (positive: it holds) |
+
+- **Method:** f_max = mu_s N; it slips when F > f_max (a force equal to the limit holds it on the verge)
+- **Assumes:** $mu_s  \geq  0$; $N > 0$; $F  \geq  0$
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![whether the body slips (slips) over mu_s (coefficient of static friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-decision)
+
+*whether the body slips (slips) over mu_s (coefficient of static friction) from 0.02 to 0.98 and N (normal force) from 10 N to 1000 N (logarithmic vertical axis): each of the 31 × 21 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, yes: 332 cells, no: 319 cells. Other inputs as in the worked example: F = 40.0 N. Marked: the worked example, mu_s = 0.5, N = 100 N → no.*
+
+![f_max (maximum static friction force) against N (normal force) from 50 N to 150 N](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-curve)
+
+*f_max (maximum static friction force) against N (normal force) from 50 N to 150 N. One curve for each value of mu_s (coefficient of static friction): 0.5, 0.26, 0.74. Other inputs as in the worked example: F = 40.0 N. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, N = 100 N, f_max = 50 N.*
+
+```python
+classical_physics_ai999x.solve('static_friction_limit', mu_s=0.5, N=100.0, F=40.0)
+# -> f_max = 50 N, slips = False, margin = 10 N   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('static_friction_limit', mu_s=0.3, N=200.0, F=75.0)
+# -> f_max = 60 N, slips = True, margin = -15 N   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Static friction: mu_s = 0.5, N = 100 N, F = 40 N | SOLVED | f_max = 50 N, slips = False, margin = 10 N |
+| Static friction: mu_s = 0.3, N = 200 N, F = 75 N | SOLVED | f_max = 60 N, slips = True, margin = -15 N |
+| Static friction: mu_s = -0.2, N = 100 N, F = 40 N | INVALID_INPUT | Static friction: maximum friction force and whether a body slips: the coefficient of static friction cannot be negative. |
+| Static friction: mu_s = 0.5, N = 100 N | NEEDS_INPUT | static_friction_limit needs F (applied force parallel to the surface (magnitude)). Example: solve('static_friction_limit |
+
+<a id="static_friction_incline"></a>
+
+### Static friction on an incline: critical angle and whether a body slides, `static_friction_incline`
+
+The steepest incline on which a body can rest (tan(theta_c) = mu_s), whether it slides at the given angle and, with its mass, the normal force, the friction needed and the friction available.
+
+$$
+\tan\theta_c = \mu_s
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `mu_s` | coefficient of static friction |  |
+| `theta` | angle of the incline above the horizontal |  |
+| `m` | mass of the body, if the forces are wanted |  |
+
+| output | meaning |
+|---|---|
+| `theta_c` | critical (steepest holding) angle |
+| `theta_c_deg` | critical angle in degrees |
+| `slips` | whether the body slides at the given angle |
+| `N` | normal force (when m is given) |
+| `f_needed` | friction needed to hold it (when m is given) |
+| `f_max` | maximum static friction available (when m is given) |
+
+- **Method:** theta_c = atan(mu_s); slides when tan(theta) > mu_s; $N = m$ g cos(theta), f_needed = m g sin(theta), f_max = mu_s N
+- **Assumes:** $mu_s  \geq  0$; $0  \leq  \theta < 90$ degrees; $g = 9.80665$ $m/s^{2}$
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![whether the body slides at the given angle (slips) over mu_s (coefficient of static friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-decision)
+
+*whether the body slides at the given angle (slips) over mu_s (coefficient of static friction) from 0.02 to 0.98 and theta (angle of the incline above the horizontal) from 0 rad to 1.5708 rad: each of the 31 × 21 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, yes: 463 cells, no: 188 cells. Marked: the worked example, mu_s = 0.5, theta = 0.349066 rad → no.*
+
+![theta_c (critical (steepest holding) angle) against mu_s (coefficient of static friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-curve)
+
+*theta_c (critical (steepest holding) angle) against mu_s (coefficient of static friction) from 0.02 to 0.98. Other inputs as in the worked example: theta = 0.3490658503988659 rad. 41 points computed by classical-physics-ai999x; marked: the worked example, mu_s = 0.5, theta_c = 0.463648 rad.*
+
+```python
+classical_physics_ai999x.solve('static_friction_incline', mu_s=0.5, theta=0.3490658503988659)
+# -> theta_c = 0.463648 rad, theta_c_deg = 26.5651, slips = False   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('static_friction_incline', mu_s=0.3, theta=0.5235987755982988, m=10.0)
+# -> theta_c = 0.291457 rad, theta_c_deg = 16.6992, slips = True, N = 84.9281 N, f_needed = 49.0333 N, f_max = 25.4784 N   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Static friction on an incline: mu_s = 0.5, theta = 20 deg | SOLVED | theta_c = 0.463648 rad, theta_c_deg = 26.5651, slips = False |
+| Static friction on an incline: mu_s = 0.3, theta = 30 deg, m = 10 kg | SOLVED | theta_c = 0.291457 rad, theta_c_deg = 16.6992, slips = True, N = 84.9281 N, f_needed = 49.0333 N, f_max = 25.4784 N |
+| Static friction on an incline: mu_s = 0.5, theta = 95 deg | INVALID_INPUT | Static friction on an incline: critical angle and whether a body slides: the incline angle must lie between 0 and 90 deg |
+| Static friction on an incline: mu_s = 0.5 | NEEDS_INPUT | static_friction_incline needs theta (angle of the incline above the horizontal). Example: solve('static_friction_incline |
+
+<a id="youngs_modulus_deformation"></a>
+
+### Tension or compression: stress, strain and change of length (Young's modulus), `youngs_modulus_deformation`
+
+Stress, strain and change of length of a rod or wire of original length L0 and cross-section A under an axial force F.
+
+$$
+\Delta L = \frac{F L_0}{A E}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `F` | axial force (positive: tension, negative: compression) |  |
+| `A` | cross-sectional area |  |
+| `L0` | original length |  |
+| `E` | Young's modulus |  |
+
+| output | meaning |
+|---|---|
+| `dL` | change of length (positive: extension) |
+| `stress` | tensile stress F / A |
+| `strain` | strain $dL / L_{0}$ |
+
+- **Method:** stress = F/A; strain = stress/E; dL = strain L0
+- **Assumes:** A, L0, $E > 0$; linear elastic (|strain| < 1)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![dL (change of length (positive: extension)) against A (cross-sectional area) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/youngs-modulus-deformation-curve)
+
+*dL (change of length (positive: extension)) against A (cross-sectional area) from 5.0000e-07 m^2 to 1.5000e-06 m^2. One curve for each value of F (axial force (positive: tension, negative: compression)): 1000 N, 500 N, 2000 N. Other inputs as in the worked example: L0 = 2.0 m, E = 200000000000.0 Pa. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 1.0000e-06 m^2, dL = 0.01 m.*
+
+```python
+classical_physics_ai999x.solve('youngs_modulus_deformation', F=1000.0, A=1e-06, L0=2.0, E=200000000000.0)
+# -> stress = 1e+09 Pa, strain = 0.005, dL = 0.01 m   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('youngs_modulus_deformation', F=-50000.0, A=0.01, L0=3.0, E=20000000000.0)
+# -> stress = -5e+06 Pa, strain = -0.00025, dL = -0.00075 m   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Young's modulus deformation: F = 1000 N, A = 1 mm^2, L0 = 2 m, E = 200 GPa | SOLVED | stress = 1e+09 Pa, strain = 0.005, dL = 0.01 m |
+| Young's modulus deformation: F = 1000 N, A = 1 mm^2, L0 = 2 m, E = 0 GPa | INVALID_INPUT | Tension or compression: stress, strain and change of length (Young's modulus): Young's modulus E must be positive. |
+| Young's modulus deformation: F = 1000 N, A = 1 mm^2, L0 = 2 m | NEEDS_INPUT | youngs_modulus_deformation needs E (Young's modulus). Example: solve('youngs_modulus_deformation', F='1000 N', A='1e-06  |
+
+<a id="shear_modulus_deformation"></a>
+
+### Shear: shear stress, shear strain and displacement (shear modulus), `shear_modulus_deformation`
+
+Shear stress, shear strain and the sideways displacement of one face of a block of height h when a force F acts parallel to a face of area A.
+
+$$
+\Delta x = \frac{F h}{A S}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `F` | force parallel to the face |  |
+| `A` | area of the face the force acts on |  |
+| `h` | distance between the sheared faces |  |
+| `S` | shear modulus |  |
+
+| output | meaning |
+|---|---|
+| `dx` | sideways displacement of the face |
+| `stress` | shear stress F / A |
+| `strain` | shear strain dx / h |
+
+- **Method:** stress = F/A; strain = stress/S; dx = strain h
+- **Assumes:** A, h, $S > 0$; linear elastic (|strain| < 1)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![dx (sideways displacement of the face) against A (area of the face the force acts on) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shear-modulus-deformation-curve)
+
+*dx (sideways displacement of the face) against A (area of the face the force acts on) from 0.001 m^2 to 0.003 m^2. One curve for each value of F (force parallel to the face): 40000 N, 20000 N, 80000 N. Other inputs as in the worked example: h = 0.1 m, S = 25000000000.0 Pa. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 0.002 m^2, dx = 8.0000e-05 m.*
+
+```python
+classical_physics_ai999x.solve('shear_modulus_deformation', F=40000.0, A=0.002, h=0.1, S=25000000000.0)
+# -> stress = 2e+07 Pa, strain = 0.0008, dx = 8e-05 m   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('shear_modulus_deformation', F=2000.0, A=0.01, h=0.05, S=80000000000.0)
+# -> stress = 200000 Pa, strain = 2.5e-06, dx = 1.25e-07 m   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Shear modulus deformation: F = 40 kN, A = 20 cm^2, h = 10 cm, S = 25 GPa | SOLVED | stress = 2e+07 Pa, strain = 0.0008, dx = 8e-05 m |
+| Shear modulus deformation: F = 40 kN, A = 0 cm^2, h = 10 cm, S = 25 GPa | INVALID_INPUT | Shear: shear stress, shear strain and displacement (shear modulus): the area A of the sheared face must be positive. |
+| Shear modulus deformation: F = 40 kN, A = 20 cm^2, h = 10 cm | NEEDS_INPUT | shear_modulus_deformation needs S (shear modulus). Example: solve('shear_modulus_deformation', F='40000 N', A='0.002 m^2 |
+
+<a id="bulk_modulus_compression"></a>
+
+### Bulk compression: volume change under a pressure change (bulk modulus), `bulk_modulus_compression`
+
+Volumetric strain, change of volume and final volume of a body of volume V0 when the pressure on it rises by dP.
+
+$$
+\Delta V = -\frac{V_0\,\Delta P}{B}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `dP` | increase of pressure (negative: decrease) |  |
+| `V0` | original volume |  |
+| `B` | bulk modulus |  |
+
+| output | meaning |
+|---|---|
+| `dV` | change of volume (negative: compression) |
+| `strain` | volumetric strain $dV / V_{0}$ |
+| `V` | final volume |
+
+- **Method:** $dV = -V_{0}$ dP / B
+- **Assumes:** V0, $B > 0$; linear elastic (|dP / B| < 1)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![dV (change of volume (negative: compression)) against B (bulk modulus) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bulk-modulus-compression-curve)
+
+*dV (change of volume (negative: compression)) against B (bulk modulus) from 2.2000e+08 Pa to 2.2000e+10 Pa on a logarithmic axis. One curve for each value of dP (increase of pressure (negative: decrease)): 2.0000e+07 Pa, 1.0000e+07 Pa, 4.0000e+07 Pa. Other inputs as in the worked example: V0 = 1.0 m^3. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, B = 2.2000e+09 Pa, dV = -0.00909091 m^3.*
+
+```python
+classical_physics_ai999x.solve('bulk_modulus_compression', dP=20000000.0, V0=1.0, B=2200000000.0)
+# -> dV = -0.00909091 m^3, strain = -0.00909091, V = 0.990909 m^3   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('bulk_modulus_compression', dP=100000000.0, V0=0.002, B=160000000000.0)
+# -> dV = -1.25e-06 m^3, strain = -0.000625, V = 0.00199875 m^3   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Bulk modulus compression: dP = 20 MPa, V0 = 1 m^3, B = 2.2 GPa | SOLVED | dV = -0.00909091 m^3, strain = -0.00909091, V = 0.990909 m^3 |
+| Bulk modulus compression: dP = 20 MPa, V0 = 1 m^3, B = 0 GPa | INVALID_INPUT | Bulk compression: volume change under a pressure change (bulk modulus): the bulk modulus B must be positive. |
+| Bulk modulus compression: dP = 20 MPa, V0 = 1 m^3 | NEEDS_INPUT | bulk_modulus_compression needs B (bulk modulus). Example: solve('bulk_modulus_compression', dP='2e+07 Pa', V0='1 m^3', B |
+
+<a id="beam_support_reactions"></a>
+
+### Static equilibrium of a beam on two supports: support reactions, `beam_support_reactions`
+
+The vertical reactions of the two supports of a beam carrying point loads, from the balance of forces and of moments.
+
+$$
+\sum F = R_A + R_B,\quad R_B(x_B - x_A) = \sum_i F_i (x_i - x_A)
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `loads` | point loads in newtons, downward positive (include the beam's weight at its centre) |  |
+| `positions` | position of each load along the beam in metres |  |
+| `xA` | position of support A |  |
+| `xB` | position of support B |  |
+
+| output | meaning |
+|---|---|
+| `RA` | upward reaction of support A |
+| `RB` | upward reaction of support B |
+| `total` | total load |
+
+- **Method:** moments about A: RB (xB - xA) = sum F (x - xA); forces: RA = sum F - RB
+- **Assumes:** one position per load; $xA  \neq  xB$; a rigid beam in equilibrium, vertical loads
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![RA (upward reaction of support A) against xB (position of support B) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/beam-support-reactions-curve)
+
+*RA (upward reaction of support A) against xB (position of support B) from 0.4 m to 40 m on a logarithmic axis. One curve for each value of xA (position of support A): 0 m, -0.5 m, 0.5 m. Other inputs as in the worked example: loads = [200.0, 300.0], positions = [1.0, 3.0]. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, xB = 4 m, RA = 225 N.*
+
+```python
+classical_physics_ai999x.solve('beam_support_reactions', loads=[200.0, 300.0], positions=[1.0, 3.0], xA=0.0, xB=4.0)
+# -> RA = 225 N, RB = 275 N, total = 500 N   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('beam_support_reactions', loads=[500.0], positions=[5.0], xA=0.0, xB=4.0)
+# -> RA = -125 N, RB = 625 N, total = 500 N   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Beam support reactions: loads = 200, 300 N; positions = 1, 3 m; xA = 0 m; xB = 4 m | SOLVED | RA = 225 N, RB = 275 N, total = 500 N |
+| Beam support reactions: loads = 200, 300 N; positions = 1, 3 m; xA = 2 m; xB = 2 m | INVALID_INPUT | Static equilibrium of a beam on two supports: support reactions: the two supports must be at different points. |
+| Beam support reactions: loads = 200, 300 N; positions = 1 m; xA = 0 m; xB = 4 m | INVALID_INPUT | Static equilibrium of a beam on two supports: support reactions: give one position for every load. |
+| Beam support reactions: loads = 200, 300 N; positions = 1, 3 m; xA = 0 m | NEEDS_INPUT | beam_support_reactions needs xB (position of support B). Example: solve('beam_support_reactions', loads=[200.0, 300.0],  |
+
+<a id="centre_of_mass_point_masses"></a>
+
+### Centre of mass of a set of point masses: `centre_of_mass_point_masses`
+
+The coordinates of the centre of mass of point masses on a line or in a plane, and the total mass.
+
+$$
+x_{cm} = \frac{\sum_i m_i x_i}{\sum_i m_i}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `masses` | masses in kilograms |  |
+| `x` | x coordinate of each mass in metres |  |
+| `y` | y coordinate of each mass in metres (for masses in a plane) |  |
+
+| output | meaning |
+|---|---|
+| `x_cm` | x coordinate of the centre of mass |
+| `y_cm` | y coordinate of the centre of mass (when y is given) |
+| `M` | total mass |
+
+- **Method:** x_cm = sum m x / sum m (and the same for y)
+- **Assumes:** every mass > 0; one coordinate per mass
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![x_cm (x coordinate of the centre of mass) as value 2 of masses (masses in kilograms) moves from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centre-of-mass-point-masses-sensitivity)
+
+*x_cm (x coordinate of the centre of mass) as value 2 of masses (masses in kilograms) moves from 1.5 to 3.5, the other values as given ([2.0, 3.0]); 41 runs of classical-physics-ai999x. Other inputs: x = [0.0, 5.0]. Marked: the worked example, masses[2] = 3, x_cm = 3 m.*
+
+```python
+classical_physics_ai999x.solve('centre_of_mass_point_masses', masses=[2.0, 3.0], x=[0.0, 5.0])
+# -> M = 5 kg, x_cm = 3 m   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('centre_of_mass_point_masses', masses=[1.0, 1.0, 2.0], x=[0.0, 4.0, 0.0], y=[0.0, 0.0, 3.0])
+# -> M = 4 kg, x_cm = 1 m, y_cm = 1.5 m   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Centre of mass: masses = 2, 3 kg; x = 0, 5 m | SOLVED | M = 5 kg, x_cm = 3 m |
+| Center of mass: masses = 1, 1, 2 kg; x = 0, 4, 0 m; y = 0, 0, 3 m | SOLVED | M = 4 kg, x_cm = 1 m, y_cm = 1.5 m |
+| Centre of mass: masses = 2, -3 kg; x = 0, 5 m | INVALID_INPUT | Centre of mass of a set of point masses: every mass must be positive. |
+| Centre of mass: masses = 2, 3 kg | NEEDS_INPUT | centre_of_mass_point_masses needs x (x coordinate of each mass in metres). Example: solve('centre_of_mass_point_masses', |
+
+<a id="vector_components_resultant"></a>
+
+### Vector components and the resultant of two-dimensional vectors, `vector_components_resultant`
+
+The x and y components of each vector given by magnitude and direction, and the magnitude and direction of their sum (forces, displacements, velocities: any one unit for all).
+
+$$
+R = \sqrt{R_x^2 + R_y^2},\quad \theta_R = \operatorname{atan2}(R_y, R_x)
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `magnitudes` | magnitude of each vector (all in one unit) |  |
+| `directions` | direction of each vector in degrees, counterclockwise from +x |  |
+
+| output | meaning |
+|---|---|
+| `R` | magnitude of the resultant |
+| `direction_deg` | direction of the resultant in degrees from +x (0 to 360) |
+| `Rx` | x component of the resultant |
+| `Ry` | y component of the resultant |
+| `x_components` | x component of each vector |
+| `y_components` | y component of each vector |
+
+- **Method:** components m cos(theta), m sin(theta); sums Rx, Ry; $R = \sqrt{Rx^{2} + R^{2}}$; direction atan2(Ry, Rx)
+- **Assumes:** one direction per magnitude; magnitudes >= 0
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The plane vectors of the worked example as arrows from the origin: input magnitudes = (3, 4), directions = (0, 90); returned by classical-physics-ai999x: x_components = (3, 0), y_components = (0, 4); also returned Rx = 3, Ry = 4, R = 5, direction_deg = 53](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-vectors)
+
+*The plane vectors of the worked example as arrows from the origin: input magnitudes = (3, 4), directions = (0, 90); returned by classical-physics-ai999x: x_components = (3, 0), y_components = (0, 4); also returned Rx = 3, Ry = 4, R = 5, direction_deg = 53.1301. Marked: the tip of each returned vector.*
+
+![x component of each vector (x_components) at each y component of each vector (y_components), both returned by classical-physics-ai999x for the worked example (magnitudes = [3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-series)
+
+*x component of each vector (x_components) at each y component of each vector (y_components), both returned by classical-physics-ai999x for the worked example (magnitudes = [3.0, 4.0], directions = [0.0, 90.0]): 0 → 3; 4 → 0.*
+
+```python
+classical_physics_ai999x.solve('vector_components_resultant', magnitudes=[3.0, 4.0], directions=[0.0, 90.0])
+# -> x_components = [3.0, 0.0], y_components = [0.0, 4.0], Rx = 3, Ry = 4, R = 5, direction_deg = 53.1301   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('vector_components_resultant', magnitudes=[10.0], directions=[30.0])
+# -> x_components = [8.66025403784], y_components = [5.0], Rx = 8.66025, Ry = 5, R = 10, direction_deg = 30   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('vector_components_resultant', magnitudes=[5.0, 5.0], directions=[0.0, 180.0])
+# -> x_components = [5.0, -5.0], y_components = [0.0, 0.0], Rx = 0, Ry = 0, R = 0, direction_deg = 0   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Vector resultant: magnitudes = 3, 4; directions = 0, 90 deg | SOLVED | x_components = [3.0, 0.0], y_components = [0.0, 4.0], Rx = 3, Ry = 4, R = 5, direction_deg = 53.1301 |
+| Vector resultant: magnitudes = 3, -4; directions = 0, 90 deg | INVALID_INPUT | Vector components and the resultant of two-dimensional vectors: magnitudes cannot be negative (reverse the direction ins |
+| Vector resultant: magnitudes = 3, 4; directions = 0 deg | INVALID_INPUT | Vector components and the resultant of two-dimensional vectors: give one direction for every magnitude. |
+| Vector resultant: magnitudes = 3, 4 | NEEDS_INPUT | vector_components_resultant needs directions (direction of each vector in degrees, counterclockwise from +x). Example: s |
+
+<a id="rotational_second_law"></a>
+
+### Newton's second law for rotation: angular acceleration from torque, `rotational_second_law`
+
+The angular acceleration of a rigid body about a fixed axis under a net torque.
+
+$$
+\tau = I\alpha
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `tau` | net torque about the axis |  |
+| `I` | moment of inertia about the same axis | $I  \neq  0$ |
+
+| output | meaning |
+|---|---|
+| `alpha` | angular acceleration |
+
+- **Method:** $\alpha = \tau / I$
+- **Assumes:** $I > 0$; rigid body, fixed axis
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![alpha (angular acceleration) against I (moment of inertia about the same axis) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-second-law-curve)
+
+*alpha (angular acceleration) against I (moment of inertia about the same axis) from 1.5 kg*m^2 to 4.5 kg*m^2. One curve for each value of tau (net torque about the axis): 12 N*m, 6 N*m, 24 N*m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I = 3 kg*m^2, alpha = 4 rad/s^2.*
+
+![alpha (angular acceleration) over tau (net torque about the axis) from 6 N*m to 18 N*m and I (moment of inertia about the same axis) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-second-law-field)
+
+*alpha (angular acceleration) over tau (net torque about the axis) from 6 N*m to 18 N*m and I (moment of inertia about the same axis) from 1.5 kg*m^2 to 4.5 kg*m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1.33333 rad/s^2 to dark 12 rad/s^2); iso-lines at alpha = 2, 4, 6, 8, 10 rad/s^2. Marked: the worked example, tau = 12 N*m, I = 3 kg*m^2, alpha = 4 rad/s^2.*
+
+```python
+classical_physics_ai999x.solve('rotational_second_law', tau=12.0, I=3.0)
+# -> alpha = 4 rad/s^2   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('rotational_second_law', tau=-2.0, I=0.5)
+# -> alpha = -4 rad/s^2   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Rotational second law: tau = 12 N*m, I = 3 kg*m^2 | SOLVED | alpha = 4 rad/s^2 |
+| Rotational second law: tau = 12 N*m, I = 0 kg*m^2 | INVALID_INPUT | Newton's second law for rotation: angular acceleration from torque: the moment of inertia must be positive. |
+| Rotational second law: tau = 12 N*m | NEEDS_INPUT | rotational_second_law needs I (moment of inertia about the same axis). Example: solve('rotational_second_law', tau='12 N |
+
+<a id="angular_momentum_conservation"></a>
+
+### Conservation of angular momentum: change of spin rate, `angular_momentum_conservation`
+
+The new angular velocity of a body whose moment of inertia changes with no external torque (a spinning skater pulling in the arms), with its rotational kinetic energy before and after.
+
+$$
+I_1\omega_1 = I_2\omega_2
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `I1` | initial moment of inertia |  |
+| `omega1` | initial angular velocity |  |
+| `I2` | final moment of inertia |  |
+
+| output | meaning |
+|---|---|
+| `omega2` | final angular velocity |
+| `L` | angular momentum (conserved) |
+| `K1` | initial rotational kinetic energy |
+| `K2` | final rotational kinetic energy |
+| `dK` | change of rotational kinetic energy |
+
+- **Method:** I1 $omega1 = I_{2}$ omega2; $K = I$ $\omega^{2} / 2$
+- **Assumes:** I1, $I_{2} > 0$; no external torque about the axis
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![omega2 (final angular velocity) against I2 (final moment of inertia) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-conservation-curve)
+
+*omega2 (final angular velocity) against I2 (final moment of inertia) from 0.8 kg*m^2 to 2.4 kg*m^2. One curve for each value of I1 (initial moment of inertia): 4 kg*m^2, 2 kg*m^2, 8 kg*m^2. Other inputs as in the worked example: omega1 = 2.0 rad/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I2 = 1.6 kg*m^2, omega2 = 5 rad/s.*
+
+```python
+classical_physics_ai999x.solve('angular_momentum_conservation', I1=4.0, omega1=2.0, I2=1.6)
+# -> omega2 = 5 rad/s, L = 8 kg*m^2/s, K1 = 8 J, K2 = 20 J, dK = 12 J   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('angular_momentum_conservation', I1=2.0, omega1=6.0, I2=3.0)
+# -> omega2 = 4 rad/s, L = 12 kg*m^2/s, K1 = 36 J, K2 = 24 J, dK = -12 J   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Angular momentum conservation: I1 = 4 kg*m^2, omega1 = 2 rad/s, I2 = 1.6 kg*m^2 | SOLVED | omega2 = 5 rad/s, L = 8 kg*m^2/s, K1 = 8 J, K2 = 20 J, dK = 12 J |
+| Angular momentum conservation: I1 = 4 kg*m^2, omega1 = 2 rad/s, I2 = 0 kg*m^2 | INVALID_INPUT | Conservation of angular momentum: change of spin rate: the final moment of inertia I2 must be positive. |
+| Angular momentum conservation: I1 = 4 kg*m^2, omega1 = 2 rad/s | NEEDS_INPUT | angular_momentum_conservation needs I2 (final moment of inertia). Example: solve('angular_momentum_conservation', I1='4  |
+
+<a id="sound_intensity_level"></a>
+
+### Sound intensity level in decibels: `sound_intensity_level`
+
+The intensity level in decibels of a sound of given intensity, or the intensity of a sound of given level (reference: the threshold of hearing, $1e-12$ W/m^2).
+
+$$
+\beta = 10\log_{10}\frac{I}{I_0}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `I` | sound intensity, if known |  |
+| `beta` | sound level in dB, if known |  |
+
+| output | meaning |
+|---|---|
+| `beta` | intensity level in dB |
+| `I` | sound intensity |
+
+- **Method:** $\beta = 10$ log10(I / I0); $I = I_{0}$ $10^{\beta/10}$; $I_{0} = 1e-12$ $W/m^{2}$
+- **Assumes:** exactly one of I and beta; $I > 0$
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![beta (intensity level in dB) against I (sound intensity, if known) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-intensity-level-curve)
+
+*beta (intensity level in dB) against I (sound intensity, if known) from 5.0000e-06 W/m^2 to 1.5000e-05 W/m^2. 31 points computed by classical-physics-ai999x; marked: the worked example, I = 1.0000e-05 W/m^2, beta = 70.*
+
+```python
+classical_physics_ai999x.solve('sound_intensity_level', I=1e-05)
+# -> beta = 70, I = 1e-05 W/m^2   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('sound_intensity_level', beta=90.0)
+# -> beta = 90, I = 0.001 W/m^2   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('sound_intensity_level', I=3.2e-06)
+# -> beta = 65.0515, I = 3.2e-06 W/m^2   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Sound intensity level: I = 1e-5 W/m^2 | SOLVED | beta = 70, I = 1e-05 W/m^2 |
+| Sound intensity level: beta = 90 dB | SOLVED | beta = 90, I = 0.001 W/m^2 |
+| Sound intensity level: I = 0 W/m^2 | INVALID_INPUT | Sound intensity level in decibels: the intensity I must be positive. |
+| Sound intensity level: I = 1e-5 W/m^2, beta = 70 dB | INVALID_INPUT | Sound intensity level in decibels: give exactly one of the intensity I or the level beta. |
+
+<a id="sound_level_change"></a>
+
+### Change of sound level and the ratio of two intensities, `sound_level_change`
+
+The ratio of the intensities of two sounds from their levels, or the change of level (and the new level) for a given ratio of intensities.
+
+$$
+\beta_2 - \beta_1 = 10\log_{10}\frac{I_2}{I_1}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `beta1` | first sound level in dB |  |
+| `beta2` | second sound level in dB |  |
+| `ratio` | intensity ratio $I_{2} / I_{1}$, if given instead of the second level |  |
+
+| output | meaning |
+|---|---|
+| `d_beta` | change of level $beta2 - beta1$ in dB |
+| `ratio` | intensity ratio $I_{2} / I_{1}$ |
+| `beta2` | second level in dB (when the first is given) |
+
+- **Method:** $beta2 - beta1 = 10$ log10(I2 / I1)
+- **Assumes:** both levels, or the ratio (with or without the first level); ratio > 0
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![d_beta (change of level beta2 - beta1 in dB) against beta1 (first sound level in dB) from 30 to 90](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-level-change-curve)
+
+*d_beta (change of level beta2 - beta1 in dB) against beta1 (first sound level in dB) from 30 to 90. One curve for each value of beta2 (second sound level in dB): 80, 40, 160. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, beta1 = 60, d_beta = 20.*
+
+![d_beta (change of level beta2 - beta1 in dB) over beta2 (second sound level in dB) from 40 to 120 and beta1 (first sound level in dB) from 30 to 90: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its sign and magnitude (second colour negative); iso-lines at d_beta = -25, 0, 25, 50, 75](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-level-change-field)
+
+*d_beta (change of level beta2 - beta1 in dB) over beta2 (second sound level in dB) from 40 to 120 and beta1 (first sound level in dB) from 30 to 90: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its sign and magnitude (second colour negative); iso-lines at d_beta = -25, 0, 25, 50, 75. Marked: the worked example, beta2 = 80, beta1 = 60, d_beta = 20.*
+
+```python
+classical_physics_ai999x.solve('sound_level_change', beta1=60.0, beta2=80.0)
+# -> d_beta = 20, ratio = 100, beta2 = 80   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('sound_level_change', ratio=100.0)
+# -> d_beta = 20, ratio = 100   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('sound_level_change', beta1=90.0, beta2=87.0)
+# -> d_beta = -3, ratio = 0.501187, beta2 = 87   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Sound level change: beta1 = 60 dB, beta2 = 80 dB | SOLVED | d_beta = 20, ratio = 100, beta2 = 80 |
+| Sound level change: beta1 = 60 dB, ratio = 2 | SOLVED | d_beta = 3.0103, ratio = 2, beta2 = 63.0103 |
+| Sound level change: ratio = 0 | INVALID_INPUT | Change of sound level and the ratio of two intensities: the intensity ratio I2/I1 must be positive. |
+| Sound level change: beta1 = 60 dB | INVALID_INPUT | Change of sound level and the ratio of two intensities: give both levels beta1 and beta2, or the intensity ratio. |
+
+<a id="standing_wave_harmonics"></a>
+
+### Standing waves: harmonics of a string and of open or closed pipes, `standing_wave_harmonics`
+
+The frequency and wavelength of the n-th harmonic, and the fundamental, of a string fixed at both ends, a pipe open at both ends or a pipe closed at one end.
+
+$$
+f_n = \frac{n v}{2L}\ \text{(string, open pipe)},\qquad f_n = \frac{n v}{4L},\ n\ \text{odd (closed pipe)}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `system` | string fixed at both ends, pipe open at both ends, or pipe closed at one end |  |
+| `L` | length of the string or pipe |  |
+| `v` | wave speed |  |
+| `n` | harmonic number (f_n = n f_1); odd only for a closed pipe |  |
+
+| output | meaning |
+|---|---|
+| `f_n` | frequency of the n-th harmonic |
+| `lam_n` | wavelength of the n-th harmonic |
+| `f1` | fundamental frequency |
+
+- **Method:** string and open pipe: $f_n = n$ $v / (2L)$; closed pipe: $f_n = n$ $v / (4L)$, n odd; $lambda_n = v / f_n$
+- **Assumes:** L, $v > 0$; $n  \geq  1$; n odd for a pipe closed at one end; no end correction
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![f_n (frequency of the n-th harmonic) against L (length of the string or pipe) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/standing-wave-harmonics-curve)
+
+*f_n (frequency of the n-th harmonic) against L (length of the string or pipe) from 0.325 m to 0.975 m. One curve for each value of v (wave speed): 286 m/s, 143 m/s, 572 m/s. Other inputs as in the worked example: system = string, n = 1. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, L = 0.65 m, f_n = 220 Hz.*
+
+```python
+classical_physics_ai999x.solve('standing_wave_harmonics', system='string', L=0.65, v=286.0, n=1)
+# -> f_n = 220 Hz, lam_n = 1.3 m, f1 = 220 Hz   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('standing_wave_harmonics', system='open pipe', L=0.5, v=340.0, n=2)
+# -> f_n = 680 Hz, lam_n = 0.5 m, f1 = 340 Hz   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('standing_wave_harmonics', system='closed pipe', L=0.25, v=340.0, n=3)
+# -> f_n = 1020 Hz, lam_n = 0.333333 m, f1 = 340 Hz   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Standing wave harmonic, closed pipe: L = 25 cm, v = 340 m/s, n = 3 | SOLVED | f_n = 1020 Hz, lam_n = 0.333333 m, f1 = 340 Hz |
+| Standing wave harmonic, string: L = 65 cm, v = 286 m/s, n = 1 | SOLVED | f_n = 220 Hz, lam_n = 1.3 m, f1 = 220 Hz |
+| Standing wave harmonic, closed pipe: L = 25 cm, v = 340 m/s, n = 2 | INVALID_INPUT | Standing waves: harmonics of a string and of open or closed pipes: a pipe closed at one end has only odd harmonics (n =  |
+| Standing wave harmonic, open pipe: L = 50 cm, n = 2 | NEEDS_INPUT | standing_wave_harmonics needs v (wave speed). Example: solve('standing_wave_harmonics', system='string', L='0.65 m', v=' |
+
+<a id="string_wave_speed"></a>
+
+### Wave speed on a stretched string: `string_wave_speed`
+
+The speed of transverse waves on a string from its tension and its mass per unit length.
+
+$$
+v = \sqrt{\frac{T}{\mu}}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `T` | tension in the string |  |
+| `mu` | mass per unit length of the string | $mu  \neq  0$ |
+
+| output | meaning |
+|---|---|
+| `v` | speed of transverse waves |
+
+- **Method:** $v = \sqrt{\frac{T}{\mu}}$
+- **Assumes:** $T > 0$, $mu > 0$; a perfectly flexible string, small amplitudes
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![v (speed of transverse waves) against mu (mass per unit length of the string) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/string-wave-speed-curve)
+
+*v (speed of transverse waves) against mu (mass per unit length of the string) from 0.005 kg/m to 0.015 kg/m. One curve for each value of T (tension in the string): 100 N, 50 N, 200 N. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, mu = 0.01 kg/m, v = 100 m/s.*
+
+![v (speed of transverse waves) over T (tension in the string) from 50 N to 150 N and mu (mass per unit length of the string) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/string-wave-speed-field)
+
+*v (speed of transverse waves) over T (tension in the string) from 50 N to 150 N and mu (mass per unit length of the string) from 0.005 kg/m to 0.015 kg/m: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 57.735 m/s to dark 173.205 m/s); iso-lines at v = 60, 80, 100, 120, 140, 160 m/s. Marked: the worked example, T = 100 N, mu = 0.01 kg/m, v = 100 m/s.*
+
+```python
+classical_physics_ai999x.solve('string_wave_speed', T=100.0, mu=0.01)
+# -> v = 100 m/s   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('string_wave_speed', T=80.0, mu=0.005)
+# -> v = 126.491 m/s   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Wave speed on a string: T = 100 N, mu = 0.01 kg/m | SOLVED | v = 100 m/s |
+| Wave speed on a string: T = 80 N, mu = 5 g/m | SOLVED | v = 126.491 m/s |
+| Wave speed on a string: T = 100 N, mu = 0 kg/m | INVALID_INPUT | Wave speed on a stretched string: the linear mass density mu must be positive. |
+| Wave speed on a string: T = 100 N | NEEDS_INPUT | string_wave_speed needs mu (mass per unit length of the string). Example: solve('string_wave_speed', T='100 N', mu='0.01 |
+
+<a id="gauss_law_symmetric_field"></a>
+
+### Gauss's law: electric field of a line, a plane, a charged sphere or a shell, `gauss_law_symmetric_field`
+
+The electric field of a symmetric charge distribution by Gauss's law: an infinite line (charge Q on a length L), an infinite plane sheet (charge Q on an area A), a uniformly charged solid sphere or a thin spherical shell of radius R, inside or outside; with the enclosed charge, the flux through the Gaussian surface and the charge density.
+
+$$
+\oint \vec E\cdot d\vec A = \frac{Q_{enc}}{\varepsilon_0}:\quad E_{line} = \frac{\lambda}{2\pi\varepsilon_0 r},\ E_{plane} = \frac{\sigma}{2\varepsilon_0},\ E_{sphere} = \frac{kQr}{R^3}\ (r<R)
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `geometry` | line, plane, sphere (uniformly charged solid ball) or shell (thin shell, or a conducting sphere) |  |
+| `Q` | charge (with its sign): on the length L, the area A, or the whole sphere or shell |  |
+| `r` | distance from the line, or from the centre (not needed for a plane) |  |
+| `L` | length of line that carries Q (line only; lambda = Q/L) |  |
+| `A` | area of plane that carries Q (plane only; sigma = Q/A) |  |
+| `R` | radius of the sphere or shell (sphere and shell only) |  |
+
+| output | meaning |
+|---|---|
+| `E` | magnitude of the electric field |
+| `E_radial` | field component away from the line, plane or centre |
+| `Q_enc` | charge enclosed by the Gaussian surface through the point |
+| `flux` | electric flux through the Gaussian surface, Q_enc/eps0 in N $m^{2}/C$ |
+| `density` | charge density: lambda in C/m (line), sigma in $C/m^{2}$ (plane, shell), rho in $C/m^{3}$ (sphere) |
+
+- **Method:** line E = lambda/(2 pi eps0 r); plane E = sigma/(2 eps0); sphere $E = k$ Q $r/R^{3}$ inside, k $Q/r^{2}$ outside; shell $E = 0$ inside, k $Q/r^{2}$ outside; flux = Q_enc/eps0
+- **Assumes:** $r > 0$, $L > 0$, $A > 0$, $R > 0$; line and plane treated as infinite; uniform charge; on a shell $(r = R)$ the field is refused; charges in vacuum (or air)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![E (magnitude of the electric field) against r (distance from the line, or from the centre (not needed for a plane)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gauss-law-symmetric-field-curve)
+
+*E (magnitude of the electric field) against r (distance from the line, or from the centre (not needed for a plane)) from 0.05 m to 0.15 m. One curve for each value of Q (charge (with its sign): on the length L, the area A, or the whole sphere or shell): 2.0000e-06 C, 1.0000e-06 C, 4.0000e-06 C. Other inputs as in the worked example: geometry = line, L = 1.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.1 m, E = 359502 N/C.*
+
+```python
+classical_physics_ai999x.solve('gauss_law_symmetric_field', geometry='line', Q=2e-06, L=1.0, r=0.1)
+# -> E = 359502 N/C, E_radial = 359502 N/C, Q_enc = 2e-06 C, flux = 225882, density = 2e-06   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('gauss_law_symmetric_field', geometry='plane', Q=5e-09, A=0.01)
+# -> E = 28235.2 N/C, E_radial = 28235.2 N/C, Q_enc = 5e-09 C, flux = 564.705, density = 5e-07   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('gauss_law_symmetric_field', geometry='sphere', Q=4e-09, R=0.1, r=0.05)
+# -> E = 1797.51 N/C, E_radial = 1797.51 N/C, Q_enc = 5e-10 C, flux = 56.4705, density = 9.5493e-07   (SOLVED)
+```
+
+```python
+classical_physics_ai999x.solve('gauss_law_symmetric_field', geometry='shell', Q=-3e-09, R=0.2, r=0.4)
+# -> E = 168.517 N/C, E_radial = -168.517 N/C, Q_enc = -3e-09 C, flux = -338.823, density = -5.96831e-09   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Gauss's law: geometry = line, Q = 2 uC, L = 1 m, r = 10 cm | SOLVED | E = 359502 N/C, E_radial = 359502 N/C, Q_enc = 2e-06 C, flux = 225882, density = 2e-06 |
+| Gauss's law: geometry = plane, Q = 5 nC, A = 0.01 m^2 | SOLVED | E = 28235.2 N/C, E_radial = 28235.2 N/C, Q_enc = 5e-09 C, flux = 564.705, density = 5e-07 |
+| Gauss's law: geometry = sphere, Q = 4 nC, R = 10 cm, r = 5 cm | SOLVED | E = 1797.51 N/C, E_radial = 1797.51 N/C, Q_enc = 5e-10 C, flux = 56.4705, density = 9.5493e-07 |
+| Gauss law: geometry = shell, Q = -3 nC, R = 20 cm, r = 10 cm | SOLVED | E = 0 N/C, E_radial = 0 N/C, Q_enc = 0 C, flux = 0, density = -5.96831e-09 |
+| Gauss's law: geometry = shell, Q = -3 nC, R = 20 cm, r = 40 cm | SOLVED | E = 168.517 N/C, E_radial = -168.517 N/C, Q_enc = -3e-09 C, flux = -338.823, density = -5.96831e-09 |
+| Gauss's law: geometry = shell, Q = 3 nC, R = 20 cm, r = 20 cm | INVALID_INPUT | Gauss's law: electric field of a line, a plane, a charged sphere or a shell: on the shell itself (r = R) the field is no |
+| Gauss's law: geometry = line, Q = 2 uC, L = 1 m, A = 1 m^2, r = 10 cm | INVALID_INPUT | Gauss's law: electric field of a line, a plane, a charged sphere or a shell: a line of charge takes no area A or radius  |
+| Gauss's law: geometry = line, L = 1 m, r = 10 cm | NEEDS_INPUT | gauss_law_symmetric_field needs Q (charge (with its sign): on the length L, the area A, or the whole sphere or shell). E |
 
 <a id="two_resistors_series_parallel"></a>
 

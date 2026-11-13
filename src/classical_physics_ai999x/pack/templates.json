@@ -1888,6 +1888,209 @@
 "answer": "7081.53 m/s"
 },
 {
+"relation": "coulomb_force",
+"name": "Coulomb's law: force between two point charges",
+"example": "Coulomb's law: q1 = 2 uC, q2 = 3 uC, r = 10 cm",
+"answer": "F = 5.39253 N, F_radial = 5.39253 N",
+"structured": "solve('coulomb_force', q1='2 uC', q2='3 uC', r='10 cm')"
+},
+{
+"relation": "gravitational_force_two_masses",
+"name": "Newton's law of universal gravitation: force between two masses",
+"example": "Gravitational force: m1 = 100 kg, m2 = 50 kg, r = 2 m",
+"answer": "F = 8.34287e-08 N",
+"structured": "solve('gravitational_force_two_masses', m1='100 kg', m2='50 kg', r='2 m')"
+},
+{
+"relation": "snell_refraction_angle",
+"name": "Snell's law: angle of refraction",
+"example": "Snell's law: n1 = 1, n2 = 1.5, theta1 = 30 deg",
+"answer": "theta2 = 0.339837 rad, theta2_deg = 19.4712",
+"structured": "solve('snell_refraction_angle', n1=1, n2=1.5, theta1='30 deg')"
+},
+{
+"relation": "critical_angle_total_internal_reflection",
+"name": "Critical angle for total internal reflection",
+"example": "Critical angle: n1 = 1.5, n2 = 1",
+"answer": "theta_c = 0.729728 rad, theta_c_deg = 41.8103",
+"structured": "solve('critical_angle_total_internal_reflection', n1=1.5, n2=1)"
+},
+{
+"relation": "lens_mirror_magnification",
+"name": "Magnification and image height of a thin lens or a spherical mirror",
+"example": "Image magnification: d_o = 30 cm, f = 10 cm, h_o = 2 cm",
+"answer": "m = -0.5 1, h_i = -0.01 m, d_i = 0.15 m, image = real, inverted",
+"structured": "solve('lens_mirror_magnification', d_o='30 cm', f='10 cm', h_o='2 cm')"
+},
+{
+"relation": "double_slit_bright_fringe",
+"name": "Double-slit interference: angle and position of a bright fringe",
+"example": "Double slit: d = 0.1 mm, lam = 600 nm, m = 2, L = 1.5 m",
+"answer": "theta = 0.0120003 rad, theta_deg = 0.687566, y = 0.0180013 m, dy = 0.009 m",
+"structured": "solve('double_slit_bright_fringe', d='0.1 mm', lam='600 nm', m='2', L='1.5 m')"
+},
+{
+"relation": "diffraction_grating_order",
+"name": "Diffraction grating: angle of an order and the highest visible order",
+"example": "Diffraction grating: N = 600 lines/mm, lam = 500 nm, m = 2",
+"answer": "theta = 0.643501 rad, theta_deg = 36.8699, m_max = 3, d = 1.66667e-06 m",
+"structured": "solve('diffraction_grating_order', N=600, lam='500 nm', m='2')"
+},
+{
+"relation": "single_slit_minimum",
+"name": "Single-slit diffraction: dark fringes and the width of the central maximum",
+"example": "Single slit: a = 0.01 mm, lam = 500 nm, m = 1, L = 2 m",
+"answer": "theta = 0.0500209 rad, theta_deg = 2.86598, y = 0.100125 m, W = 0.20025 m, W_angle = 0.100042 rad",
+"structured": "solve('single_slit_minimum', a='0.01 mm', lam='500 nm', m='1', L='2 m')"
+},
+{
+"relation": "malus_law_polarizer",
+"name": "Malus's law: intensity through a polarizer",
+"example": "Malus's law: I0 = 100 W/m^2, theta = 60 deg",
+"answer": "I = 25 W/m^2, fraction = 0.25",
+"structured": "solve('malus_law_polarizer', I0='100 W/m^2', theta='60 deg')"
+},
+{
+"relation": "faraday_induced_emf",
+"name": "Faraday's law: average emf induced by a change of magnetic flux",
+"example": "Faraday induced emf: N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T, dt = 0.1 s",
+"answer": "phi1 = 0 Wb, phi2 = 0.005 Wb, dphi = 0.005 Wb, emf = 10 V, emf_signed = -10 V",
+"structured": "solve('faraday_induced_emf', N='200', A1='100 cm^2', B1='0 T', B2='0.5 T', dt='0.1 s')"
+},
+{
+"relation": "ideal_transformer_secondary",
+"name": "Ideal transformer: secondary voltage and current",
+"example": "Ideal transformer: Np = 500, Ns = 50, Vp = 230 V, Ip = 0.5 A",
+"answer": "Vs = 23 V, ratio = 0.1, type = step-down, Is = 5 A",
+"structured": "solve('ideal_transformer_secondary', Np='500', Ns='50', Vp='230 V', Ip='0.5 A')"
+},
+{
+"relation": "series_rlc_ac_circuit",
+"name": "Series RLC circuit on an AC supply: impedance, current, phase and power",
+"example": "Series RLC circuit: R = 30 ohm, L = 0.1 H, C = 10 uF, f = 50 Hz, V = 230 V",
+"answer": "Z = 288.458 ohm, I = 0.797343 A, phi = -1.46661 rad, phi_deg = -84.0304, pf = 0.104001, P = 19.0727 W, XL = 31.4159 ohm, XC = 318.31 ohm",
+"structured": "solve('series_rlc_ac_circuit', R='30 ohm', L='0.1 H', C='10 uF', f='50 Hz', V='230 V')"
+},
+{
+"relation": "terminal_voltage_internal_resistance",
+"name": "Terminal voltage of a source with internal resistance",
+"example": "Terminal voltage: emf = 12 V, r = 0.5 ohm, R = 5.5 ohm",
+"answer": "I = 2 A, V_t = 11 V, V_lost = 1 V, P_load = 22 W, efficiency = 0.916667 1",
+"structured": "solve('terminal_voltage_internal_resistance', emf='12 V', r='0.5 ohm', R='5.5 ohm')"
+},
+{
+"relation": "static_friction_limit",
+"name": "Static friction: maximum friction force and whether a body slips",
+"example": "Static friction: mu_s = 0.5, N = 100 N, F = 40 N",
+"answer": "f_max = 50 N, slips = False, margin = 10 N",
+"structured": "solve('static_friction_limit', mu_s=0.5, N='100 N', F='40 N')"
+},
+{
+"relation": "static_friction_incline",
+"name": "Static friction on an incline: critical angle and whether a body slides",
+"example": "Static friction on an incline: mu_s = 0.5, theta = 20 deg",
+"answer": "theta_c = 0.463648 rad, theta_c_deg = 26.5651, slips = False",
+"structured": "solve('static_friction_incline', mu_s=0.5, theta='20 deg')"
+},
+{
+"relation": "youngs_modulus_deformation",
+"name": "Tension or compression: stress, strain and change of length (Young's modulus)",
+"example": "Young's modulus deformation: F = 1000 N, A = 1 mm^2, L0 = 2 m, E = 200 GPa",
+"answer": "stress = 1e+09 Pa, strain = 0.005, dL = 0.01 m",
+"structured": "solve('youngs_modulus_deformation', F='1000 N', A='1 mm^2', L0='2 m', E='200 GPa')"
+},
+{
+"relation": "shear_modulus_deformation",
+"name": "Shear: shear stress, shear strain and displacement (shear modulus)",
+"example": "Shear modulus deformation: F = 40 kN, A = 20 cm^2, h = 10 cm, S = 25 GPa",
+"answer": "stress = 2e+07 Pa, strain = 0.0008, dx = 8e-05 m",
+"structured": "solve('shear_modulus_deformation', F='40 kN', A='20 cm^2', h='10 cm', S='25 GPa')"
+},
+{
+"relation": "bulk_modulus_compression",
+"name": "Bulk compression: volume change under a pressure change (bulk modulus)",
+"example": "Bulk modulus compression: dP = 20 MPa, V0 = 1 m^3, B = 2.2 GPa",
+"answer": "dV = -0.00909091 m^3, strain = -0.00909091, V = 0.990909 m^3",
+"structured": "solve('bulk_modulus_compression', dP='20 MPa', V0='1 m^3', B='2.2 GPa')"
+},
+{
+"relation": "beam_support_reactions",
+"name": "Static equilibrium of a beam on two supports: support reactions",
+"example": "Beam support reactions: loads = 200, 300 N; positions = 1, 3 m; xA = 0 m; xB = 4 m",
+"answer": "RA = 225 N, RB = 275 N, total = 500 N",
+"structured": "solve('beam_support_reactions', loads='200, 300', positions='1, 3', xA='0 m', xB='4 m')"
+},
+{
+"relation": "centre_of_mass_point_masses",
+"name": "Centre of mass of a set of point masses",
+"example": "Centre of mass: masses = 2, 3 kg; x = 0, 5 m",
+"answer": "M = 5 kg, x_cm = 3 m",
+"structured": "solve('centre_of_mass_point_masses', masses='2, 3', x='0, 5')"
+},
+{
+"relation": "vector_components_resultant",
+"name": "Vector components and the resultant of two-dimensional vectors",
+"example": "Vector resultant: magnitudes = 3, 4; directions = 0, 90 deg",
+"answer": "x_components = [3.0, 0.0], y_components = [0.0, 4.0], Rx = 3, Ry = 4, R = 5, direction_deg = 53.1301",
+"structured": "solve('vector_components_resultant', magnitudes='3, 4', directions='0, 90')"
+},
+{
+"relation": "rotational_second_law",
+"name": "Newton's second law for rotation: angular acceleration from torque",
+"example": "Rotational second law: tau = 12 N*m, I = 3 kg*m^2",
+"answer": "alpha = 4 rad/s^2",
+"structured": "solve('rotational_second_law', tau='12 N*m', I='3 kg*m^2')"
+},
+{
+"relation": "angular_momentum_conservation",
+"name": "Conservation of angular momentum: change of spin rate",
+"example": "Angular momentum conservation: I1 = 4 kg*m^2, omega1 = 2 rad/s, I2 = 1.6 kg*m^2",
+"answer": "omega2 = 5 rad/s, L = 8 kg*m^2/s, K1 = 8 J, K2 = 20 J, dK = 12 J",
+"structured": "solve('angular_momentum_conservation', I1='4 kg*m^2', omega1='2 rad/s', I2='1.6 kg*m^2')"
+},
+{
+"relation": "sound_intensity_level",
+"name": "Sound intensity level in decibels",
+"example": "Sound intensity level: I = 1e-5 W/m^2",
+"answer": "beta = 70, I = 1e-05 W/m^2",
+"structured": "solve('sound_intensity_level', I='1e-5 W/m^2')"
+},
+{
+"relation": "sound_level_change",
+"name": "Change of sound level and the ratio of two intensities",
+"example": "Sound level change: beta1 = 60 dB, beta2 = 80 dB",
+"answer": "d_beta = 20, ratio = 100, beta2 = 80",
+"structured": "solve('sound_level_change', beta1=60, beta2=80)"
+},
+{
+"relation": "standing_wave_harmonics",
+"name": "Standing waves: harmonics of a string and of open or closed pipes",
+"example": "Standing wave harmonic, closed pipe: L = 25 cm, v = 340 m/s, n = 3",
+"answer": "f_n = 1020 Hz, lam_n = 0.333333 m, f1 = 340 Hz",
+"structured": "solve('standing_wave_harmonics', L='25 cm', v='340 m/s', n='3', system='closed pipe')"
+},
+{
+"relation": "string_wave_speed",
+"name": "Wave speed on a stretched string",
+"example": "Wave speed on a string: T = 100 N, mu = 0.01 kg/m",
+"answer": "v = 100 m/s",
+"structured": "solve('string_wave_speed', T='100 N', mu='0.01 kg/m')"
+},
+{
+"relation": "gauss_law_symmetric_field",
+"name": "Gauss's law: electric field of a line, a plane, a charged sphere or a shell",
+"example": "Gauss's law: geometry = line, Q = 2 uC, L = 1 m, r = 10 cm",
+"answer": "E = 359502 N/C, E_radial = 359502 N/C, Q_enc = 2e-06 C, flux = 225882, density = 2e-06",
+"structured": "solve('gauss_law_symmetric_field', geometry='line', Q='2 uC', L='1 m', r='10 cm')"
+},
+{
+"relation": "gauss_law_symmetric_field",
+"name": "Gauss's law: electric field of a line, a plane, a charged sphere or a shell",
+"example": "Gauss's law: geometry = sphere, Q = 4 nC, R = 10 cm, r = 5 cm",
+"answer": "E = 1797.51 N/C, E_radial = 1797.51 N/C, Q_enc = 5e-10 C, flux = 56.4705, density = 9.5493e-07",
+"structured": "solve('gauss_law_symmetric_field', geometry='sphere', Q='4 nC', R='10 cm', r='5 cm')"
+},
+{
 "relation": "two_resistors_series_parallel",
 "name": "Two resistors in series and in parallel",
 "example": "What are the series and parallel equivalents of 6 ohm and 3 ohm resistors?",
