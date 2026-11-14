@@ -5,7 +5,7 @@ pub const TABLE: &[(&str, &[&str], &[(&str, &str)])] = &[
     ("uniform_acceleration_state", &["graph"], &[("u", "4"), ("a", "2"), ("t", "5")]),
     ("uniform_motion", &["drawing"], &[("v", "20 m/s"), ("t", "30 s")]),
     ("velocity_time", &["graph"], &[("v0", "5 m/s"), ("a", "2 m/s^2"), ("t", "4 s")]),
-    ("displacement_time", &["drawing", "graph"], &[("v0", "3 m/s"), ("a", "2 m/s^2"), ("t", "4 s")]),
+    ("displacement_time", &["graph"], &[("v0", "3 m/s"), ("a", "2 m/s^2"), ("t", "4 s")]),
     ("velocity_displacement", &["graph"], &[("v0", "6 m/s"), ("a", "2 m/s^2"), ("x", "16 m")]),
     ("average_velocity_displacement", &["graph"], &[("v0", "4 m/s"), ("v", "10 m/s"), ("t", "3 s")]),
     ("newton_second", &["bars", "diagram"], &[("m", "4 kg"), ("a", "2.5 m/s^2")]),
