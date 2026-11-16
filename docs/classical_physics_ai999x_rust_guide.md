@@ -1,6 +1,6 @@
 # classical-physics: the Classical Physics program, user guide
 
-**classical-physics-ai999x 1.6.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**classical-physics-ai999x 1.6.4**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Classical Physics covers kinematics, dynamics, energy, momentum, rotation, gravitation, oscillations, waves and sound, optics, thermodynamics, electricity and magnetism. This guide is about `classical-physics`, the model as a self-contained program for Windows and Linux: 162 capabilities in 37 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/classical-physics-ai999x/); the Python package (`pip install classical-physics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ classical-physics --version
-classical-physics-ai999x 1.6.3 (Rust build, ax-engine 1.6.3)
+classical-physics-ai999x 1.6.4 (Rust build, ax-engine 1.6.4)
 ```
 
 ### 2.2 Ask in words
