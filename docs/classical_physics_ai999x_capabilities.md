@@ -2131,9 +2131,9 @@ $$
 - **Assumes:** an ideal capacitor
 - **Evidence:** fundamental_law
 
-![Charge on a C = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-graph)
+![Charge on a C = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-graph)
 
-*Charge on a C = 0.0001 F capacitor against its voltage (from the package's Q = C V, charge in mC): the energy stored when it is charged to 20 V is the triangle under the line, ½ Q V. Marked: the energy the package returns, U = 0.02 J, and Q = 0.002 C.*
+*Charge on a C = 1.0000e-04 F capacitor against its voltage (from the package's Q = C V, charge in mC): the energy stored when it is charged to 20 V is the triangle under the line, ½ Q V. Marked: the energy the package returns, U = 0.02 J, and Q = 0.002 C.*
 
 ![Ecap (energy stored) against V (Voltage) from 10 V to 30 V](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-curve)
 
@@ -3548,7 +3548,7 @@ $$
 
 ![Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-graph)
 
-*Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9.8 m/s²) with P₀ = 101325 Pa at the surface, 31 depths from the package (shown in kPa): the surface pressure's share is constant, the liquid column adds ρ g h. Marked: 199325 Pa at 10 m.*
+*Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9.80665 m/s²) with P₀ = 101325 Pa at the surface, 31 depths from the package (shown in kPa): the surface pressure's share is constant, the liquid column adds ρ g h. Marked: 199392 Pa at 10 m.*
 
 ```python
 classical_physics_ai999x.solve('absolute_pressure_depth', P0='101325 Pa', rho='1000 kg/m^3', h='10 m', g='9.8 m/s^2', target='P')
@@ -4319,9 +4319,9 @@ $$
 - **Assumes:** ideal components; negligible resistance for the frequency
 - **Evidence:** fundamental_law
 
-![Reactance of an inductor L = 8](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-graph)
+![Reactance of an inductor L = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-graph)
 
-*Reactance of an inductor L = 8.0000e-09 H and a capacitor C = 3.1700e-12 F against frequency over two decades (21 frequencies each from the package's reactance formulas): they are equal where the LC circuit resonates. Marked: the resonant frequency the package returns, f₀ = 9.9941e+08 Hz, where both reactances are 50.236 Ω.*
+*Reactance of an inductor L = 0.01 H and a capacitor C = 1.0000e-06 F against frequency over two decades (21 frequencies each from the package's reactance formulas): they are equal where the LC circuit resonates. Marked: the resonant frequency the package returns, f₀ = 1591.55 Hz, where both reactances are 100 Ω.*
 
 ![f (resonant frequency) against L (Inductance) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-curve)
 
@@ -5713,7 +5713,7 @@ $$
 
 ![Acceleration down a 30° incline (m = 2 kg, R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-comparison)
 
-*Acceleration down a 30° incline (m = 2 kg, R = 0.2 m, g = 9.81 m/s²) of the body as given (I = 0.04 kg·m², highlighted) and of a solid sphere, a solid disc and a hollow sphere of the same mass and radius rolling without slipping, with each moment of inertia from the package's inertia formulas (solid sphere, I = 0.032; solid disc, I = 0.04; hollow sphere, I = 0.0533333 kg·m²) and the rolling acceleration from its formula; grey: a block sliding without friction (no rotation). Marked: each acceleration.*
+*Acceleration down a 30° incline (m = 2 kg, R = 0.2 m, g = 9.80665 m/s²) of the body as given (I = 0.04 kg·m², highlighted) and of a solid sphere, a solid disc and a hollow sphere of the same mass and radius rolling without slipping, with each moment of inertia from the package's inertia formulas (solid sphere, I = 0.032; solid disc, I = 0.04; hollow sphere, I = 0.0533333 kg·m²) and the rolling acceleration from its formula; grey: a block sliding without friction (no rotation). Marked: each acceleration.*
 
 ![a (acceleration of the center of mass along the incline) against theta (angle of the incline) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-curve)
 
@@ -5763,7 +5763,7 @@ $$
 
 ![An Atwood machine: masses m₁ = 3 kg and m₂ = 2 kg on a cord over a pulley with moment of inertia I = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-drawing)
 
-*An Atwood machine: masses m₁ = 3 kg and m₂ = 2 kg on a cord over a pulley with moment of inertia I = 0.02 kg·m² and radius R = 0.1 m (g = 9.81 m/s²). Marked: the acceleration the package returns, a = 1.40143 m/s² (m₁ down, m₂ up); with a pulley of negligible inertia (I = 1e-9 kg·m²) it would be 1.962 m/s², also returned.*
+*An Atwood machine: masses m₁ = 3 kg and m₂ = 2 kg on a cord over a pulley with moment of inertia I = 0.02 kg·m² and radius R = 0.1 m (g = 9.80665 m/s²). Marked: the acceleration the package returns, a = 1.40095 m/s² (m₁ down, m₂ up); with a pulley of negligible inertia (I = 1e-9 kg·m²) it would be 1.96133 m/s², also returned.*
 
 ![a (acceleration of each mass) against R (radius of the pulley) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-curve)
 
