@@ -10,8 +10,8 @@ Classical Physics covers kinematics, dynamics, energy, momentum, rotation, gravi
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-classical-physics-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-classical-physics-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `classical-physics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-classical-physics-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-classical-physics-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `classical-physics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install classical-physics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -135,71 +135,6 @@ print(a.outcome, a.values)
 # SOLVED {'f_n': 1020.0, 'lam_n': 0.3333333333333333, 'f1': 340.0}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `classical-physics` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ classical-physics solve capacitive_reactance "f=60 Hz" "C=1e-06 F"
-capacitive reactance (X) = 2652.582385 ohm
-
-$ classical-physics solve parallel_plate_capacitor "A=0.01 m^2" "d=0.001 m" "eps0=8.854187813e-12 C^2/(N*m^2)"
-capacitance (C) = 8.854187813e-11 F
-
-$ classical-physics solve ohm_power_current "I=2 A" "R=5 ohm"
-power dissipated (P) = 20 W
-
-$ classical-physics solve angular_frequency "f=0.5 Hz"
-angular frequency (omega) = 3.141592654 rad/s
-
-$ classical-physics solve elastic_collision_first_final "m1=2 kg" "m2=1 kg" "v1=3 m/s" "v2=0 m/s"
-final velocity of the first body (v1f) = 1 m/s
-
-$ classical-physics solve terminal_voltage_internal_resistance "emf=12 V" "r=0.5 ohm" "R=5.5 ohm"
-I = 2 A
-V_t = 11 V
-V_lost = 1 V
-P_load = 22 W
-efficiency = 0.9166666667
-
-$ classical-physics solve acceleration_frictionless_incline "g=9.8 m/s^2" "theta=30 deg"
-acceleration down the incline (a) = 4.9 m/s^2
-
-$ classical-physics solve bulk_modulus_compression "dP=20 MPa" "V0=1 m^3" "B=2.2 GPa"
-dV = -0.009090909091 m^3
-strain = -0.009090909091
-V = 0.9909090909 m^3
-
-$ classical-physics solve charge_current "I=2 A" "t=30 s"
-charge (Q) = 60 C
-
-$ classical-physics solve faraday_induced_emf N=200 "A1=100 cm^2" "B1=0 T" "B2=0.5 T" "dt=0.1 s"
-phi1 = 0 Wb
-phi2 = 0.005 Wb
-dphi = 0.005 Wb
-emf = 10 V
-emf_signed = -10 V
-
-$ classical-physics solve coulomb_force "q1=2 uC" "q2=3 uC" "r=10 cm"
-F = 5.392531075 N
-F_radial = 5.392531075 N
-
-$ classical-physics solve power_energy "E=600 J" "t=20 s"
-average power (P) = 30 W
-
-$ classical-physics solve absolute_pressure_depth "P0=101325 Pa" "rho=1000 kg/m^3" "g=9.80665 m/s^2" "h=10 m"
-absolute pressure at the depth (P) = 199391.5 Pa
-
-$ classical-physics solve static_friction_incline "mu_s=0.5 1" "theta=20 deg"
-theta_c = 0.463647609 rad
-theta_c_deg = 26.56505118
-slips = false
-
-$ classical-physics solve critical_angle_total_internal_reflection "n1=1.5 1" "n2=1 1"
-theta_c = 0.7297276562 rad
-theta_c_deg = 41.8103149
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_desktop_guide.md)
@@ -208,13 +143,13 @@ theta_c_deg = 41.8103149
 
 Every calculation, with its formula, a worked example and its figures: **[Classical Physics on ai999x.com](https://www.ai999x.com/models/classical-physics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/classical-physics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/classical-physics-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/classical-physics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/classical-physics-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
