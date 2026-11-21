@@ -10,8 +10,8 @@ Classical Physics covers kinematics, dynamics, energy, momentum, rotation, gravi
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-classical-physics-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-classical-physics-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `classical-physics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-classical-physics-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-classical-physics-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `classical-physics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/classical-physics-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install classical-physics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -200,89 +200,6 @@ theta_c = 0.7297276562 rad
 theta_c_deg = 41.8103149
 ```
 
-## Rust library: 15 examples
-
-The crate `classical-physics-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `classical_physics_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/classical-physics/examples/readme.rs`: `cd rust && cargo run --release --example readme -p classical-physics-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&classical_physics_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "capacitive_reactance", "inputs": {"f": "60 Hz", "C": "1e-06 F"}}));
-// SOLVED
-
-show(json!({"key": "parallel_plate_capacitor", "inputs": {"A": "0.01 m^2", "d": "0.001 m", "eps0": "8.854187813e-12 C^2/(N*m^2)"}}));
-// SOLVED
-
-show(json!({"key": "ohm_power_current", "inputs": {"I": "2 A", "R": "5 ohm"}}));
-// SOLVED
-
-show(json!({"key": "angular_frequency", "inputs": {"f": "0.5 Hz"}}));
-// SOLVED
-
-show(json!({"key": "elastic_collision_first_final", "inputs": {"m1": "2 kg", "m2": "1 kg", "v1": "3 m/s", "v2": "0 m/s"}}));
-// SOLVED
-
-show(json!({"key": "terminal_voltage_internal_resistance", "inputs": {"emf": "12 V", "r": "0.5 ohm", "R": "5.5 ohm"}}));
-// SOLVED
-// I = 2.0 A
-// V_t = 11.0 V
-// V_lost = 1.0 V
-// P_load = 22.0 W
-// efficiency = 0.9166666666666666
-
-show(json!({"key": "acceleration_frictionless_incline", "inputs": {"g": "9.8 m/s^2", "theta": "30 deg"}}));
-// SOLVED
-
-show(json!({"key": "bulk_modulus_compression", "inputs": {"dP": "20 MPa", "V0": "1 m^3", "B": "2.2 GPa"}}));
-// SOLVED
-// dV = -0.00909090909090909 m^3
-// strain = -0.00909090909090909
-// V = 0.990909090909091 m^3
-
-show(json!({"key": "charge_current", "inputs": {"I": "2 A", "t": "30 s"}}));
-// SOLVED
-
-show(json!({"key": "faraday_induced_emf", "inputs": {"N": "200", "A1": "100 cm^2", "B1": "0 T", "B2": "0.5 T", "dt": "0.1 s"}}));
-// SOLVED
-// phi1 = 0.0 Wb
-// phi2 = 0.005 Wb
-// dphi = 0.005 Wb
-// emf = 10.0 V
-// emf_signed = -10.0 V
-
-show(json!({"key": "coulomb_force", "inputs": {"q1": "2 uC", "q2": "3 uC", "r": "10 cm"}}));
-// SOLVED
-// F = 5.392531075379998 N
-// F_radial = 5.392531075379998 N
-
-show(json!({"key": "power_energy", "inputs": {"E": "600 J", "t": "20 s"}}));
-// SOLVED
-
-show(json!({"key": "absolute_pressure_depth", "inputs": {"P0": "101325 Pa", "rho": "1000 kg/m^3", "g": "9.80665 m/s^2", "h": "10 m"}}));
-// SOLVED
-
-show(json!({"key": "static_friction_incline", "inputs": {"mu_s": "0.5 1", "theta": "20 deg"}}));
-// SOLVED
-// theta_c = 0.463647609001 rad
-// theta_c_deg = 26.5650511771
-// slips = false
-
-show(json!({"key": "critical_angle_total_internal_reflection", "inputs": {"n1": "1.5 1", "n2": "1 1"}}));
-// SOLVED
-// theta_c = 0.729727656227 rad
-// theta_c_deg = 41.8103148958
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/classical-physics-ai999x/blob/main/docs/classical_physics_ai999x_desktop_guide.md)
@@ -291,7 +208,7 @@ show(json!({"key": "critical_angle_total_internal_reflection", "inputs": {"n1": 
 
 Every calculation, with its formula, a worked example and its figures: **[Classical Physics on ai999x.com](https://www.ai999x.com/models/classical-physics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
