@@ -264,17 +264,9 @@ $$
 - **Assumes:** constant velocity
 - **Evidence:** hand-checked pack
 
-![A body moving at a constant 20 m/s, shown at seven equal time steps along its path (equal steps: equal distances) and as a distance against time line; each position a solve of the model](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-motion-drawing)
+![A body moving at a constant 20 m/s, shown every 5 s along its path (equal steps: equal distances) and as a distance–time line; each position from the package](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-motion-drawing)
 
-*A body moving at a constant 20 m/s, shown at seven equal time steps along its path (equal steps: equal distances) and as a distance against time line; each position a solve of the model. Marked: 600 m after 30 s. Your inputs: v = 20 m/s, t = 30 s.*
-
-![Distance travelled as v runs from 5 to 35 m/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-motion-live-1)
-
-*Distance travelled as v runs from 5 to 35 m/s, every other input as you entered it (41 solutions). Marked: your v = 20 m/s gives d = 600. Your inputs: v = 20 m/s, t = 30 s.*
-
-![Distance travelled as t runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-motion-live-2)
-
-*Distance travelled as t runs from 7.5 to 52.5 s, every other input as you entered it (29 solutions). Marked: your t = 30 s gives d = 600. Your inputs: v = 20 m/s, t = 30 s.*
+*A body moving at a constant 20 m/s, shown every 5 s along its path (equal steps: equal distances) and as a distance–time line; each position from the package. Marked: 600 m after 30 s.*
 
 ```python
 classical_physics_ai999x.solve('uniform_motion', v='20 m/s', t='30 s', target='d')
@@ -309,17 +301,9 @@ $$
 - **Assumes:** constant acceleration along a line
 - **Evidence:** hand-checked pack
 
-![Velocity against time from v0 = 5 m/s for three constant accelerations, 12 times each a solve of the model; the slope of each line is its acceleration](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-time-graph)
+![Velocity against time from v₀ = 5 m/s for three constant accelerations, 12 times each from the package; the slope of each line is its acceleration (the dashed triangle on the example line: Δv over Δt, Δv derived from the returned velocities)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-time-graph)
 
-*Velocity against time from v0 = 5 m/s for three constant accelerations, 12 times each a solve of the model; the slope of each line is its acceleration. Marked at t = 4 s: a = 0.5 m/s²: v = 7 m/s; a = 2 m/s²: v = 13 m/s; a = -1 m/s²: v = 1 m/s. Your inputs: v0 = 5 m/s, a = 2 m/s^2, t = 4 s.*
-
-![Final velocity as a runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-time-live-1)
-
-*Final velocity as a runs from 0.5 to 3.5 m/s^2, every other input as you entered it (41 solutions). Marked: your a = 2 m/s^2 gives v = 13. Your inputs: v0 = 5 m/s, a = 2 m/s^2, t = 4 s.*
-
-![Final velocity as t runs from 1 to 7 s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-time-live-2)
-
-*Final velocity as t runs from 1 to 7 s, every other input as you entered it (29 solutions). Marked: your t = 4 s gives v = 13. Your inputs: v0 = 5 m/s, a = 2 m/s^2, t = 4 s.*
+*Velocity against time from v₀ = 5 m/s for three constant accelerations, 12 times each from the package; the slope of each line is its acceleration (the dashed triangle on the example line: Δv over Δt, Δv derived from the returned velocities). Marked at t = 4 s: a = 0.5 m/s²: v = 7 m/s; a = 2 m/s²: v = 13 m/s; a = -1 m/s²: v = 1 m/s.*
 
 ```python
 classical_physics_ai999x.solve('velocity_time', v0='5 m/s', a='2 m/s^2', t='4 s', target='v')
@@ -354,17 +338,13 @@ $$
 - **Assumes:** constant acceleration along a line
 - **Evidence:** hand-checked pack
 
-![Displacement against time for v0 = 3 m/s and a = 2 m/s² (20 times, each a solve of the model), beside the straight line the same start speed gives with no acceleration (also from the model); the gap between them at t = 4 s is the part due to the acceleration](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/displacement-time-graph)
+![Trajectories of a projectile launched at 20 m/s (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/displacement-time-drawing.svg)
 
-*Displacement against time for v0 = 3 m/s and a = 2 m/s² (20 times, each a solve of the model), beside the straight line the same start speed gives with no acceleration (also from the model); the gap between them at t = 4 s is the part due to the acceleration. Marked: x = 28 m at t = 4 s, 12 m without acceleration. Your inputs: v0 = 3 m/s, a = 2 m/s^2, t = 4 s.*
+*Trajectories of a projectile launched at 20 m/s (g = 9.81 m/s², no air resistance) at three angles: each point's horizontal distance and height computed by the package (uniform motion and constant acceleration), the top from its maximum-height formula, and on the 45° path the velocity vectors (horizontal part constant, vertical part from v = v₀ + a t), θ = 30°: range 35.3119 m, top 5.09684 m; θ = 45°: range 40.7747 m, top 10.1937 m; θ = 60°: range 35.3119 m, top 15.2905 m.*
 
-![Displacement as t runs from 1 to 7 s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/displacement-time-live-1)
+![Displacement against time for v₀ = 3 m/s and a = 2 m/s² (20 times from the package), beside the straight line the same start speed gives without acceleration (uniform motion, also from the package); the gap between them at t = 4 s is the part due to the acceleration (derived as the difference)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/displacement-time-graph)
 
-*Displacement as t runs from 1 to 7 s, every other input as you entered it (41 solutions). Marked: your t = 4 s gives x = 28. Your inputs: v0 = 3 m/s, a = 2 m/s^2, t = 4 s.*
-
-![Displacement as a runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/displacement-time-live-2)
-
-*Displacement as a runs from 0.5 to 3.5 m/s^2, every other input as you entered it (29 solutions). Marked: your a = 2 m/s^2 gives x = 28. Your inputs: v0 = 3 m/s, a = 2 m/s^2, t = 4 s.*
+*Displacement against time for v₀ = 3 m/s and a = 2 m/s² (20 times from the package), beside the straight line the same start speed gives without acceleration (uniform motion, also from the package); the gap between them at t = 4 s is the part due to the acceleration (derived as the difference). Marked: x = 28 m at t = 4 s, 12 m without acceleration.*
 
 ```python
 classical_physics_ai999x.solve('displacement_time', v0='3 m/s', a='2 m/s^2', t='4 s', target='x')
@@ -399,17 +379,9 @@ $$
 - **Assumes:** constant acceleration along a line; motion does not reverse
 - **Evidence:** hand-checked pack
 
-![Speed reached after a displacement x from v0 = 6 m/s, for three constant accelerations (24 displacements each, a solve of the model): the speed grows as the square root of the distance, not linearly](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-displacement-graph)
+![Speed reached after a displacement x from v₀ = 6 m/s, for three constant accelerations (24 displacements each from the package): the speed grows as the square root of the distance, not linearly](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-displacement-graph)
 
-*Speed reached after a displacement x from v0 = 6 m/s, for three constant accelerations (24 displacements each, a solve of the model): the speed grows as the square root of the distance, not linearly. Marked at x = 16 m: a = 1 m/s²: 8.246 m/s; a = 2 m/s²: 10 m/s; a = 4 m/s²: 12.81 m/s. Your inputs: v0 = 6 m/s, a = 2 m/s^2, x = 16 m.*
-
-![Final speed as v0 runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-displacement-live-1)
-
-*Final speed as v0 runs from 1.5 to 10.5 m/s, every other input as you entered it (41 solutions). Marked: your v0 = 6 m/s gives v = 10. Your inputs: v0 = 6 m/s, a = 2 m/s^2, x = 16 m.*
-
-![Final speed as a runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/velocity-displacement-live-2)
-
-*Final speed as a runs from 0.5 to 3.5 m/s^2, every other input as you entered it (29 solutions). Marked: your a = 2 m/s^2 gives v = 10. Your inputs: v0 = 6 m/s, a = 2 m/s^2, x = 16 m.*
+*Speed reached after a displacement x from v₀ = 6 m/s, for three constant accelerations (24 displacements each from the package): the speed grows as the square root of the distance, not linearly. Marked at x = 16 m: a = 1: 8.24621 m/s; a = 2: 10 m/s; a = 4: 12.8062 m/s.*
 
 ```python
 classical_physics_ai999x.solve('velocity_displacement', v0='6 m/s', a='2 m/s^2', x='16 m', target='v')
@@ -443,17 +415,9 @@ $$
 - **Assumes:** constant acceleration along a line
 - **Evidence:** hand-checked pack
 
-![Velocity changing uniformly from v0 = 4 m/s to v = 10 m/s in t = 3 s: the trapezoid under the line is the displacement the model returns, Δx = 21 m; the second line is the average velocity Δx / t = 7 m/s, which encloses the same area](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-velocity-displacement-graph)
+![Velocity changing uniformly from v₀ = 4 m/s to v = 10 m/s in t = 3 s: the trapezoid under the line is the displacement the package returns, Δx = 21 m; the dashed line is the average velocity Δx / t = 7 m/s (derived), which encloses the same area](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-velocity-displacement-graph)
 
-*Velocity changing uniformly from v0 = 4 m/s to v = 10 m/s in t = 3 s: the trapezoid under the line is the displacement the model returns, Δx = 21 m; the second line is the average velocity Δx / t = 7 m/s, which encloses the same area. Your inputs: v0 = 4 m/s, v = 10 m/s, t = 3 s.*
-
-![Displacement as t runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-velocity-displacement-live-1)
-
-*Displacement as t runs from 0.75 to 5.25 s, every other input as you entered it (41 solutions). Marked: your t = 3 s gives x = 21. Your inputs: v0 = 4 m/s, v = 10 m/s, t = 3 s.*
-
-![Displacement as v runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-velocity-displacement-live-2)
-
-*Displacement as v runs from 2.5 to 17.5 m/s, every other input as you entered it (29 solutions). Marked: your v = 10 m/s gives x = 21. Your inputs: v0 = 4 m/s, v = 10 m/s, t = 3 s.*
+*Velocity changing uniformly from v₀ = 4 m/s to v = 10 m/s in t = 3 s: the trapezoid under the line is the displacement the package returns, Δx = 21 m; the dashed line is the average velocity Δx / t = 7 m/s (derived), which encloses the same area. Marked: Δx = 21 m.*
 
 ```python
 classical_physics_ai999x.solve('average_velocity_displacement', v0='4 m/s', v='10 m/s', t='3 s', target='x')
@@ -486,21 +450,13 @@ $$
 - **Assumes:** constant mass; inertial frame
 - **Evidence:** hand-checked pack
 
-![Newton's second law for a body of m = 4 kg accelerating at a = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/newton-second-diagram)
+![Free-body view of Newton's second law: a body of m = 4 kg accelerating at a = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/newton-second-diagram)
 
-*Newton's second law for a body of m = 4 kg accelerating at a = 2.5 m/s²: it needs the net force the model returns, in the direction of the acceleration. Marked: F = 10 N. Your inputs: m = 4 kg, a = 2.5 m/s^2.*
+*Free-body view of Newton's second law: a body of m = 4 kg accelerating at a = 2.5 m/s² (the inputs) needs the net force the package returns, in the direction of the acceleration. Marked: F = 10 N.*
 
-![Net force needed to give bodies of four masses the same acceleration a = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/newton-second-bars)
+![Net force needed to give bodies of 1, 2, 4 and 8 kg the same acceleration a = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/newton-second-bars)
 
-*Net force needed to give bodies of four masses the same acceleration a = 2.5 m/s², each a solve of the model: twice the mass needs twice the force. Marked: 1 kg: 2.5 N, 2 kg: 5 N, 4 kg: 10 N, 8 kg: 20 N. Your inputs: m = 4 kg, a = 2.5 m/s^2.*
-
-![Net force as m runs from 1 to 7 kg, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/newton-second-live-1)
-
-*Net force as m runs from 1 to 7 kg, every other input as you entered it (41 solutions). Marked: your m = 4 kg gives F = 10. Your inputs: m = 4 kg, a = 2.5 m/s^2.*
-
-![Net force as a runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/newton-second-live-2)
-
-*Net force as a runs from 0.625 to 4.375 m/s^2, every other input as you entered it (29 solutions). Marked: your a = 2.5 m/s^2 gives F = 10. Your inputs: m = 4 kg, a = 2.5 m/s^2.*
+*Net force needed to give bodies of 1, 2, 4 and 8 kg the same acceleration a = 2.5 m/s², each from the package: twice the mass needs twice the force. Marked: the force for each mass.*
 
 ```python
 classical_physics_ai999x.solve('newton_second', m='4 kg', a='2.5 m/s^2', target='F')
@@ -535,15 +491,11 @@ $$
 
 ![Weight of the same 10 kg mass where the gravitational acceleration is 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-bars)
 
-*Weight of the same 10 kg mass where the gravitational acceleration is 1.62 m/s² (Moon), 3.71 m/s² (Mars), 9.8 m/s² (Earth) and 24.79 m/s² (Jupiter), each a solve of the model, and with the given g: the mass is the same, the weight scales with g. Marked: Moon 16.2 N, Mars 37.1 N, Earth 98 N, Jupiter 247.9 N, given 98 N. Your inputs: m = 10 kg, g = 9.8 m/s^2.*
+*Weight of the same 10 kg mass where the gravitational acceleration is 1.62 m/s² (Moon), 3.71 m/s² (Mars), 9.8 m/s² (Earth), 24.79 m/s² (Jupiter), each from the package: the mass is the same, the weight scales with g. Marked: each weight.*
 
-![Weight as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-live-1)
+![W (weight) against m (mass) from 5 kg to 15 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-curve)
 
-*Weight as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (41 solutions). Marked: your g = 9.8 m/s^2 gives W = 98. Your inputs: m = 10 kg, g = 9.8 m/s^2.*
-
-![Weight as m runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-live-2)
-
-*Weight as m runs from 2.5 to 17.5 kg, every other input as you entered it (29 solutions). Marked: your m = 10 kg gives W = 98. Your inputs: m = 10 kg, g = 9.8 m/s^2.*
+*W (weight) against m (mass) from 5 kg to 15 kg. One curve for each value of g (gravitational acceleration): 9.8 m/s^2, 4.9 m/s^2, 19.6 m/s^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 10 kg, W = 98 N.*
 
 ```python
 classical_physics_ai999x.solve('weight', m='10 kg', g='9.8 m/s^2', target='W')
@@ -576,17 +528,9 @@ $$
 - **Assumes:** applied force and friction act along the same line, in opposite directions
 - **Evidence:** hand-checked pack
 
-![A block pushed by an applied force P = 50 N against friction f = 12 N, arrows to scale; the model returns the net horizontal force, drawn below](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-force-friction-diagram)
+![A block pushed by an applied force P = 50 N against friction f = 12 N (the inputs), arrows to scale; the package returns the net horizontal force, drawn below](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-force-friction-diagram)
 
-*A block pushed by an applied force P = 50 N against friction f = 12 N, arrows to scale; the model returns the net horizontal force, drawn below. Marked: net force 38 N. Your inputs: P = 50 N, f = 12 N.*
-
-![Net force as P runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-force-friction-live-1)
-
-*Net force as P runs from 12.5 to 87.5 N, every other input as you entered it (41 solutions). Marked: your P = 50 N gives F = 38. Your inputs: P = 50 N, f = 12 N.*
-
-![Net force as f runs from 3 to 21 N, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-force-friction-live-2)
-
-*Net force as f runs from 3 to 21 N, every other input as you entered it (29 solutions). Marked: your f = 12 N gives F = 38. Your inputs: P = 50 N, f = 12 N.*
+*A block pushed by an applied force P = 50 N against friction f = 12 N (the inputs), arrows to scale; the package returns the net horizontal force, drawn below. Marked: net force 38 N.*
 
 ```python
 classical_physics_ai999x.solve('net_force_friction', P='50 N', f='12 N', target='F')
@@ -619,17 +563,13 @@ $$
 - **Assumes:** the surfaces slide over each other
 - **Evidence:** hand-checked pack
 
-![A block sliding on a level floor: normal force N = 80 N (balanced by the weight), coefficient of kinetic friction μk = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-friction-diagram)
+![A block sliding on a level floor: normal force N = 80 N (input, balanced by the weight), coefficient of kinetic friction μk = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-friction-diagram)
 
-*A block sliding on a level floor: normal force N = 80 N (balanced by the weight), coefficient of kinetic friction μk = 0.25; the friction force the model returns acts against the motion. Arrows to scale. Marked: f = 20 N. Your inputs: mu = 0.25, N = 80 N.*
+*A block sliding on a level floor: normal force N = 80 N (input, balanced by the weight), coefficient of kinetic friction μk = 0.25; the friction force the package returns acts against the motion. Arrows to scale. Marked: f = 20 N.*
 
-![Friction force as μ runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-friction-live-1)
+![f (friction force) against mu (coefficient of friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-friction-curve)
 
-*Friction force as μ runs from 0.0625 to 0.4375, every other input as you entered it (41 solutions). Marked: your μ = 0.25 gives f = 20. Your inputs: mu = 0.25, N = 80 N.*
-
-![Friction force as N runs from 20 to 140 N, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-friction-live-2)
-
-*Friction force as N runs from 20 to 140 N, every other input as you entered it (29 solutions). Marked: your N = 80 N gives f = 20. Your inputs: mu = 0.25, N = 80 N.*
+*f (friction force) against mu (coefficient of friction) from 0.02 to 0.98. One curve for each value of N (normal force): 80 N, 40 N, 160 N. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, mu = 0.25, f = 20 N.*
 
 ```python
 classical_physics_ai999x.solve('kinetic_friction', mu='0.25 1', N='80 N', target='f')
@@ -662,13 +602,9 @@ $$
 - **Assumes:** level surface; no other vertical forces
 - **Evidence:** hand-checked pack
 
-![A body at rest on a level surface with weight W = 70 N: the surface pushes back with the normal force the model returns, equal and opposite](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-on-level-diagram)
+![A body at rest on a level surface with weight W = 70 N (input): the surface pushes back with the normal force the package returns, equal and opposite](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-on-level-diagram)
 
-*A body at rest on a level surface with weight W = 70 N: the surface pushes back with the normal force the model returns, equal and opposite. Arrows to scale. Marked: N = 70 N. Your inputs: W = 70 N.*
-
-![Normal force as W runs from 17](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-on-level-live-1)
-
-*Normal force as W runs from 17.5 to 122.5 N, every other input as you entered it (41 solutions). Marked: your W = 70 N gives N = 70. Your inputs: W = 70 N.*
+*A body at rest on a level surface with weight W = 70 N (input): the surface pushes back with the normal force the package returns, equal and opposite. Arrows to scale. Marked: N = 70 N.*
 
 ```python
 classical_physics_ai999x.solve('normal_on_level', W='70 N', target='N')
@@ -701,17 +637,13 @@ $$
 - **Assumes:** speeds far below the speed of light
 - **Evidence:** hand-checked pack
 
+![p (momentum) against m (mass) from 1 kg to 3 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/momentum-curve)
+
+*p (momentum) against m (mass) from 1 kg to 3 kg. One curve for each value of v (velocity): 7 m/s, 3.5 m/s, 14 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, p = 14 kg*m/s.*
+
 ![p (momentum) over m (mass) from 1 kg to 3 kg and v (velocity) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/momentum-field)
 
-*p (momentum) over m (mass) from 1 kg to 3 kg and v (velocity) from 3.5 m/s to 10.5 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 3.5 kg·m/s to dark 31.5 kg·m/s); iso-lines at p = 5, 10, 15, 20, 25, 30. Marked: the given point, m = 2 kg, v = 7 m/s, p = 14 kg·m/s. Your inputs: m = 2 kg, v = 7 m/s.*
-
-![Momentum as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/momentum-live-1)
-
-*Momentum as m runs from 0.5 to 3.5 kg, every other input as you entered it (41 solutions). Marked: your m = 2 kg gives p = 14. Your inputs: m = 2 kg, v = 7 m/s.*
-
-![Momentum as v runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/momentum-live-2)
-
-*Momentum as v runs from 1.75 to 12.25 m/s, every other input as you entered it (29 solutions). Marked: your v = 7 m/s gives p = 14. Your inputs: m = 2 kg, v = 7 m/s.*
+*p (momentum) over m (mass) from 1 kg to 3 kg and v (velocity) from 3.5 m/s to 10.5 m/s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 3.5 kg*m/s to dark 31.5 kg*m/s); iso-lines at p = 5, 10, 15, 20, 25 kg*m/s. Marked: the worked example, m = 2 kg, v = 7 m/s, p = 14 kg*m/s.*
 
 ```python
 classical_physics_ai999x.solve('momentum', m='2 kg', v='7 m/s', target='p')
@@ -744,17 +676,13 @@ $$
 - **Assumes:** constant force
 - **Evidence:** hand-checked pack
 
-![A constant force F = 15 N acting for t = 4 s: the impulse is the area of the rectangle under the force against time](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/impulse-graph)
+![A constant force F = 15 N acting for t = 4 s: the impulse is the area under the force–time graph](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/impulse-graph)
 
-*A constant force F = 15 N acting for t = 4 s: the impulse is the area of the rectangle under the force against time. Marked: the impulse the model returns, J = 60 N·s (the change of momentum it causes). Your inputs: F = 15 N, t = 4 s.*
+*A constant force F = 15 N acting for t = 4 s: the impulse is the area under the force–time graph. Marked: the impulse the package returns, J = 60 N·s (the change of momentum it causes).*
 
-![Impulse as F runs from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/impulse-live-1)
+![J (impulse) against F (force) from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/impulse-curve)
 
-*Impulse as F runs from 3.75 to 26.25 N, every other input as you entered it (41 solutions). Marked: your F = 15 N gives J = 60. Your inputs: F = 15 N, t = 4 s.*
-
-![Impulse as t runs from 1 to 7 s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/impulse-live-2)
-
-*Impulse as t runs from 1 to 7 s, every other input as you entered it (29 solutions). Marked: your t = 4 s gives J = 60. Your inputs: F = 15 N, t = 4 s.*
+*J (impulse) against F (force) from 7.5 N to 22.5 N. One curve for each value of t (time the force acts): 4 s, 2 s, 8 s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, F = 15 N, J = 60 N*s.*
 
 ```python
 classical_physics_ai999x.solve('impulse', F='15 N', t='4 s', target='J')
@@ -789,21 +717,13 @@ $$
 - **Assumes:** constant force
 - **Evidence:** hand-checked pack
 
-![A force F = 10 N pulling at θ = 60° to the direction of a displacement d = 5 m: only its component along the motion, F cos θ, does work](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/work-diagram)
+![A force F = 10 N pulling at θ = 60° above the direction of a displacement d = 5 m (the inputs): only its component along the motion, F cos θ, does work](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/work-diagram)
 
-*A force F = 10 N pulling at θ = 60° to the direction of a displacement d = 5 m: only its component along the motion, F cos θ, does work. Marked: the work the model returns, W = 25 J. Your inputs: F = 10 N, d = 5 m, theta = 60 deg.*
+*A force F = 10 N pulling at θ = 60° above the direction of a displacement d = 5 m (the inputs): only its component along the motion, F cos θ, does work. Marked: the work the package returns, W = 25 J.*
 
-![Work of a force F = 10 N over d = 5 m against the angle between them (37 angles, each a solve of the model): positive below 90°, zero for a perpendicular force, negative when the force opposes the motion](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/work-graph)
+![Work of a force F = 10 N over d = 5 m against the angle between them (37 angles from the package): positive below 90°, zero for a perpendicular force, negative when the force opposes the motion](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/work-graph)
 
-*Work of a force F = 10 N over d = 5 m against the angle between them (37 angles, each a solve of the model): positive below 90°, zero for a perpendicular force, negative when the force opposes the motion. Marked: 25 J at 60°. Your inputs: F = 10 N, d = 5 m, theta = 60 deg.*
-
-![Work done as θ runs from 15 to 105 deg, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/work-live-1)
-
-*Work done as θ runs from 15 to 105 deg, every other input as you entered it (41 solutions). Marked: your θ = 60 deg gives W = 25. Your inputs: F = 10 N, d = 5 m, theta = 60 deg.*
-
-![Work done as F runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/work-live-2)
-
-*Work done as F runs from 2.5 to 17.5 N, every other input as you entered it (29 solutions). Marked: your F = 10 N gives W = 25. Your inputs: F = 10 N, d = 5 m, theta = 60 deg.*
+*Work of a force F = 10 N over d = 5 m against the angle between them (37 angles from the package): positive below 90°, zero for a perpendicular force, negative when the force opposes the motion. Marked: 25 J at 60°.*
 
 ```python
 classical_physics_ai999x.solve('work', F='10 N', d='5 m', theta='60 deg', target='W')
@@ -836,21 +756,17 @@ $$
 - **Assumes:** speeds far below the speed of light
 - **Evidence:** hand-checked pack
 
-![Energy of a 4 kg body falling from rest from 458](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/kinetic-energy-bars.svg)
+![Energy of a 1 kg body falling from rest from 20 m (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/kinetic-energy-bars.svg)
 
-*Energy of a 4 kg body falling from rest from 458.7 mm (g = 9.81 m/s², no air resistance), the height from which it lands at the given speed: potential energy and kinetic energy (from the speed after the fall), each a solve of the model; their sum stays the same. h = 458.7 mm: U = 18 J, K = 0 J; h = 344 mm: U = 13.5 J, K = 4.5 J; h = 229.4 mm: U = 9 J, K = 9 J; h = 114.7 mm: U = 4.5 J, K = 13.5 J; h = 0 m: U = 0 J, K = 18 J. Your inputs: m = 4 kg, v = 3 m/s.*
+*Energy of a 1 kg body falling from rest from 20 m (g = 9.81 m/s², no air resistance): potential energy and kinetic energy (from the speed after the fall), each computed by the package, stacked, their sum stays 196.2 J: h = 20 m: U = 196.2 J, K = 0 J (v = 0 m/s); h = 15 m: U = 147.15 J, K = 49.05 J (v = 9.90454 m/s); h = 10 m: U = 98.1 J, K = 98.1 J (v = 14.0071 m/s); h = 5 m: U = 49.05 J, K = 147.15 J (v = 17.1552 m/s); h = 0 m: U = 0 J, K = 196.2 J (v = 19.8091 m/s).*
+
+![K (kinetic energy) against v (speed) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-energy-curve)
+
+*K (kinetic energy) against v (speed) from 1.5 m/s to 4.5 m/s. One curve for each value of m (mass): 4 kg, 2 kg, 8 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, v = 3 m/s, K = 18 J.*
 
 ![K (kinetic energy) over v (speed) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-energy-field)
 
-*K (kinetic energy) over v (speed) from 1.5 m/s to 4.5 m/s and m (mass) from 2 kg to 6 kg: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2.25 J to dark 60.75 J); iso-lines at K = 10, 20, 30, 40, 50, 60. Marked: the given point, v = 3 m/s, m = 4 kg, K = 18 J. Your inputs: m = 4 kg, v = 3 m/s.*
-
-![Kinetic energy as v runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-energy-live-1)
-
-*Kinetic energy as v runs from 0.75 to 5.25 m/s, every other input as you entered it (41 solutions). Marked: your v = 3 m/s gives K = 18. Your inputs: m = 4 kg, v = 3 m/s.*
-
-![Kinetic energy as m runs from 1 to 7 kg, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kinetic-energy-live-2)
-
-*Kinetic energy as m runs from 1 to 7 kg, every other input as you entered it (29 solutions). Marked: your m = 4 kg gives K = 18. Your inputs: m = 4 kg, v = 3 m/s.*
+*K (kinetic energy) over v (speed) from 1.5 m/s to 4.5 m/s and m (mass) from 2 kg to 6 kg: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 2.25 J to dark 60.75 J); iso-lines at K = 10, 20, 30, 40, 50 J. Marked: the worked example, v = 3 m/s, m = 4 kg, K = 18 J.*
 
 ```python
 classical_physics_ai999x.solve('kinetic_energy', m='4 kg', v='3 m/s', target='K')
@@ -884,13 +800,9 @@ $$
 - **Assumes:** uniform gravitational field; zero of potential energy at $h = 0$
 - **Evidence:** hand-checked pack
 
-![Gravitational potential energy as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-pe-live-1)
+![U (gravitational potential energy) against m (mass) from 1 kg to 3 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-pe-curve)
 
-*Gravitational potential energy as m runs from 0.5 to 3.5 kg, every other input as you entered it (41 solutions). Marked: your m = 2 kg gives U = 98. Your inputs: m = 2 kg, g = 9.8 m/s^2, h = 5 m.*
-
-![Gravitational potential energy as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-pe-live-2)
-
-*Gravitational potential energy as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.8 m/s^2 gives U = 98. Your inputs: m = 2 kg, g = 9.8 m/s^2, h = 5 m.*
+*U (gravitational potential energy) against m (mass) from 1 kg to 3 kg. One curve for each value of g (gravitational acceleration): 9.8 m/s^2, 4.9 m/s^2, 19.6 m/s^2. Other inputs as in the worked example: h = 5 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, U = 98 J.*
 
 ```python
 classical_physics_ai999x.solve('gravitational_pe', m='2 kg', g='9.8 m/s^2', h='5 m', target='U')
@@ -923,17 +835,9 @@ $$
 - **Assumes:** linear elastic spring within its elastic limit
 - **Evidence:** hand-checked pack
 
-![A spring of stiffness k = 300 N/m stretched x = 50 mm beyond its natural length: it pulls back with the force the model returns (Hooke's law), and the force grows in proportion to the extension (20 extensions below, each a solve of the model)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-force-drawing)
+![A spring of stiffness k = 300 N/m stretched x = 5 cm beyond its natural length: it pulls back with the force the package returns (Hooke's law), and the force grows in proportion to the extension (20 extensions below)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-force-drawing)
 
-*A spring of stiffness k = 300 N/m stretched x = 50 mm beyond its natural length: it pulls back with the force the model returns (Hooke's law), and the force grows in proportion to the extension (20 extensions below, each a solve of the model). Marked: F = 15 N at x = 50 mm. Your inputs: k = 300 N/m, x = 5 cm.*
-
-![Spring force (magnitude) as k runs from 75 to 525 N/m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-force-live-1)
-
-*Spring force (magnitude) as k runs from 75 to 525 N/m, every other input as you entered it (41 solutions). Marked: your k = 300 N/m gives F = 15. Your inputs: k = 300 N/m, x = 5 cm.*
-
-![Spring force (magnitude) as x runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-force-live-2)
-
-*Spring force (magnitude) as x runs from 1.25 to 8.75 cm, every other input as you entered it (29 solutions). Marked: your x = 5 cm gives F = 15. Your inputs: k = 300 N/m, x = 5 cm.*
+*A spring of stiffness k = 300 N/m stretched x = 5 cm beyond its natural length: it pulls back with the force the package returns (Hooke's law), and the force grows in proportion to the extension (20 extensions below). Marked: F = 15 N at x = 0.05 m.*
 
 ```python
 classical_physics_ai999x.solve('spring_force', k='300 N/m', x='5 cm', target='F')
@@ -966,17 +870,13 @@ $$
 - **Assumes:** linear elastic spring within its elastic limit
 - **Evidence:** hand-checked pack
 
-![Force of a spring with k = 400 N/m against its extension (from the model's Hooke's-law formula): the energy stored when it is stretched x = 100 mm is the triangle under the line up to x](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-energy-graph)
+![Force of a spring with k = 400 N/m against its extension (from the package's Hooke's-law formula): the energy stored when it is stretched x = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-energy-graph)
 
-*Force of a spring with k = 400 N/m against its extension (from the model's Hooke's-law formula): the energy stored when it is stretched x = 100 mm is the triangle under the line up to x. Marked: stored energy U = 2 J (returned) and F = 40 N at x. Your inputs: k = 400 N/m, x = 0.1 m.*
+*Force of a spring with k = 400 N/m against its extension (from the package's Hooke's-law formula): the energy stored when it is stretched x = 0.1 m is the triangle under the line up to x. Marked: stored energy U = 2 J (returned) and F = 40 N at x.*
 
-![Elastic potential energy as x runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-energy-live-1)
+![U (elastic potential energy) against x (extension or compression) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-energy-curve)
 
-*Elastic potential energy as x runs from 0.025 to 0.175 m, every other input as you entered it (41 solutions). Marked: your x = 0.1 m gives U = 2. Your inputs: k = 400 N/m, x = 0.1 m.*
-
-![Elastic potential energy as k runs from 100 to 700 N/m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-energy-live-2)
-
-*Elastic potential energy as k runs from 100 to 700 N/m, every other input as you entered it (29 solutions). Marked: your k = 400 N/m gives U = 2. Your inputs: k = 400 N/m, x = 0.1 m.*
+*U (elastic potential energy) against x (extension or compression) from 0.05 m to 0.15 m. One curve for each value of k (spring constant): 400 N/m, 200 N/m, 800 N/m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, x = 0.1 m, U = 2 J.*
 
 ```python
 classical_physics_ai999x.solve('spring_energy', k='400 N/m', x='0.1 m', target='U')
@@ -1009,17 +909,13 @@ $$
 - **Assumes:** power averaged over the interval
 - **Evidence:** hand-checked pack
 
-![P (average power) over E (energy transferred) from 300 J to 900 J and t (elapsed time) from 10 s to 30 s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 10 W to dark 90 W); iso-lines at P = 20, 40, 60, 80](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-energy-field)
+![P (average power) against t (elapsed time) from 10 s to 30 s](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-energy-curve)
 
-*P (average power) over E (energy transferred) from 300 J to 900 J and t (elapsed time) from 10 s to 30 s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 10 W to dark 90 W); iso-lines at P = 20, 40, 60, 80. Marked: the given point, E = 600 J, t = 20 s, P = 30 W. Your inputs: E = 600 J, t = 20 s.*
+*P (average power) against t (elapsed time) from 10 s to 30 s. One curve for each value of E (energy transferred): 600 J, 300 J, 1200 J. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, t = 20 s, P = 30 W.*
 
-![Average power as E runs from 150 to 1050 J, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-energy-live-1)
+![P (average power) over E (energy transferred) from 300 J to 900 J and t (elapsed time) from 10 s to 30 s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 10 W to dark 90 W); iso-lines at P = 20, 40, 60, 80 W](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-energy-field)
 
-*Average power as E runs from 150 to 1050 J, every other input as you entered it (41 solutions). Marked: your E = 600 J gives P = 30. Your inputs: E = 600 J, t = 20 s.*
-
-![Average power as t runs from 5 to 35 s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-energy-live-2)
-
-*Average power as t runs from 5 to 35 s, every other input as you entered it (29 solutions). Marked: your t = 20 s gives P = 30. Your inputs: E = 600 J, t = 20 s.*
+*P (average power) over E (energy transferred) from 300 J to 900 J and t (elapsed time) from 10 s to 30 s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 10 W to dark 90 W); iso-lines at P = 20, 40, 60, 80 W. Marked: the worked example, E = 600 J, t = 20 s, P = 30 W.*
 
 ```python
 classical_physics_ai999x.solve('power_energy', E='600 J', t='20 s', target='P')
@@ -1053,17 +949,13 @@ $$
 - **Assumes:** force parallel to the velocity; constant speed
 - **Evidence:** hand-checked pack
 
+![P (power) against F (force along the motion) from 20 N to 60 N](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-force-speed-curve)
+
+*P (power) against F (force along the motion) from 20 N to 60 N. One curve for each value of v (speed): 3 m/s, 1.5 m/s, 6 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, F = 40 N, P = 120 W.*
+
 ![P (power) over F (force along the motion) from 20 N to 60 N and v (speed) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-force-speed-field)
 
-*P (power) over F (force along the motion) from 20 N to 60 N and v (speed) from 1.5 m/s to 4.5 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 30 W to dark 270 W); iso-lines at P = 50, 100, 150, 200, 250. Marked: the given point, F = 40 N, v = 3 m/s, P = 120 W. Your inputs: F = 40 N, v = 3 m/s.*
-
-![Power as F runs from 10 to 70 N, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-force-speed-live-1)
-
-*Power as F runs from 10 to 70 N, every other input as you entered it (41 solutions). Marked: your F = 40 N gives P = 120. Your inputs: F = 40 N, v = 3 m/s.*
-
-![Power as v runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/power-force-speed-live-2)
-
-*Power as v runs from 0.75 to 5.25 m/s, every other input as you entered it (29 solutions). Marked: your v = 3 m/s gives P = 120. Your inputs: F = 40 N, v = 3 m/s.*
+*P (power) over F (force along the motion) from 20 N to 60 N and v (speed) from 1.5 m/s to 4.5 m/s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 30 W to dark 270 W); iso-lines at P = 50, 100, 150, 200, 250 W. Marked: the worked example, F = 40 N, v = 3 m/s, P = 120 W.*
 
 ```python
 classical_physics_ai999x.solve('power_force_speed', F='40 N', v='3 m/s', target='P')
@@ -1098,15 +990,11 @@ $$
 
 ![A body moving round a circle of radius r = 3 m at a constant speed v = 6 m/s, at six positions: its velocity (green) is always along the circle, its acceleration (pink) always points to the centre](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-diagram)
 
-*A body moving round a circle of radius r = 3 m at a constant speed v = 6 m/s, at six positions: its velocity (green) is always along the circle, its acceleration (pink) always points to the centre. Marked: the centripetal acceleration the model returns, a = 12 m/s². Your inputs: v = 6 m/s, r = 3 m.*
+*A body moving round a circle of radius r = 3 m at a constant speed v = 6 m/s, at six positions: its velocity (green) is always along the circle, its acceleration (pink) always points to the centre. Marked: the centripetal acceleration the package returns, a = v²/r = 12 m/s².*
 
-![Centripetal acceleration as v runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-live-1)
+![a (centripetal acceleration) against r (radius of the circle) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-curve)
 
-*Centripetal acceleration as v runs from 1.5 to 10.5 m/s, every other input as you entered it (41 solutions). Marked: your v = 6 m/s gives a = 12. Your inputs: v = 6 m/s, r = 3 m.*
-
-![Centripetal acceleration as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-live-2)
-
-*Centripetal acceleration as r runs from 0.75 to 5.25 m, every other input as you entered it (29 solutions). Marked: your r = 3 m gives a = 12. Your inputs: v = 6 m/s, r = 3 m.*
+*a (centripetal acceleration) against r (radius of the circle) from 1.5 m to 4.5 m. One curve for each value of v (speed): 6 m/s, 3 m/s, 12 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 3 m, a = 12 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('centripetal_acceleration', v='6 m/s', r='3 m', target='a')
@@ -1142,15 +1030,11 @@ $$
 
 ![Inward (centripetal) force needed to keep a 2 kg body moving at 6 m/s on circles of radius 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-force-diagram)
 
-*Inward (centripetal) force needed to keep a 2 kg body moving at 6 m/s on circles of radius 1.5 m, 3 m and 6 m, each a solve of the model and drawn to scale towards the centre: halving the radius doubles the force. Marked: F = 24 N at the given r = 3 m. Your inputs: m = 2 kg, v = 6 m/s, r = 3 m.*
+*Inward (centripetal) force needed to keep a 2 kg body moving at 6 m/s on circles of radius 1.5, 3 and 6 m (the worked example is r = 3 m), each from the package and drawn to scale towards the centre: halving the radius doubles the force. Marked: r = 1.5 m, F = 48 N; r = 3 m, F = 24 N; r = 6 m, F = 12 N.*
 
-![Centripetal force as v runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-force-live-1)
+![F (centripetal force) against r (radius of the circle) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-force-curve)
 
-*Centripetal force as v runs from 1.5 to 10.5 m/s, every other input as you entered it (41 solutions). Marked: your v = 6 m/s gives F = 24. Your inputs: m = 2 kg, v = 6 m/s, r = 3 m.*
-
-![Centripetal force as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-force-live-2)
-
-*Centripetal force as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives F = 24. Your inputs: m = 2 kg, v = 6 m/s, r = 3 m.*
+*F (centripetal force) against r (radius of the circle) from 1.5 m to 4.5 m. One curve for each value of v (speed): 6 m/s, 3 m/s, 12 m/s. Other inputs as in the worked example: m = 2 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 3 m, F = 24 N.*
 
 ```python
 classical_physics_ai999x.solve('centripetal_force', m='2 kg', v='6 m/s', r='3 m', target='F')
@@ -1183,17 +1067,13 @@ $$
 - **Assumes:** rotation about a fixed axis
 - **Evidence:** hand-checked pack
 
-![A disc of radius 500 mm turning at ω = 4 rad/s: the speed of a point grows in proportion to its distance from the axis (arrows to scale; the dashed line joins their tips)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-diagram)
+![A disc of radius 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-diagram)
 
-*A disc of radius 500 mm turning at ω = 4 rad/s: the speed of a point grows in proportion to its distance from the axis (arrows to scale; the dashed line joins their tips). Marked: the tangential speed the model returns, 0.5 m/s at r = 125 mm, 1 m/s at r = 250 mm, 1.5 m/s at r = 375 mm, 2 m/s at r = 500 mm. Your inputs: omega = 4 rad/s, r = 0.5 m.*
+*A disc of radius 0.5 m turning at ω = 4 rad/s: the speed of a point grows in proportion to its distance from the axis (arrows to scale; the dashed line joins their tips). Marked: the tangential speed the package returns at r = 0.125, 0.25, 0.375, 0.5 m, 0.5 m/s, 1 m/s, 1.5 m/s, 2 m/s.*
 
-![Speed as ω runs from 1 to 7 rad/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-live-1)
+![v (speed) against omega (angular speed) from 2 rad/s to 6 rad/s](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-curve)
 
-*Speed as ω runs from 1 to 7 rad/s, every other input as you entered it (41 solutions). Marked: your ω = 4 rad/s gives v = 2. Your inputs: omega = 4 rad/s, r = 0.5 m.*
-
-![Speed as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-speed-live-2)
-
-*Speed as r runs from 0.125 to 0.875 m, every other input as you entered it (29 solutions). Marked: your r = 0.5 m gives v = 2. Your inputs: omega = 4 rad/s, r = 0.5 m.*
+*v (speed) against omega (angular speed) from 2 rad/s to 6 rad/s. One curve for each value of r (radius of the circle): 0.5 m, 0.25 m, 1 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, omega = 4 rad/s, v = 2 m/s.*
 
 ```python
 classical_physics_ai999x.solve('tangential_speed', omega='4 rad/s', r='0.5 m', target='v')
@@ -1224,13 +1104,9 @@ $$
 
 - **Evidence:** hand-checked pack
 
-![A point turning round a circle at f = 500 mHz: in one second it sweeps the angle ω times 1 s (shaded, whole turns left out), with ω = 2π f the angular frequency the model returns; dots every eighth of a period T = 2 s (from its period formula)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-frequency-diagram)
+![A point turning round a circle at f = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-frequency-diagram)
 
-*A point turning round a circle at f = 500 mHz: in one second it sweeps the angle ω times 1 s (shaded, whole turns left out), with ω = 2π f the angular frequency the model returns; dots every eighth of a period T = 2 s (from its period formula). Marked: ω = 3.142 rad/s. Your inputs: f = 0.5 Hz.*
-
-![Angular frequency as f runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-frequency-live-1)
-
-*Angular frequency as f runs from 0.125 to 0.875 Hz, every other input as you entered it (41 solutions). Marked: your f = 0.5 Hz gives ω = 3.142. Your inputs: f = 0.5 Hz.*
+*A point turning round a circle at f = 0.5 revolutions per second: in 1 s it sweeps the angle ω × 1 s (shaded), with ω = 2π f the angular frequency the package returns; dots every 0.25 s for one period T = 2 s (from its period formula). Marked: ω = 3.14159 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_frequency', f='0.5 Hz', target='omega')
@@ -1264,11 +1140,7 @@ $$
 
 ![An oscillation of frequency f = 4 Hz drawn as sin(ω t) over three cycles, with ω = 25](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/period-frequency-graph)
 
-*An oscillation of frequency f = 4 Hz drawn as sin(ω t) over three cycles, with ω = 25.13 rad/s from the model's angular-frequency formula; the time between two equal crests is the period the model returns. Marked: T = 1/f = 250 ms. In SI units: T = 0.25 s. Your inputs: f = 4 Hz.*
-
-![Period as f runs from 1 to 7 Hz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/period-frequency-live-1)
-
-*Period as f runs from 1 to 7 Hz, every other input as you entered it (41 solutions). Marked: your f = 4 Hz gives T = 0.25. Your inputs: f = 4 Hz.*
+*An oscillation of frequency f = 4 Hz drawn as sin(ω t) over three cycles, with ω = 25.1327 rad/s from the package's angular-frequency formula; the time between two equal crests is the period the package returns. Marked: T = 1/f = 0.25 s.*
 
 ```python
 classical_physics_ai999x.solve('period_frequency', f='4 Hz', target='T')
@@ -1302,17 +1174,13 @@ $$
 - **Assumes:** uniform material, or mean density
 - **Evidence:** hand-checked pack
 
-![rho (density) over m (mass) from 3 kg to 9 kg and V (volume) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/density-field)
+![rho (density) against V (volume) from 1 L to 3 L](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/density-curve)
 
-*rho (density) over m (mass) from 3 kg to 9 kg and V (volume) from 0.001 m³ to 0.003 m³: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1000 kg/m³ to dark 9000 kg/m³); iso-lines at rho = 2000, 4000, 6000, 8000. Marked: the given point, m = 6 kg, V = 0.002 m³, rho = 3000 kg/m³. Your inputs: m = 6 kg, V = 2 L.*
+*rho (density) against V (volume) from 1 L to 3 L. One curve for each value of m (mass): 6 kg, 3 kg, 12 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, V = 2 L, rho = 3000 kg/m^3.*
 
-![Density as m runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/density-live-1)
+![rho (density) over m (mass) from 3 kg to 9 kg and V (volume) from 1 L to 3 L: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1000 kg/m^3 to dark 9000 kg/m^3); iso-lines at rho = 2000, 4000, 6000, 8000 kg/m^3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/density-field)
 
-*Density as m runs from 1.5 to 10.5 kg, every other input as you entered it (41 solutions). Marked: your m = 6 kg gives ρ = 3000. Your inputs: m = 6 kg, V = 2 L.*
-
-![Density as V runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/density-live-2)
-
-*Density as V runs from 0.5 to 3.5 L, every other input as you entered it (29 solutions). Marked: your V = 2 L gives ρ = 3000. Your inputs: m = 6 kg, V = 2 L.*
+*rho (density) over m (mass) from 3 kg to 9 kg and V (volume) from 1 L to 3 L: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1000 kg/m^3 to dark 9000 kg/m^3); iso-lines at rho = 2000, 4000, 6000, 8000 kg/m^3. Marked: the worked example, m = 6 kg, V = 2 L, rho = 3000 kg/m^3.*
 
 ```python
 classical_physics_ai999x.solve('density', m='6 kg', V='2 L', target='rho')
@@ -1345,17 +1213,13 @@ $$
 - **Assumes:** force spread evenly and normal to the surface
 - **Evidence:** hand-checked pack
 
+![P (pressure) against A (area) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pressure-force-curve)
+
+*P (pressure) against A (area) from 0.02 m^2 to 0.06 m^2. One curve for each value of F (force normal to the surface): 200 N, 100 N, 400 N. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 0.04 m^2, P = 5000 Pa.*
+
 ![P (pressure) over F (force normal to the surface) from 100 N to 300 N and A (area) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pressure-force-field)
 
-*P (pressure) over F (force normal to the surface) from 100 N to 300 N and A (area) from 0.02 m² to 0.06 m²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.667 kPa to dark 15 kPa); iso-lines at P = 2000, 4000, 6000, 8000, 1e+04, 1.2e+04, 1.4e+04. Marked: the given point, F = 200 N, A = 0.04 m², P = 5 kPa. In SI units: P = 5000 Pa. Your inputs: F = 200 N, A = 0.04 m^2.*
-
-![Pressure as F runs from 50 to 350 N, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pressure-force-live-1)
-
-*Pressure as F runs from 50 to 350 N, every other input as you entered it (41 solutions). Marked: your F = 200 N gives P = 5000. Your inputs: F = 200 N, A = 0.04 m^2.*
-
-![Pressure as A runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pressure-force-live-2)
-
-*Pressure as A runs from 0.01 to 0.07 m^2, every other input as you entered it (29 solutions). Marked: your A = 0.04 m^2 gives P = 5000. Your inputs: F = 200 N, A = 0.04 m^2.*
+*P (pressure) over F (force normal to the surface) from 100 N to 300 N and A (area) from 0.02 m^2 to 0.06 m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1666.67 Pa to dark 15000 Pa); iso-lines at P = 2500, 5000, 7500, 10000, 12500 Pa. Marked: the worked example, F = 200 N, A = 0.04 m^2, P = 5000 Pa.*
 
 ```python
 classical_physics_ai999x.solve('pressure_force', F='200 N', A='0.04 m^2', target='P')
@@ -1389,17 +1253,13 @@ $$
 - **Assumes:** fluid at rest with uniform density; pressure measured relative to the surface
 - **Evidence:** hand-checked pack
 
-![Gauge pressure on the wall of a tank of liquid at four depths, arrows to scale, each a solve of the model: the pressure grows linearly with depth (dashed line)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-diagram)
+![Gauge pressure on the wall of a tank of liquid (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-diagram)
 
-*Gauge pressure on the wall of a tank of liquid at four depths, arrows to scale, each a solve of the model: the pressure grows linearly with depth (dashed line). Marked: 4.9 kPa at 500 mm, 9.8 kPa at 1 m, 14.7 kPa at 1.5 m, 19.6 kPa at 2 m. In SI units: P = 1.96e+04 Pa. Your inputs: rho = 1000 kg/m^3, g = 9.8 m/s^2, h = 2 m.*
+*Gauge pressure on the wall of a tank of liquid (ρ = 1000 kg/m³, g = 9.8 m/s²) at depths 0.5, 1, 1.5 and 2 m, arrows to scale: the pressure grows linearly with depth (dashed line). Marked: the pressure the package returns at each depth, 4900 Pa, 9800 Pa, 14700 Pa, 19600 Pa.*
 
-![Gauge pressure as ρ runs from 250 to 1750 kg/m^3, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-live-1)
+![P (gauge pressure) against rho (fluid density) from 500 kg/m^3 to 1500 kg/m^3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-curve)
 
-*Gauge pressure as ρ runs from 250 to 1750 kg/m^3, every other input as you entered it (41 solutions). Marked: your ρ = 1000 kg/m^3 gives P = 19.6 kPa. Your inputs: rho = 1000 kg/m^3, g = 9.8 m/s^2, h = 2 m.*
-
-![Gauge pressure as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/hydrostatic-pressure-live-2)
-
-*Gauge pressure as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.8 m/s^2 gives P = 19.6 kPa. Your inputs: rho = 1000 kg/m^3, g = 9.8 m/s^2, h = 2 m.*
+*P (gauge pressure) against rho (fluid density) from 500 kg/m^3 to 1500 kg/m^3. One curve for each value of g (gravitational acceleration): 9.8 m/s^2, 4.9 m/s^2, 19.6 m/s^2. Other inputs as in the worked example: h = 2 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, rho = 1000 kg/m^3, P = 19600 Pa.*
 
 ```python
 classical_physics_ai999x.solve('hydrostatic_pressure', rho='1000 kg/m^3', g='9.8 m/s^2', h='2 m', target='P')
@@ -1432,17 +1292,13 @@ $$
 - **Assumes:** ohmic element at a fixed temperature
 - **Evidence:** hand-checked pack
 
-![A resistor R = 4 Ω across a source, carrying a current I = 3 A: Ohm's law gives the voltage across it](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-schematic)
+![A resistor R = 4 Ω across a source, carrying a current I = 3 A (the inputs): Ohm's law gives the voltage across it](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-schematic)
 
-*A resistor R = 4 Ω across a source, carrying a current I = 3 A: Ohm's law gives the voltage across it. Marked: the voltage the model returns, V = I R = 12 V. Your inputs: I = 3 A, R = 4 ohm.*
+*A resistor R = 4 Ω across a source, carrying a current I = 3 A (the inputs): Ohm's law gives the voltage across it. Marked: the voltage the package returns, V = I R = 12 V.*
 
-![Voltage as I runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-live-1)
+![V (voltage) against I (current) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-curve)
 
-*Voltage as I runs from 0.75 to 5.25 A, every other input as you entered it (41 solutions). Marked: your I = 3 A gives V = 12. Your inputs: I = 3 A, R = 4 ohm.*
-
-![Voltage as R runs from 1 to 7 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-live-2)
-
-*Voltage as R runs from 1 to 7 ohm, every other input as you entered it (29 solutions). Marked: your R = 4 ohm gives V = 12. Your inputs: I = 3 A, R = 4 ohm.*
+*V (voltage) against I (current) from 1.5 A to 4.5 A. One curve for each value of R (resistance): 4 ohm, 2 ohm, 8 ohm. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I = 3 A, V = 12 V.*
 
 ```python
 classical_physics_ai999x.solve('ohm', I='3 A', R='4 ohm', target='V')
@@ -1476,17 +1332,13 @@ $$
 - **Assumes:** steady direct current
 - **Evidence:** hand-checked pack
 
+![P (electric power) against V (voltage) from 6 V to 18 V](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-power-curve)
+
+*P (electric power) against V (voltage) from 6 V to 18 V. One curve for each value of I (current): 3 A, 1.5 A, 6 A. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, V = 12 V, P = 36 W.*
+
 ![P (electric power) over V (voltage) from 6 V to 18 V and I (current) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-power-field)
 
-*P (electric power) over V (voltage) from 6 V to 18 V and I (current) from 1.5 A to 4.5 A: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 9 W to dark 81 W); iso-lines at P = 10, 20, 30, 40, 50, 60, 70, 80. Marked: the given point, V = 12 V, I = 3 A, P = 36 W. Your inputs: V = 12 V, I = 3 A.*
-
-![Electric power as V runs from 3 to 21 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-power-live-1)
-
-*Electric power as V runs from 3 to 21 V, every other input as you entered it (41 solutions). Marked: your V = 12 V gives P = 36. Your inputs: V = 12 V, I = 3 A.*
-
-![Electric power as I runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-power-live-2)
-
-*Electric power as I runs from 0.75 to 5.25 A, every other input as you entered it (29 solutions). Marked: your I = 3 A gives P = 36. Your inputs: V = 12 V, I = 3 A.*
+*P (electric power) over V (voltage) from 6 V to 18 V and I (current) from 1.5 A to 4.5 A: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 9 W to dark 81 W); iso-lines at P = 20, 40, 60 W. Marked: the worked example, V = 12 V, I = 3 A, P = 36 W.*
 
 ```python
 classical_physics_ai999x.solve('electric_power', V='12 V', I='3 A', target='P')
@@ -1519,17 +1371,13 @@ $$
 - **Assumes:** steady current
 - **Evidence:** hand-checked pack
 
-![Q (charge) over I (current) from 1 A to 3 A and t (elapsed time) from 15 s to 45 s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 15 C to dark 135 C); iso-lines at Q = 20, 40, 60, 80, 100, 120](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/charge-current-field)
+![Q (charge) against I (current) from 1 A to 3 A](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/charge-current-curve)
 
-*Q (charge) over I (current) from 1 A to 3 A and t (elapsed time) from 15 s to 45 s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 15 C to dark 135 C); iso-lines at Q = 20, 40, 60, 80, 100, 120. Marked: the given point, I = 2 A, t = 30 s, Q = 60 C. Your inputs: I = 2 A, t = 30 s.*
+*Q (charge) against I (current) from 1 A to 3 A. One curve for each value of t (elapsed time): 30 s, 15 s, 60 s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I = 2 A, Q = 60 C.*
 
-![Charge as I runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/charge-current-live-1)
+![Q (charge) over I (current) from 1 A to 3 A and t (elapsed time) from 15 s to 45 s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 15 C to dark 135 C); iso-lines at Q = 20, 40, 60, 80, 100, 120 C](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/charge-current-field)
 
-*Charge as I runs from 0.5 to 3.5 A, every other input as you entered it (41 solutions). Marked: your I = 2 A gives Q = 60. Your inputs: I = 2 A, t = 30 s.*
-
-![Charge as t runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/charge-current-live-2)
-
-*Charge as t runs from 7.5 to 52.5 s, every other input as you entered it (29 solutions). Marked: your t = 30 s gives Q = 60. Your inputs: I = 2 A, t = 30 s.*
+*Q (charge) over I (current) from 1 A to 3 A and t (elapsed time) from 15 s to 45 s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 15 C to dark 135 C); iso-lines at Q = 20, 40, 60, 80, 100, 120 C. Marked: the worked example, I = 2 A, t = 30 s, Q = 60 C.*
 
 ```python
 classical_physics_ai999x.solve('charge_current', I='2 A', t='30 s', target='Q')
@@ -1562,17 +1410,13 @@ $$
 - **Assumes:** periodic wave in a uniform medium
 - **Evidence:** hand-checked pack
 
-![A snapshot of a travelling wave of frequency f = 50 Hz and wavelength λ = 400 mm (drawn with an arbitrary amplitude), and dashed the same wave a quarter period later: each crest moves one wavelength forward every period T = 20 ms](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wave-speed-drawing)
+![A snapshot of a travelling wave of frequency f = 50 Hz and wavelength λ = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wave-speed-drawing)
 
-*A snapshot of a travelling wave of frequency f = 50 Hz and wavelength λ = 400 mm (drawn with an arbitrary amplitude), and dashed the same wave a quarter period later: each crest moves one wavelength forward every period T = 20 ms. Marked: the wave speed the model returns, v = f λ = 20 m/s. Your inputs: f = 50 Hz, lam = 0.4 m.*
+*A snapshot of a travelling wave of frequency f = 50 Hz and wavelength λ = 0.4 m (drawn with a stated amplitude of 0.1 m): each crest moves one wavelength forward every period. Marked: the wave speed the package returns, v = f λ = 20 m/s.*
 
-![Wave speed as f runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wave-speed-live-1)
+![v (wave speed) against f (frequency) from 25 Hz to 75 Hz](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wave-speed-curve)
 
-*Wave speed as f runs from 12.5 to 87.5 Hz, every other input as you entered it (41 solutions). Marked: your f = 50 Hz gives v = 20. Your inputs: f = 50 Hz, lam = 0.4 m.*
-
-![Wave speed as λ runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wave-speed-live-2)
-
-*Wave speed as λ runs from 0.1 to 0.7 m, every other input as you entered it (29 solutions). Marked: your λ = 0.4 m gives v = 20. Your inputs: f = 50 Hz, lam = 0.4 m.*
+*v (wave speed) against f (frequency) from 25 Hz to 75 Hz. One curve for each value of lam (wavelength): 0.4 m, 0.2 m, 0.8 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, f = 50 Hz, v = 20 m/s.*
 
 ```python
 classical_physics_ai999x.solve('wave_speed', f='50 Hz', lam='0.4 m', target='v')
@@ -1606,13 +1450,9 @@ $$
 - **Assumes:** no change of phase; specific heat constant over the range
 - **Evidence:** hand-checked pack
 
-![Heat transferred as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/heat-live-1)
+![Q (heat transferred) against m (mass) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/heat-curve)
 
-*Heat transferred as m runs from 0.125 to 0.875 kg, every other input as you entered it (41 solutions). Marked: your m = 0.5 kg gives Q = 20 kJ. Your inputs: m = 0.5 kg, c = 4000 J/(kg*K), dT = 10 K.*
-
-![Heat transferred as c runs from 1000 to 7000 J/(kg*K), every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/heat-live-2)
-
-*Heat transferred as c runs from 1000 to 7000 J/(kg*K), every other input as you entered it (29 solutions). Marked: your c = 4000 J/(kg*K) gives Q = 20 kJ. Your inputs: m = 0.5 kg, c = 4000 J/(kg*K), dT = 10 K.*
+*Q (heat transferred) against m (mass) from 0.25 kg to 0.75 kg. One curve for each value of c (specific heat capacity): 4000 J/(kg*K), 2000 J/(kg*K), 8000 J/(kg*K). Other inputs as in the worked example: dT = 10 K. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 0.5 kg, Q = 20000 J.*
 
 ```python
 classical_physics_ai999x.solve('heat', m='0.5 kg', c='4000 J/(kg*K)', dT='10 K', target='Q')
@@ -1650,15 +1490,11 @@ $$
 
 ![Height against time of a body thrown straight up (g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/max-height-vertical-throw-graph)
 
-*Height against time of a body thrown straight up (g = 9.8 m/s², no air resistance) at three launch speeds: each point from the model's constant-acceleration displacement, the tops from its maximum-height and time-to-top formulas; doubling v0 quadruples the height. Marked: v0 = 7 m/s: top 2.5 m at 714.3 ms; v0 = 14 m/s: top 10 m at 1.429 s; v0 = 21 m/s: top 22.5 m at 2.143 s. Your inputs: v0 = 14 m/s, g = 9.8 m/s^2.*
+*Height against time of a body thrown straight up (g = 9.8 m/s², no air resistance) at three launch speeds: each point from the package's constant-acceleration displacement, the tops (dots) from its maximum-height and time-to-top formulas, doubling v₀ quadruples the height. Marked: v₀ = 7 m/s: top 2.5 m at 0.714286 s; v₀ = 14 m/s: top 10 m at 1.42857 s; v₀ = 21 m/s: top 22.5 m at 2.14286 s.*
 
-![Maximum height above the launch point as v0 runs from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/max-height-vertical-throw-live-1)
+![h (maximum height above the launch point) against g (gravitational acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/max-height-vertical-throw-curve)
 
-*Maximum height above the launch point as v0 runs from 3.5 to 24.5 m/s, every other input as you entered it (41 solutions). Marked: your v0 = 14 m/s gives h = 10. Your inputs: v0 = 14 m/s, g = 9.8 m/s^2.*
-
-![Maximum height above the launch point as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/max-height-vertical-throw-live-2)
-
-*Maximum height above the launch point as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.8 m/s^2 gives h = 10. Your inputs: v0 = 14 m/s, g = 9.8 m/s^2.*
+*h (maximum height above the launch point) against g (gravitational acceleration) from 4.9 m/s^2 to 14.7 m/s^2. One curve for each value of v0 (launch speed): 14 m/s, 7 m/s, 28 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, g = 9.8 m/s^2, h = 10 m.*
 
 ```python
 classical_physics_ai999x.solve('max_height_vertical_throw', v0='14 m/s', g='9.8 m/s^2', target='h')
@@ -1694,17 +1530,13 @@ $$
 - **Assumes:** thrown straight up; no air resistance; uniform gravitational field
 - **Evidence:** hand-checked pack
 
-![Upward velocity of a body thrown up at v0 = 29](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/time-to-top-vertical-throw-graph)
+![Upward velocity of a body thrown up at v₀ = 29](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/time-to-top-vertical-throw-graph)
 
-*Upward velocity of a body thrown up at v0 = 29.4 m/s (g = 9.8 m/s²), 25 times, each a solve of the model: it falls by g every second, is zero at the top and returns with the launch speed downwards. Marked: time to the top 3 s. Your inputs: v0 = 29.4 m/s, g = 9.8 m/s^2.*
+*Upward velocity of a body thrown up at v₀ = 29.4 m/s (g = 9.8 m/s²), 25 times from the package: it falls by g every second, is zero at the top and returns with the launch speed downwards. Marked: time to the top 3 s.*
 
-![Time from launch to the highest point as v0 runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/time-to-top-vertical-throw-live-1)
+![t (time from launch to the highest point) against g (gravitational acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/time-to-top-vertical-throw-curve)
 
-*Time from launch to the highest point as v0 runs from 7.35 to 51.45 m/s, every other input as you entered it (41 solutions). Marked: your v0 = 29.4 m/s gives t = 3. Your inputs: v0 = 29.4 m/s, g = 9.8 m/s^2.*
-
-![Time from launch to the highest point as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/time-to-top-vertical-throw-live-2)
-
-*Time from launch to the highest point as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.8 m/s^2 gives t = 3. Your inputs: v0 = 29.4 m/s, g = 9.8 m/s^2.*
+*t (time from launch to the highest point) against g (gravitational acceleration) from 4.9 m/s^2 to 14.7 m/s^2. One curve for each value of v0 (launch speed): 29.4 m/s, 14.7 m/s, 58.8 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, g = 9.8 m/s^2, t = 3 s.*
 
 ```python
 classical_physics_ai999x.solve('time_to_top_vertical_throw', v0='29.4 m/s', g='9.8 m/s^2', target='t')
@@ -1741,17 +1573,13 @@ $$
 - **Assumes:** no acceleration perpendicular to the incline; no other force with a component normal to the surface
 - **Evidence:** hand-checked pack
 
-![Forces on a 10 kg block on a frictionless 60° incline, each a solve of the model and drawn to scale: weight 98 N, normal force N = m g cos θ = 49 N, component of the weight along the slope 84](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-force-incline-diagram)
+![Forces on a 2 kg block on a frictionless 30° incline (g = 9](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/normal-force-incline-diagram.svg)
 
-*Forces on a 10 kg block on a frictionless 60° incline, each a solve of the model and drawn to scale: weight 98 N, normal force N = m g cos θ = 49 N, component of the weight along the slope 84.87 N. Your inputs: m = 10 kg, g = 9.8 m/s^2, theta = 60 deg.*
+*Forces on a 2 kg block on a frictionless 30° incline (g = 9.81 m/s²), each computed by the package and drawn to scale (0.12 length units per newton): weight 19.62 N, normal force 16.9914 N = m g cos θ, component along the slope 9.81 N = m g sin θ, which accelerates the block at 4.905 m/s².*
 
-![Normal force from the incline as θ runs from 15 to 89](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-force-incline-live-1)
+![N (normal force from the incline) against theta (angle of the incline to the horizontal) from 0 deg to 90 deg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-force-incline-curve)
 
-*Normal force from the incline as θ runs from 15 to 89.25 deg, every other input as you entered it (34 solutions). Marked: your θ = 60 deg gives N = 49. Your inputs: m = 10 kg, g = 9.8 m/s^2, theta = 60 deg.*
-
-![Normal force from the incline as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/normal-force-incline-live-2)
-
-*Normal force from the incline as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.8 m/s^2 gives N = 49. Your inputs: m = 10 kg, g = 9.8 m/s^2, theta = 60 deg.*
+*N (normal force from the incline) against theta (angle of the incline to the horizontal) from 0 deg to 90 deg. One curve for each value of m (mass): 10 kg, 5 kg, 20 kg. Other inputs as in the worked example: g = 9.8 m/s^2. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 60 deg, N = 49 N.*
 
 ```python
 classical_physics_ai999x.solve('normal_force_incline', m='10 kg', g='9.8 m/s^2', theta='60 deg', target='N')
@@ -1788,17 +1616,9 @@ $$
 - **Assumes:** uniform gravitational field
 - **Evidence:** hand-checked pack
 
-![The two components of the weight of a 10 kg body on an incline, against the incline's angle (19 angles each a solve of the model): the part pulling it down the slope grows from zero, the part pressing it into the surface (the normal force) falls to zero at 90°](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-component-along-incline-comparison)
+![The two components of the weight of a 10 kg body (g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-component-along-incline-comparison)
 
-*The two components of the weight of a 10 kg body on an incline, against the incline's angle (19 angles each a solve of the model): the part pulling it down the slope grows from zero, the part pressing it into the surface (the normal force) falls to zero at 90°. Marked: 49 N along the slope at θ = 30°; weight 98 N. Your inputs: m = 10 kg, g = 9.8 m/s^2, theta = 30 deg.*
-
-![Component of the weight along the incline as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-component-along-incline-live-1)
-
-*Component of the weight along the incline as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (41 solutions). Marked: your g = 9.8 m/s^2 gives F = 49. Your inputs: m = 10 kg, g = 9.8 m/s^2, theta = 30 deg.*
-
-![Component of the weight along the incline as m runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/weight-component-along-incline-live-2)
-
-*Component of the weight along the incline as m runs from 2.5 to 17.5 kg, every other input as you entered it (29 solutions). Marked: your m = 10 kg gives F = 49. Your inputs: m = 10 kg, g = 9.8 m/s^2, theta = 30 deg.*
+*The two components of the weight of a 10 kg body (g = 9.8 m/s²) on an incline, against the incline's angle (19 angles each from the package): the part pulling it down the slope grows from zero, the part pressing it into the surface (the normal force) falls to zero at 90°. Marked: 49 N along the slope at θ = 30°; weight 98 N.*
 
 ```python
 classical_physics_ai999x.solve('weight_component_along_incline', m='10 kg', g='9.8 m/s^2', theta='30 deg', target='F')
@@ -1835,17 +1655,13 @@ $$
 - **Assumes:** no friction; the only forces are gravity and the normal force
 - **Evidence:** hand-checked pack
 
+![a (acceleration down the incline) against theta (angle of the incline to the horizontal) from 0 deg to 90 deg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/acceleration-frictionless-incline-curve)
+
+*a (acceleration down the incline) against theta (angle of the incline to the horizontal) from 0 deg to 90 deg. One curve for each value of g (gravitational acceleration): 9.8 m/s^2, 4.9 m/s^2, 19.6 m/s^2. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 30 deg, a = 4.9 m/s^2.*
+
 ![a (acceleration down the incline) over g (gravitational acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/acceleration-frictionless-incline-field)
 
-*a (acceleration down the incline) over g (gravitational acceleration) from 4.9 m/s² to 14.7 m/s² and theta (angle of the incline to the horizontal) from 0.2618 rad to 0.7854 rad: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.268 m/s² to dark 10.39 m/s²); iso-lines at a = 2, 4, 6, 8, 10. Marked: the given point, g = 9.8 m/s², theta = 0.5236 rad, a = 4.9 m/s². Your inputs: g = 9.8 m/s^2, theta = 30 deg.*
-
-![Acceleration down the incline as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/acceleration-frictionless-incline-live-1)
-
-*Acceleration down the incline as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (41 solutions). Marked: your g = 9.8 m/s^2 gives a = 4.9. Your inputs: g = 9.8 m/s^2, theta = 30 deg.*
-
-![Acceleration down the incline as θ runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/acceleration-frictionless-incline-live-2)
-
-*Acceleration down the incline as θ runs from 7.5 to 52.5 deg, every other input as you entered it (29 solutions). Marked: your θ = 30 deg gives a = 4.9. Your inputs: g = 9.8 m/s^2, theta = 30 deg.*
+*a (acceleration down the incline) over g (gravitational acceleration) from 4.9 m/s^2 to 14.7 m/s^2 and theta (angle of the incline to the horizontal) from 0 deg to 90 deg: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0 m/s^2 to dark 14.7 m/s^2); iso-lines at a = 2.5, 5, 7.5, 10, 12.5 m/s^2. Marked: the worked example, g = 9.8 m/s^2, theta = 30 deg, a = 4.9 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('acceleration_frictionless_incline', g='9.8 m/s^2', theta='30 deg', target='a')
@@ -1883,17 +1699,13 @@ $$
 - **Assumes:** all the energy stored in the spring becomes kinetic energy of the body; no friction; the spring is massless
 - **Evidence:** hand-checked pack
 
-![A spring of k = 100 N/m compressed x = 200 mm launches a 1 kg block on a frictionless surface: all the stored energy (from the model's elastic-energy formula) becomes kinetic energy (its kinetic-energy formula)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-launch-speed-drawing)
+![A spring of k = 100 N/m compressed x = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-launch-speed-drawing)
 
-*A spring of k = 100 N/m compressed x = 200 mm launches a 1 kg block on a frictionless surface: all the stored energy (from the model's elastic-energy formula) becomes kinetic energy (its kinetic-energy formula). Marked: launch speed v = 2 m/s (returned), stored energy 2 J, kinetic energy 2 J. Your inputs: k = 100 N/m, x = 0.2 m, m = 1 kg.*
+*A spring of k = 100 N/m compressed x = 0.2 m launches a 1 kg block on a frictionless surface: all the stored energy (from the package's elastic-energy formula) becomes kinetic energy. Marked: launch speed v = 2 m/s (returned), stored energy 2 J.*
 
-![Speed when the spring has returned to its](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-launch-speed-live-1)
+![k*x**2/2 (Speed of a body launched by a spring) against m (mass of the body) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-launch-speed-curve)
 
-*Speed when the spring has returned to its... as x runs from 0.05 to 0.35 m, every other input as you entered it (41 solutions). Marked: your x = 0.2 m gives v = 2. Your inputs: k = 100 N/m, x = 0.2 m, m = 1 kg.*
-
-![Speed when the spring has returned to its](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-launch-speed-live-2)
-
-*Speed when the spring has returned to its... as m runs from 0.25 to 1.75 kg, every other input as you entered it (29 solutions). Marked: your m = 1 kg gives v = 2. Your inputs: k = 100 N/m, x = 0.2 m, m = 1 kg.*
+*k*x**2/2 (Speed of a body launched by a spring) against m (mass of the body) from 0.5 kg to 1.5 kg. One curve for each value of x (compression of the spring before release): 0.2 m, 0.1 m, 0.4 m. Other inputs as in the worked example: k = 100 N/m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 1 kg, k*x**2/2 = 2 m/s.*
 
 ```python
 classical_physics_ai999x.solve('spring_launch_speed', k='100 N/m', x='0.2 m', m='1 kg', target='v')
@@ -1929,13 +1741,9 @@ $$
 - **Assumes:** W is the work of ALL forces on the body; constant mass; speeds far below the speed of light
 - **Evidence:** hand-checked pack
 
-![Net work done on the body, equal to its](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-work-kinetic-energy-live-1)
+![W (net work done on the body, equal to its change in kinetic energy) against v (final speed) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-work-kinetic-energy-curve)
 
-*Net work done on the body, equal to its... as v runs from 0.75 to 5.25 m/s, every other input as you entered it (41 solutions). Marked: your v = 3 m/s gives W = 24. Your inputs: m = 6 kg, v = 3 m/s, v0 = 1 m/s.*
-
-![Net work done on the body, equal to its](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/net-work-kinetic-energy-live-2)
-
-*Net work done on the body, equal to its... as m runs from 1.5 to 10.5 kg, every other input as you entered it (29 solutions). Marked: your m = 6 kg gives W = 24. Your inputs: m = 6 kg, v = 3 m/s, v0 = 1 m/s.*
+*W (net work done on the body, equal to its change in kinetic energy) against v (final speed) from 0.3 m/s to 30 m/s on a logarithmic axis. Other inputs as in the worked example: m = 6 kg, v0 = 1 m/s. 41 points computed by classical-physics-ai999x; marked: the worked example, v = 3 m/s, W = 24 J.*
 
 ```python
 classical_physics_ai999x.solve('net_work_kinetic_energy', m='6 kg', v0='1 m/s', v='3 m/s', target='W')
@@ -1972,17 +1780,13 @@ $$
 - **Assumes:** one vertical rope carries the whole weight; the body is not accelerating
 - **Evidence:** hand-checked pack
 
-![A 10 kg mass hanging at rest from a rope: the rope tension the model returns balances the weight (also from the model)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tension-hanging-at-rest-diagram)
+![A 10 kg mass hanging at rest from a rope (g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tension-hanging-at-rest-diagram)
 
-*A 10 kg mass hanging at rest from a rope: the rope tension the model returns balances the weight (also from the model). Arrows to scale. Marked: T = 98 N, W = 98 N. Your inputs: m = 10 kg, g = 9.8 m/s^2.*
+*A 10 kg mass hanging at rest from a rope (g = 9.8 m/s²): the rope tension the package returns balances the weight (also from the package). Arrows to scale. Marked: T = 98 N, W = 98 N.*
 
-![Tension in the rope as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tension-hanging-at-rest-live-1)
+![T (tension in the rope) against m (mass of the hanging body) from 5 kg to 15 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tension-hanging-at-rest-curve)
 
-*Tension in the rope as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (41 solutions). Marked: your g = 9.8 m/s^2 gives T = 98. Your inputs: m = 10 kg, g = 9.8 m/s^2.*
-
-![Tension in the rope as m runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tension-hanging-at-rest-live-2)
-
-*Tension in the rope as m runs from 2.5 to 17.5 kg, every other input as you entered it (29 solutions). Marked: your m = 10 kg gives T = 98. Your inputs: m = 10 kg, g = 9.8 m/s^2.*
+*T (tension in the rope) against m (mass of the hanging body) from 5 kg to 15 kg. One curve for each value of g (gravitational acceleration): 9.8 m/s^2, 4.9 m/s^2, 19.6 m/s^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 10 kg, T = 98 N.*
 
 ```python
 classical_physics_ai999x.solve('tension_hanging_at_rest', m='10 kg', g='9.8 m/s^2', target='T')
@@ -2018,17 +1822,9 @@ $$
 - **Assumes:** F is the net force averaged over the interval; motion along a line
 - **Evidence:** hand-checked pack
 
-![Momentum changing from p1 = 10 kg·m/s to p2 = 25 kg·m/s in Δt = 3 s (the inputs): the average net force is the slope of momentum against time](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-force-from-momentum-change-graph)
+![Momentum rising from p₁ = 10 to p₂ = 25 kg·m/s in Δt = 3 s (inputs): the average net force is the slope of momentum against time](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-force-from-momentum-change-graph)
 
-*Momentum changing from p1 = 10 kg·m/s to p2 = 25 kg·m/s in Δt = 3 s (the inputs): the average net force is the slope of momentum against time. Marked: the average force the model returns, 5 N. Your inputs: p2 = 25 kg*m/s, p1 = 10 kg*m/s, t = 3 s.*
-
-![Average net force as p2 runs from 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-force-from-momentum-change-live-1)
-
-*Average net force as p2 runs from 6.25 to 43.75 kg*m/s, every other input as you entered it (41 solutions). Marked: your p2 = 25 kg*m/s gives F = 5. Your inputs: p2 = 25 kg*m/s, p1 = 10 kg*m/s, t = 3 s.*
-
-![Average net force as t runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/average-force-from-momentum-change-live-2)
-
-*Average net force as t runs from 0.75 to 5.25 s, every other input as you entered it (29 solutions). Marked: your t = 3 s gives F = 5. Your inputs: p2 = 25 kg*m/s, p1 = 10 kg*m/s, t = 3 s.*
+*Momentum rising from p₁ = 10 to p₂ = 25 kg·m/s in Δt = 3 s (inputs): the average net force is the slope of momentum against time. Marked: the average force the package returns, 5 N.*
 
 ```python
 classical_physics_ai999x.solve('average_force_from_momentum_change', p2='25 kg*m/s', p1='10 kg*m/s', t='3 s', target='F')
@@ -2064,17 +1860,13 @@ $$
 - **Assumes:** released from rest; no air resistance
 - **Evidence:** hand-checked pack
 
-![A body released from rest 10 m above the ground (no air resistance), drawn after falling 0, an eighth, a quarter, a half, three quarters and all of the height; each arrow is to scale with its speed, a solve of the model](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/speed-after-fall-from-rest-drawing)
+![A body released from rest 10 m above the ground (g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/speed-after-fall-from-rest-drawing)
 
-*A body released from rest 10 m above the ground (no air resistance), drawn after falling 0, an eighth, a quarter, a half, three quarters and all of the height; each arrow is to scale with its speed, a solve of the model. Marked: 14 m/s on reaching the ground. Your inputs: g = 9.8 m/s^2, h = 10 m.*
+*A body released from rest 10 m above the ground (g = 9.8 m/s², no air resistance), drawn after falling 0, 1.25, 2.5, 5, 7.5 and 10 m; each arrow is to scale with its speed v = √(2 g h) from the package. Marked: 14 m/s on reaching the ground.*
 
-![Speed after the fall as h runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/speed-after-fall-from-rest-live-1)
+![v (speed after the fall) against g (gravitational acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/speed-after-fall-from-rest-curve)
 
-*Speed after the fall as h runs from 2.5 to 17.5 m, every other input as you entered it (41 solutions). Marked: your h = 10 m gives v = 14. Your inputs: g = 9.8 m/s^2, h = 10 m.*
-
-![Speed after the fall as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/speed-after-fall-from-rest-live-2)
-
-*Speed after the fall as g runs from 2.45 to 17.15 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.8 m/s^2 gives v = 14. Your inputs: g = 9.8 m/s^2, h = 10 m.*
+*v (speed after the fall) against g (gravitational acceleration) from 4.9 m/s^2 to 14.7 m/s^2. One curve for each value of h (height fallen): 10 m, 5 m, 20 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, g = 9.8 m/s^2, v = 14 m/s.*
 
 ```python
 classical_physics_ai999x.solve('speed_after_fall_from_rest', g='9.8 m/s^2', h='10 m', target='v')
@@ -2110,17 +1902,13 @@ $$
 - **Assumes:** magnitudes only
 - **Evidence:** definition
 
-![A charge q = 2e-06 C in a uniform field E = 3e+04 N/C between two plates: a positive charge is pushed along the field lines, a negative one the other way](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-diagram)
+![A charge q = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-diagram)
 
-*A charge q = 2e-06 C in a uniform field E = 3e+04 N/C between two plates: a positive charge is pushed along the field lines, a negative one the other way. Marked: the force the model returns, F = q E = 60 mN. In SI units: F = 0.06 N. Your inputs: q = 2e-06 C, Ef = 30000.0 N/C.*
+*A charge q = 2.0000e-06 C in a uniform field E = 30000 N/C between two plates: it is pushed along the field lines (a negative charge would be pushed the other way). Marked: the force the package returns, F = qE = 0.06 N.*
 
-![Magnitude of the electric force as q runs from 5e-07 to 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-live-1)
+![F (magnitude of the electric force) against q (magnitude of the charge) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-curve)
 
-*Magnitude of the electric force as q runs from 5e-07 to 3.5e-06 C, every other input as you entered it (41 solutions). Marked: your q = 2e-06 C gives F = 60 mN. Your inputs: q = 2e-06 C, Ef = 30000.0 N/C.*
-
-![Magnitude of the electric force as Ef runs from 7500 to 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/electric-force-in-field-live-2)
-
-*Magnitude of the electric force as Ef runs from 7500 to 5.25e+04 N/C, every other input as you entered it (29 solutions). Marked: your Ef = 3e+04 N/C gives F = 60 mN. Your inputs: q = 2e-06 C, Ef = 30000.0 N/C.*
+*F (magnitude of the electric force) against q (magnitude of the charge) from 1.0000e-06 C to 3.0000e-06 C. One curve for each value of Ef (electric field strength at the charge): 30000 N/C, 15000 N/C, 60000 N/C. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, q = 2.0000e-06 C, F = 0.06 N.*
 
 ```python
 classical_physics_ai999x.solve('electric_force_in_field', q='2e-06 C', Ef='30000 N/C', target='F')
@@ -2162,17 +1950,13 @@ $$
 - **Assumes:** a point (or spherically symmetric) charge; vacuum or air
 - **Evidence:** fundamental_law
 
-![Electric field lines of a point charge Q = 2e-06 C (pointing away from a positive charge, towards a negative one), with the field strength the model returns at half, once and twice the given distance: doubling the distance quarters the field](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-diagram)
+![Electric field lines of a point charge Q = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-diagram)
 
-*Electric field lines of a point charge Q = 2e-06 C (pointing away from a positive charge, towards a negative one), with the field strength the model returns at half, once and twice the given distance: doubling the distance quarters the field. Marked: 1.997e+05 N/C at r = 300 mm. Your inputs: Q = 2e-06 C, r = 0.3 m.*
+*Electric field lines of a point charge Q = 2.0000e-06 C (pointing away from a positive charge), with the field strength the package returns at three distances, doubling the distance quarters the field (inverse square). Marked: 798893 N/C at 0.15 m; 199723 N/C at 0.3 m; 49930.8 N/C at 0.6 m.*
 
-![Field strength at distance r as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-live-1)
+![Ef (field strength at distance r) against r (distance from the charge) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-curve)
 
-*Field strength at distance r as r runs from 0.075 to 0.525 m, every other input as you entered it (41 solutions). Marked: your r = 0.3 m gives Ef = 1.997e+05. Your inputs: Q = 2e-06 C, r = 0.3 m.*
-
-![Field strength at distance r as Q runs from 5e-07 to 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-field-live-2)
-
-*Field strength at distance r as Q runs from 5e-07 to 3.5e-06 C, every other input as you entered it (29 solutions). Marked: your Q = 2e-06 C gives Ef = 1.997e+05. Your inputs: Q = 2e-06 C, r = 0.3 m.*
+*Ef (field strength at distance r) against r (distance from the charge) from 0.15 m to 0.45 m. One curve for each value of Q (magnitude of the source charge): 2.0000e-06 C, 1.0000e-06 C, 4.0000e-06 C. Other inputs as in the worked example: ke = 8987551792.3 N*m^2/C^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.3 m, Ef = 199723 N/C.*
 
 ```python
 classical_physics_ai999x.solve('point_charge_field', Q='2e-06 C', r='0.3 m', target='Ef')
@@ -2214,17 +1998,9 @@ $$
 - **Assumes:** a point charge; potential zero at infinity; vacuum or air
 - **Evidence:** fundamental_law
 
-![Equipotential circles round a point charge Q = 3e-09 C at half, once and twice the given distance, labelled with the potential the model returns, and the potential against distance below (34 distances, each a solve of the model): it falls as 1/r](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-potential-diagram)
+![Equipotential circles around a point charge Q = 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-potential-diagram)
 
-*Equipotential circles round a point charge Q = 3e-09 C at half, once and twice the given distance, labelled with the potential the model returns, and the potential against distance below (34 distances, each a solve of the model): it falls as 1/r. Marked: 107.9 V at 250 mm, 53.93 V at 500 mm, 26.96 V at 1 m. Your inputs: Q = 3e-09 C, r = 0.5 m.*
-
-![Electric potential relative to infinity as Q runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-potential-live-1)
-
-*Electric potential relative to infinity as Q runs from 7.5e-10 to 5.25e-09 C, every other input as you entered it (41 solutions). Marked: your Q = 3e-09 C gives V = 53.93. Your inputs: Q = 3e-09 C, r = 0.5 m.*
-
-![Electric potential relative to infinity as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/point-charge-potential-live-2)
-
-*Electric potential relative to infinity as r runs from 0.125 to 0.875 m, every other input as you entered it (29 solutions). Marked: your r = 0.5 m gives V = 53.93. Your inputs: Q = 3e-09 C, r = 0.5 m.*
+*Equipotential circles around a point charge Q = 3.0000e-09 C at r = 0.25, 0.5 and 1 m, labelled with the potential the package returns, and the potential against distance (34 distances): it falls as 1/r. Marked: 107.851 V at 0.25 m, 53.9253 V at 0.5 m, 26.9627 V at 1 m.*
 
 ```python
 classical_physics_ai999x.solve('point_charge_potential', Q='3e-09 C', r='0.5 m', target='V')
@@ -2265,17 +2041,13 @@ $$
 - **Assumes:** a uniform electric field
 - **Evidence:** fundamental_law
 
-![A uniform field E = 2000 V/m between two plates d = 5 mm apart (field lines grey), with equipotential planes (dashed) a quarter, half and three quarters of the way across, each potential difference from the first plate a solve of the model](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-field-potential-diagram)
+![A uniform field E = 2000 V/m between two plates d = 5 mm apart (field lines grey, from + to −), with equipotential planes (dashed) a quarter, half and three quarters of the way across](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-field-potential-diagram)
 
-*A uniform field E = 2000 V/m between two plates d = 5 mm apart (field lines grey), with equipotential planes (dashed) a quarter, half and three quarters of the way across, each potential difference from the first plate a solve of the model. The potential difference over the whole gap is V = E d = 10 V. Your inputs: Ef = 2000 V/m, d = 0.005 m.*
+*A uniform field E = 2000 V/m between two plates d = 5 mm apart (field lines grey, from + to −), with equipotential planes (dashed) a quarter, half and three quarters of the way across. The potential difference the package returns over the whole gap is 10 V; the potential at each plane is that minus the drop over the distance from the + plate (drops returned: 2.5 V after 1.25 mm, 5 V after 2.5 mm, 7.5 V after 3.75 mm).*
 
-![Potential difference between the plates as Ef runs from 500 to 3500 V/m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-field-potential-live-1)
+![V (potential difference between the plates) against Ef (uniform field strength) from 1000 N/C to 3000 N/C](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-field-potential-curve)
 
-*Potential difference between the plates as Ef runs from 500 to 3500 V/m, every other input as you entered it (41 solutions). Marked: your Ef = 2000 V/m gives V = 10. Your inputs: Ef = 2000 V/m, d = 0.005 m.*
-
-![Potential difference between the plates as d runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-field-potential-live-2)
-
-*Potential difference between the plates as d runs from 0.00125 to 0.00875 m, every other input as you entered it (29 solutions). Marked: your d = 0.005 m gives V = 10. Your inputs: Ef = 2000 V/m, d = 0.005 m.*
+*V (potential difference between the plates) against Ef (uniform field strength) from 1000 N/C to 3000 N/C. One curve for each value of d (separation along the field): 0.005 m, 0.0025 m, 0.01 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Ef = 2000 N/C, V = 10 V.*
 
 ```python
 classical_physics_ai999x.solve('uniform_field_potential', Ef='2000 V/m', d='0.005 m', target='V')
@@ -2316,17 +2088,9 @@ $$
 - **Assumes:** an ideal capacitor
 - **Evidence:** definition
 
-![Charge stored on three capacitors against the voltage across them (10 voltages each, a solve of the model): Q = C V, so the capacitance is the slope](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/capacitance-definition-graph.svg)
+![Charge stored on capacitors of 5, 10 and 20 μF against the voltage across them (10 voltages each from the package, charge shown in μC): Q = C V, so the capacitance is the slope](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitance-definition-graph)
 
-*Charge stored on three capacitors against the voltage across them (10 voltages each, a solve of the model): Q = C V, so the capacitance is the slope. Marked at V = 12 V: C = 5 µF: Q = 6e-05 C; C = 10 µF: Q = 0.00012 C; C = 20 µF: Q = 0.00024 C. Your inputs: C = 1e-05 F, V = 12 V.*
-
-![Charge on either plate as C runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitance-definition-live-1)
-
-*Charge on either plate as C runs from 2.5e-06 to 1.75e-05 F, every other input as you entered it (41 solutions). Marked: your C = 1e-05 F gives Q = 0.00012. Your inputs: C = 1e-05 F, V = 12 V.*
-
-![Charge on either plate as V runs from 3 to 21 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitance-definition-live-2)
-
-*Charge on either plate as V runs from 3 to 21 V, every other input as you entered it (29 solutions). Marked: your V = 12 V gives Q = 0.00012. Your inputs: C = 1e-05 F, V = 12 V.*
+*Charge stored on capacitors of 5, 10 and 20 μF against the voltage across them (10 voltages each from the package, charge shown in μC): Q = C V, so the capacitance is the slope. Marked at V = 12 V: C = 5.0000e-06 F: Q = 6.0000e-05 C; C = 1.0000e-05 F: Q = 0.00012 C; C = 2.0000e-05 F: Q = 0.00024 C.*
 
 ```python
 classical_physics_ai999x.solve('capacitance_definition', C='1e-05 F', V='12 V', target='Q')
@@ -2367,17 +2131,13 @@ $$
 - **Assumes:** an ideal capacitor
 - **Evidence:** fundamental_law
 
-![Charge on a C = 100 µF capacitor against its voltage (from the model's Q = C V): the energy stored when it is charged to 20 V is the triangle under the line, half of Q V](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-graph)
+![Charge on a C = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-graph)
 
-*Charge on a C = 100 µF capacitor against its voltage (from the model's Q = C V): the energy stored when it is charged to 20 V is the triangle under the line, half of Q V. Marked: the energy the model returns, U = 20 mJ, and Q = 0.002 C. In SI units: Ecap = 0.02 J. Your inputs: C = 0.0001 F, V = 20 V.*
+*Charge on a C = 1.0000e-04 F capacitor against its voltage (from the package's Q = C V, charge in mC): the energy stored when it is charged to 20 V is the triangle under the line, ½ Q V. Marked: the energy the package returns, U = 0.02 J, and Q = 0.002 C.*
 
-![Energy stored as V runs from 5 to 35 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-live-1)
+![Ecap (energy stored) against V (Voltage) from 10 V to 30 V](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-curve)
 
-*Energy stored as V runs from 5 to 35 V, every other input as you entered it (41 solutions). Marked: your V = 20 V gives Ecap = 20 mJ. Your inputs: C = 0.0001 F, V = 20 V.*
-
-![Energy stored as C runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitor-energy-live-2)
-
-*Energy stored as C runs from 2.5e-05 to 0.000175 F, every other input as you entered it (29 solutions). Marked: your C = 0.0001 F gives Ecap = 20 mJ. Your inputs: C = 0.0001 F, V = 20 V.*
+*Ecap (energy stored) against V (Voltage) from 10 V to 30 V. One curve for each value of C (Capacitance): 1.0000e-04 F, 5.0000e-05 F, 0.0002 F. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, V = 20 V, Ecap = 0.02 J.*
 
 ```python
 classical_physics_ai999x.solve('capacitor_energy', C='0.0001 F', V='20 V', target='Ecap')
@@ -2421,15 +2181,7 @@ $$
 
 ![A parallel-plate capacitor of plate area A = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/parallel-plate-capacitor-graph)
 
-*A parallel-plate capacitor of plate area A = 0.01 m² with the gap from a quarter to four times d (250 µm to 4 mm), 25 gaps each a solve of the model: the capacitance is inversely proportional to the gap. Marked: C = 88.54 pF at d = 1 mm. In SI units: C = 8.854e-11 F. Your inputs: A = 0.01 m^2, d = 0.001 m.*
-
-![Capacitance as d runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/parallel-plate-capacitor-live-1)
-
-*Capacitance as d runs from 0.00025 to 0.00175 m, every other input as you entered it (41 solutions). Marked: your d = 0.001 m gives C = 88.54 pF. Your inputs: A = 0.01 m^2, d = 0.001 m.*
-
-![Capacitance as A runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/parallel-plate-capacitor-live-2)
-
-*Capacitance as A runs from 0.0025 to 0.0175 m^2, every other input as you entered it (29 solutions). Marked: your A = 0.01 m^2 gives C = 88.54 pF. Your inputs: A = 0.01 m^2, d = 0.001 m.*
+*A parallel-plate capacitor of plate area A = 0.01 m² in vacuum with the gap d halved and doubled (0.25 to 4 mm): the capacitance the package returns is inversely proportional to the gap (a straight line of slope −1 on these logarithmic axes; values in pF). Marked: C = 8.8542e-11 F at d = 1 mm.*
 
 ```python
 classical_physics_ai999x.solve('parallel_plate_capacitor', A='0.01 m^2', d='0.001 m', target='C')
@@ -2471,17 +2223,13 @@ $$
 - **Assumes:** an ohmic resistor; steady direct current
 - **Evidence:** derived
 
-![P (power dissipated) over I (current) from 1 A to 3 A and R (resistance) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-current-field)
+![P (power dissipated) against I (Current) from 1 A to 3 A](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-current-curve)
 
-*P (power dissipated) over I (current) from 1 A to 3 A and R (resistance) from 2.5 Ω to 7.5 Ω: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2.5 W to dark 67.5 W); iso-lines at P = 10, 20, 30, 40, 50, 60. Marked: the given point, I = 2 A, R = 5 Ω, P = 20 W. Your inputs: I = 2 A, R = 5 ohm.*
+*P (power dissipated) against I (Current) from 1 A to 3 A. One curve for each value of R (Resistance): 5 ohm, 2.5 ohm, 10 ohm. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I = 2 A, P = 20 W.*
 
-![Power dissipated as I runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-current-live-1)
+![P (power dissipated) over I (Current) from 1 A to 3 A and R (Resistance) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-current-field)
 
-*Power dissipated as I runs from 0.5 to 3.5 A, every other input as you entered it (41 solutions). Marked: your I = 2 A gives P = 20. Your inputs: I = 2 A, R = 5 ohm.*
-
-![Power dissipated as R runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-current-live-2)
-
-*Power dissipated as R runs from 1.25 to 8.75 ohm, every other input as you entered it (29 solutions). Marked: your R = 5 ohm gives P = 20. Your inputs: I = 2 A, R = 5 ohm.*
+*P (power dissipated) over I (Current) from 1 A to 3 A and R (Resistance) from 2.5 ohm to 7.5 ohm: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 2.5 W to dark 67.5 W); iso-lines at P = 20, 40, 60 W. Marked: the worked example, I = 2 A, R = 5 ohm, P = 20 W.*
 
 ```python
 classical_physics_ai999x.solve('ohm_power_current', I='2 A', R='5 ohm', target='P')
@@ -2523,17 +2271,13 @@ $$
 - **Assumes:** an ohmic resistor; steady direct current
 - **Evidence:** derived
 
-![P (power dissipated) over V (voltage) from 6 V to 18 V and R (resistance) from 3 Ω to 9 Ω: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 4 W to dark 108 W); iso-lines at P = 20, 40, 60, 80, 100](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-voltage-field)
+![P (power dissipated) against R (Resistance) from 3 ohm to 9 ohm](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-voltage-curve)
 
-*P (power dissipated) over V (voltage) from 6 V to 18 V and R (resistance) from 3 Ω to 9 Ω: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 4 W to dark 108 W); iso-lines at P = 20, 40, 60, 80, 100. Marked: the given point, V = 12 V, R = 6 Ω, P = 24 W. Your inputs: V = 12 V, R = 6 ohm.*
+*P (power dissipated) against R (Resistance) from 3 ohm to 9 ohm. One curve for each value of V (Voltage): 12 V, 6 V, 24 V. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 6 ohm, P = 24 W.*
 
-![Power dissipated as V runs from 3 to 21 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-voltage-live-1)
+![P (power dissipated) over V (Voltage) from 6 V to 18 V and R (Resistance) from 3 ohm to 9 ohm: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 4 W to dark 108 W); iso-lines at P = 20, 40, 60, 80, 100 W](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-voltage-field)
 
-*Power dissipated as V runs from 3 to 21 V, every other input as you entered it (41 solutions). Marked: your V = 12 V gives P = 24. Your inputs: V = 12 V, R = 6 ohm.*
-
-![Power dissipated as R runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ohm-power-voltage-live-2)
-
-*Power dissipated as R runs from 1.5 to 10.5 ohm, every other input as you entered it (29 solutions). Marked: your R = 6 ohm gives P = 24. Your inputs: V = 12 V, R = 6 ohm.*
+*P (power dissipated) over V (Voltage) from 6 V to 18 V and R (Resistance) from 3 ohm to 9 ohm: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 4 W to dark 108 W); iso-lines at P = 20, 40, 60, 80, 100 W. Marked: the worked example, V = 12 V, R = 6 ohm, P = 24 W.*
 
 ```python
 classical_physics_ai999x.solve('ohm_power_voltage', V='12 V', R='6 ohm', target='P')
@@ -2575,13 +2319,9 @@ $$
 - **Assumes:** a uniform wire; constant temperature
 - **Evidence:** empirical
 
-![Resistance as ρ_e runs from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/resistivity-live-1)
+![R (Resistance) against A (cross-sectional area) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/resistivity-curve)
 
-*Resistance as ρ_e runs from 4.2e-09 to 2.94e-08 ohm*m, every other input as you entered it (41 solutions). Marked: your ρ_e = 1.68e-08 ohm*m gives R = 0.168. Your inputs: rho_e = 1.68e-08 ohm*m, L = 10 m, A = 1e-06 m^2.*
-
-![Resistance as L runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/resistivity-live-2)
-
-*Resistance as L runs from 2.5 to 17.5 m, every other input as you entered it (29 solutions). Marked: your L = 10 m gives R = 0.168. Your inputs: rho_e = 1.68e-08 ohm*m, L = 10 m, A = 1e-06 m^2.*
+*R (Resistance) against A (cross-sectional area) from 5.0000e-07 m^2 to 1.5000e-06 m^2. One curve for each value of rho_e (resistivity of the material): 1.6800e-08 ohm*m, 8.4000e-09 ohm*m, 3.3600e-08 ohm*m. Other inputs as in the worked example: L = 10.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 1.0000e-06 m^2, R = 0.168 ohm.*
 
 ```python
 classical_physics_ai999x.solve('resistivity', rho_e='1.68e-08 ohm*m', L='10 m', A='1e-06 m^2', target='R')
@@ -2626,15 +2366,11 @@ $$
 
 ![A charge q = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-diagram)
 
-*A charge q = 1.6e-19 C moving at v = 2e+06 m/s through a uniform magnetic field B = 500 mT into the page, at 90° to the velocity: the force is perpendicular to both (F = q v × B). Marked: the force the model returns, F = 1.6e-13 N. Your inputs: q = 1.6e-19 C, v = 2000000.0 m/s, B = 0.5 T, theta = 90 deg.*
+*A charge q = 1.6000e-19 C moving at v = 2e+06 m/s through a uniform magnetic field B = 0.5 T pointing into the page (×), at 90° to the velocity: the force is perpendicular to both (F = q v × B). Marked: the force the package returns, F = q v B sin θ = 1.6000e-13 N.*
 
-![Magnitude of the magnetic force as q runs from 4e-20 to 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-live-1)
+![F (magnitude of the magnetic force) against q (Charge) from 8](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-curve)
 
-*Magnitude of the magnetic force as q runs from 4e-20 to 2.8e-19 C, every other input as you entered it (41 solutions). Marked: your q = 1.6e-19 C gives F = 1.6e-13. Your inputs: q = 1.6e-19 C, v = 2000000.0 m/s, B = 0.5 T, theta = 90 deg.*
-
-![Magnitude of the magnetic force as v runs from 5e+05 to 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-charge-live-2)
-
-*Magnitude of the magnetic force as v runs from 5e+05 to 3.5e+06 m/s, every other input as you entered it (29 solutions). Marked: your v = 2e+06 m/s gives F = 1.6e-13. Your inputs: q = 1.6e-19 C, v = 2000000.0 m/s, B = 0.5 T, theta = 90 deg.*
+*F (magnitude of the magnetic force) against q (Charge) from 8.0000e-20 C to 2.4000e-19 C. One curve for each value of v (speed of the charge): 2e+06 m/s, 1e+06 m/s, 4e+06 m/s. Other inputs as in the worked example: B = 0.5 T, theta = 1.5707963267948966 rad. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, q = 1.6000e-19 C, F = 1.6000e-13 N.*
 
 ```python
 classical_physics_ai999x.solve('magnetic_force_charge', q='1.6e-19 C', v='2e+06 m/s', B='0.5 T', theta='90 deg', target='F')
@@ -2677,17 +2413,13 @@ $$
 - **Assumes:** a straight wire; a uniform field
 - **Evidence:** fundamental_law
 
-![A straight wire carrying I = 5 A to the right, with L = 200 mm of it in a uniform field B = 400 mT into the page, at 90°: the force is perpendicular to wire and field (F = I L × B)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-wire-diagram)
+![A straight wire carrying I = 5 A to the right, with L = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-wire-diagram)
 
-*A straight wire carrying I = 5 A to the right, with L = 200 mm of it in a uniform field B = 400 mT into the page, at 90°: the force is perpendicular to wire and field (F = I L × B). Marked: the force the model returns, F = 400 mN. In SI units: F = 0.4 N. Your inputs: I = 5 A, L = 0.2 m, B = 0.4 T, theta = 90 deg.*
+*A straight wire carrying I = 5 A to the right, with L = 0.2 m of it in a uniform field B = 0.4 T into the page (×), at 90°: the force is perpendicular to wire and field (F = I L × B). Marked: the force the package returns, F = 0.4 N.*
 
-![Force as L runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-wire-live-1)
+![F (Force) against I (Current) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-wire-curve)
 
-*Force as L runs from 0.05 to 0.35 m, every other input as you entered it (41 solutions). Marked: your L = 0.2 m gives F = 0.4. Your inputs: I = 5 A, L = 0.2 m, B = 0.4 T, theta = 90 deg.*
-
-![Force as B runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/magnetic-force-wire-live-2)
-
-*Force as B runs from 0.1 to 0.7 T, every other input as you entered it (29 solutions). Marked: your B = 0.4 T gives F = 0.4. Your inputs: I = 5 A, L = 0.2 m, B = 0.4 T, theta = 90 deg.*
+*F (Force) against I (Current) from 2.5 A to 7.5 A. One curve for each value of L (length of wire in the field): 0.2 m, 0.1 m, 0.4 m. Other inputs as in the worked example: B = 0.4 T, theta = 1.5707963267948966 rad. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I = 5 A, F = 0.4 N.*
 
 ```python
 classical_physics_ai999x.solve('magnetic_force_wire', I='5 A', L='0.2 m', B='0.4 T', theta='90 deg', target='F')
@@ -2730,21 +2462,13 @@ $$
 - **Assumes:** a long straight wire; vacuum or air
 - **Evidence:** fundamental_law
 
-![Field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-diagram)
+![Magnetic field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-diagram)
 
-*Field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule). Marked on each ring: the field strength the model computes there (100 µT at 20 mm, 40 µT at 50 mm, 20 µT at 100 mm), falling as 1/r. In SI units: B = 4e-05 T. Your inputs: I = 10 A, r = 0.05 m.*
+*Magnetic field lines round a long straight wire carrying I = 10 A out of the page: circles, anticlockwise (right-hand rule). Marked: the field strength the package returns at 2, 5 and 10 cm (0.0001 T, 4.0000e-05 T, 2.0000e-05 T), falling as 1/r.*
 
-![B against r from 25 mm to 75 mm, one curve for each current (the one given, half and twice it), 31 points each computed by the model; marked: r = 50 mm, B = 40 µT](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-curve)
+![B (Magnetic field) against r (distance from the wire) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-curve)
 
-*B against r from 25 mm to 75 mm, one curve for each current (the one given, half and twice it), 31 points each computed by the model; marked: r = 50 mm, B = 40 µT. In SI units: B = 4e-05 T. Your inputs: I = 10 A, r = 0.05 m.*
-
-![Magnetic field as I runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-live-1)
-
-*Magnetic field as I runs from 2.5 to 17.5 A, every other input as you entered it (41 solutions). Marked: your I = 10 A gives B = 4e-05. Your inputs: I = 10 A, r = 0.05 m.*
-
-![Magnetic field as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/long-wire-field-live-2)
-
-*Magnetic field as r runs from 0.0125 to 0.0875 m, every other input as you entered it (29 solutions). Marked: your r = 0.05 m gives B = 4e-05. Your inputs: I = 10 A, r = 0.05 m.*
+*B (Magnetic field) against r (distance from the wire) from 0.025 m to 0.075 m. One curve for each value of I (Current): 10 A, 5 A, 20 A. Other inputs as in the worked example: mu0 = 1.25663706212e-06 T*m/A. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.05 m, B = 4.0000e-05 T.*
 
 ```python
 classical_physics_ai999x.solve('long_wire_field', I='10 A', r='0.05 m', target='B')
@@ -2788,15 +2512,11 @@ $$
 
 ![A long solenoid with n = 1000 turns per metre carrying I = 2 A: inside, the field is uniform and along the axis (solid arrows); outside it is weak and returns round the ends (dashed, schematic)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/solenoid-field-diagram)
 
-*A long solenoid with n = 1000 turns per metre carrying I = 2 A: inside, the field is uniform and along the axis (solid arrows); outside it is weak and returns round the ends (dashed, schematic). Marked: the field inside the model returns, B = 2.513 mT. In SI units: B = 0.002513 T. Your inputs: nt = 1000 1/m, I = 2 A.*
+*A long solenoid with n = 1000 turns per metre carrying I = 2 A: inside, the field is uniform and along the axis (solid arrows); outside it is weak and returns round the ends (dashed, schematic). Marked: the field inside the package returns, B = μ₀ n I = 0.00251327 T.*
 
-![Magnetic field as nt runs from 250 to 1750 1/m, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/solenoid-field-live-1)
+![B (Magnetic field) against nt (turns per unit length) from 500 1/m to 1500 1/m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/solenoid-field-curve)
 
-*Magnetic field as nt runs from 250 to 1750 1/m, every other input as you entered it (41 solutions). Marked: your nt = 1000 1/m gives B = 0.002513. Your inputs: nt = 1000 1/m, I = 2 A.*
-
-![Magnetic field as I runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/solenoid-field-live-2)
-
-*Magnetic field as I runs from 0.5 to 3.5 A, every other input as you entered it (29 solutions). Marked: your I = 2 A gives B = 0.002513. Your inputs: nt = 1000 1/m, I = 2 A.*
+*B (Magnetic field) against nt (turns per unit length) from 500 1/m to 1500 1/m. One curve for each value of I (Current): 2 A, 1 A, 4 A. Other inputs as in the worked example: mu0 = 1.25663706212e-06 T*m/A. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, nt = 1000 1/m, B = 0.00251327 T.*
 
 ```python
 classical_physics_ai999x.solve('solenoid_field', nt='1000 1/m', I='2 A', target='B')
@@ -2838,17 +2558,13 @@ $$
 - **Assumes:** a spherically symmetric body; outside the body
 - **Evidence:** fundamental_law
 
-![Surface gravity of four bodies from their mass and radius (stated: Moon 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-bars)
+![Surface gravity of 4 bodies from their mass and radius (stated: Moon 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-bars)
 
-*Surface gravity of four bodies from their mass and radius (stated: Moon 7.35e22 kg, 1.737e6 m; Mars 6.42e23 kg, 3.39e6 m; Earth 5.97e24 kg, 6.37e6 m; Jupiter 1.898e27 kg, 6.99e7 m) and of the given mass and distance, each a solve of the model. Marked: Moon 1.626 m/s², Mars 3.729 m/s², Earth 9.82 m/s², Jupiter 25.93 m/s², given 9.82 m/s². Your inputs: M = 5.97e+24 kg, r = 6370000.0 m.*
+*Surface gravity of 4 bodies from their mass and radius (stated: Moon 7.3500e+22 kg, 1.737e+06 m; Mars 6.4200e+23 kg, 3.39e+06 m; Earth 5.9700e+24 kg, 6.37e+06 m; Jupiter 1.8980e+27 kg, 6.9900e+07 m; Earth is the worked example), each from the package. Marked: Moon 1.6259 m/s², Mars 3.72856 m/s², Earth 9.81977 m/s², Jupiter 25.9267 m/s².*
 
-![Gravitational acceleration as r runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-live-1)
+![g (gravitational acceleration) against r (distance from the centre) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-curve)
 
-*Gravitational acceleration as r runs from 1.592e+06 to 1.115e+07 m, every other input as you entered it (41 solutions). Marked: your r = 6.37e+06 m gives g = 9.82. Your inputs: M = 5.97e+24 kg, r = 6370000.0 m.*
-
-![Gravitational acceleration as M runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/surface-gravity-live-2)
-
-*Gravitational acceleration as M runs from 1.493e+24 to 1.045e+25 kg, every other input as you entered it (29 solutions). Marked: your M = 5.97e+24 kg gives g = 9.82. Your inputs: M = 5.97e+24 kg, r = 6370000.0 m.*
+*g (gravitational acceleration) against r (distance from the centre) from 3.185e+06 m to 9.555e+06 m. One curve for each value of M (mass of the planet or star): 5.9700e+24 kg, 2.9850e+24 kg, 1.1940e+25 kg. Other inputs as in the worked example: G = 6.6743e-11 N*m^2/kg^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 6.37e+06 m, g = 9.81977 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('surface_gravity', M='5.97e+24 kg', r='6.37e+06 m', target='g')
@@ -2892,15 +2608,11 @@ $$
 
 ![Circular orbits round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-orbit)
 
-*Circular orbits round a body of mass M = 5.97e+24 kg drawn to scale at the given radius and at 2.5 and 4 times it, with velocity arrows to scale: the farther out, the slower. Marked: the orbital speeds the model returns, 7672 m/s at 6.77 Mm, 4852 m/s at 16.93 Mm, 3836 m/s at 27.08 Mm. Your inputs: M = 5.97e+24 kg, r = 6770000.0 m.*
+*Circular orbits round a body of mass M = 5.9700e+24 kg (the Earth, radius 6.371e+06 m) drawn to scale at orbital radii 6770 km, 26560 km, 42200 km (the first is the worked example), with velocity arrows to scale: the farther out, the slower. Marked: the orbital speeds the package returns, 7671.77 m/s, 3873.25 m/s, 3072.8 m/s.*
 
-![Orbital speed as M runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-live-1)
+![v (orbital speed) against r (orbital radius) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-curve)
 
-*Orbital speed as M runs from 1.493e+24 to 1.045e+25 kg, every other input as you entered it (41 solutions). Marked: your M = 5.97e+24 kg gives v = 7672. Your inputs: M = 5.97e+24 kg, r = 6770000.0 m.*
-
-![Orbital speed as r runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-speed-live-2)
-
-*Orbital speed as r runs from 1.692e+06 to 1.185e+07 m, every other input as you entered it (29 solutions). Marked: your r = 6.77e+06 m gives v = 7672. Your inputs: M = 5.97e+24 kg, r = 6770000.0 m.*
+*v (orbital speed) against r (orbital radius) from 3.385e+06 m to 1.0155e+07 m. One curve for each value of M (mass of the central body): 5.9700e+24 kg, 2.9850e+24 kg, 1.1940e+25 kg. Other inputs as in the worked example: G = 6.6743e-11 N*m^2/kg^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 6.77e+06 m, v = 7671.77 m/s.*
 
 ```python
 classical_physics_ai999x.solve('orbital_speed', M='5.97e+24 kg', r='6.77e+06 m', target='v')
@@ -2942,17 +2654,9 @@ $$
 - **Assumes:** a circular orbit; the orbiting body much lighter than the central one
 - **Evidence:** fundamental_law
 
-![Period of a circular orbit round the given central mass against its radius, 40 radii from 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-period-graph)
+![Period of a circular orbit round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-period-graph)
 
-*Period of a circular orbit round the given central mass against its radius, 40 radii from 6.583 Mm to 63.3 Mm, each a solve of the model (T grows as r to the power 3/2). Marked: the given orbit, T = 86.29 ks at r = 42.2 Mm. In SI units: T = 8.629e+04 s. Your inputs: r = 42200000.0 m, M = 5.97e+24 kg.*
-
-![Orbital period as r runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-period-live-1)
-
-*Orbital period as r runs from 1.055e+07 to 7.385e+07 m, every other input as you entered it (41 solutions). Marked: your r = 4.22e+07 m gives T = 23.97 h. Your inputs: r = 42200000.0 m, M = 5.97e+24 kg.*
-
-![Orbital period as M runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/orbital-period-live-2)
-
-*Orbital period as M runs from 1.493e+24 to 1.045e+25 kg, every other input as you entered it (29 solutions). Marked: your M = 5.97e+24 kg gives T = 23.97 h. Your inputs: r = 42200000.0 m, M = 5.97e+24 kg.*
+*Period of a circular orbit round a body of mass M = 5.9700e+24 kg against its radius, 40 radii from 6600 to 63300 km from the package (T ∝ r^(3/2); hours = seconds / 3600). Marked: low orbit 5544.63 s; navigation 43085.6 s; geostationary 86289.6 s; the given orbit 86289.6 s at r = 4.2200e+07 m.*
 
 ```python
 classical_physics_ai999x.solve('orbital_period', r='4.22e+07 m', M='5.97e+24 kg', target='T')
@@ -2995,13 +2699,9 @@ $$
 - **Assumes:** an ideal gas; absolute pressure and temperature
 - **Evidence:** fundamental_law
 
-![Absolute pressure as V runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-gas-moles-live-1)
+![P*V (Ideal gas law) against V (Volume) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-gas-moles-curve)
 
-*Absolute pressure as V runs from 0.0056 to 0.0392 m^3, every other input as you entered it (41 solutions). Marked: your V = 0.0224 m^3 gives P = 101.4 kPa. Your inputs: V = 0.0224 m^3, n = 1 mol, T = 273.15 K.*
-
-![Absolute pressure as n runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-gas-moles-live-2)
-
-*Absolute pressure as n runs from 0.25 to 1.75 mol, every other input as you entered it (29 solutions). Marked: your n = 1 mol gives P = 101.4 kPa. Your inputs: V = 0.0224 m^3, n = 1 mol, T = 273.15 K.*
+*P*V (Ideal gas law) against V (Volume) from 0.025 m^3 to 0.075 m^3. One curve for each value of n (amount of gas): 2 mol, 1 mol, 4 mol. Other inputs as in the worked example: T = 300.0 K, R = 8.314462618 J/(mol*K). 31 points per curve computed by classical-physics-ai999x; marked: the worked example, V = 0.05 m^3, P*V = 99773.6 Pa.*
 
 ```python
 classical_physics_ai999x.solve('ideal_gas_moles', n='1 mol', T='273.15 K', V='0.0224 m^3', target='P')
@@ -3043,17 +2743,13 @@ $$
 - **Assumes:** at the melting point; no temperature change during the phase change
 - **Evidence:** fundamental_law
 
-![Heating curve of 2 kg of water from ice at -20 °C to steam at 120 °C at atmospheric pressure (stated: c of ice 2100, of water 4186, of steam 2010 J/(kg·K), latent heat of vaporization 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-graph)
+![Heating curve of 2 kg of water from ice at −20 °C to steam at 120 °C at atmospheric pressure (stated: c_ice = 2100, c_water = 4186, c_steam = 2010 J/(kg·K), L_f = 334000 J/kg, L_v = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-graph)
 
-*Heating curve of 2 kg of water from ice at -20 °C to steam at 120 °C at atmospheric pressure (stated: c of ice 2100, of water 4186, of steam 2010 J/(kg·K), latent heat of vaporization 2.26e6 J/kg, latent heat of fusion Lf = 3.34e+05 J/kg as given): each stage's heat from the model, accumulated; the temperature stays put while the phase changes. Marked: melting needs 668 kJ, boiling 4.52 MJ. In SI units: Q = 6.68e+05 J. Your inputs: m = 2 kg, Lf = 334000 J/kg.*
+*Heating curve of 2 kg of water from ice at −20 °C to steam at 120 °C at atmospheric pressure (stated: c_ice = 2100, c_water = 4186, c_steam = 2010 J/(kg·K), L_f = 334000 J/kg, L_v = 2.26e+06 J/kg): each stage's heat from the package (heat = m c ΔT; latent heats m L), accumulated; the temperature stays put while the phase changes. Marked: melting needs 668000 J, boiling 4.52e+06 J.*
 
-![Heat absorbed or released as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-live-1)
+![Q (heat absorbed or released) against m (Mass) from 1 kg to 3 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-curve)
 
-*Heat absorbed or released as m runs from 0.5 to 3.5 kg, every other input as you entered it (41 solutions). Marked: your m = 2 kg gives Q = 668 kJ. Your inputs: m = 2 kg, Lf = 334000 J/kg.*
-
-![Heat absorbed or released as Lf runs from 8](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-fusion-live-2)
-
-*Heat absorbed or released as Lf runs from 8.35e+04 to 5.845e+05 J/kg, every other input as you entered it (29 solutions). Marked: your Lf = 3.34e+05 J/kg gives Q = 668 kJ. Your inputs: m = 2 kg, Lf = 334000 J/kg.*
+*Q (heat absorbed or released) against m (Mass) from 1 kg to 3 kg. One curve for each value of Lf (latent heat of fusion): 334000 J/kg, 167000 J/kg, 668000 J/kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, Q = 668000 J.*
 
 ```python
 classical_physics_ai999x.solve('latent_heat_fusion', m='2 kg', Lf='334000 J/kg', target='Q')
@@ -3097,15 +2793,11 @@ $$
 
 ![Heat needed by 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-vaporization-bars)
 
-*Heat needed by 0.5 kg of water to melt (latent heat of fusion 334000 J/kg), to warm from 0 to 100 °C (c = 4186 J/(kg·K)) and to boil away (the given latent heat), each a solve of the model. Marked: melting 167 kJ, warming 209.3 kJ, vaporisation 1.13 MJ. In SI units: Q = 1.13e+06 J. Your inputs: m = 0.5 kg, Lv = 2260000.0 J/kg.*
+*Heat needed by 0.5 kg of water (the worked example's mass) to melt (L_f = 334000 J/kg), to warm from 0 to 100 °C (c = 4186 J/(kg·K)) and to boil away (L_v = 2.26e+06 J/kg), each from the package: boiling takes more than five times the heat of warming it all the way. Marked: vaporisation 1.13e+06 J.*
 
-![Energy as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-vaporization-live-1)
+![Q (Energy) against m (Mass) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-vaporization-curve)
 
-*Energy as m runs from 0.125 to 0.875 kg, every other input as you entered it (41 solutions). Marked: your m = 0.5 kg gives Q = 1130 kJ. Your inputs: m = 0.5 kg, Lv = 2260000.0 J/kg.*
-
-![Energy as Lv runs from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/latent-heat-vaporization-live-2)
-
-*Energy as Lv runs from 5.65e+05 to 3.955e+06 J/kg, every other input as you entered it (29 solutions). Marked: your Lv = 2.26e+06 J/kg gives Q = 1130 kJ. Your inputs: m = 0.5 kg, Lv = 2260000.0 J/kg.*
+*Q (Energy) against m (Mass) from 0.25 kg to 0.75 kg. One curve for each value of Lv (latent heat of vaporization): 2.26e+06 J/kg, 1.13e+06 J/kg, 4.52e+06 J/kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 0.5 kg, Q = 1.13e+06 J.*
 
 ```python
 classical_physics_ai999x.solve('latent_heat_vaporization', m='0.5 kg', Lv='2.26e+06 J/kg', target='Q')
@@ -3147,13 +2839,9 @@ $$
 - **Assumes:** a small temperature change; the coefficient constant over the range
 - **Evidence:** empirical
 
-![Change in length as α_t runs from 3e-06 to 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/linear-expansion-live-1)
+![dL (change in length) against alpha_t (coefficient of linear expansion) from 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/linear-expansion-curve)
 
-*Change in length as α_t runs from 3e-06 to 2.1e-05 1/K, every other input as you entered it (41 solutions). Marked: your α_t = 1.2e-05 1/K gives dL = 36 mm. Your inputs: alpha_t = 1.2e-05 1/K, L = 100 m, dT = 30 K.*
-
-![Change in length as L runs from 25 to 175 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/linear-expansion-live-2)
-
-*Change in length as L runs from 25 to 175 m, every other input as you entered it (29 solutions). Marked: your L = 100 m gives dL = 36 mm. Your inputs: alpha_t = 1.2e-05 1/K, L = 100 m, dT = 30 K.*
+*dL (change in length) against alpha_t (coefficient of linear expansion) from 6.0000e-06 1/K to 1.8000e-05 1/K. One curve for each value of L (original length): 100 m, 50 m, 200 m. Other inputs as in the worked example: dT = 30.0 K. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, alpha_t = 1.2000e-05 1/K, dL = 0.036 m.*
 
 ```python
 classical_physics_ai999x.solve('linear_expansion', alpha_t='1.2e-05 1/K', L='100 m', dT='30 K', target='dL')
@@ -3194,25 +2882,17 @@ $$
 - **Assumes:** a thin lens; paraxial rays
 - **Evidence:** fundamental_law
 
-![Ray diagram for the given lens and object: f = 100 mm, object 300 mm in front of the lens; the ray parallel to the axis is bent through (or away from) the focal point, the ray through the centre goes straight](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-ray-diagram)
+![Ray diagram of a thin converging lens of focal length f = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-ray-diagram)
 
-*Ray diagram for the given lens and object: f = 100 mm, object 300 mm in front of the lens; the ray parallel to the axis is bent through (or away from) the focal point, the ray through the centre goes straight. The image distance is a solve of the model's thin-lens equation: d_i = 150 mm (a real, inverted image), magnification -0.5 (derived as -d_i / d_o). In SI units: d_i = 0.15 m. Your inputs: d_o = 0.3 m, f = 0.1 m.*
+*Ray diagram of a thin converging lens of focal length f = 0.1 m with an object 0.3 m in front of it (drawn 4 cm tall): the ray parallel to the axis is bent through the focal point F′, the ray through the centre goes straight, the ray through F leaves parallel. Beyond the focal point the rays meet behind the lens. Marked: the image distance the package returns, d_i = 0.15 m (real, behind the lens); magnification −d_i/d_o = -0.5 and image height -2 cm (derived).*
 
-![Ray diagram for a diverging lens of the same focal length magnitude with the given object distance: f = -100 mm, object 300 mm in front of the lens; the ray parallel to the axis is bent through (or away from) the focal point, the ray through the centre goes straight](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-diverging)
+![Ray diagram of a thin converging lens of focal length f = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-magnifier)
 
-*Ray diagram for a diverging lens of the same focal length magnitude with the given object distance: f = -100 mm, object 300 mm in front of the lens; the ray parallel to the axis is bent through (or away from) the focal point, the ray through the centre goes straight. The image distance is a solve of the model's thin-lens equation: d_i = -75 mm (a virtual, upright image), magnification 0.25 (derived as -d_i / d_o). In SI units: d_i = 0.15 m. Your inputs: d_o = 0.3 m, f = 0.1 m.*
+*Ray diagram of a thin converging lens of focal length f = 0.1 m with an object 0.05 m in front of it (drawn 3 cm tall): the ray parallel to the axis is bent through the focal point F′, the ray through the centre goes straight. Inside the focal length the rays diverge; they appear to come from an enlarged upright image. Marked: the image distance the package returns, d_i = -0.1 m (negative: virtual, on the object side); magnification −d_i/d_o = 2 and image height 6 cm (derived).*
 
-![Ray diagram for the given converging lens with an object at half its focal length, inside the focal point: f = 100 mm, object 50 mm in front of the lens; the ray parallel to the axis is bent through (or away from) the focal point, the ray through the centre goes straight](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-magnifier)
+![Ray diagram of a thin diverging lens of focal length f = -0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-diverging)
 
-*Ray diagram for the given converging lens with an object at half its focal length, inside the focal point: f = 100 mm, object 50 mm in front of the lens; the ray parallel to the axis is bent through (or away from) the focal point, the ray through the centre goes straight. The image distance is a solve of the model's thin-lens equation: d_i = -100 mm (a virtual, upright image), magnification 2 (derived as -d_i / d_o). In SI units: d_i = 0.15 m. Your inputs: d_o = 0.3 m, f = 0.1 m.*
-
-![Image distance as f runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-live-1)
-
-*Image distance as f runs from 0.025 to 0.175 m, every other input as you entered it (41 solutions). Marked: your f = 0.1 m gives d_i = 0.15. Your inputs: d_o = 0.3 m, f = 0.1 m.*
-
-![Image distance as d_o runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/thin-lens-live-2)
-
-*Image distance as d_o runs from 0.1071 to 0.525 m, every other input as you entered it (27 solutions). Marked: your d_o = 0.3 m gives d_i = 0.15. Your inputs: d_o = 0.3 m, f = 0.1 m.*
+*Ray diagram of a thin diverging lens of focal length f = -0.1 m with an object 0.3 m in front of it (drawn 4 cm tall): the ray parallel to the axis is bent away from the focal point F′, the ray through the centre goes straight. A diverging lens always gives a smaller upright virtual image. Marked: the image distance the package returns, d_i = -0.075 m (negative: virtual, on the object side); magnification −d_i/d_o = 0.25 and image height 1 cm (derived).*
 
 ```python
 classical_physics_ai999x.solve('thin_lens', d_o='0.3 m', f='0.1 m', target='d_i')
@@ -3253,9 +2933,13 @@ $$
 - **Assumes:** a single photon
 - **Evidence:** fundamental_law
 
-![Photon energy as f runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-energy-live-1)
+![E (photon energy) against f (frequency of the light) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-energy-curve)
 
-*Photon energy as f runs from 1.25e+14 to 8.75e+14 Hz, every other input as you entered it (41 solutions). Marked: your f = 5e+14 Hz gives E = 2.068 eV. Your inputs: f = 500000000000000.0 Hz.*
+*E (photon energy) against f (frequency of the light) from 2.5000e+14 Hz to 7.5000e+14 Hz. One curve for each value of h (Planck constant): 6.6261e-34 J*s, 3.3130e-34 J*s, 1.3252e-33 J*s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, f = 5.0000e+14 Hz, E = 3.3130e-19 J.*
+
+![E (photon energy) over f (frequency of the light) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-energy-field)
+
+*E (photon energy) over f (frequency of the light) from 2.5000e+14 Hz to 7.5000e+14 Hz and h (Planck constant) from 3.3130e-34 J*s to 9.9391e-34 J*s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 8.2826e-20 J to dark 7.4543e-19 J); iso-lines at E = 2.00e-19, 4.00e-19, 6.00e-19 J. Marked: the worked example, f = 5.0000e+14 Hz, h = 6.6261e-34 J*s, E = 3.3130e-19 J.*
 
 ```python
 classical_physics_ai999x.solve('photon_energy', f='5e+14 Hz', target='E')
@@ -3297,13 +2981,9 @@ $$
 - **Assumes:** a single photon; wavelength in vacuum
 - **Evidence:** fundamental_law
 
-![Energy of one photon against its wavelength from 200 nm to 1 µm, 41 wavelengths, each a solve of the model: the shorter the wavelength, the more energy per photon](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-energy-wavelength-graph)
+![Energy of one photon against its wavelength from 200 to 1000 nm, 41 wavelengths from the package (E = h c / λ, converted to electronvolts with 1 eV = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-energy-wavelength-graph)
 
-*Energy of one photon against its wavelength from 200 nm to 1 µm, 41 wavelengths, each a solve of the model: the shorter the wavelength, the more energy per photon. Marked: E = 3.973e-19 J at 500 nm. Your inputs: lam = 5e-07 m.*
-
-![Energy as λ runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-energy-wavelength-live-1)
-
-*Energy as λ runs from 1.25e-07 to 8.75e-07 m, every other input as you entered it (41 solutions). Marked: your λ = 5e-07 m gives E = 2.48 eV. Your inputs: lam = 5e-07 m.*
+*Energy of one photon against its wavelength from 200 to 1000 nm, 41 wavelengths from the package (E = h c / λ, converted to electronvolts with 1 eV = 1.6022e-19 J): shorter wavelength, more energy per photon. The visible band 380–750 nm is shaded. Marked: E = 3.9729e-19 J = 2.47968 eV at 500 nm.*
 
 ```python
 classical_physics_ai999x.solve('photon_energy_wavelength', lam='5e-07 m', target='E')
@@ -3344,9 +3024,13 @@ $$
 - **Assumes:** a single photon
 - **Evidence:** fundamental_law
 
-![Photon momentum as λ runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-momentum-live-1)
+![p (photon momentum) against lam (Length) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-momentum-curve)
 
-*Photon momentum as λ runs from 1.25e-07 to 8.75e-07 m, every other input as you entered it (41 solutions). Marked: your λ = 5e-07 m gives p = 1.325e-27. Your inputs: lam = 5e-07 m.*
+*p (photon momentum) against lam (Length) from 2.5000e-07 m to 7.5000e-07 m. One curve for each value of h (Planck constant): 6.6261e-34 J*s, 3.3130e-34 J*s, 1.3252e-33 J*s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, lam = 5.0000e-07 m, p = 1.3252e-27 kg*m/s.*
+
+![p (photon momentum) over lam (Length) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/photon-momentum-field)
+
+*p (photon momentum) over lam (Length) from 2.5000e-07 m to 7.5000e-07 m and h (Planck constant) from 3.3130e-34 J*s to 9.9391e-34 J*s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 4.4174e-28 kg*m/s to dark 3.9756e-27 kg*m/s); iso-lines at p = 1.00e-27, 2.00e-27, 3.00e-27 kg*m/s. Marked: the worked example, lam = 5.0000e-07 m, h = 6.6261e-34 J*s, p = 1.3252e-27 kg*m/s.*
 
 ```python
 classical_physics_ai999x.solve('photon_momentum', lam='5e-07 m', target='p')
@@ -3388,9 +3072,13 @@ $$
 - **Assumes:** a free particle
 - **Evidence:** fundamental_law
 
-![De Broglie wavelength as p runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/de-broglie-live-1)
+![lam (de Broglie wavelength) against p (momentum of the particle) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/de-broglie-curve)
 
-*De Broglie wavelength as p runs from 2.5e-25 to 1.75e-24 kg*m/s, every other input as you entered it (41 solutions). Marked: your p = 1e-24 kg*m/s gives λ = 0.6626 nm. Your inputs: p = 1e-24 kg*m/s.*
+*lam (de Broglie wavelength) against p (momentum of the particle) from 5.0000e-25 kg*m/s to 1.5000e-24 kg*m/s. One curve for each value of h (Planck constant): 6.6261e-34 J*s, 3.3130e-34 J*s, 1.3252e-33 J*s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, p = 1.0000e-24 kg*m/s, lam = 6.6261e-10 m.*
+
+![lam (de Broglie wavelength) over p (momentum of the particle) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/de-broglie-field)
+
+*lam (de Broglie wavelength) over p (momentum of the particle) from 5.0000e-25 kg*m/s to 1.5000e-24 kg*m/s and h (Planck constant) from 3.3130e-34 J*s to 9.9391e-34 J*s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 2.2087e-10 m to dark 1.9878e-09 m); iso-lines at lam = 5.00e-10, 1.00e-9, 1.50e-9 m. Marked: the worked example, p = 1.0000e-24 kg*m/s, h = 6.6261e-34 J*s, lam = 6.6261e-10 m.*
 
 ```python
 classical_physics_ai999x.solve('de_broglie', p='1e-24 kg*m/s', target='lam')
@@ -3431,9 +3119,13 @@ $$
 - **Assumes:** energy of the mass at rest
 - **Evidence:** fundamental_law
 
-![Rest energy as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rest-energy-live-1)
+![E0 (rest energy) against c (Speed) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rest-energy-curve)
 
-*Rest energy as m runs from 0.00025 to 0.00175 kg, every other input as you entered it (41 solutions). Marked: your m = 0.001 kg gives E0 = 8.988e+13. Your inputs: m = 0.001 kg.*
+*E0 (rest energy) against c (Speed) from 1.4990e+08 m/s to 4.4969e+08 m/s. One curve for each value of m (rest mass): 0.001 kg, 0.0005 kg, 0.002 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, c = 2.9979e+08 m/s, E0 = 8.9876e+13 J.*
+
+![E0 (rest energy) over c (Speed) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rest-energy-field)
+
+*E0 (rest energy) over c (Speed) from 1.4990e+08 m/s to 4.4969e+08 m/s and m (rest mass) from 0.0005 kg to 0.0015 kg: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1.1234e+13 J to dark 3.0333e+14 J); iso-lines at E0 = 5.00e13, 1.00e14, 1.50e14, 2.00e14, 2.50e14 J. Marked: the worked example, c = 2.9979e+08 m/s, m = 0.001 kg, E0 = 8.9876e+13 J.*
 
 ```python
 classical_physics_ai999x.solve('rest_energy', m='0.001 kg', target='E0')
@@ -3474,17 +3166,13 @@ $$
 - **Assumes:** small swings; a point mass on a light string
 - **Evidence:** fundamental_law
 
-![Simple pendulums of a quarter, once and 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pendulum-period-drawing)
+![Simple pendulums of length 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pendulum-period-drawing)
 
-*Simple pendulums of a quarter, once and 2.25 times the given length drawn to scale (small swings): each period a solve of the model; the period grows with the square root of the length, so a pendulum 9 times longer swings 3 times slower. Marked: 1.003 s for 250 mm, 2.006 s for 1 m, 3.01 s for 2.25 m. Your inputs: Lp = 1 m, g = 9.80665 m/s^2.*
+*Simple pendulums of length 0.25, 1 and 2.25 m (g = 9.80665 m/s², small swings; the 1 m pendulum is the worked example), drawn to scale: the period grows with the square root of the length, so 9 times longer swings 3 times slower. Marked: the periods the package returns, 1.0032 s, 2.00641 s, 3.00961 s.*
 
-![Period of the swing as Lp runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pendulum-period-live-1)
+![T (period of the swing) against g (Acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pendulum-period-curve)
 
-*Period of the swing as Lp runs from 0.25 to 1.75 m, every other input as you entered it (41 solutions). Marked: your Lp = 1 m gives T = 2.006. Your inputs: Lp = 1 m, g = 9.80665 m/s^2.*
-
-![Period of the swing as g runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/pendulum-period-live-2)
-
-*Period of the swing as g runs from 2.452 to 17.16 m/s^2, every other input as you entered it (29 solutions). Marked: your g = 9.807 m/s^2 gives T = 2.006. Your inputs: Lp = 1 m, g = 9.80665 m/s^2.*
+*T (period of the swing) against g (Acceleration) from 4.90332 m/s^2 to 14.71 m/s^2. One curve for each value of Lp (length of the pendulum): 1 m, 0.5 m, 2 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, g = 9.80665 m/s^2, T = 2.00641 s.*
 
 ```python
 classical_physics_ai999x.solve('pendulum_period', Lp='1 m', g='9.80665 m/s^2', target='T')
@@ -3525,17 +3213,13 @@ $$
 - **Assumes:** an ideal spring; small oscillations; no damping
 - **Evidence:** fundamental_law
 
-![Masses of once, 4 and 9 times the given 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-oscillation-period-drawing)
+![Masses of 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-oscillation-period-drawing)
 
-*Masses of once, 4 and 9 times the given 0.5 kg on identical springs of stiffness k = 200 N/m: the period of oscillation, a solve of the model for each, grows with the square root of the mass, independent of the amplitude. Marked: the periods 314.2 ms, 628.3 ms, 942.5 ms (given: 314.2 ms). In SI units: T = 0.3142 s. Your inputs: m = 0.5 kg, k = 200 N/m.*
+*Masses of 0.5 kg (the worked example), 2 kg and 4.5 kg on identical springs of stiffness k = 200 N/m: the period of oscillation grows with the square root of the mass, independent of the amplitude. Marked: the periods the package returns, 0.314159 s, 0.628319 s, 0.942478 s.*
 
-![Time as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-oscillation-period-live-1)
+![T (Time) against k (Spring constant) from 100 N/m to 300 N/m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-oscillation-period-curve)
 
-*Time as m runs from 0.125 to 0.875 kg, every other input as you entered it (41 solutions). Marked: your m = 0.5 kg gives T = 0.3142. Your inputs: m = 0.5 kg, k = 200 N/m.*
-
-![Time as k runs from 50 to 350 N/m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/spring-oscillation-period-live-2)
-
-*Time as k runs from 50 to 350 N/m, every other input as you entered it (29 solutions). Marked: your k = 200 N/m gives T = 0.3142. Your inputs: m = 0.5 kg, k = 200 N/m.*
+*T (Time) against k (Spring constant) from 100 N/m to 300 N/m. One curve for each value of m (Mass): 0.5 kg, 0.25 kg, 1 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, k = 200 N/m, T = 0.314159 s.*
 
 ```python
 classical_physics_ai999x.solve('spring_oscillation_period', m='0.5 kg', k='200 N/m', target='T')
@@ -3577,17 +3261,13 @@ $$
 - **Assumes:** a rigid body; a fixed pivot
 - **Evidence:** definition
 
-![A force F = 50 N applied at r = 300 mm from a pivot at θ = 90° to the lever: only its component perpendicular to the lever, F sin θ, turns it](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-diagram)
+![A force F = 50 N applied at r = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-diagram)
 
-*A force F = 50 N applied at r = 300 mm from a pivot at θ = 90° to the lever: only its component perpendicular to the lever, F sin θ, turns it. Marked: the torque the model returns, τ = 15 N·m (at 90° it would be 15 N·m, also returned). Your inputs: r = 0.3 m, F = 50 N, theta = 90 deg.*
+*A force F = 50 N applied at r = 0.3 m from a pivot at θ = 90° to the lever: only its component perpendicular to the lever, F sin θ, turns it. Marked: the torque the package returns, τ = 15 N·m (at 90° it would be 15 N·m, also returned).*
 
-![Torque about the pivot as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-live-1)
+![tau (torque about the pivot) against r (distance from the pivot to the point of application) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-curve)
 
-*Torque about the pivot as r runs from 0.075 to 0.525 m, every other input as you entered it (41 solutions). Marked: your r = 0.3 m gives τ = 15. Your inputs: r = 0.3 m, F = 50 N, theta = 90 deg.*
-
-![Torque about the pivot as F runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-lever-live-2)
-
-*Torque about the pivot as F runs from 12.5 to 87.5 N, every other input as you entered it (29 solutions). Marked: your F = 50 N gives τ = 15. Your inputs: r = 0.3 m, F = 50 N, theta = 90 deg.*
+*tau (torque about the pivot) against r (distance from the pivot to the point of application) from 0.15 m to 0.45 m. One curve for each value of F (applied force): 50 N, 25 N, 100 N. Other inputs as in the worked example: theta = 1.5707963267948966 rad. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.3 m, tau = 15 N*m.*
 
 ```python
 classical_physics_ai999x.solve('torque_lever', r='0.3 m', F='50 N', theta='90 deg', target='tau')
@@ -3628,17 +3308,13 @@ $$
 - **Assumes:** a rigid body rotating about a fixed axis
 - **Evidence:** definition
 
-![KR (rotational kinetic energy) over omega (angular velocity) from 5 rad/s to 15 rad/s and Ir (moment of inertia) from 1 kg·m² to 3 kg·m²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-kinetic-energy-field)
+![KR (rotational kinetic energy) against omega (angular velocity) from 5 rad/s to 15 rad/s](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-kinetic-energy-curve)
 
-*KR (rotational kinetic energy) over omega (angular velocity) from 5 rad/s to 15 rad/s and Ir (moment of inertia) from 1 kg·m² to 3 kg·m²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 12.5 J to dark 337.5 J); iso-lines at KR = 50, 100, 150, 200, 250, 300. Marked: the given point, omega = 10 rad/s, Ir = 2 kg·m², KR = 100 J. Your inputs: Ir = 2 kg*m^2, omega = 10 rad/s.*
+*KR (rotational kinetic energy) against omega (angular velocity) from 5 rad/s to 15 rad/s. One curve for each value of Ir (Moment of inertia): 2 kg*m^2, 1 kg*m^2, 4 kg*m^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, omega = 10 rad/s, KR = 100 J.*
 
-![Rotational kinetic energy as ω runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-kinetic-energy-live-1)
+![KR (rotational kinetic energy) over omega (angular velocity) from 5 rad/s to 15 rad/s and Ir (Moment of inertia) from 1 kg*m^2 to 3 kg*m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-kinetic-energy-field)
 
-*Rotational kinetic energy as ω runs from 2.5 to 17.5 rad/s, every other input as you entered it (41 solutions). Marked: your ω = 10 rad/s gives KR = 100. Your inputs: Ir = 2 kg*m^2, omega = 10 rad/s.*
-
-![Rotational kinetic energy as Ir runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-kinetic-energy-live-2)
-
-*Rotational kinetic energy as Ir runs from 0.5 to 3.5 kg*m^2, every other input as you entered it (29 solutions). Marked: your Ir = 2 kg*m^2 gives KR = 100. Your inputs: Ir = 2 kg*m^2, omega = 10 rad/s.*
+*KR (rotational kinetic energy) over omega (angular velocity) from 5 rad/s to 15 rad/s and Ir (Moment of inertia) from 1 kg*m^2 to 3 kg*m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 12.5 J to dark 337.5 J); iso-lines at KR = 100, 200, 300 J. Marked: the worked example, omega = 10 rad/s, Ir = 2 kg*m^2, KR = 100 J.*
 
 ```python
 classical_physics_ai999x.solve('rotational_kinetic_energy', Ir='2 kg*m^2', omega='10 rad/s', target='KR')
@@ -3679,17 +3355,13 @@ $$
 - **Assumes:** a rigid body rotating about a fixed axis
 - **Evidence:** definition
 
-![L (angular momentum) over Ir (moment of inertia) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-field)
+![L (Angular momentum) against Ir (Moment of inertia) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-curve)
 
-*L (angular momentum) over Ir (moment of inertia) from 0.25 kg·m² to 0.75 kg·m² and omega (angular velocity) from 4 rad/s to 12 rad/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1 kg·m²/s to dark 9 kg·m²/s); iso-lines at L = 2, 4, 6, 8. Marked: the given point, Ir = 0.5 kg·m², omega = 8 rad/s, L = 4 kg·m²/s. Your inputs: Ir = 0.5 kg*m^2, omega = 8 rad/s.*
+*L (Angular momentum) against Ir (Moment of inertia) from 0.25 kg*m^2 to 0.75 kg*m^2. One curve for each value of omega (angular velocity): 8 rad/s, 4 rad/s, 16 rad/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Ir = 0.5 kg*m^2, L = 4 kg*m^2/s.*
 
-![Angular momentum as Ir runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-live-1)
+![L (Angular momentum) over Ir (Moment of inertia) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-field)
 
-*Angular momentum as Ir runs from 0.125 to 0.875 kg*m^2, every other input as you entered it (41 solutions). Marked: your Ir = 0.5 kg*m^2 gives L = 4. Your inputs: Ir = 0.5 kg*m^2, omega = 8 rad/s.*
-
-![Angular momentum as ω runs from 2 to 14 rad/s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-live-2)
-
-*Angular momentum as ω runs from 2 to 14 rad/s, every other input as you entered it (29 solutions). Marked: your ω = 8 rad/s gives L = 4. Your inputs: Ir = 0.5 kg*m^2, omega = 8 rad/s.*
+*L (Angular momentum) over Ir (Moment of inertia) from 0.25 kg*m^2 to 0.75 kg*m^2 and omega (angular velocity) from 4 rad/s to 12 rad/s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1 kg*m^2/s to dark 9 kg*m^2/s); iso-lines at L = 2, 4, 6, 8 kg*m^2/s. Marked: the worked example, Ir = 0.5 kg*m^2, omega = 8 rad/s, L = 4 kg*m^2/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_momentum', Ir='0.5 kg*m^2', omega='8 rad/s', target='L')
@@ -3730,17 +3402,13 @@ $$
 - **Assumes:** a rigid body about a fixed axis
 - **Evidence:** definition
 
-![a (tangential acceleration) over r (distance from the axis) from 250 mm to 750 mm and alpha (angular acceleration) from 2 rad/s² to 6 rad/s²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-acceleration-field)
+![a (tangential acceleration) against r (distance from the axis) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-acceleration-curve)
 
-*a (tangential acceleration) over r (distance from the axis) from 250 mm to 750 mm and alpha (angular acceleration) from 2 rad/s² to 6 rad/s²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.5 m/s² to dark 4.5 m/s²); iso-lines at a = 1, 2, 3, 4. Marked: the given point, r = 500 mm, alpha = 4 rad/s², a = 2 m/s². Your inputs: r = 0.5 m, alpha = 4 rad/s^2.*
+*a (tangential acceleration) against r (distance from the axis) from 0.25 m to 0.75 m. One curve for each value of alpha (angular acceleration): 4 rad/s^2, 2 rad/s^2, 8 rad/s^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.5 m, a = 2 m/s^2.*
 
-![Tangential acceleration as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-acceleration-live-1)
+![a (tangential acceleration) over r (distance from the axis) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-acceleration-field)
 
-*Tangential acceleration as r runs from 0.125 to 0.875 m, every other input as you entered it (41 solutions). Marked: your r = 0.5 m gives a = 2. Your inputs: r = 0.5 m, alpha = 4 rad/s^2.*
-
-![Tangential acceleration as α runs from 1 to 7 rad/s^2, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/tangential-acceleration-live-2)
-
-*Tangential acceleration as α runs from 1 to 7 rad/s^2, every other input as you entered it (29 solutions). Marked: your α = 4 rad/s^2 gives a = 2. Your inputs: r = 0.5 m, alpha = 4 rad/s^2.*
+*a (tangential acceleration) over r (distance from the axis) from 0.25 m to 0.75 m and alpha (angular acceleration) from 2 rad/s^2 to 6 rad/s^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0.5 m/s^2 to dark 4.5 m/s^2); iso-lines at a = 1, 2, 3, 4 m/s^2. Marked: the worked example, r = 0.5 m, alpha = 4 rad/s^2, a = 2 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('tangential_acceleration', r='0.5 m', alpha='4 rad/s^2', target='a')
@@ -3781,17 +3449,13 @@ $$
 - **Assumes:** uniform circular motion
 - **Evidence:** derived
 
+![a (centripetal acceleration) against omega (angular velocity) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-omega-curve)
+
+*a (centripetal acceleration) against omega (angular velocity) from 1.5 rad/s to 4.5 rad/s. One curve for each value of r (radius of the circle): 2 m, 1 m, 4 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, omega = 3 rad/s, a = 18 m/s^2.*
+
 ![a (centripetal acceleration) over omega (angular velocity) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-omega-field)
 
-*a (centripetal acceleration) over omega (angular velocity) from 1.5 rad/s to 4.5 rad/s and r (radius of the circle) from 1 m to 3 m: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2.25 m/s² to dark 60.75 m/s²); iso-lines at a = 10, 20, 30, 40, 50, 60. Marked: the given point, omega = 3 rad/s, r = 2 m, a = 18 m/s². Your inputs: r = 2 m, omega = 3 rad/s.*
-
-![Centripetal acceleration as ω runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-omega-live-1)
-
-*Centripetal acceleration as ω runs from 0.75 to 5.25 rad/s, every other input as you entered it (41 solutions). Marked: your ω = 3 rad/s gives a = 18. Your inputs: r = 2 m, omega = 3 rad/s.*
-
-![Centripetal acceleration as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centripetal-acceleration-omega-live-2)
-
-*Centripetal acceleration as r runs from 0.5 to 3.5 m, every other input as you entered it (29 solutions). Marked: your r = 2 m gives a = 18. Your inputs: r = 2 m, omega = 3 rad/s.*
+*a (centripetal acceleration) over omega (angular velocity) from 1.5 rad/s to 4.5 rad/s and r (radius of the circle) from 1 m to 3 m: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 2.25 m/s^2 to dark 60.75 m/s^2); iso-lines at a = 10, 20, 30, 40, 50 m/s^2. Marked: the worked example, omega = 3 rad/s, r = 2 m, a = 18 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('centripetal_acceleration_omega', r='2 m', omega='3 rad/s', target='a')
@@ -3833,17 +3497,13 @@ $$
 - **Assumes:** a point mass moving perpendicular to the radius
 - **Evidence:** definition
 
-![A 2 kg body moving at v = 3 m/s perpendicular to its radius r = 4 m about a centre: its angular momentum points out of the page (right-hand rule, the dot at the centre)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-point-mass-diagram)
+![A 2 kg body moving at v = 3 m/s perpendicular to its radius r = 4 m about a centre: its angular momentum points out of the page (right-hand rule, ⊙ at the centre)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-point-mass-diagram)
 
-*A 2 kg body moving at v = 3 m/s perpendicular to its radius r = 4 m about a centre: its angular momentum points out of the page (right-hand rule, the dot at the centre). Marked: the value the model returns, L = m v r = 24 kg·m²/s. Your inputs: m = 2 kg, v = 3 m/s, r = 4 m.*
+*A 2 kg body moving at v = 3 m/s perpendicular to its radius r = 4 m about a centre: its angular momentum points out of the page (right-hand rule, ⊙ at the centre). Marked: the value the package returns, L = m v r = 24 kg·m²/s.*
 
-![Angular momentum about the centre as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-point-mass-live-1)
+![L (angular momentum about the centre) against m (Mass) from 1 kg to 3 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-point-mass-curve)
 
-*Angular momentum about the centre as m runs from 0.5 to 3.5 kg, every other input as you entered it (41 solutions). Marked: your m = 2 kg gives L = 24. Your inputs: m = 2 kg, v = 3 m/s, r = 4 m.*
-
-![Angular momentum about the centre as v runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-point-mass-live-2)
-
-*Angular momentum about the centre as v runs from 0.75 to 5.25 m/s, every other input as you entered it (29 solutions). Marked: your v = 3 m/s gives L = 24. Your inputs: m = 2 kg, v = 3 m/s, r = 4 m.*
+*L (angular momentum about the centre) against m (Mass) from 1 kg to 3 kg. One curve for each value of v (speed on the circle): 3 m/s, 1.5 m/s, 6 m/s. Other inputs as in the worked example: r = 4.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, L = 24 kg*m^2/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_momentum_point_mass', m='2 kg', v='3 m/s', r='4 m', target='L')
@@ -3886,17 +3546,9 @@ $$
 - **Assumes:** an incompressible fluid at rest; uniform gravity
 - **Evidence:** fundamental_law
 
-![Absolute pressure in a liquid with P0 = 101](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-graph)
+![Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-graph)
 
-*Absolute pressure in a liquid with P0 = 101.3 kPa at the surface, 31 depths each a solve of the model: the surface pressure's share is constant, the liquid column adds ρ g h. Marked: 199.3 kPa at 10 m. In SI units: P = 1.993e+05 Pa. Your inputs: P0 = 101325 Pa, rho = 1000 kg/m^3, g = 9.8 m/s^2, h = 10 m.*
-
-![Absolute pressure at the depth as P0 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-live-1)
-
-*Absolute pressure at the depth as P0 runs from 2.533e+04 to 1.773e+05 Pa, every other input as you entered it (41 solutions). Marked: your P0 = 1.013e+05 Pa gives P = 199.3 kPa. Your inputs: P0 = 101325 Pa, rho = 1000 kg/m^3, g = 9.8 m/s^2, h = 10 m.*
-
-![Absolute pressure at the depth as ρ runs from 250 to 1750 kg/m^3, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/absolute-pressure-depth-live-2)
-
-*Absolute pressure at the depth as ρ runs from 250 to 1750 kg/m^3, every other input as you entered it (29 solutions). Marked: your ρ = 1000 kg/m^3 gives P = 199.3 kPa. Your inputs: P0 = 101325 Pa, rho = 1000 kg/m^3, g = 9.8 m/s^2, h = 10 m.*
+*Absolute pressure in a liquid (ρ = 1000 kg/m³, g = 9.80665 m/s²) with P₀ = 101325 Pa at the surface, 31 depths from the package (shown in kPa): the surface pressure's share is constant, the liquid column adds ρ g h. Marked: 199392 Pa at 10 m.*
 
 ```python
 classical_physics_ai999x.solve('absolute_pressure_depth', P0='101325 Pa', rho='1000 kg/m^3', h='10 m', g='9.8 m/s^2', target='P')
@@ -3937,17 +3589,13 @@ $$
 - **Assumes:** a steady flow
 - **Evidence:** definition
 
+![Q (volume flow rate) against t (time taken) from 5 s to 15 s](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-volume-time-curve)
+
+*Q (volume flow rate) against t (time taken) from 5 s to 15 s. One curve for each value of V (volume delivered): 0.002 m^3, 0.001 m^3, 0.004 m^3. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, t = 10 s, Q = 0.0002 m^3/s.*
+
 ![Q (volume flow rate) over V (volume delivered) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-volume-time-field)
 
-*Q (volume flow rate) over V (volume delivered) from 0.001 m³ to 0.003 m³ and t (time taken) from 5 s to 15 s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 6.667e-05 m³/s to dark 0.0006 m³/s); iso-lines at Q = 0.0001, 0.0002, 0.0003, 0.0004, 0.0005. Marked: the given point, V = 0.002 m³, t = 10 s, Q = 0.0002 m³/s. Your inputs: V = 0.002 m^3, t = 10 s.*
-
-![Volume flow rate as V runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-volume-time-live-1)
-
-*Volume flow rate as V runs from 0.0005 to 0.0035 m^3, every other input as you entered it (41 solutions). Marked: your V = 0.002 m^3 gives Q = 0.2 L/s. Your inputs: V = 0.002 m^3, t = 10 s.*
-
-![Volume flow rate as t runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-volume-time-live-2)
-
-*Volume flow rate as t runs from 2.5 to 17.5 s, every other input as you entered it (29 solutions). Marked: your t = 10 s gives Q = 0.2 L/s. Your inputs: V = 0.002 m^3, t = 10 s.*
+*Q (volume flow rate) over V (volume delivered) from 0.001 m^3 to 0.003 m^3 and t (time taken) from 5 s to 15 s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 6.6667e-05 m^3/s to dark 0.0006 m^3/s); iso-lines at Q = 1.00e-4, 2.00e-4, 3.00e-4, 4.00e-4, 5.00e-4 m^3/s. Marked: the worked example, V = 0.002 m^3, t = 10 s, Q = 0.0002 m^3/s.*
 
 ```python
 classical_physics_ai999x.solve('flow_rate_volume_time', V='0.002 m^3', t='10 s', target='Q')
@@ -3988,17 +3636,13 @@ $$
 - **Assumes:** a steady flow; the average speed over the cross section
 - **Evidence:** definition
 
+![Q (volume flow rate) against A (cross-sectional area) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-area-speed-curve)
+
+*Q (volume flow rate) against A (cross-sectional area) from 0.00015 m^2 to 0.00045 m^2. One curve for each value of v (average speed of the fluid): 2 m/s, 1 m/s, 4 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 0.0003 m^2, Q = 0.0006 m^3/s.*
+
 ![Q (volume flow rate) over A (cross-sectional area) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-area-speed-field)
 
-*Q (volume flow rate) over A (cross-sectional area) from 0.00015 m² to 0.00045 m² and v (average speed of the fluid) from 1 m/s to 3 m/s: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.00015 m³/s to dark 0.00135 m³/s); iso-lines at Q = 0.0002, 0.0004, 0.0006, 0.0008, 0.001, 0.0012. Marked: the given point, A = 0.0003 m², v = 2 m/s, Q = 0.0006 m³/s. Your inputs: A = 0.0003 m^2, v = 2 m/s.*
-
-![Volume flow rate as A runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-area-speed-live-1)
-
-*Volume flow rate as A runs from 7.5e-05 to 0.000525 m^2, every other input as you entered it (41 solutions). Marked: your A = 0.0003 m^2 gives Q = 0.6 L/s. Your inputs: A = 0.0003 m^2, v = 2 m/s.*
-
-![Volume flow rate as v runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/flow-rate-area-speed-live-2)
-
-*Volume flow rate as v runs from 0.5 to 3.5 m/s, every other input as you entered it (29 solutions). Marked: your v = 2 m/s gives Q = 0.6 L/s. Your inputs: A = 0.0003 m^2, v = 2 m/s.*
+*Q (volume flow rate) over A (cross-sectional area) from 0.00015 m^2 to 0.00045 m^2 and v (average speed of the fluid) from 1 m/s to 3 m/s: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0.00015 m^3/s to dark 0.00135 m^3/s); iso-lines at Q = 2.00e-4, 4.00e-4, 6.00e-4, 8.00e-4, 0.001, 0.0012 m^3/s. Marked: the worked example, A = 0.0003 m^2, v = 2 m/s, Q = 0.0006 m^3/s.*
 
 ```python
 classical_physics_ai999x.solve('flow_rate_area_speed', A='0.0003 m^2', v='2 m/s', target='Q')
@@ -4040,13 +3684,9 @@ $$
 - **Assumes:** a small temperature change; a constant coefficient
 - **Evidence:** empirical
 
-![Change in volume as V0 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/volume-expansion-live-1)
+![dV (change in volume) against beta (coefficient of volume expansion) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/volume-expansion-curve)
 
-*Change in volume as V0 runs from 0.00025 to 0.00175 m^3, every other input as you entered it (41 solutions). Marked: your V0 = 0.001 m^3 gives dV = 10.5 mL. Your inputs: beta = 0.00021 1/K, V0 = 0.001 m^3, dT = 50 K.*
-
-![Change in volume as dT runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/volume-expansion-live-2)
-
-*Change in volume as dT runs from 12.5 to 87.5 K, every other input as you entered it (29 solutions). Marked: your dT = 50 K gives dV = 10.5 mL. Your inputs: beta = 0.00021 1/K, V0 = 0.001 m^3, dT = 50 K.*
+*dV (change in volume) against beta (coefficient of volume expansion) from 0.000105 1/K to 0.000315 1/K. One curve for each value of V0 (original volume): 0.001 m^3, 0.0005 m^3, 0.002 m^3. Other inputs as in the worked example: dT = 50.0 K. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, beta = 0.00021 1/K, dV = 1.0500e-05 m^3.*
 
 ```python
 classical_physics_ai999x.solve('volume_expansion', beta='0.00021 1/K', V0='0.001 m^3', dT='50 K', target='dV')
@@ -4087,17 +3727,13 @@ $$
 - **Assumes:** a cyclic engine; efficiency as a fraction, not a percentage
 - **Evidence:** definition
 
-![eff (efficiency (a fraction)) over W (work output per cycle) from 150 J to 450 J and Qh (heat taken in from the hot reservoir) from 500 J to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-efficiency-field)
+![eff (efficiency (a fraction)) against Qh (heat taken in from the hot reservoir) from 500 J to 1500 J](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-efficiency-curve)
 
-*eff (efficiency (a fraction)) over W (work output per cycle) from 150 J to 450 J and Qh (heat taken in from the hot reservoir) from 500 J to 1.5 kJ: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0.1 to dark 0.9); iso-lines at eff = 0.2, 0.4, 0.6, 0.8. Marked: the given point, W = 300 J, Qh = 1 kJ, eff = 0.3. Your inputs: W = 300 J, Qh = 1000 J.*
+*eff (efficiency (a fraction)) against Qh (heat taken in from the hot reservoir) from 500 J to 1500 J. One curve for each value of W (work output per cycle): 300 J, 150 J, 600 J. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Qh = 1000 J, eff = 0.3.*
 
-![Efficiency as W runs from 75 to 525 J, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-efficiency-live-1)
+![eff (efficiency (a fraction)) over W (work output per cycle) from 150 J to 450 J and Qh (heat taken in from the hot reservoir) from 500 J to 1500 J: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-efficiency-field)
 
-*Efficiency as W runs from 75 to 525 J, every other input as you entered it (41 solutions). Marked: your W = 300 J gives eff = 0.3. Your inputs: W = 300 J, Qh = 1000 J.*
-
-![Efficiency as Qh runs from 303](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-efficiency-live-2)
-
-*Efficiency as Qh runs from 303.6 to 1750 J, every other input as you entered it (28 solutions). Marked: your Qh = 1000 J gives eff = 0.3. Your inputs: W = 300 J, Qh = 1000 J.*
+*eff (efficiency (a fraction)) over W (work output per cycle) from 150 J to 450 J and Qh (heat taken in from the hot reservoir) from 500 J to 1500 J: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0.1 to dark 0.9); iso-lines at eff = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, W = 300 J, Qh = 1000 J, eff = 0.3.*
 
 ```python
 classical_physics_ai999x.solve('engine_efficiency', W='300 J', Qh='1000 J', target='eff')
@@ -4138,17 +3774,13 @@ $$
 - **Assumes:** a reversible engine between two reservoirs; absolute temperatures
 - **Evidence:** fundamental_law
 
-![eff (maximum efficiency) over Tc (cold reservoir temperature (absolute)) from 150 K to 450 K and Th (hot reservoir temperature (absolute)) from 300 K to 900 K: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0 to dark 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-field)
+![eff (maximum efficiency) against Th (hot reservoir temperature (absolute)) from 300 K to 900 K](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-curve)
 
-*eff (maximum efficiency) over Tc (cold reservoir temperature (absolute)) from 150 K to 450 K and Th (hot reservoir temperature (absolute)) from 300 K to 900 K: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 0 to dark 0.8333); iso-lines at eff = 0.2, 0.4, 0.6, 0.8. Marked: the given point, Tc = 300 K, Th = 600 K, eff = 0.5. Your inputs: Tc = 300 K, Th = 600 K.*
+*eff (maximum efficiency) against Th (hot reservoir temperature (absolute)) from 300 K to 900 K. One curve for each value of Tc (cold reservoir temperature (absolute)): 300 K, 150 K, 600 K. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Th = 600 K, eff = 0.5.*
 
-![Maximum efficiency as Th runs from 307](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-live-1)
+![eff (maximum efficiency) over Th (hot reservoir temperature (absolute)) from 300 K to 900 K and Tc (cold reservoir temperature (absolute)) from 150 K to 450 K: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0 to dark 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-field)
 
-*Maximum efficiency as Th runs from 307.5 to 1050 K, every other input as you entered it (34 solutions). Marked: your Th = 600 K gives eff = 0.5. Your inputs: Tc = 300 K, Th = 600 K.*
-
-![Maximum efficiency as Tc runs from 75 to 525 K, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/carnot-efficiency-live-2)
-
-*Maximum efficiency as Tc runs from 75 to 525 K, every other input as you entered it (29 solutions). Marked: your Tc = 300 K gives eff = 0.5. Your inputs: Tc = 300 K, Th = 600 K.*
+*eff (maximum efficiency) over Th (hot reservoir temperature (absolute)) from 300 K to 900 K and Tc (cold reservoir temperature (absolute)) from 150 K to 450 K: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0 to dark 0.833333); iso-lines at eff = 0.2, 0.4, 0.6, 0.8; blank cells: inputs the capability refuses. Marked: the worked example, Th = 600 K, Tc = 300 K, eff = 0.5.*
 
 ```python
 classical_physics_ai999x.solve('carnot_efficiency', Tc='300 K', Th='600 K', target='eff')
@@ -4190,13 +3822,9 @@ $$
 - **Assumes:** undamped simple harmonic motion; an ideal massless spring
 - **Evidence:** fundamental_law
 
-![Maximum speed (at equilibrium) as X runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shm-max-speed-live-1)
+![v (maximum speed (at equilibrium)) against m (oscillating mass) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shm-max-speed-curve)
 
-*Maximum speed (at equilibrium) as X runs from 0.025 to 0.175 m, every other input as you entered it (41 solutions). Marked: your X = 0.1 m gives v = 1. Your inputs: X = 0.1 m, k = 100 N/m, m = 1 kg.*
-
-![Maximum speed (at equilibrium) as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shm-max-speed-live-2)
-
-*Maximum speed (at equilibrium) as m runs from 0.25 to 1.75 kg, every other input as you entered it (29 solutions). Marked: your m = 1 kg gives v = 1. Your inputs: X = 0.1 m, k = 100 N/m, m = 1 kg.*
+*v (maximum speed (at equilibrium)) against m (oscillating mass) from 0.5 kg to 1.5 kg. One curve for each value of X (amplitude): 0.1 m, 0.05 m, 0.2 m. Other inputs as in the worked example: k = 100.0 N/m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 1 kg, v = 1 m/s.*
 
 ```python
 classical_physics_ai999x.solve('shm_max_speed', X='0.1 m', k='100 N/m', m='1 kg', target='v')
@@ -4237,17 +3865,13 @@ $$
 - **Assumes:** power spread uniformly over the area
 - **Evidence:** definition
 
-![I (intensity) over P (power crossing the area) from 50 W to 150 W and A (area perpendicular to the flow of energy) from 1 m² to 3 m²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 16](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/intensity-power-area-field)
+![I (intensity) against A (area perpendicular to the flow of energy) from 1 m^2 to 3 m^2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/intensity-power-area-curve)
 
-*I (intensity) over P (power crossing the area) from 50 W to 150 W and A (area perpendicular to the flow of energy) from 1 m² to 3 m²: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 16.67 W/m² to dark 150 W/m²); iso-lines at I = 20, 40, 60, 80, 100, 120, 140. Marked: the given point, P = 100 W, A = 2 m², I = 50 W/m². Your inputs: P = 100 W, A = 2 m^2.*
+*I (intensity) against A (area perpendicular to the flow of energy) from 1 m^2 to 3 m^2. One curve for each value of P (power crossing the area): 100 W, 50 W, 200 W. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 2 m^2, I = 50 W/m^2.*
 
-![Intensity as A runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/intensity-power-area-live-1)
+![I (intensity) over P (power crossing the area) from 50 W to 150 W and A (area perpendicular to the flow of energy) from 1 m^2 to 3 m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 16](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/intensity-power-area-field)
 
-*Intensity as A runs from 0.5 to 3.5 m^2, every other input as you entered it (41 solutions). Marked: your A = 2 m^2 gives I = 50. Your inputs: P = 100 W, A = 2 m^2.*
-
-![Intensity as P runs from 25 to 175 W, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/intensity-power-area-live-2)
-
-*Intensity as P runs from 25 to 175 W, every other input as you entered it (29 solutions). Marked: your P = 100 W gives I = 50. Your inputs: P = 100 W, A = 2 m^2.*
+*I (intensity) over P (power crossing the area) from 50 W to 150 W and A (area perpendicular to the flow of energy) from 1 m^2 to 3 m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 16.6667 W/m^2 to dark 150 W/m^2); iso-lines at I = 25, 50, 75, 100, 125 W/m^2. Marked: the worked example, P = 100 W, A = 2 m^2, I = 50 W/m^2.*
 
 ```python
 classical_physics_ai999x.solve('intensity_power_area', P='100 W', A='2 m^2', target='I')
@@ -4288,17 +3912,13 @@ $$
 - **Assumes:** the frequency is unchanged across the boundary
 - **Evidence:** definition
 
-![Light of vacuum wavelength λ = 600 nm entering a medium of refractive index n = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-drawing)
+![Light of vacuum wavelength λ = 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-drawing)
 
-*Light of vacuum wavelength λ = 600 nm entering a medium of refractive index n = 1.5 (shaded), drawn as a sine wave of each wavelength: the frequency is unchanged, so the waves are compressed. Marked: the wavelength in the medium the model returns, λn = 400 nm. In SI units: lam_n = 4e-07 m. Your inputs: lam = 6e-07 m, n = 1.5.*
+*Light of vacuum wavelength λ = 6.0000e-07 m entering a medium of refractive index n = 1.5 (shaded) at x = 0, drawn as a sine wave of each wavelength: the frequency is unchanged, so the waves are compressed. Marked: the wavelength in the medium the package returns, λₙ = λ/n = 4.0000e-07 m.*
 
-![Wavelength in the medium as λ runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-live-1)
+![lam_n (wavelength in the medium) against lam (wavelength in vacuum) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-curve)
 
-*Wavelength in the medium as λ runs from 1.5e-07 to 1.05e-06 m, every other input as you entered it (41 solutions). Marked: your λ = 6e-07 m gives λ_n = 0.4 um. Your inputs: lam = 6e-07 m, n = 1.5.*
-
-![Wavelength in the medium as n runs from 1 to 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/wavelength-in-medium-live-2)
-
-*Wavelength in the medium as n runs from 1 to 2.625, every other input as you entered it (30 solutions). Marked: your n = 1.5 gives λ_n = 0.4 um. Your inputs: lam = 6e-07 m, n = 1.5.*
+*lam_n (wavelength in the medium) against lam (wavelength in vacuum) from 3.0000e-07 m to 9.0000e-07 m. One curve for each value of n (index of refraction): 1.5, 3. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, lam = 6.0000e-07 m, lam_n = 4.0000e-07 m.*
 
 ```python
 classical_physics_ai999x.solve('wavelength_in_medium', lam='6e-07 m', n='1.5 1', target='lam_n')
@@ -4341,11 +3961,7 @@ $$
 
 ![Refractive index n = c/v of transparent media from the speed of light in each (stated: water 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/index-of-refraction-bars)
 
-*Refractive index n = c/v of transparent media from the speed of light in each (stated: water 2.25e8 m/s, glass 2.0e8 m/s, diamond 1.24e8 m/s) and in the given medium, each a solve of the model. Marked: water 1.332, glass 1.499, diamond 2.418, given 1.499. Your inputs: v = 200000000.0 m/s.*
-
-![Index of refraction as v runs from 5e+07 to 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/index-of-refraction-live-1)
-
-*Index of refraction as v runs from 5e+07 to 2.975e+08 m/s, every other input as you entered it (34 solutions). Marked: your v = 2e+08 m/s gives n = 1.499. Your inputs: v = 200000000.0 m/s.*
+*Refractive index n = c/v of transparent media from the speed of light in each (stated: water 2.2500e+08 m/s, glass 2.0000e+08 m/s, diamond 1.2400e+08 m/s; glass is the worked example), each from the package. Marked: water 1.33241, glass 1.49896, diamond 2.41768.*
 
 ```python
 classical_physics_ai999x.solve('index_of_refraction', v='2e+08 m/s', target='n')
@@ -4385,13 +4001,9 @@ $$
 - **Assumes:** paraxial rays
 - **Evidence:** fundamental_law
 
-![A concave mirror with radius of curvature R = 400 mm (centre C): rays arriving parallel to the axis reflect through the focal point F, half-way to C (paraxial rays)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/mirror-focal-length-ray-diagram)
+![A concave mirror with radius of curvature R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/mirror-focal-length-ray-diagram)
 
-*A concave mirror with radius of curvature R = 400 mm (centre C): rays arriving parallel to the axis reflect through the focal point F, half-way to C (paraxial rays). Marked: the focal length the model returns, f = R/2 = 200 mm. In SI units: f = 0.2 m. Your inputs: R = 0.4 m.*
-
-![Focal length as R runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/mirror-focal-length-live-1)
-
-*Focal length as R runs from 0.1 to 0.7 m, every other input as you entered it (41 solutions). Marked: your R = 0.4 m gives f = 0.2. Your inputs: R = 0.4 m.*
+*A concave mirror with radius of curvature R = 0.4 m (centre C): rays arriving parallel to the axis reflect through the focal point F, half-way to C (paraxial rays). Marked: the focal length the package returns, f = R/2 = 0.2 m.*
 
 ```python
 classical_physics_ai999x.solve('mirror_focal_length', R='0.4 m', target='f')
@@ -4431,13 +4043,9 @@ $$
 - **Assumes:** a sinusoidal waveform
 - **Evidence:** definition
 
-![An alternating voltage of peak 170 V (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the model returns: the steady value that delivers the same average power](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rms-voltage-graph)
+![An alternating voltage of peak 170 V (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the package returns: the steady value that delivers the same average power](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rms-voltage-graph)
 
-*An alternating voltage of peak 170 V (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the model returns: the steady value that delivers the same average power. Marked: rms = 120.2 V, the peak divided by the square root of 2. Your inputs: V0 = 170 V.*
-
-![Rms voltage as V0 runs from 42](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rms-voltage-live-1)
-
-*Rms voltage as V0 runs from 42.5 to 297.5 V, every other input as you entered it (41 solutions). Marked: your V0 = 170 V gives Vrms = 120.2. Your inputs: V0 = 170 V.*
+*An alternating voltage of peak 170 V (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the package returns: the steady value that delivers the same average power. The shaded curve is the square of the wave divided by the peak, whose mean height is rms²/peak (derived). Marked: rms = 120.208 V = peak/√2.*
 
 ```python
 classical_physics_ai999x.solve('rms_voltage', V0='170 V', target='Vrms')
@@ -4477,13 +4085,9 @@ $$
 - **Assumes:** a sinusoidal waveform
 - **Evidence:** definition
 
-![An alternating current of peak 10 A (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the model returns: the steady value that delivers the same average power](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rms-current-graph)
+![An alternating current of peak 10 A (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the package returns: the steady value that delivers the same average power](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rms-current-graph)
 
-*An alternating current of peak 10 A (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the model returns: the steady value that delivers the same average power. Marked: rms = 7.071 A, the peak divided by the square root of 2. Your inputs: I0 = 10 A.*
-
-![Rms current as I0 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rms-current-live-1)
-
-*Rms current as I0 runs from 2.5 to 17.5 A, every other input as you entered it (41 solutions). Marked: your I0 = 10 A gives Irms = 7.071. Your inputs: I0 = 10 A.*
+*An alternating current of peak 10 A (drawn at 50 Hz for two cycles, a stated frequency) with the root-mean-square value the package returns: the steady value that delivers the same average power. The shaded curve is the square of the wave divided by the peak, whose mean height is rms²/peak (derived). Marked: rms = 7.07107 A = peak/√2.*
 
 ```python
 classical_physics_ai999x.solve('rms_current', I0='10 A', target='Irms')
@@ -4525,17 +4129,13 @@ $$
 - **Assumes:** a single circular loop; vacuum or air
 - **Evidence:** fundamental_law
 
-![Circular loops of half, once and twice the given radius, each carrying I = 5 A anticlockwise: the field at the centre points out of the page](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-diagram)
+![Circular loops of radius 5, 10 and 20 cm each carrying I = 5 A anticlockwise: the field at the centre points out of the page (⊙)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-diagram)
 
-*Circular loops of half, once and twice the given radius, each carrying I = 5 A anticlockwise: the field at the centre points out of the page. Marked: the field strength at the centre the model returns, 62.83 µT for r = 50 mm, 31.42 µT for r = 100 mm, 15.71 µT for r = 200 mm. In SI units: B = 3.142e-05 T. Your inputs: I = 5 A, r = 0.1 m.*
+*Circular loops of radius 5, 10 and 20 cm each carrying I = 5 A anticlockwise: the field at the centre points out of the page (⊙). Marked: the field strength at the centre the package returns, 6.2832e-05 T for r = 0.05 m, 3.1416e-05 T for r = 0.1 m, 1.5708e-05 T for r = 0.2 m, halving the radius doubles it.*
 
-![Field at the centre as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-live-1)
+![B (field at the centre) against r (radius of the loop) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-curve)
 
-*Field at the centre as r runs from 0.025 to 0.175 m, every other input as you entered it (41 solutions). Marked: your r = 0.1 m gives B = 3.142e-05. Your inputs: I = 5 A, r = 0.1 m.*
-
-![Field at the centre as I runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/loop-center-field-live-2)
-
-*Field at the centre as I runs from 1.25 to 8.75 A, every other input as you entered it (29 solutions). Marked: your I = 5 A gives B = 3.142e-05. Your inputs: I = 5 A, r = 0.1 m.*
+*B (field at the centre) against r (radius of the loop) from 0.05 m to 0.15 m. One curve for each value of I (Current): 5 A, 2.5 A, 10 A. Other inputs as in the worked example: mu0 = 1.25663706212e-06 T*m/A. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.1 m, B = 3.1416e-05 T.*
 
 ```python
 classical_physics_ai999x.solve('loop_center_field', I='5 A', r='0.1 m', target='B')
@@ -4576,17 +4176,13 @@ $$
 - **Assumes:** a single inductor and resistor
 - **Evidence:** definition
 
-![tau (time constant) over L (inductance) from 250 mH to 750 mH and R (resistance) from 50 Ω to 150 Ω: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-time-constant-field)
+![tau (time constant) against R (resistance) from 50 ohm to 150 ohm](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-time-constant-curve)
 
-*tau (time constant) over L (inductance) from 250 mH to 750 mH and R (resistance) from 50 Ω to 150 Ω: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.667 ms to dark 15 ms); iso-lines at tau = 0.002, 0.004, 0.006, 0.008, 0.01, 0.012, 0.014. Marked: the given point, L = 500 mH, R = 100 Ω, tau = 5 ms. In SI units: tau = 0.005 s. Your inputs: L = 0.5 H, R = 100 ohm.*
+*tau (time constant) against R (resistance) from 50 ohm to 150 ohm. One curve for each value of L (inductance): 0.5 H, 0.25 H, 1 H. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 100 ohm, tau = 0.005 s.*
 
-![Time constant as L runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-time-constant-live-1)
+![tau (time constant) over L (inductance) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-time-constant-field)
 
-*Time constant as L runs from 0.125 to 0.875 H, every other input as you entered it (41 solutions). Marked: your L = 0.5 H gives τ = 5 ms. Your inputs: L = 0.5 H, R = 100 ohm.*
-
-![Time constant as R runs from 25 to 175 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-time-constant-live-2)
-
-*Time constant as R runs from 25 to 175 ohm, every other input as you entered it (29 solutions). Marked: your R = 100 ohm gives τ = 5 ms. Your inputs: L = 0.5 H, R = 100 ohm.*
+*tau (time constant) over L (inductance) from 0.25 H to 0.75 H and R (resistance) from 50 ohm to 150 ohm: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0.00166667 s to dark 0.015 s); iso-lines at tau = 0.0025, 0.005, 0.0075, 0.01, 0.0125 s. Marked: the worked example, L = 0.5 H, R = 100 ohm, tau = 0.005 s.*
 
 ```python
 classical_physics_ai999x.solve('rl_time_constant', L='0.5 H', R='100 ohm', target='tau')
@@ -4628,17 +4224,13 @@ $$
 - **Assumes:** sinusoidal AC
 - **Evidence:** definition
 
-![X (inductive reactance) over f (frequency) from 30 Hz to 90 Hz and L (inductance) from 15 mH to 45 mH: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inductive-reactance-field)
+![X (inductive reactance) against f (Frequency) from 30 Hz to 90 Hz](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inductive-reactance-curve)
 
-*X (inductive reactance) over f (frequency) from 30 Hz to 90 Hz and L (inductance) from 15 mH to 45 mH: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2.827 Ω to dark 25.45 Ω); iso-lines at X = 5, 10, 15, 20, 25. Marked: the given point, f = 60 Hz, L = 30 mH, X = 11.31 Ω. Your inputs: f = 60 Hz, L = 0.03 H.*
+*X (inductive reactance) against f (Frequency) from 30 Hz to 90 Hz. One curve for each value of L (Inductance): 0.03 H, 0.015 H, 0.06 H. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, f = 60 Hz, X = 11.3097 ohm.*
 
-![Inductive reactance as L runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inductive-reactance-live-1)
+![X (inductive reactance) over f (Frequency) from 30 Hz to 90 Hz and L (Inductance) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inductive-reactance-field)
 
-*Inductive reactance as L runs from 0.0075 to 0.0525 H, every other input as you entered it (41 solutions). Marked: your L = 0.03 H gives X = 11.31. Your inputs: f = 60 Hz, L = 0.03 H.*
-
-![Inductive reactance as f runs from 15 to 105 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inductive-reactance-live-2)
-
-*Inductive reactance as f runs from 15 to 105 Hz, every other input as you entered it (29 solutions). Marked: your f = 60 Hz gives X = 11.31. Your inputs: f = 60 Hz, L = 0.03 H.*
+*X (inductive reactance) over f (Frequency) from 30 Hz to 90 Hz and L (Inductance) from 0.015 H to 0.045 H: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 2.82743 ohm to dark 25.4469 ohm); iso-lines at X = 5, 10, 15, 20 ohm. Marked: the worked example, f = 60 Hz, L = 0.03 H, X = 11.3097 ohm.*
 
 ```python
 classical_physics_ai999x.solve('inductive_reactance', f='60 Hz', L='0.03 H', target='X')
@@ -4680,17 +4272,13 @@ $$
 - **Assumes:** sinusoidal AC
 - **Evidence:** definition
 
-![X (capacitive reactance) over f (frequency) from 30 Hz to 90 Hz and C (capacitance) from 500 nF to 1](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/capacitive-reactance-field.svg)
+![X (capacitive reactance) against f (Frequency) from 30 Hz to 90 Hz](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitive-reactance-curve)
 
-*X (capacitive reactance) over f (frequency) from 30 Hz to 90 Hz and C (capacitance) from 500 nF to 1.5 µF: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 1.179 kΩ to dark 10.61 kΩ); iso-lines at X = 2000, 4000, 6000, 8000, 1e+04. Marked: the given point, f = 60 Hz, C = 1 µF, X = 2.653 kΩ. In SI units: X = 2653 ohm. Your inputs: f = 60 Hz, C = 1e-06 F.*
+*X (capacitive reactance) against f (Frequency) from 30 Hz to 90 Hz. One curve for each value of C (Capacitance): 1.0000e-06 F, 5.0000e-07 F, 2.0000e-06 F. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, f = 60 Hz, X = 2652.58 ohm.*
 
-![Capacitive reactance as C runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitive-reactance-live-1)
+![X (capacitive reactance) over f (Frequency) from 30 Hz to 90 Hz and C (Capacitance) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitive-reactance-field)
 
-*Capacitive reactance as C runs from 2.5e-07 to 1.75e-06 F, every other input as you entered it (41 solutions). Marked: your C = 1e-06 F gives X = 2653. Your inputs: f = 60 Hz, C = 1e-06 F.*
-
-![Capacitive reactance as f runs from 15 to 105 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/capacitive-reactance-live-2)
-
-*Capacitive reactance as f runs from 15 to 105 Hz, every other input as you entered it (29 solutions). Marked: your f = 60 Hz gives X = 2653. Your inputs: f = 60 Hz, C = 1e-06 F.*
+*X (capacitive reactance) over f (Frequency) from 30 Hz to 90 Hz and C (Capacitance) from 5.0000e-07 F to 1.5000e-06 F: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1178.93 ohm to dark 10610.3 ohm); iso-lines at X = 2000, 4000, 6000, 8000 ohm. Marked: the worked example, f = 60 Hz, C = 1.0000e-06 F, X = 2652.58 ohm.*
 
 ```python
 classical_physics_ai999x.solve('capacitive_reactance', f='60 Hz', C='1e-06 F', target='X')
@@ -4731,17 +4319,13 @@ $$
 - **Assumes:** ideal components; negligible resistance for the frequency
 - **Evidence:** fundamental_law
 
-![Reactance of an inductor L = 8 nH and a capacitor C = 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-graph)
+![Reactance of an inductor L = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-graph)
 
-*Reactance of an inductor L = 8 nH and a capacitor C = 3.17 pF against frequency over two decades (21 frequencies each from the model's reactance formulas): they are equal where the LC circuit resonates. Marked: the resonant frequency the model returns, f0 = 999.4 MHz, where both reactances are 50.24 Ω. In SI units: f = 9.994e+08 Hz. Your inputs: L = 8e-09 H, C = 3.17e-12 F.*
+*Reactance of an inductor L = 0.01 H and a capacitor C = 1.0000e-06 F against frequency over two decades (21 frequencies each from the package's reactance formulas): they are equal where the LC circuit resonates. Marked: the resonant frequency the package returns, f₀ = 1591.55 Hz, where both reactances are 100 Ω.*
 
-![Resonant frequency as C runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-live-1)
+![f (resonant frequency) against L (Inductance) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-curve)
 
-*Resonant frequency as C runs from 7.925e-13 to 5.547e-12 F, every other input as you entered it (41 solutions). Marked: your C = 3.17e-12 F gives f = 999.4 MHz. Your inputs: L = 8e-09 H, C = 3.17e-12 F.*
-
-![Resonant frequency as L runs from 2e-09 to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lc-resonance-live-2)
-
-*Resonant frequency as L runs from 2e-09 to 1.4e-08 H, every other input as you entered it (29 solutions). Marked: your L = 8e-09 H gives f = 999.4 MHz. Your inputs: L = 8e-09 H, C = 3.17e-12 F.*
+*f (resonant frequency) against L (Inductance) from 0.005 H to 0.015 H. One curve for each value of C (Capacitance): 1.0000e-06 F, 5.0000e-07 F, 2.0000e-06 F. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, L = 0.01 H, f = 1591.55 Hz.*
 
 ```python
 classical_physics_ai999x.solve('lc_resonance', L='8e-09 H', C='3.17e-12 F', target='f')
@@ -4783,13 +4367,9 @@ $$
 - **Assumes:** constant angular acceleration; a fixed axis
 - **Evidence:** definition
 
-![Final angular velocity as α runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-velocity-time-live-1)
+![omega (final angular velocity) against alpha (constant angular acceleration) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-velocity-time-curve)
 
-*Final angular velocity as α runs from 0.75 to 5.25 rad/s^2, every other input as you entered it (41 solutions). Marked: your α = 3 rad/s^2 gives ω = 14. Your inputs: omega0 = 2 rad/s, alpha = 3 rad/s^2, t = 4 s.*
-
-![Final angular velocity as t runs from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-velocity-time-live-2)
-
-*Final angular velocity as t runs from 3.327 to 4.673 s, every other input as you entered it (29 solutions). Marked: your t = 4 s gives ω = 14. Your inputs: omega0 = 2 rad/s, alpha = 3 rad/s^2, t = 4 s.*
+*omega (final angular velocity) against alpha (constant angular acceleration) from 1.5 rad/s^2 to 4.5 rad/s^2. One curve for each value of t (elapsed time): 4 s, 2 s, 8 s. Other inputs as in the worked example: omega0 = 2.0 rad/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, alpha = 3 rad/s^2, omega = 14 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_velocity_time', omega0='2 rad/s', alpha='3 rad/s^2', t='4 s', target='omega')
@@ -4831,13 +4411,9 @@ $$
 - **Assumes:** constant angular acceleration; a fixed axis
 - **Evidence:** fundamental_law
 
-![Final angular speed as α runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-velocity-angle-live-1)
+![omega**2 (Angular velocity and angle turned under constant angular acceleration) against theta (angle turned) from 0 rad to 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-velocity-angle-curve)
 
-*Final angular speed as α runs from 0.5 to 3.5 rad/s^2, every other input as you entered it (41 solutions). Marked: your α = 2 rad/s^2 gives ω = 10. Your inputs: omega0 = 0 rad/s, alpha = 2 rad/s^2, theta = 25 rad.*
-
-![Final angular speed as θ runs from 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-velocity-angle-live-2)
-
-*Final angular speed as θ runs from 6.25 to 43.75 rad, every other input as you entered it (29 solutions). Marked: your θ = 25 rad gives ω = 10. Your inputs: omega0 = 0 rad/s, alpha = 2 rad/s^2, theta = 25 rad.*
+*omega**2 (Angular velocity and angle turned under constant angular acceleration) against theta (angle turned) from 0 rad to 6.28319 rad. One curve for each value of alpha (constant angular acceleration): 2 rad/s^2, 1 rad/s^2, 4 rad/s^2. Other inputs as in the worked example: omega0 = 0.0 rad/s. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 25 rad, omega**2 = 10 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_velocity_angle', omega0='0 rad/s', alpha='2 rad/s^2', theta='25 rad', target='omega')
@@ -4878,17 +4454,13 @@ $$
 - **Assumes:** a cyclic engine (no net change in internal energy)
 - **Evidence:** fundamental_law
 
-![Energy flow through a heat engine that takes Qh = 1 kJ from a hot reservoir and rejects Qc = 700 J to a cold one; arrow widths to scale](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-energy-balance-flow)
+![Energy flow through a heat engine that takes Qh = 1000 J from a hot reservoir and rejects Qc = 700 J to a cold one; arrow widths to scale](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-energy-balance-flow)
 
-*Energy flow through a heat engine that takes Qh = 1 kJ from a hot reservoir and rejects Qc = 700 J to a cold one; arrow widths to scale. Marked: the work the model returns, W = Qh - Qc = 300 J, and the efficiency W/Qh = 0.3 from its efficiency formula. Your inputs: Qh = 1000 J, Qc = 700 J.*
+*Energy flow through a heat engine that takes Qh = 1000 J from a hot reservoir and rejects Qc = 700 J to a cold one; arrow widths to scale. Marked: the work the package returns, W = Qh − Qc = 300 J, and the efficiency W/Qh = 0.3 from its efficiency formula.*
 
-![Net work output per cycle as Qc runs from 175 to 988](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-energy-balance-live-1)
+![W (net work output per cycle) against Qh (heat in from the hot reservoir) from 500 J to 1500 J](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-energy-balance-curve)
 
-*Net work output per cycle as Qc runs from 175 to 988.8 J, every other input as you entered it (32 solutions). Marked: your Qc = 700 J gives W = 300. Your inputs: Qh = 1000 J, Qc = 700 J.*
-
-![Net work output per cycle as Qh runs from 732](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/engine-energy-balance-live-2)
-
-*Net work output per cycle as Qh runs from 732.1 to 1750 J, every other input as you entered it (20 solutions). Marked: your Qh = 1000 J gives W = 300. Your inputs: Qh = 1000 J, Qc = 700 J.*
+*W (net work output per cycle) against Qh (heat in from the hot reservoir) from 500 J to 1500 J. One curve for each value of Qc (heat out to the cold reservoir): 700 J, 350 J. 24 points per curve computed by classical-physics-ai999x; marked: the worked example, Qh = 1000 J, W = 300 J.*
 
 ```python
 classical_physics_ai999x.solve('engine_energy_balance', Qh='1000 J', Qc='700 J', target='W')
@@ -4930,17 +4502,13 @@ $$
 - **Assumes:** a cyclic refrigerator
 - **Evidence:** definition
 
-![A refrigerator moving Qc = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-refrigerator-flow)
+![A refrigerator moving Qc = 1200 J out of the cold space with W = 400 J of work; it rejects Qh = Qc + W = 1600 J (derived) to the room](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-refrigerator-flow)
 
-*A refrigerator moving Qc = 1.2 kJ out of the cold space with W = 400 J of work; it rejects Qh = Qc + W = 1.6 kJ (derived) to the room. Marked: the coefficient of performance the model returns, COP = Qc/W = 3. Arrow widths to scale. Your inputs: Qc = 1200 J, W = 400 J.*
+*A refrigerator moving Qc = 1200 J out of the cold space with W = 400 J of work; it rejects Qh = Qc + W = 1600 J (derived) to the room. Marked: the coefficient of performance the package returns, COP = Qc/W = 3. Arrow widths to scale.*
 
-![Coefficient of performance as Qc runs from 300 to 2100 J, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-refrigerator-live-1)
+![cop (coefficient of performance) against W (work input) from 200 J to 600 J](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-refrigerator-curve)
 
-*Coefficient of performance as Qc runs from 300 to 2100 J, every other input as you entered it (41 solutions). Marked: your Qc = 1200 J gives cop = 3. Your inputs: Qc = 1200 J, W = 400 J.*
-
-![Coefficient of performance as W runs from 100 to 700 J, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-refrigerator-live-2)
-
-*Coefficient of performance as W runs from 100 to 700 J, every other input as you entered it (29 solutions). Marked: your W = 400 J gives cop = 3. Your inputs: Qc = 1200 J, W = 400 J.*
+*cop (coefficient of performance) against W (work input) from 200 J to 600 J. One curve for each value of Qc (heat removed from the cold space): 1200 J, 600 J, 2400 J. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, W = 400 J, cop = 3.*
 
 ```python
 classical_physics_ai999x.solve('cop_refrigerator', Qc='1200 J', W='400 J', target='cop')
@@ -4982,17 +4550,13 @@ $$
 - **Assumes:** a cyclic heat pump
 - **Evidence:** definition
 
-![A heat pump delivering Qh = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-heat-pump-flow)
+![A heat pump delivering Qh = 1500 J into a house with W = 500 J of work; it draws Qc = Qh − W = 1000 J (derived) from outdoors](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-heat-pump-flow)
 
-*A heat pump delivering Qh = 1.5 kJ into a house with W = 500 J of work; it draws Qc = Qh - W = 1 kJ (derived) from outdoors. Marked: the coefficient of performance the model returns, COP = Qh/W = 3. Arrow widths to scale. Your inputs: Qh = 1500 J, W = 500 J.*
+*A heat pump delivering Qh = 1500 J into a house with W = 500 J of work; it draws Qc = Qh − W = 1000 J (derived) from outdoors. Marked: the coefficient of performance the package returns, COP = Qh/W = 3. Arrow widths to scale.*
 
-![Coefficient of performance as Qh runs from 375 to 2625 J, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-heat-pump-live-1)
+![cop (coefficient of performance) against W (work input) from 250 J to 750 J](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-heat-pump-curve)
 
-*Coefficient of performance as Qh runs from 375 to 2625 J, every other input as you entered it (41 solutions). Marked: your Qh = 1500 J gives cop = 3. Your inputs: Qh = 1500 J, W = 500 J.*
-
-![Coefficient of performance as W runs from 125 to 875 J, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cop-heat-pump-live-2)
-
-*Coefficient of performance as W runs from 125 to 875 J, every other input as you entered it (29 solutions). Marked: your W = 500 J gives cop = 3. Your inputs: Qh = 1500 J, W = 500 J.*
+*cop (coefficient of performance) against W (work input) from 250 J to 750 J. One curve for each value of Qh (heat delivered to the warm space): 1500 J, 750 J, 3000 J. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, W = 500 J, cop = 3.*
 
 ```python
 classical_physics_ai999x.solve('cop_heat_pump', Qh='1500 J', W='500 J', target='cop')
@@ -5036,17 +4600,13 @@ $$
 - **Assumes:** a uniform field; non-relativistic speed; the path is the circle traced by the perpendicular velocity component
 - **Evidence:** derived
 
-![Circular paths of a charged particle launched upwards from the same point at half, once and twice the given speed across a uniform magnetic field out of the page, each radius a solve of the model and drawn to scale: the radius grows in proportion to the speed](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-drawing)
+![Circular paths of a charged particle (m = 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-drawing)
 
-*Circular paths of a charged particle launched upwards from the same point at half, once and twice the given speed across a uniform magnetic field out of the page, each radius a solve of the model and drawn to scale: the radius grows in proportion to the speed. Marked: r = 20.88 mm at v = 1e+06 m/s. In SI units: r = 0.02088 m. Your inputs: m = 1.67e-27 kg, v = 1000000.0 m/s, q = 1.6e-19 C, B = 0.5 T, theta = 90 deg.*
+*Circular paths of a charged particle (m = 1.6700e-27 kg, q = 1.6000e-19 C) launched upwards from the same point at 500000, 1e+06 (the worked example) and 2e+06 m/s across a uniform field B = 0.5 T out of the page (·), drawn to scale: the radius grows in proportion to the speed. Marked: the radii the package returns, 0.0104375 m, 0.020875 m, 0.04175 m.*
 
-![Radius of the circular path as m runs from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-live-1)
+![r (radius of the circular path) against theta (angle between the velocity and the field) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-curve)
 
-*Radius of the circular path as m runs from 4.175e-28 to 2.923e-27 kg, every other input as you entered it (41 solutions). Marked: your m = 1.67e-27 kg gives r = 20.88 mm. Your inputs: m = 1.67e-27 kg, v = 1000000.0 m/s, q = 1.6e-19 C, B = 0.5 T, theta = 90 deg.*
-
-![Radius of the circular path as v runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/cyclotron-radius-live-2)
-
-*Radius of the circular path as v runs from 2.5e+05 to 1.75e+06 m/s, every other input as you entered it (29 solutions). Marked: your v = 1e+06 m/s gives r = 20.88 mm. Your inputs: m = 1.67e-27 kg, v = 1000000.0 m/s, q = 1.6e-19 C, B = 0.5 T, theta = 90 deg.*
+*r (radius of the circular path) against theta (angle between the velocity and the field) from 0 rad to 1.5708 rad. One curve for each value of m (mass of the particle): 1.6700e-27 kg, 8.3500e-28 kg, 3.3400e-27 kg. Other inputs as in the worked example: v = 1000000.0 m/s, q = 1.6e-19 C, B = 0.5 T. 40 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 1.5708 rad, r = 0.020875 m.*
 
 ```python
 classical_physics_ai999x.solve('cyclotron_radius', m='1.67e-27 kg', v='1e+06 m/s', q='1.6e-19 C', B='0.5 T', theta='90 deg', target='r')
@@ -5088,17 +4648,13 @@ $$
 - **Assumes:** a single resistor and capacitor
 - **Evidence:** definition
 
-![tau (time constant) over R (resistance) from 500 Ω to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-time-constant-field)
+![tau (time constant) against R (resistance) from 500 ohm to 1500 ohm](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-time-constant-curve)
 
-*tau (time constant) over R (resistance) from 500 Ω to 1.5 kΩ and C (capacitance) from 4 µF to 12 µF: each of the 21 × 15 cells is one solve of the model, shaded by its value (light 2 ms to dark 18 ms); iso-lines at tau = 0.005, 0.01, 0.015. Marked: the given point, R = 1 kΩ, C = 8 µF, tau = 8 ms. In SI units: tau = 0.008 s. Your inputs: R = 1000 ohm, C = 8e-06 F.*
+*tau (time constant) against R (resistance) from 500 ohm to 1500 ohm. One curve for each value of C (capacitance): 8.0000e-06 F, 4.0000e-06 F, 1.6000e-05 F. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 1000 ohm, tau = 0.008 s.*
 
-![Time constant as R runs from 250 to 1750 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-time-constant-live-1)
+![tau (time constant) over R (resistance) from 500 ohm to 1500 ohm and C (capacitance) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-time-constant-field)
 
-*Time constant as R runs from 250 to 1750 ohm, every other input as you entered it (41 solutions). Marked: your R = 1000 ohm gives τ = 8 ms. Your inputs: R = 1000 ohm, C = 8e-06 F.*
-
-![Time constant as C runs from 2e-06 to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-time-constant-live-2)
-
-*Time constant as C runs from 2e-06 to 1.4e-05 F, every other input as you entered it (29 solutions). Marked: your C = 8e-06 F gives τ = 8 ms. Your inputs: R = 1000 ohm, C = 8e-06 F.*
+*tau (time constant) over R (resistance) from 500 ohm to 1500 ohm and C (capacitance) from 4.0000e-06 F to 1.2000e-05 F: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 0.002 s to dark 0.018 s); iso-lines at tau = 0.005, 0.01, 0.015 s. Marked: the worked example, R = 1000 ohm, C = 8.0000e-06 F, tau = 0.008 s.*
 
 ```python
 classical_physics_ai999x.solve('rc_time_constant', R='1000 ohm', C='8e-06 F', target='tau')
@@ -5142,17 +4698,9 @@ $$
 - **Assumes:** a single resistor and capacitor; the discharge starts at $t = 0$
 - **Evidence:** fundamental_law
 
-![A capacitor C = 8 µF charged to V0 = 12 V discharging through R = 1 kΩ (sketch above), and its voltage against time, 40 times each a solve of the model; time constant τ = R C = 8 ms from its formula](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-discharging-schematic)
+![A capacitor C = 8](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-discharging-schematic)
 
-*A capacitor C = 8 µF charged to V0 = 12 V discharging through R = 1 kΩ (sketch above), and its voltage against time, 40 times each a solve of the model; time constant τ = R C = 8 ms from its formula. Marked: 1τ: 4.415 V, 2τ: 1.624 V, 3τ: 597.4 mV; V = 4.415 V at t = 8 ms. Your inputs: V0 = 12 V, t = 0.008 s, R = 1000 ohm, C = 8e-06 F.*
-
-![Voltage across the capacitor at time t as R runs from 250 to 1750 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-discharging-live-1)
-
-*Voltage across the capacitor at time t as R runs from 250 to 1750 ohm, every other input as you entered it (41 solutions). Marked: your R = 1000 ohm gives V = 4.415. Your inputs: V0 = 12 V, t = 0.008 s, R = 1000 ohm, C = 8e-06 F.*
-
-![Voltage across the capacitor at time t as C runs from 2e-06 to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-discharging-live-2)
-
-*Voltage across the capacitor at time t as C runs from 2e-06 to 1.4e-05 F, every other input as you entered it (29 solutions). Marked: your C = 8e-06 F gives V = 4.415. Your inputs: V0 = 12 V, t = 0.008 s, R = 1000 ohm, C = 8e-06 F.*
+*A capacitor C = 8.0000e-06 F charged to V₀ = 12 V discharging through R = 1000 Ω (sketch above), and its voltage against time, 40 times from the package (time shown in ms); time constant τ = RC = 0.008 s from its formula. Marked: 1τ: 4.41455 V, 2τ: 1.62402 V, 3τ: 0.597445 V, at t = 0.008 s: 4.41455 V, about 37 % is left after each τ.*
 
 ```python
 classical_physics_ai999x.solve('rc_discharging', V0='12 V', t='0.008 s', R='1000 ohm', C='8e-06 F', target='V')
@@ -5196,17 +4744,13 @@ $$
 - **Assumes:** a single resistor and capacitor; the capacitor is uncharged at $t = 0$
 - **Evidence:** fundamental_law
 
-![V (voltage across the capacitor at time t) against t (time since charging began) from 800 µs to 80 ms on a logarithmic axis, one curve for each value of emf (emf of the source): 9 V, 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-charging-curve-2)
+![Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/rc-charging-curve.svg)
 
-*V (voltage across the capacitor at time t) against t (time since charging began) from 800 µs to 80 ms on a logarithmic axis, one curve for each value of emf (emf of the source): 9 V, 4.5 V, 18 V; 41 points per curve, each a solve of the model. Marked: the given point, t = 8 ms, V = 5.689 V. Your inputs: emf = 9 V, t = 0.008 s, R = 1000 ohm, C = 8e-06 F.*
+*Capacitor voltage in an RC circuit (R = 1000 Ω, C = 0.001 F, source 10 V) charging from 0 and discharging from 10 V, 50 times each from the package; time constant τ = 1 s; marked: t = τ, charging voltage 6.32121 V (63.2121 % of the source).*
 
-![Voltage across the capacitor at time t as emf runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-charging-live-1)
+![V (voltage across the capacitor at time t) against t (time since charging began) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-charging-curve-2)
 
-*Voltage across the capacitor at time t as emf runs from 2.25 to 15.75 V, every other input as you entered it (41 solutions). Marked: your emf = 9 V gives V = 5.689. Your inputs: emf = 9 V, t = 0.008 s, R = 1000 ohm, C = 8e-06 F.*
-
-![Voltage across the capacitor at time t as t runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rc-charging-live-2)
-
-*Voltage across the capacitor at time t as t runs from 0.002 to 0.014 s, every other input as you entered it (29 solutions). Marked: your t = 0.008 s gives V = 5.689. Your inputs: emf = 9 V, t = 0.008 s, R = 1000 ohm, C = 8e-06 F.*
+*V (voltage across the capacitor at time t) against t (time since charging began) from 0.0008 s to 0.08 s on a logarithmic axis. One curve for each value of emf (emf of the source): 9 V, 4.5 V, 18 V. Other inputs as in the worked example: R = 1000.0 ohm, C = 8e-06 F. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, t = 0.008 s, V = 5.68909 V.*
 
 ```python
 classical_physics_ai999x.solve('rc_charging', emf='9 V', t='0.008 s', R='1000 ohm', C='8e-06 F', target='V')
@@ -5248,13 +4792,9 @@ $$
 - **Assumes:** a small temperature change; an isotropic material; the coefficient constant over the range
 - **Evidence:** empirical
 
-![Change in area as α_t runs from 3e-06 to 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/area-expansion-live-1)
+![dA (change in area) against alpha_t (coefficient of linear expansion) from 6](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/area-expansion-curve)
 
-*Change in area as α_t runs from 3e-06 to 2.1e-05 1/K, every other input as you entered it (41 solutions). Marked: your α_t = 1.2e-05 1/K gives dA = 24 cm^2. Your inputs: alpha_t = 1.2e-05 1/K, A = 2.0 m^2, dT = 50 K.*
-
-![Change in area as A runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/area-expansion-live-2)
-
-*Change in area as A runs from 0.5 to 3.5 m^2, every other input as you entered it (29 solutions). Marked: your A = 2 m^2 gives dA = 24 cm^2. Your inputs: alpha_t = 1.2e-05 1/K, A = 2.0 m^2, dT = 50 K.*
+*dA (change in area) against alpha_t (coefficient of linear expansion) from 6.0000e-06 1/K to 1.8000e-05 1/K. One curve for each value of A (original area): 2 m^2, 1 m^2, 4 m^2. Other inputs as in the worked example: dT = 50.0 K. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, alpha_t = 1.2000e-05 1/K, dA = 0.0024 m^2.*
 
 ```python
 classical_physics_ai999x.solve('area_expansion', alpha_t='1.2e-05 1/K', A='2 m^2', dT='50 K', target='dA')
@@ -5296,17 +4836,13 @@ $$
 - **Assumes:** B, the rod and its velocity mutually perpendicular; a uniform field
 - **Evidence:** fundamental_law
 
-![A rod of length l = 200 mm sliding at v = 3 m/s along two rails through a uniform field B = 500 mT into the page; the rails are joined by a resistor, closing the circuit](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/motional-emf-diagram)
+![A rod of length l = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/motional-emf-diagram)
 
-*A rod of length l = 200 mm sliding at v = 3 m/s along two rails through a uniform field B = 500 mT into the page; the rails are joined by a resistor, closing the circuit. Marked: the induced emf the model returns, ε = B l v = 300 mV. In SI units: emf = 0.3 V. Your inputs: B = 0.5 T, l = 0.2 m, v = 3 m/s.*
+*A rod of length l = 0.2 m sliding at v = 3 m/s along two rails through a uniform field B = 0.5 T into the page; the rails are joined by a resistor, closing the circuit. Marked: the induced emf the package returns, ε = B l v = 0.3 V.*
 
-![Induced emf as B runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/motional-emf-live-1)
+![emf (induced emf) against B (magnetic field) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/motional-emf-curve)
 
-*Induced emf as B runs from 0.125 to 0.875 T, every other input as you entered it (41 solutions). Marked: your B = 0.5 T gives emf = 0.3. Your inputs: B = 0.5 T, l = 0.2 m, v = 3 m/s.*
-
-![Induced emf as l runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/motional-emf-live-2)
-
-*Induced emf as l runs from 0.05 to 0.35 m, every other input as you entered it (29 solutions). Marked: your l = 0.2 m gives emf = 0.3. Your inputs: B = 0.5 T, l = 0.2 m, v = 3 m/s.*
+*emf (induced emf) against B (magnetic field) from 0.25 T to 0.75 T. One curve for each value of l (length of the rod): 0.2 m, 0.1 m, 0.4 m. Other inputs as in the worked example: v = 3.0 m/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, B = 0.5 T, emf = 0.3 V.*
 
 ```python
 classical_physics_ai999x.solve('motional_emf', B='0.5 T', l='0.2 m', v='3 m/s', target='emf')
@@ -5348,17 +4884,9 @@ $$
 - **Assumes:** a single inductor and resistor; the source is removed at $t = 0$
 - **Evidence:** fundamental_law
 
-![Current dying away in an inductive circuit from I0 = 10 A with time constant τ = 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-current-decay-graph)
+![Current dying away in an inductive circuit from I₀ = 10 A with time constant τ = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-current-decay-graph)
 
-*Current dying away in an inductive circuit from I0 = 10 A with time constant τ = 2.5 ms, 40 times, each a solve of the model: each τ leaves about 37 % of the current before it. Marked: 3.679 A at 1τ, 1.353 A at 2τ, 497.9 mA at 3τ, 183.2 mA at 4τ. Your inputs: I0 = 10 A, t = 0.0025 s, tau = 0.0025 s.*
-
-![Current at time t as τ runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-current-decay-live-1)
-
-*Current at time t as τ runs from 0.000625 to 0.004375 s, every other input as you entered it (41 solutions). Marked: your τ = 0.0025 s gives I = 3.679. Your inputs: I0 = 10 A, t = 0.0025 s, tau = 0.0025 s.*
-
-![Current at time t as I0 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rl-current-decay-live-2)
-
-*Current at time t as I0 runs from 2.5 to 17.5 A, every other input as you entered it (29 solutions). Marked: your I0 = 10 A gives I = 3.679. Your inputs: I0 = 10 A, t = 0.0025 s, tau = 0.0025 s.*
+*Current dying away in an inductive circuit from I₀ = 10 A with time constant τ = 0.0025 s, 40 times from the package (time in ms): each τ leaves e⁻¹ ≈ 37 % of the current before it. Marked: 3.67879 A at 1τ, 1.35335 A at 2τ, 0.497871 A at 3τ, 0.183156 A at 4τ.*
 
 ```python
 classical_physics_ai999x.solve('rl_current_decay', I0='10 A', t='0.0025 s', tau='0.0025 s', target='I')
@@ -5400,17 +4928,13 @@ $$
 - **Assumes:** linear viscous damping; underdamped (b^2 < 4 k m)
 - **Evidence:** theorem
 
-![Free motion of a damped oscillator (k = 50 N/m, m = 2 kg) starting at x = 1 for three damping constants, drawn as exp(-b t / 2m) cos(ωd t), with the damped angular frequency ωd and the damping ratio ζ returned by the model; the last curve is the decay envelope of the given case](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/damped-angular-frequency-graph.svg)
+![Free motion of a damped oscillator (k = 50 N/m, m = 2 kg) starting at x = 1 for three damping constants, drawn as e^(−b t / 2m) cos(ω_d t), with the damped angular frequency ω_d and damping ratio ζ returned by the package and the decay rate b/2m from the inputs; dashed: the decay envelope of the example)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damped-angular-frequency-graph)
 
-*Free motion of a damped oscillator (k = 50 N/m, m = 2 kg) starting at x = 1 for three damping constants, drawn as exp(-b t / 2m) cos(ωd t), with the damped angular frequency ωd and the damping ratio ζ returned by the model; the last curve is the decay envelope of the given case. Marked: b = 4 kg/s: ωd = 4.899 rad/s, ζ = 0.2; b = 1 kg/s: ωd = 4.994 rad/s, ζ = 0.05; b = 10 kg/s: ωd = 4.33 rad/s, ζ = 0.5. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
+*Free motion of a damped oscillator (k = 50 N/m, m = 2 kg) starting at x = 1 for three damping constants, drawn as e^(−b t / 2m) cos(ω_d t), with the damped angular frequency ω_d and damping ratio ζ returned by the package and the decay rate b/2m from the inputs; dashed: the decay envelope of the example). Marked: b = 4 kg/s: ω_d = 4.89898 rad/s, ζ = 0.2; b = 1 kg/s: ω_d = 4.99375 rad/s, ζ = 0.05; b = 12 kg/s: ω_d = 4 rad/s, ζ = 0.6.*
 
-![Angular frequency of the damped oscillation as k runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damped-angular-frequency-live-1)
+![wd (angular frequency of the damped oscillation) against b (viscous damping coefficient) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damped-angular-frequency-curve)
 
-*Angular frequency of the damped oscillation as k runs from 12.5 to 87.5 N/m, every other input as you entered it (41 solutions). Marked: your k = 50 N/m gives wd = 4.899. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
-
-![Angular frequency of the damped oscillation as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damped-angular-frequency-live-2)
-
-*Angular frequency of the damped oscillation as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives wd = 4.899. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
+*wd (angular frequency of the damped oscillation) against b (viscous damping coefficient) from 0.4 kg/s to 40 kg/s on a logarithmic axis. One curve for each value of k (spring constant): 50 N/m, 25 N/m, 100 N/m. Other inputs as in the worked example: m = 2.0 kg. 34 points per curve computed by classical-physics-ai999x; marked: the worked example, b = 4 kg/s, wd = 4.89898 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('damped_angular_frequency', k='50 N/m', m='2 kg', b='4 kg/s', target='wd')
@@ -5452,17 +4976,9 @@ $$
 - **Assumes:** linear viscous damping
 - **Evidence:** theorem
 
-![Damping ratio of the oscillator against its damping constant, 40 values each a solve of the model: below ζ = 1 the motion oscillates, above it it does not; critical damping is at b = 20 kg/s (derived as b / ζ)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damping-ratio-graph)
+![Damping ratio of an oscillator with k = 50 N/m and m = 2 kg against its damping constant, 40 values from the package: below ζ = 1 the motion oscillates, above it it does not; the critical damping constant 2√(k m) = 20 kg/s is derived from the inputs](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damping-ratio-graph)
 
-*Damping ratio of the oscillator against its damping constant, 40 values each a solve of the model: below ζ = 1 the motion oscillates, above it it does not; critical damping is at b = 20 kg/s (derived as b / ζ). Marked: ζ = 0.2 at b = 4 kg/s. Your inputs: b = 4 kg/s, k = 50 N/m, m = 2 kg.*
-
-![Damping ratio as b runs from 1 to 7 kg/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damping-ratio-live-1)
-
-*Damping ratio as b runs from 1 to 7 kg/s, every other input as you entered it (41 solutions). Marked: your b = 4 kg/s gives ζ = 0.2. Your inputs: b = 4 kg/s, k = 50 N/m, m = 2 kg.*
-
-![Damping ratio as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/damping-ratio-live-2)
-
-*Damping ratio as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives ζ = 0.2. Your inputs: b = 4 kg/s, k = 50 N/m, m = 2 kg.*
+*Damping ratio of an oscillator with k = 50 N/m and m = 2 kg against its damping constant, 40 values from the package: below ζ = 1 the motion oscillates, above it it does not; the critical damping constant 2√(k m) = 20 kg/s is derived from the inputs. Marked: ζ = 0.2 at b = 4 kg/s.*
 
 ```python
 classical_physics_ai999x.solve('damping_ratio', b='4 kg/s', k='50 N/m', m='2 kg', target='zeta')
@@ -5504,13 +5020,9 @@ $$
 - **Assumes:** linear viscous damping
 - **Evidence:** theorem
 
-![Quality factor as b runs from 1 to 7 kg/s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/quality-factor-live-1)
+![Qf (quality factor) against b (viscous damping coefficient) from 2 kg/s to 6 kg/s](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/quality-factor-curve)
 
-*Quality factor as b runs from 1 to 7 kg/s, every other input as you entered it (41 solutions). Marked: your b = 4 kg/s gives Qf = 2.5. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
-
-![Quality factor as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/quality-factor-live-2)
-
-*Quality factor as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives Qf = 2.5. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
+*Qf (quality factor) against b (viscous damping coefficient) from 2 kg/s to 6 kg/s. One curve for each value of k (spring constant): 50 N/m, 25 N/m, 100 N/m. Other inputs as in the worked example: m = 2.0 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, b = 4 kg/s, Qf = 2.5.*
 
 ```python
 classical_physics_ai999x.solve('quality_factor', k='50 N/m', m='2 kg', b='4 kg/s', target='Qf')
@@ -5554,17 +5066,13 @@ $$
 - **Assumes:** sinusoidal driving force; linear viscous damping; steady state (transients have died out)
 - **Evidence:** theorem
 
+![Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes, b = 0](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/driven-amplitude-curve.svg)
+
+*Steady-state amplitude of a driven damped oscillator (F₀ = 1 N, k = 4 N/m, m = 1 kg) against the driving frequency for four damping constants, 64 frequencies each from the package; dots: the amplitude-resonance frequency it computes, b = 0.25: ω_r = 1.99217 rad/s, A = 2.00392 m; b = 0.5: ω_r = 1.9685 rad/s, A = 1.00791 m; b = 1: ω_r = 1.87083 rad/s, A = 0.516398 m; b = 2: ω_r = 1.41421 rad/s, A = 0.288675 m.*
+
 ![A (steady-state amplitude) against m (oscillating mass) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/driven-amplitude-curve-2)
 
-*A (steady-state amplitude) against m (oscillating mass) from 0.2 kg to 20 kg on a logarithmic axis, one curve for each value of F0 (driving force amplitude): 10 N, 5 N, 20 N; 41 points per curve, each a solve of the model. Marked: the given point, m = 2 kg, A = 292.6 mm. In SI units: A = 0.2926 m. Your inputs: F0 = 10 N, k = 50 N/m, m = 2 kg, b = 4 kg/s, w = 3 rad/s.*
-
-![Steady-state amplitude as k runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/driven-amplitude-live-1)
-
-*Steady-state amplitude as k runs from 12.5 to 87.5 N/m, every other input as you entered it (41 solutions). Marked: your k = 50 N/m gives A = 0.2926. Your inputs: F0 = 10 N, k = 50 N/m, m = 2 kg, b = 4 kg/s, w = 3 rad/s.*
-
-![Steady-state amplitude as F0 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/driven-amplitude-live-2)
-
-*Steady-state amplitude as F0 runs from 2.5 to 17.5 N, every other input as you entered it (29 solutions). Marked: your F0 = 10 N gives A = 0.2926. Your inputs: F0 = 10 N, k = 50 N/m, m = 2 kg, b = 4 kg/s, w = 3 rad/s.*
+*A (steady-state amplitude) against m (oscillating mass) from 0.2 kg to 20 kg on a logarithmic axis. One curve for each value of F0 (driving force amplitude): 10 N, 5 N, 20 N. Other inputs as in the worked example: k = 50.0 N/m, b = 4.0 kg/s, w = 3.0 rad/s. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, A = 0.292603 m.*
 
 ```python
 classical_physics_ai999x.solve('driven_amplitude', F0='10 N', k='50 N/m', m='2 kg', b='4 kg/s', w='3 rad/s', target='A')
@@ -5606,13 +5114,9 @@ $$
 - **Assumes:** sinusoidal driving; linear viscous damping; $b^{2} < 2$ k m
 - **Evidence:** theorem
 
-![Driving frequency of maximum amplitude as k runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/amplitude-resonance-frequency-live-1)
+![wr (driving frequency of maximum amplitude) against m (oscillating mass) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/amplitude-resonance-frequency-curve)
 
-*Driving frequency of maximum amplitude as k runs from 12.5 to 87.5 N/m, every other input as you entered it (41 solutions). Marked: your k = 50 N/m gives wr = 4.796. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
-
-![Driving frequency of maximum amplitude as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/amplitude-resonance-frequency-live-2)
-
-*Driving frequency of maximum amplitude as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives wr = 4.796. Your inputs: k = 50 N/m, m = 2 kg, b = 4 kg/s.*
+*wr (driving frequency of maximum amplitude) against m (oscillating mass) from 0.2 kg to 20 kg on a logarithmic axis. One curve for each value of k (spring constant): 50 N/m, 25 N/m, 100 N/m. Other inputs as in the worked example: b = 4.0 kg/s. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, wr = 4.79583 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('amplitude_resonance_frequency', k='50 N/m', m='2 kg', b='4 kg/s', target='wr')
@@ -5654,13 +5158,9 @@ $$
 - **Assumes:** two identical masses; identical outer springs; small oscillations, no damping
 - **Evidence:** theorem
 
-![Higher normal-mode angular frequency as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coupled-fast-mode-live-1)
+![w2 (higher normal-mode angular frequency) against k (each outer spring's constant) from 4 N/m to 400 N/m on a logarithmic axis](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coupled-fast-mode-curve)
 
-*Higher normal-mode angular frequency as m runs from 0.5 to 3.5 kg, every other input as you entered it (41 solutions). Marked: your m = 2 kg gives w2 = 5.477. Your inputs: k = 40 N/m, kc = 10 N/m, m = 2 kg.*
-
-![Higher normal-mode angular frequency as k runs from 10 to 70 N/m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coupled-fast-mode-live-2)
-
-*Higher normal-mode angular frequency as k runs from 10 to 70 N/m, every other input as you entered it (29 solutions). Marked: your k = 40 N/m gives w2 = 5.477. Your inputs: k = 40 N/m, kc = 10 N/m, m = 2 kg.*
+*w2 (higher normal-mode angular frequency) against k (each outer spring's constant) from 4 N/m to 400 N/m on a logarithmic axis. One curve for each value of m (each mass): 2 kg, 1 kg, 4 kg. Other inputs as in the worked example: kc = 10.0 N/m. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, k = 40 N/m, w2 = 5.47723 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('coupled_fast_mode', k='40 N/m', kc='10 N/m', m='2 kg', target='w2')
@@ -5703,13 +5203,9 @@ $$
 - **Assumes:** small oscillations; no friction at the pivot
 - **Evidence:** theorem
 
-![Small-oscillation period as Ir runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/physical-pendulum-period-live-1)
+![T (small-oscillation period) against m (mass of the body) from 1 kg to 3 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/physical-pendulum-period-curve)
 
-*Small-oscillation period as Ir runs from 0.125 to 0.875 kg*m^2, every other input as you entered it (41 solutions). Marked: your Ir = 0.5 kg*m^2 gives T = 1.832. Your inputs: Ir = 0.5 kg*m^2, m = 2 kg, d = 0.3 m.*
-
-![Small-oscillation period as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/physical-pendulum-period-live-2)
-
-*Small-oscillation period as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives T = 1.832. Your inputs: Ir = 0.5 kg*m^2, m = 2 kg, d = 0.3 m.*
+*T (small-oscillation period) against m (mass of the body) from 1 kg to 3 kg. One curve for each value of Ir (moment of inertia about the pivot): 0.5 kg*m^2, 0.25 kg*m^2, 1 kg*m^2. Other inputs as in the worked example: g = 9.80665 m/s^2, d = 0.3 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m = 2 kg, T = 1.83159 s.*
 
 ```python
 classical_physics_ai999x.solve('physical_pendulum_period', Ir='0.5 kg*m^2', m='2 kg', d='0.3 m', target='T')
@@ -5750,13 +5246,9 @@ $$
 - **Assumes:** equal masses and arm lengths; small oscillations
 - **Evidence:** theorem
 
-![Small-oscillation normal-mode angular frequencies of a double pendulum of two equal masses on equal lengths L, 29 lengths from 200 mm to 3 m, each a solve of the model for each mode](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-pendulum-slow-mode-comparison)
+![Small-oscillation normal-mode angular frequencies of a double pendulum of two equal masses on equal lengths L (standard gravity), 29 lengths from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-pendulum-slow-mode-comparison)
 
-*Small-oscillation normal-mode angular frequencies of a double pendulum of two equal masses on equal lengths L, 29 lengths from 200 mm to 3 m, each a solve of the model for each mode. Marked at L = 1 m: slow mode 2.397 rad/s, fast mode 5.786 rad/s. Your inputs: L = 1 m.*
-
-![Lower normal-mode angular frequency as L runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-pendulum-slow-mode-live-1)
-
-*Lower normal-mode angular frequency as L runs from 0.25 to 1.75 m, every other input as you entered it (41 solutions). Marked: your L = 1 m gives w = 2.397. Your inputs: L = 1 m.*
+*Small-oscillation normal-mode angular frequencies of a double pendulum of two equal masses on equal lengths L (standard gravity), 29 lengths from 0.2 to 3 m from the package for each mode. Marked at L = 1 m: slow mode 2.39679 rad/s, fast mode 5.78636 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('double_pendulum_slow_mode', L='1 m', target='w')
@@ -5797,9 +5289,13 @@ $$
 - **Assumes:** equal masses and arm lengths; small oscillations
 - **Evidence:** theorem
 
-![Higher normal-mode angular frequency as L runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-pendulum-fast-mode-live-1)
+![w (higher normal-mode angular frequency) against L (length of each arm) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-pendulum-fast-mode-curve)
 
-*Higher normal-mode angular frequency as L runs from 0.25 to 1.75 m, every other input as you entered it (41 solutions). Marked: your L = 1 m gives w = 5.786. Your inputs: L = 1 m.*
+*w (higher normal-mode angular frequency) against L (length of each arm) from 0.5 m to 1.5 m. One curve for each value of g (Acceleration): 9.80665 m/s^2, 4.90332 m/s^2, 19.6133 m/s^2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, L = 1 m, w = 5.78636 rad/s.*
+
+![w (higher normal-mode angular frequency) over g (Acceleration) from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-pendulum-fast-mode-field)
+
+*w (higher normal-mode angular frequency) over g (Acceleration) from 4.90332 m/s^2 to 14.71 m/s^2 and L (length of each arm) from 0.5 m to 1.5 m: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 3.34076 rad/s to dark 10.0223 rad/s); iso-lines at w = 4, 6, 8 rad/s. Marked: the worked example, g = 9.80665 m/s^2, L = 1 m, w = 5.78636 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('double_pendulum_fast_mode', L='1 m', target='w')
@@ -5842,17 +5338,13 @@ $$
 - **Assumes:** two bodies, the orbiting one much lighter; a bound (elliptical) orbit
 - **Evidence:** theorem
 
-![Orbits round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-orbit)
+![2 orbits round a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-orbit)
 
-*Orbits round a body of mass M = 5.972e+24 kg with the same semi-major axis a = 8 Mm but eccentricities e = 0.3 and e = 0.5, each crossing the circle of radius r = 7 Mm (dashed; the ellipses are drawn from that geometry). The vis-viva equation gives every one the same speed at that radius, whatever its shape. Marked: v = 8004 m/s (returned). Your inputs: M = 5.972e+24 kg, r = 7000000.0 m, a = 8000000.0 m.*
+*2 orbits round a body of mass M = 5.9720e+24 kg with the same semi-major axis a = 8e+06 m but eccentricities 0.3, 0.5, each passing through the point at r = 7e+06 m (the ellipses and the directions of motion there are drawn from that geometry). The vis-viva equation gives every one the same speed at that radius, whatever its shape. Marked: v = 8003.69 m/s (returned).*
 
-![Orbital speed at distance r as r runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-live-1)
+![v (orbital speed at distance r) against r (distance from the center of the central body) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-curve)
 
-*Orbital speed at distance r as r runs from 1.75e+06 to 1.225e+07 m, every other input as you entered it (41 solutions). Marked: your r = 7e+06 m gives v = 8004. Your inputs: M = 5.972e+24 kg, r = 7000000.0 m, a = 8000000.0 m.*
-
-![Orbital speed at distance r as a runs from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vis-viva-live-2)
-
-*Orbital speed at distance r as a runs from 3.714e+06 to 1.4e+07 m, every other input as you entered it (25 solutions). Marked: your a = 8e+06 m gives v = 8004. Your inputs: M = 5.972e+24 kg, r = 7000000.0 m, a = 8000000.0 m.*
+*v (orbital speed at distance r) against r (distance from the center of the central body) from 3.5e+06 m to 1.0500e+07 m. One curve for each value of G (Gravitational constant): 6.6743e-11 N*m^2/kg^2, 3.3371e-11 N*m^2/kg^2, 1.3349e-10 N*m^2/kg^2. Other inputs as in the worked example: M = 5.972e+24 kg, a = 8000000.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 7e+06 m, v = 8003.69 m/s.*
 
 ```python
 classical_physics_ai999x.solve('vis_viva', M='5.972e+24 kg', r='7e+06 m', a='8e+06 m', target='v')
@@ -5894,17 +5386,9 @@ $$
 - **Assumes:** no air resistance; a spherically symmetric body; starting from rest relative to it
 - **Evidence:** theorem
 
-![Escape speed and circular orbital speed against distance from the centre of a body of mass M = 5](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/escape-speed-comparison.svg)
+![Escape speed and circular orbital speed against distance from the centre of a body of mass M = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/escape-speed-comparison)
 
-*Escape speed and circular orbital speed against distance from the centre of a body of mass M = 5.972e+24 kg, from r = 6.371 Mm to ten times that, 30 distances each a solve of the model: the escape speed is always the square root of 2 times the circular speed. Marked: escape speed 1.119e+04 m/s at r = 6.371 Mm. Your inputs: M = 5.972e+24 kg, r = 6371000.0 m.*
-
-![Escape speed as M runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/escape-speed-live-1)
-
-*Escape speed as M runs from 1.493e+24 to 1.045e+25 kg, every other input as you entered it (41 solutions). Marked: your M = 5.972e+24 kg gives v = 1.119e+04. Your inputs: M = 5.972e+24 kg, r = 6371000.0 m.*
-
-![Escape speed as r runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/escape-speed-live-2)
-
-*Escape speed as r runs from 1.593e+06 to 1.115e+07 m, every other input as you entered it (29 solutions). Marked: your r = 6.371e+06 m gives v = 1.119e+04. Your inputs: M = 5.972e+24 kg, r = 6371000.0 m.*
+*Escape speed and circular orbital speed against distance from the centre of a body of mass M = 5.9720e+24 kg, from r = 6.371e+06 m to ten times that, 30 distances each from the package (km/s): the escape speed is always √2 times the circular speed. Marked: escape speed 11186 m/s at r = 6.371e+06 m.*
 
 ```python
 classical_physics_ai999x.solve('escape_speed', M='5.972e+24 kg', r='6.371e+06 m', target='v')
@@ -5946,17 +5430,9 @@ $$
 - **Assumes:** two bodies, the orbiting one much lighter
 - **Evidence:** theorem
 
-![Orbital period against semi-major axis for the eight planets' distances (stated, from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kepler-period-semi-major-graph)
+![Kepler's third law for the eight planets' distances: orbital period against semi-major axis (stated, from Mercury 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kepler-period-semi-major-graph)
 
-*Orbital period against semi-major axis for the eight planets' distances (stated, from 5.79e10 m to 4.495e12 m) round the given central mass, each period a solve of the model; on logarithmic axes the points lie on one straight line of slope 3/2. Periods: Mercury 7.598 Ms, Venus 19.41 Ms, Earth 31.55 Ms, Mars 59.33 Ms, Jupiter 374.7 Ms, Saturn 936 Ms, Uranus 2.655 Gs, Neptune 5.197 Gs. Marked: the given orbit, T = 31.55 Ms at a = 149.6 Gm. In SI units: T = 3.155e+07 s. Your inputs: a = 149600000000.0 m, M = 1.989e+30 kg.*
-
-![Orbital period as a runs from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kepler-period-semi-major-live-1)
-
-*Orbital period as a runs from 3.74e+10 to 2.618e+11 m, every other input as you entered it (41 solutions). Marked: your a = 1.496e+11 m gives T = 365.2 day. Your inputs: a = 149600000000.0 m, M = 1.989e+30 kg.*
-
-![Orbital period as M runs from 4](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/kepler-period-semi-major-live-2)
-
-*Orbital period as M runs from 4.972e+29 to 3.481e+30 kg, every other input as you entered it (29 solutions). Marked: your M = 1.989e+30 kg gives T = 365.2 day. Your inputs: a = 149600000000.0 m, M = 1.989e+30 kg.*
+*Kepler's third law for the eight planets' distances: orbital period against semi-major axis (stated, from Mercury 5.79e10 m to Neptune 4.495e12 m) round a central mass M = 1.9890e+30 kg, each period from the package (shown in years of 3.1558e+07 s, distances in AU): on logarithmic axes the points lie on one straight line of slope 3/2. Marked: Earth, T = 3.1554e+07 s = 0.999892 years.*
 
 ```python
 classical_physics_ai999x.solve('kepler_period_semi_major', a='1.496e+11 m', M='1.989e+30 kg', target='T')
@@ -5997,17 +5473,13 @@ $$
 - **Assumes:** uniform density; the axis through the center (the symmetry axis for a disk)
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 500 mm, rods of length 1 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-comparison)
+![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 500 mm, rods of length 1 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I. Marked: sphere 0.2 kg·m², shell 0.3333 kg·m², disc 0.25 kg·m², rod, mid 0.1667 kg·m², rod, end 0.6667 kg·m². Your inputs: m = 2 kg, R = 0.5 m.*
+*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 0.2 kg·m².*
 
-![Moment of inertia about the central axis as R runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-live-1)
+![Ir (moment of inertia about the central axis) against R (radius) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-curve)
 
-*Moment of inertia about the central axis as R runs from 0.125 to 0.875 m, every other input as you entered it (41 solutions). Marked: your R = 0.5 m gives Ir = 0.2. Your inputs: m = 2 kg, R = 0.5 m.*
-
-![Moment of inertia about the central axis as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-sphere-live-2)
-
-*Moment of inertia about the central axis as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives Ir = 0.2. Your inputs: m = 2 kg, R = 0.5 m.*
+*Ir (moment of inertia about the central axis) against R (radius) from 0.25 m to 0.75 m. One curve for each value of m (mass): 2 kg, 1 kg, 4 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 0.5 m, Ir = 0.2 kg*m^2.*
 
 ```python
 classical_physics_ai999x.solve('inertia_solid_sphere', m='2 kg', R='0.5 m', target='Ir')
@@ -6048,17 +5520,13 @@ $$
 - **Assumes:** uniform density; the axis through the center (the symmetry axis for a disk)
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 500 mm, rods of length 1 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-comparison)
+![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 500 mm, rods of length 1 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I. Marked: sphere 0.2 kg·m², shell 0.3333 kg·m², disc 0.25 kg·m², rod, mid 0.1667 kg·m², rod, end 0.6667 kg·m². Your inputs: m = 2 kg, R = 0.5 m.*
+*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 0.333333 kg·m².*
 
-![Moment of inertia about the central axis as R runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-live-1)
+![Ir (moment of inertia about the central axis) against R (radius) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-curve)
 
-*Moment of inertia about the central axis as R runs from 0.125 to 0.875 m, every other input as you entered it (41 solutions). Marked: your R = 0.5 m gives Ir = 0.3333. Your inputs: m = 2 kg, R = 0.5 m.*
-
-![Moment of inertia about the central axis as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-hollow-sphere-live-2)
-
-*Moment of inertia about the central axis as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives Ir = 0.3333. Your inputs: m = 2 kg, R = 0.5 m.*
+*Ir (moment of inertia about the central axis) against R (radius) from 0.25 m to 0.75 m. One curve for each value of m (mass): 2 kg, 1 kg, 4 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 0.5 m, Ir = 0.333333 kg*m^2.*
 
 ```python
 classical_physics_ai999x.solve('inertia_hollow_sphere', m='2 kg', R='0.5 m', target='Ir')
@@ -6099,17 +5567,13 @@ $$
 - **Assumes:** uniform density; the axis through the center (the symmetry axis for a disk)
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 500 mm, rods of length 1 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-comparison)
+![Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-comparison)
 
-*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 500 mm, rods of length 1 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I. Marked: sphere 0.2 kg·m², shell 0.3333 kg·m², disc 0.25 kg·m², rod, mid 0.1667 kg·m², rod, end 0.6667 kg·m². Your inputs: m = 2 kg, R = 0.5 m.*
+*Moments of inertia of bodies of the same mass m = 2 kg: spheres and a disc of radius R = 0.5 m, rods of length L = 1 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 0.25 kg·m².*
 
-![Moment of inertia about the central axis as R runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-live-1)
+![Ir (moment of inertia about the central axis) against R (radius) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-curve)
 
-*Moment of inertia about the central axis as R runs from 0.125 to 0.875 m, every other input as you entered it (41 solutions). Marked: your R = 0.5 m gives Ir = 0.25. Your inputs: m = 2 kg, R = 0.5 m.*
-
-![Moment of inertia about the central axis as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-solid-disk-live-2)
-
-*Moment of inertia about the central axis as m runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m = 2 kg gives Ir = 0.25. Your inputs: m = 2 kg, R = 0.5 m.*
+*Ir (moment of inertia about the central axis) against R (radius) from 0.25 m to 0.75 m. One curve for each value of m (mass): 2 kg, 1 kg, 4 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 0.5 m, Ir = 0.25 kg*m^2.*
 
 ```python
 classical_physics_ai999x.solve('inertia_solid_disk', m='2 kg', R='0.5 m', target='Ir')
@@ -6150,17 +5614,13 @@ $$
 - **Assumes:** a thin uniform rod; the axis perpendicular to the rod
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length 2 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-comparison)
+![Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-comparison)
 
-*Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length 2 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I. Marked: sphere 1.2 kg·m², shell 2 kg·m², disc 1.5 kg·m², rod, mid 1 kg·m², rod, end 4 kg·m². Your inputs: m = 3 kg, Lr = 2 m.*
+*Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 1 kg·m².*
 
-![Moment of inertia about its center as Lr runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-live-1)
+![Ir (moment of inertia about its center) against Lr (length of the rod) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-curve)
 
-*Moment of inertia about its center as Lr runs from 0.5 to 3.5 m, every other input as you entered it (41 solutions). Marked: your Lr = 2 m gives Ir = 1. Your inputs: m = 3 kg, Lr = 2 m.*
-
-![Moment of inertia about its center as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-center-live-2)
-
-*Moment of inertia about its center as m runs from 0.75 to 5.25 kg, every other input as you entered it (29 solutions). Marked: your m = 3 kg gives Ir = 1. Your inputs: m = 3 kg, Lr = 2 m.*
+*Ir (moment of inertia about its center) against Lr (length of the rod) from 1 m to 3 m. One curve for each value of m (mass of the rod): 3 kg, 1.5 kg, 6 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Lr = 2 m, Ir = 1 kg*m^2.*
 
 ```python
 classical_physics_ai999x.solve('inertia_rod_center', m='3 kg', Lr='2 m', target='Ir')
@@ -6201,17 +5661,13 @@ $$
 - **Assumes:** a thin uniform rod; the axis perpendicular to the rod
 - **Evidence:** theorem
 
-![Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length 2 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-comparison)
+![Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-comparison)
 
-*Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length 2 m (2R) about their centre and about one end, each a solve of the model; the highlighted bar is this formula's: the farther the mass from the axis, the larger I. Marked: sphere 1.2 kg·m², shell 2 kg·m², disc 1.5 kg·m², rod, mid 1 kg·m², rod, end 4 kg·m². Your inputs: m = 3 kg, Lr = 2 m.*
+*Moments of inertia of bodies of the same mass m = 3 kg: spheres and a disc of radius R = 1 m, rods of length L = 2 m (= 2R) about their centre and about one end, each from the package; the highlighted bar is this formula's, the farther the mass from the axis, the larger I. Marked: I = 4 kg·m².*
 
-![Moment of inertia about one end as Lr runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-live-1)
+![Ir (moment of inertia about one end) against Lr (length of the rod) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-curve)
 
-*Moment of inertia about one end as Lr runs from 0.5 to 3.5 m, every other input as you entered it (41 solutions). Marked: your Lr = 2 m gives Ir = 4. Your inputs: m = 3 kg, Lr = 2 m.*
-
-![Moment of inertia about one end as m runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/inertia-rod-end-live-2)
-
-*Moment of inertia about one end as m runs from 0.75 to 5.25 kg, every other input as you entered it (29 solutions). Marked: your m = 3 kg gives Ir = 4. Your inputs: m = 3 kg, Lr = 2 m.*
+*Ir (moment of inertia about one end) against Lr (length of the rod) from 1 m to 3 m. One curve for each value of m (mass of the rod): 3 kg, 1.5 kg, 6 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, Lr = 2 m, Ir = 4 kg*m^2.*
 
 ```python
 classical_physics_ai999x.solve('inertia_rod_end', m='3 kg', Lr='2 m', target='Ir')
@@ -6255,17 +5711,13 @@ $$
 - **Assumes:** rolling without slipping; no rolling resistance
 - **Evidence:** theorem
 
-![Acceleration down a 30° incline (m = 2 kg, R = 200 mm) of the body as given (highlighted) and of a solid sphere, a solid disc and a hollow sphere of the same mass and radius rolling without slipping, each moment of inertia from the model's inertia formulas and each acceleration a solve of the model](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-comparison)
+![Acceleration down a 30° incline (m = 2 kg, R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-comparison)
 
-*Acceleration down a 30° incline (m = 2 kg, R = 200 mm) of the body as given (highlighted) and of a solid sphere, a solid disc and a hollow sphere of the same mass and radius rolling without slipping, each moment of inertia from the model's inertia formulas and each acceleration a solve of the model. Marked: as given (I = 0.04 kg·m²) 3.269 m/s²; sphere (I = 0.032 kg·m²) 3.502 m/s²; disc (I = 0.04 kg·m²) 3.269 m/s²; shell (I = 0.05333 kg·m²) 2.942 m/s². Your inputs: theta = 30 deg, Ir = 0.04 kg*m^2, m = 2 kg, R = 0.2 m.*
+*Acceleration down a 30° incline (m = 2 kg, R = 0.2 m, g = 9.80665 m/s²) of the body as given (I = 0.04 kg·m², highlighted) and of a solid sphere, a solid disc and a hollow sphere of the same mass and radius rolling without slipping, with each moment of inertia from the package's inertia formulas (solid sphere, I = 0.032; solid disc, I = 0.04; hollow sphere, I = 0.0533333 kg·m²) and the rolling acceleration from its formula; grey: a block sliding without friction (no rotation). Marked: each acceleration.*
 
-![Acceleration of the center of mass along the](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-live-1)
+![a (acceleration of the center of mass along the incline) against theta (angle of the incline) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-curve)
 
-*Acceleration of the center of mass along the... as θ runs from 7.5 to 52.5 deg, every other input as you entered it (41 solutions). Marked: your θ = 30 deg gives a = 3.269. Your inputs: theta = 30 deg, Ir = 0.04 kg*m^2, m = 2 kg, R = 0.2 m.*
-
-![Acceleration of the center of mass along the](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rolling-incline-acceleration-live-2)
-
-*Acceleration of the center of mass along the... as R runs from 0.05 to 0.35 m, every other input as you entered it (29 solutions). Marked: your R = 0.2 m gives a = 3.269. Your inputs: theta = 30 deg, Ir = 0.04 kg*m^2, m = 2 kg, R = 0.2 m.*
+*a (acceleration of the center of mass along the incline) against theta (angle of the incline) from 0 rad to 1.5708 rad. One curve for each value of g (Acceleration): 9.80665 m/s^2, 4.90332 m/s^2, 19.6133 m/s^2. Other inputs as in the worked example: Ir = 0.04 kg*m^2, m = 2.0 kg, R = 0.2 m. 40 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 0.523599 rad, a = 3.26888 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('rolling_incline_acceleration', theta='30 deg', Ir='0.04 kg*m^2', m='2 kg', R='0.2 m', target='a')
@@ -6309,17 +5761,13 @@ $$
 - **Assumes:** a massless string that does not slip on the pulley; a frictionless axle
 - **Evidence:** theorem
 
-![An Atwood machine: masses m1 = 3 kg and m2 = 2 kg on a cord over a pulley with moment of inertia I = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-drawing)
+![An Atwood machine: masses m₁ = 3 kg and m₂ = 2 kg on a cord over a pulley with moment of inertia I = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-drawing)
 
-*An Atwood machine: masses m1 = 3 kg and m2 = 2 kg on a cord over a pulley with moment of inertia I = 0.02 kg·m² and radius R = 100 mm. Marked: the acceleration the model returns, a = 1.401 m/s² (the heavier mass down). Your inputs: m1 = 3 kg, m2 = 2 kg, Ir = 0.02 kg*m^2, R = 0.1 m.*
+*An Atwood machine: masses m₁ = 3 kg and m₂ = 2 kg on a cord over a pulley with moment of inertia I = 0.02 kg·m² and radius R = 0.1 m (g = 9.80665 m/s²). Marked: the acceleration the package returns, a = 1.40095 m/s² (m₁ down, m₂ up); with a pulley of negligible inertia (I = 1e-9 kg·m²) it would be 1.96133 m/s², also returned.*
 
-![Acceleration of each mass as m2 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-live-1)
+![a (acceleration of each mass) against R (radius of the pulley) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-curve)
 
-*Acceleration of each mass as m2 runs from 0.5 to 2.975 kg, every other input as you entered it (34 solutions). Marked: your m2 = 2 kg gives a = 1.401. Your inputs: m1 = 3 kg, m2 = 2 kg, Ir = 0.02 kg*m^2, R = 0.1 m.*
-
-![Acceleration of each mass as m1 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/atwood-massive-pulley-live-2)
-
-*Acceleration of each mass as m1 runs from 2.036 to 5.25 kg, every other input as you entered it (21 solutions). Marked: your m1 = 3 kg gives a = 1.401. Your inputs: m1 = 3 kg, m2 = 2 kg, Ir = 0.02 kg*m^2, R = 0.1 m.*
+*a (acceleration of each mass) against R (radius of the pulley) from 0.01 m to 1 m on a logarithmic axis. One curve for each value of g (Acceleration): 9.80665 m/s^2, 4.90332 m/s^2, 19.6133 m/s^2. Other inputs as in the worked example: m1 = 3.0 kg, m2 = 2.0 kg, Ir = 0.02 kg*m^2. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 0.1 m, a = 1.40095 m/s^2.*
 
 ```python
 classical_physics_ai999x.solve('atwood_massive_pulley', m1='3 kg', m2='2 kg', Ir='0.02 kg*m^2', R='0.1 m', target='a')
@@ -6361,13 +5809,9 @@ $$
 - **Assumes:** a rigid symmetric body $(I_{1} = I_{2})$; no external torque; an oblate body $(I_{3} > I_{1})$
 - **Evidence:** theorem
 
-![Precession rate seen in the body frame as I1 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-free-precession-live-1)
+![Wp (precession rate seen in the body frame) against I1 (moment of inertia about a transverse axis) from 1 kg*m^2 to 3 kg*m^2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-free-precession-curve)
 
-*Precession rate seen in the body frame as I1 runs from 0.5 to 2.975 kg*m^2, every other input as you entered it (34 solutions). Marked: your I1 = 2 kg*m^2 gives Wp = 5. Your inputs: w3 = 10 rad/s, I1 = 2 kg*m^2, I3 = 3 kg*m^2.*
-
-![Precession rate seen in the body frame as I3 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/torque-free-precession-live-2)
-
-*Precession rate seen in the body frame as I3 runs from 2.036 to 5.25 kg*m^2, every other input as you entered it (21 solutions). Marked: your I3 = 3 kg*m^2 gives Wp = 5. Your inputs: w3 = 10 rad/s, I1 = 2 kg*m^2, I3 = 3 kg*m^2.*
+*Wp (precession rate seen in the body frame) against I1 (moment of inertia about a transverse axis) from 1 kg*m^2 to 3 kg*m^2. One curve for each value of I3 (moment of inertia about the symmetry axis): 3 kg*m^2, 1.5 kg*m^2, 6 kg*m^2. Other inputs as in the worked example: w3 = 10.0 rad/s. 30 points per curve computed by classical-physics-ai999x; marked: the worked example, I1 = 2 kg*m^2, Wp = 5 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('torque_free_precession', w3='10 rad/s', I1='2 kg*m^2', I3='3 kg*m^2', target='Wp')
@@ -6408,9 +5852,13 @@ $$
 - **Assumes:** small oscillations; the rotation much slower than the swing
 - **Evidence:** theorem
 
-![Time for the swing plane to turn once as φ runs from 12](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/foucault-precession-period-live-1)
+![T (time for the swing plane to turn once) against phi (latitude) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/foucault-precession-period-curve)
 
-*Time for the swing plane to turn once as φ runs from 12.21 to 85.49 deg, every other input as you entered it (41 solutions). Marked: your φ = 48.85 deg gives T = 1.324 day. Your inputs: phi = 48.85 deg.*
+*T (time for the swing plane to turn once) against phi (latitude) from 0 rad to 1.5708 rad. One curve for each value of W (Angular frequency): 7.2921e-05 rad/s, 3.6461e-05 rad/s, 0.000145842 rad/s. 40 points per curve computed by classical-physics-ai999x; marked: the worked example, phi = 0.852593 rad, T = 114429 s.*
+
+![T (time for the swing plane to turn once) over W (Angular frequency) from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/foucault-precession-period-field)
+
+*T (time for the swing plane to turn once) over W (Angular frequency) from 3.6461e-05 rad/s to 0.000109382 rad/s and phi (latitude) from 0 rad to 1.5708 rad: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 57442.7 s to dark 1.53913e+06 s); iso-lines at T = 2.50e5, 5.00e5, 7.50e5, 1.00e6, 1.25e6 s; blank cells: inputs the capability refuses. Marked: the worked example, W = 7.2921e-05 rad/s, phi = 0.852593 rad, T = 114429 s.*
 
 ```python
 classical_physics_ai999x.solve('foucault_precession_period', phi='48.85 deg', target='T')
@@ -6452,21 +5900,13 @@ $$
 - **Assumes:** a frictionless bead; the hoop turning about its vertical diameter; $w^{2}$ $R > g$
 - **Evidence:** theorem
 
-![A bead free to slide on a hoop of radius R = 200 mm spinning about its vertical diameter at ω = 10 rad/s: it settles where gravity and the required centripetal force balance](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bead-hoop-equilibrium-drawing)
+![A bead free to slide on a hoop of radius R = 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bead-hoop-equilibrium-drawing)
 
-*A bead free to slide on a hoop of radius R = 200 mm spinning about its vertical diameter at ω = 10 rad/s: it settles where gravity and the required centripetal force balance. Marked: the equilibrium angle the model returns, θ = 1.058 rad = 60.64° from the bottom, and the radius of the bead's circle R sin θ = 174.3 mm (derived). Your inputs: w = 10 rad/s, R = 0.2 m.*
+*A bead free to slide on a hoop of radius R = 0.2 m spinning about its vertical diameter at ω = 10 rad/s (g = 9.80665 m/s²): it settles where gravity and the required centripetal force balance. Marked: the equilibrium angle the package returns, θ = 1.05833 rad = 60.6376° from the bottom (degrees converted), and the radius of the bead's circle R sin θ (derived).*
 
-![Equilibrium angle of a bead on the hoop against the spin rate, 40 rates each a solve of the model (angles converted to degrees): too slow a spin has no off-bottom equilibrium, and no point is drawn there](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bead-hoop-equilibrium-graph)
+![Equilibrium angle of a bead on a hoop of radius 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bead-hoop-equilibrium-graph)
 
-*Equilibrium angle of a bead on the hoop against the spin rate, 40 rates each a solve of the model (angles converted to degrees): too slow a spin has no off-bottom equilibrium, and no point is drawn there. Marked: 60.64° at ω = 10 rad/s. In SI units: theta = 1.058 rad. Your inputs: w = 10 rad/s, R = 0.2 m.*
-
-![Equilibrium angle from the bottom as R runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bead-hoop-equilibrium-live-1)
-
-*Equilibrium angle from the bottom as R runs from 0.1025 to 0.35 m, every other input as you entered it (34 solutions). Marked: your R = 0.2 m gives θ = 1.058. Your inputs: w = 10 rad/s, R = 0.2 m.*
-
-![Equilibrium angle from the bottom as w runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bead-hoop-equilibrium-live-2)
-
-*Equilibrium angle from the bottom as w runs from 7.321 to 17.5 rad/s, every other input as you entered it (20 solutions). Marked: your w = 10 rad/s gives θ = 1.058. Your inputs: w = 10 rad/s, R = 0.2 m.*
+*Equilibrium angle of a bead on a hoop of radius 0.2 m (g = 9.80665 m/s²) against the spin rate, 40 rates from the package (angles converted to degrees): below ω = √(g/R) = 7.00237 rad/s (derived from the inputs) the bead stays at the bottom and no off-bottom equilibrium is returned. Marked: 60.6376° at ω = 10 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('bead_hoop_equilibrium', w='10 rad/s', R='0.2 m', target='theta')
@@ -6509,17 +5949,13 @@ $$
 - **Assumes:** a head-on (one-dimensional) collision; kinetic energy conserved; no external forces
 - **Evidence:** theorem
 
-![A head-on elastic collision: a 2 kg body at 3 m/s strikes a 1 kg body moving at 0 m/s; velocity arrows to scale](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-first-final-diagram)
+![A head-on elastic collision: a 2 kg body at 3 m/s strikes a 1 kg body at rest; velocity arrows to scale (1 length unit per m/s)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-first-final-diagram)
 
-*A head-on elastic collision: a 2 kg body at 3 m/s strikes a 1 kg body moving at 0 m/s; velocity arrows to scale. Marked: the final velocities the model returns, 1 m/s for the first and 4 m/s for the second; total momentum 6 kg·m/s (derived from the inputs). Your inputs: m1 = 2 kg, m2 = 1 kg, v1 = 3 m/s, v2 = 0 m/s.*
+*A head-on elastic collision: a 2 kg body at 3 m/s strikes a 1 kg body at rest; velocity arrows to scale (1 length unit per m/s). Marked: the final velocities the package returns, 1 m/s for the first and 4 m/s for the second; total momentum and kinetic energy before and after (derived from those values) are unchanged.*
 
-![Final velocity of the first body as m1 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-first-final-live-1)
+![v1f (final velocity of the first body) against m1 (mass of the first body) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-first-final-curve)
 
-*Final velocity of the first body as m1 runs from 0.5 to 3.5 kg, every other input as you entered it (41 solutions). Marked: your m1 = 2 kg gives v1f = 1. Your inputs: m1 = 2 kg, m2 = 1 kg, v1 = 3 m/s, v2 = 0 m/s.*
-
-![Final velocity of the first body as m2 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-first-final-live-2)
-
-*Final velocity of the first body as m2 runs from 0.25 to 1.75 kg, every other input as you entered it (29 solutions). Marked: your m2 = 1 kg gives v1f = 1. Your inputs: m1 = 2 kg, m2 = 1 kg, v1 = 3 m/s, v2 = 0 m/s.*
+*v1f (final velocity of the first body) against m1 (mass of the first body) from 0.2 kg to 20 kg on a logarithmic axis. One curve for each value of v1 (initial velocity of the first body): 3 m/s, 1.5 m/s, 6 m/s. Other inputs as in the worked example: m2 = 1.0 kg, v2 = 0.0 m/s. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, m1 = 2 kg, v1f = 1 m/s.*
 
 ```python
 classical_physics_ai999x.solve('elastic_collision_first_final', m1='2 kg', m2='1 kg', v1='3 m/s', v2='0 m/s', target='v1f')
@@ -6562,17 +5998,9 @@ $$
 - **Assumes:** a head-on (one-dimensional) collision; kinetic energy conserved; no external forces
 - **Evidence:** theorem
 
-![Final velocities after a head-on elastic collision of a body of mass m1 moving at v1 = 3 m/s with a 1 kg body moving at v2 = 0 m/s, against the mass ratio m1/m2 from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-second-final-comparison)
+![Final velocities after a head-on elastic collision of a body of mass m₁ moving at v₁ = 3 m/s with a 1 kg body at rest, against the mass ratio from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-second-final-comparison)
 
-*Final velocities after a head-on elastic collision of a body of mass m1 moving at v1 = 3 m/s with a 1 kg body moving at v2 = 0 m/s, against the mass ratio m1/m2 from 0.1 to 10 (31 ratios, both velocities a solve of the model). Marked: v2' = 4 m/s for the given ratio 2. Your inputs: m1 = 2 kg, m2 = 1 kg, v1 = 3 m/s, v2 = 0 m/s.*
-
-![Final velocity of the second body as v1 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-second-final-live-1)
-
-*Final velocity of the second body as v1 runs from 0.75 to 5.25 m/s, every other input as you entered it (41 solutions). Marked: your v1 = 3 m/s gives v2f = 4. Your inputs: m1 = 2 kg, m2 = 1 kg, v1 = 3 m/s, v2 = 0 m/s.*
-
-![Final velocity of the second body as m1 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/elastic-collision-second-final-live-2)
-
-*Final velocity of the second body as m1 runs from 0.5 to 3.5 kg, every other input as you entered it (29 solutions). Marked: your m1 = 2 kg gives v2f = 4. Your inputs: m1 = 2 kg, m2 = 1 kg, v1 = 3 m/s, v2 = 0 m/s.*
+*Final velocities after a head-on elastic collision of a body of mass m₁ moving at v₁ = 3 m/s with a 1 kg body at rest, against the mass ratio from 0.1 to 10 (31 ratios, both velocities from the package): equal masses exchange velocities, a heavy striker sends the target off at up to twice v₁. Marked: v₂′ = 4 m/s for the worked example m₁ = 2 kg.*
 
 ```python
 classical_physics_ai999x.solve('elastic_collision_second_final', m1='2 kg', m2='1 kg', v1='3 m/s', v2='0 m/s', target='v2f')
@@ -6614,13 +6042,9 @@ $$
 - **Assumes:** no gravity or drag during the burn; a constant exhaust velocity
 - **Evidence:** theorem
 
-![Change in velocity as m0 runs from 437](https://huggingface.co/AI999X/classical-physics-ai999x/resolve/main/figures/rocket-delta-v-live-1.svg)
+![dv (change in velocity) against m0 (initial mass) from 500 kg to 1500 kg](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rocket-delta-v-curve)
 
-*Change in velocity as m0 runs from 437.5 to 1750 kg, every other input as you entered it (36 solutions). Marked: your m0 = 1000 kg gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.*
-
-![Change in velocity as ve runs from 750 to 5250 m/s, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rocket-delta-v-live-2)
-
-*Change in velocity as ve runs from 750 to 5250 m/s, every other input as you entered it (29 solutions). Marked: your ve = 3000 m/s gives dv = 2749. Your inputs: ve = 3000 m/s, m0 = 1000 kg, mf = 400 kg.*
+*dv (change in velocity) against m0 (initial mass) from 500 kg to 1500 kg. One curve for each value of ve (exhaust velocity): 3000 m/s, 1500 m/s, 6000 m/s. Other inputs as in the worked example: mf = 400.0 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, m0 = 1000 kg, dv = 2748.87 m/s.*
 
 ```python
 classical_physics_ai999x.solve('rocket_delta_v', ve='3000 m/s', m0='1000 kg', mf='400 kg', target='dv')
@@ -6875,13 +6299,9 @@ $$
 - **Assumes:** $r > 0$; point charges in vacuum (or air)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnitude of the electrostatic force as r runs from 6 to 14 cm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coulomb-force-live-1)
+![F (magnitude of the electrostatic force) against r (distance between the charges) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coulomb-force-curve)
 
-*Magnitude of the electrostatic force as r runs from 6 to 14 cm, every other input as you entered it (41 solutions). Marked: your r = 10 cm gives F = 5.393. Your inputs: q1 = 2 uC, q2 = 3 uC, r = 10 cm.*
-
-![Magnitude of the electrostatic force as q2 runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/coulomb-force-live-2)
-
-*Magnitude of the electrostatic force as q2 runs from 1.8 to 4.2 uC, every other input as you entered it (29 solutions). Marked: your q2 = 3 uC gives F = 5.393. Your inputs: q1 = 2 uC, q2 = 3 uC, r = 10 cm.*
+*F (magnitude of the electrostatic force) against r (distance between the charges) from 0.05 m to 0.15 m. One curve for each value of q1 (first charge (with its sign)): 2.0000e-06 C, 1.0000e-06 C, 4.0000e-06 C. Other inputs as in the worked example: q2 = 3e-06 C. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.1 m, F = 5.39253 N.*
 
 ```python
 classical_physics_ai999x.solve('coulomb_force', q1=2e-06, q2=3e-06, r=0.1)
@@ -6926,13 +6346,9 @@ $$
 - **Assumes:** $m_{1} > 0$, $m_{2} > 0$, $r > 0$; point masses or spherically symmetric bodies
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnitude of the gravitational attraction as r runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-force-two-masses-live-1)
+![F (magnitude of the gravitational attraction) against r (distance between the centres) from 1 m to 3 m](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-force-two-masses-curve)
 
-*Magnitude of the gravitational attraction as r runs from 1.2 to 2.8 m, every other input as you entered it (41 solutions). Marked: your r = 2 m gives F = 8.343e-08. Your inputs: m1 = 100 kg, m2 = 50 kg, r = 2 m.*
-
-![Magnitude of the gravitational attraction as m1 runs from 60 to 140 kg, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gravitational-force-two-masses-live-2)
-
-*Magnitude of the gravitational attraction as m1 runs from 60 to 140 kg, every other input as you entered it (29 solutions). Marked: your m1 = 100 kg gives F = 8.343e-08. Your inputs: m1 = 100 kg, m2 = 50 kg, r = 2 m.*
+*F (magnitude of the gravitational attraction) against r (distance between the centres) from 1 m to 3 m. One curve for each value of m1 (first mass): 100 kg, 50 kg, 200 kg. Other inputs as in the worked example: m2 = 50.0 kg. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 2 m, F = 8.3429e-08 N.*
 
 ```python
 classical_physics_ai999x.solve('gravitational_force_two_masses', m1=100.0, m2=50.0, r=2.0)
@@ -6977,13 +6393,9 @@ $$
 - **Assumes:** n1, $n_{2}  \geq  1$; $0  \leq  theta1  \leq  90$ degrees; n1 sin(theta1) <= n2 (no total internal reflection)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Angle of refraction from the normal as θ1 runs from 18 to 42 deg, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/snell-refraction-angle-live-1)
+![theta2 (angle of refraction from the normal) against theta1 (angle of incidence from the normal (deg or rad)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/snell-refraction-angle-curve)
 
-*Angle of refraction from the normal as θ1 runs from 18 to 42 deg, every other input as you entered it (41 solutions). Marked: your θ1 = 30 deg gives θ2 = 0.3398. Your inputs: n1 = 1, n2 = 1.5, theta1 = 30 deg.*
-
-![Angle of refraction from the normal as n1 runs from 1 to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/snell-refraction-angle-live-2)
-
-*Angle of refraction from the normal as n1 runs from 1 to 1.75, every other input as you entered it (15 solutions). Marked: your n1 = 1 gives θ2 = 0.3398. Your inputs: n1 = 1, n2 = 1.5, theta1 = 30 deg.*
+*theta2 (angle of refraction from the normal) against theta1 (angle of incidence from the normal (deg or rad)) from 0 rad to 1.5708 rad. One curve for each value of n2 (refractive index of the second medium): 1.5, 3. Other inputs as in the worked example: n1 = 1.0. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta1 = 0.523599 rad, theta2 = 0.339837 rad.*
 
 ```python
 classical_physics_ai999x.solve('snell_refraction_angle', n1=1.0, n2=1.5, theta1=0.5235987755982988)
@@ -7028,13 +6440,9 @@ $$
 - **Assumes:** $n_{1} > n_{2}  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Critical angle from the normal as n2 runs from 1 to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/critical-angle-total-internal-reflection-live-1)
+![theta_c (critical angle from the normal) against n1 (refractive index of the medium the light travels in (the denser one)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/critical-angle-total-internal-reflection-curve)
 
-*Critical angle from the normal as n2 runs from 1 to 1.488, every other input as you entered it (33 solutions). Marked: your n2 = 1 gives θ_c = 0.7297. Your inputs: n1 = 1.5, n2 = 1.*
-
-![Critical angle from the normal as n1 runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/critical-angle-total-internal-reflection-live-2)
-
-*Critical angle from the normal as n1 runs from 1.018 to 2.625, every other input as you entered it (21 solutions). Marked: your n1 = 1.5 gives θ_c = 0.7297. Your inputs: n1 = 1.5, n2 = 1.*
+*theta_c (critical angle from the normal) against n1 (refractive index of the medium the light travels in (the denser one)) from 0.75 to 2.25. Other inputs as in the worked example: n2 = 1.0. 25 points computed by classical-physics-ai999x; marked: the worked example, n1 = 1.5, theta_c = 0.729728 rad.*
 
 ```python
 classical_physics_ai999x.solve('critical_angle_total_internal_reflection', n1=1.5, n2=1.0)
@@ -7082,13 +6490,13 @@ $$
 - **Assumes:** $d_o > 0$, $h_o > 0$; exactly one of d_i and f; the object not at the focal point
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnification as d_o runs from 18 to 42 cm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lens-mirror-magnification-live-1)
+![real or virtual, upright or inverted (image) over d_o (object distance (positive)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lens-mirror-magnification-decision)
 
-*Magnification as d_o runs from 18 to 42 cm, every other input as you entered it (41 solutions). Marked: your d_o = 30 cm gives m = -0.5. Your inputs: d_o = 30 cm, h_o = 2 cm, f = 10 cm.*
+*real or virtual, upright or inverted (image) over d_o (object distance (positive)) from 0.03 m to 3 m and f (focal length (positive: converging lens or concave mirror), if d_i is not given) from 0.01 m to 1 m (logarithmic axes): each of the 31 × 21 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, real, inverted: 459 cells, virtual, upright: 192 cells. Other inputs as in the worked example: h_o = 0.02 m. Marked: the worked example, d_o = 0.3 m, f = 0.1 m → real, inverted.*
 
-![Magnification as f runs from 6 to 14 cm, every other input as you entered it (27 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lens-mirror-magnification-live-2)
+![m (magnification (negative: inverted image)) against d_o (object distance (positive)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/lens-mirror-magnification-curve)
 
-*Magnification as f runs from 6 to 14 cm, every other input as you entered it (27 solutions). Marked: your f = 10 cm gives m = -0.5. Your inputs: d_o = 30 cm, h_o = 2 cm, f = 10 cm.*
+*m (magnification (negative: inverted image)) against d_o (object distance (positive)) from 0.106444 m to 3 m on a logarithmic axis. One curve for each value of f (focal length (positive: converging lens or concave mirror), if d_i is not given): 0.1 m, 0.05 m, 0.2 m. Other inputs as in the worked example: h_o = 0.02 m. 30 points per curve computed by classical-physics-ai999x; marked: the worked example, d_o = 0.3 m, m = -0.5.*
 
 ```python
 classical_physics_ai999x.solve('lens_mirror_magnification', d_o=0.3, h_o=0.02, f=0.1)
@@ -7143,13 +6551,9 @@ $$
 - **Assumes:** d, lam, $L > 0$; m a whole number with m $\lambda < d$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Position of the m-th bright fringe on the](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-slit-bright-fringe-live-1)
+![y (position of the m-th bright fringe on the screen, from the central maximum) against d (slit separation) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-slit-bright-fringe-curve)
 
-*Position of the m-th bright fringe on the... as m runs from 0 to 6, every other input as you entered it (7 solutions). Marked: your m = 2 gives y = 18 mm. Your inputs: d = 0.1 mm, lam = 600 nm, m = 2, L = 1.5 m.*
-
-![Position of the m-th bright fringe on the](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/double-slit-bright-fringe-live-2)
-
-*Position of the m-th bright fringe on the... as d runs from 0.06 to 0.14 mm, every other input as you entered it (29 solutions). Marked: your d = 0.1 mm gives y = 18 mm. Your inputs: d = 0.1 mm, lam = 600 nm, m = 2, L = 1.5 m.*
+*y (position of the m-th bright fringe on the screen, from the central maximum) against d (slit separation) from 5.0000e-05 m to 0.00015 m. One curve for each value of lam (wavelength): 6.0000e-07 m, 3.0000e-07 m, 1.2000e-06 m. Other inputs as in the worked example: m = 2, L = 1.5 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, d = 0.0001 m, y = 0.0180013 m.*
 
 ```python
 classical_physics_ai999x.solve('double_slit_bright_fringe', d=0.0001, lam=6e-07, m=2, L=1.5)
@@ -7198,13 +6602,9 @@ $$
 - **Assumes:** exactly one of d and N; $d > \lambda$; 1 <= m <= the highest order
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Angle of the m-th order from the central axis as m runs from 1 to 3, every other input as you entered it (3 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/diffraction-grating-order-live-1)
+![theta (angle of the m-th order from the central axis) against lam (wavelength) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/diffraction-grating-order-curve)
 
-*Angle of the m-th order from the central axis as m runs from 1 to 3, every other input as you entered it (3 solutions). Marked: your m = 2 gives θ = 0.6435. Your inputs: lam = 5e-07 m, m = 2, N = 600.*
-
-![Angle of the m-th order from the central axis as λ runs from 3e-07 to 7e-07 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/diffraction-grating-order-live-2)
-
-*Angle of the m-th order from the central axis as λ runs from 3e-07 to 7e-07 m, every other input as you entered it (29 solutions). Marked: your λ = 5e-07 m gives θ = 0.6435. Your inputs: lam = 5e-07 m, m = 2, N = 600.*
+*theta (angle of the m-th order from the central axis) against lam (wavelength) from 2.5000e-07 m to 7.5000e-07 m. One curve for each value of N (number of lines per millimetre, if given instead of d): 600, 300, 1200. Other inputs as in the worked example: m = 2. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, lam = 5.0000e-07 m, theta = 0.643501 rad.*
 
 ```python
 classical_physics_ai999x.solve('diffraction_grating_order', lam=5e-07, m=2, N=600.0)
@@ -7253,13 +6653,9 @@ $$
 - **Assumes:** a, lam, $L > 0$; $\lambda < a$; m $\lambda < a$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Angle of the m-th dark fringe from the](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/single-slit-minimum-live-1)
+![theta (angle of the m-th dark fringe from the central axis) against a (slit width) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/single-slit-minimum-curve)
 
-*Angle of the m-th dark fringe from the... as m runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your m = 1 gives θ = 0.05002. Your inputs: a = 0.01 mm, lam = 500 nm, m = 1, L = 2 m.*
-
-![Angle of the m-th dark fringe from the](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/single-slit-minimum-live-2)
-
-*Angle of the m-th dark fringe from the... as a runs from 0.006 to 0.014 mm, every other input as you entered it (29 solutions). Marked: your a = 0.01 mm gives θ = 0.05002. Your inputs: a = 0.01 mm, lam = 500 nm, m = 1, L = 2 m.*
+*theta (angle of the m-th dark fringe from the central axis) against a (slit width) from 5.0000e-06 m to 1.5000e-05 m. One curve for each value of lam (wavelength): 5.0000e-07 m, 2.5000e-07 m, 1.0000e-06 m. Other inputs as in the worked example: m = 1, L = 2.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, a = 1.0000e-05 m, theta = 0.0500209 rad.*
 
 ```python
 classical_physics_ai999x.solve('single_slit_minimum', a=1e-05, lam=5e-07, m=1, L=2.0)
@@ -7304,13 +6700,13 @@ $$
 - **Assumes:** $I_{0} > 0$; ideal polarizers
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Transmitted intensity as θ runs from 36 to 84 deg, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/malus-law-polarizer-live-1)
+![I (transmitted intensity) against theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/malus-law-polarizer-curve)
 
-*Transmitted intensity as θ runs from 36 to 84 deg, every other input as you entered it (41 solutions). Marked: your θ = 60 deg gives I = 25. Your inputs: I0 = 100 W/m^2, theta = 60 deg.*
+*I (transmitted intensity) against theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1.5708 rad. One curve for each value of I0 (intensity of the incident light): 100 W/m^2, 50 W/m^2, 200 W/m^2. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, theta = 1.0472 rad, I = 25 W/m^2.*
 
-![Transmitted intensity as I0 runs from 60 to 140 W/m^2, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/malus-law-polarizer-live-2)
+![I (transmitted intensity) over I0 (intensity of the incident light) from 50 W/m^2 to 150 W/m^2 and theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/malus-law-polarizer-field)
 
-*Transmitted intensity as I0 runs from 60 to 140 W/m^2, every other input as you entered it (29 solutions). Marked: your I0 = 100 W/m^2 gives I = 25. Your inputs: I0 = 100 W/m^2, theta = 60 deg.*
+*I (transmitted intensity) over I0 (intensity of the incident light) from 50 W/m^2 to 150 W/m^2 and theta (angle between the polarization (or first polarizer) and the analyser's axis) from 0 rad to 1.5708 rad: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1.1988e-21 W/m^2 to dark 150 W/m^2); iso-lines at I = 25, 50, 75, 100, 125 W/m^2. Marked: the worked example, I0 = 100 W/m^2, theta = 1.0472 rad, I = 25 W/m^2.*
 
 ```python
 classical_physics_ai999x.solve('malus_law_polarizer', I0=100.0, theta=1.0471975511965976)
@@ -7368,13 +6764,9 @@ $$
 - **Assumes:** $N  \geq  1$; $dt > 0$; areas >= 0; uniform field over the coil
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnitude of the average induced emf as B1 runs from -1 to 1 T, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/faraday-induced-emf-live-1)
+![emf (magnitude of the average induced emf) against N (number of turns) from 1 to 400 on a logarithmic axis](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/faraday-induced-emf-curve)
 
-*Magnitude of the average induced emf as B1 runs from -1 to 1 T, every other input as you entered it (41 solutions). Marked: your B1 = 0 T gives emf = 10. Your inputs: N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T, dt = 0.1 s.*
-
-![Magnitude of the average induced emf as dt runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/faraday-induced-emf-live-2)
-
-*Magnitude of the average induced emf as dt runs from 0.06 to 0.14 s, every other input as you entered it (29 solutions). Marked: your dt = 0.1 s gives emf = 10. Your inputs: N = 200, A1 = 100 cm^2, B1 = 0 T, B2 = 0.5 T, dt = 0.1 s.*
+*emf (magnitude of the average induced emf) against N (number of turns) from 1 to 400 on a logarithmic axis. One curve for each value of A1 (initial area of the coil): 0.01 m^2, 0.005 m^2, 0.02 m^2. Other inputs as in the worked example: B1 = 0.0 T, B2 = 0.5 T, dt = 0.1 s. 35 points per curve computed by classical-physics-ai999x; marked: the worked example, N = 200, emf = 10 V.*
 
 ```python
 classical_physics_ai999x.solve('faraday_induced_emf', N=200, A1=0.01, B1=0.0, B2=0.5, dt=0.1)
@@ -7427,13 +6819,13 @@ $$
 - **Assumes:** Np, $Ns  \geq  1$; $Vp > 0$; ideal: no losses, no magnetizing current
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Secondary voltage as Ns runs from 30 to 70, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-transformer-secondary-live-1)
+![step-up, step-down or isolation (type) over Np (number of turns of the primary) from 1 to 1000 and Ns (number of turns of the secondary) from 1 to 100 (logarithmic axes): each of the 29 × 18 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, isolation (1:1): 18 cells, step-down: 351 cells, step-up: 153 cells](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-transformer-secondary-decision)
 
-*Secondary voltage as Ns runs from 30 to 70, every other input as you entered it (41 solutions). Marked: your Ns = 50 gives Vs = 23. Your inputs: Np = 500, Ns = 50, Vp = 230 V, Ip = 0.5 A.*
+*step-up, step-down or isolation (type) over Np (number of turns of the primary) from 1 to 1000 and Ns (number of turns of the secondary) from 1 to 100 (logarithmic axes): each of the 29 × 18 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, isolation (1:1): 18 cells, step-down: 351 cells, step-up: 153 cells. Other inputs as in the worked example: Vp = 230.0 V, Ip = 0.5 A. Marked: the worked example, Np = 500, Ns = 50 → step-down.*
 
-![Secondary voltage as Vp runs from 138 to 322 V, every other input as you entered it (25 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-transformer-secondary-live-2)
+![Vs (secondary voltage) against Np (number of turns of the primary) from 1 to 1000 on a logarithmic axis](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/ideal-transformer-secondary-curve)
 
-*Secondary voltage as Vp runs from 138 to 322 V, every other input as you entered it (25 solutions). Marked: your Vp = 230 V gives Vs = 23. Your inputs: Np = 500, Ns = 50, Vp = 230 V, Ip = 0.5 A.*
+*Vs (secondary voltage) against Np (number of turns of the primary) from 1 to 1000 on a logarithmic axis. One curve for each value of Vp (primary voltage (rms)): 230 V, 115 V, 460 V. Other inputs as in the worked example: Ns = 50, Ip = 0.5 A. 37 points per curve computed by classical-physics-ai999x; marked: the worked example, Np = 500, Vs = 23 V.*
 
 ```python
 classical_physics_ai999x.solve('ideal_transformer_secondary', Np=500, Ns=50, Vp=230.0, Ip=0.5)
@@ -7487,13 +6879,9 @@ $$
 - **Assumes:** R, L, C, f, $V > 0$; sinusoidal steady state
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rms current as f runs from 30 to 70 Hz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/series-rlc-ac-circuit-live-1)
+![I (rms current) against f (supply frequency) from 5 Hz to 500 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/series-rlc-ac-circuit-curve)
 
-*Rms current as f runs from 30 to 70 Hz, every other input as you entered it (41 solutions). Marked: your f = 50 Hz gives I = 0.7973. Your inputs: R = 30 ohm, L = 0.1 H, C = 10 uF, f = 50 Hz, V = 230 V.*
-
-![Rms current as C runs from 6 to 14 uF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/series-rlc-ac-circuit-live-2)
-
-*Rms current as C runs from 6 to 14 uF, every other input as you entered it (29 solutions). Marked: your C = 10 uF gives I = 0.7973. Your inputs: R = 30 ohm, L = 0.1 H, C = 10 uF, f = 50 Hz, V = 230 V.*
+*I (rms current) against f (supply frequency) from 5 Hz to 500 Hz on a logarithmic axis. One curve for each value of V (rms supply voltage): 230 V, 115 V, 460 V. Other inputs as in the worked example: R = 30.0 ohm, L = 0.1 H, C = 9.999999999999999e-06 F. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, f = 50 Hz, I = 0.797343 A.*
 
 ```python
 classical_physics_ai999x.solve('series_rlc_ac_circuit', R=30.0, L=0.1, C=1.6666666666666667e-05, f=159.15494309189535, V=100.0)
@@ -7541,13 +6929,9 @@ $$
 - **Assumes:** emf > 0; r, $R  \geq  0$ and not both 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Current in the circuit as emf runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/terminal-voltage-internal-resistance-live-1)
+![I (current in the circuit) against R (load resistance) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/terminal-voltage-internal-resistance-curve)
 
-*Current in the circuit as emf runs from 7.2 to 16.8 V, every other input as you entered it (41 solutions). Marked: your emf = 12 V gives I = 2. Your inputs: emf = 12 V, r = 0.5 ohm, R = 5.5 ohm.*
-
-![Current in the circuit as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/terminal-voltage-internal-resistance-live-2)
-
-*Current in the circuit as r runs from 0.3 to 0.7 ohm, every other input as you entered it (29 solutions). Marked: your r = 0.5 ohm gives I = 2. Your inputs: emf = 12 V, r = 0.5 ohm, R = 5.5 ohm.*
+*I (current in the circuit) against R (load resistance) from 0.55 ohm to 55 ohm on a logarithmic axis. One curve for each value of emf (emf of the source): 12 V, 6 V, 24 V. Other inputs as in the worked example: r = 0.5 ohm. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, R = 5.5 ohm, I = 2 A.*
 
 ```python
 classical_physics_ai999x.solve('terminal_voltage_internal_resistance', emf=12.0, r=0.5, R=5.5)
@@ -7593,17 +6977,13 @@ $$
 - **Assumes:** $mu_s  \geq  0$; $N > 0$; $F  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Maximum static friction force and f_max - F as μ_s runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-live-1)
+![whether the body slips (slips) over mu_s (coefficient of static friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-decision)
 
-*Maximum static friction force and f_max - F as μ_s runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your μ_s = 0.5 gives f_max = 50. Shaded by whether the body slips: yes, no. Your inputs: mu_s = 0.5, N = 100 N, F = 40 N.*
+*whether the body slips (slips) over mu_s (coefficient of static friction) from 0.02 to 0.98 and N (normal force) from 10 N to 1000 N (logarithmic vertical axis): each of the 31 × 21 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, yes: 332 cells, no: 319 cells. Other inputs as in the worked example: F = 40.0 N. Marked: the worked example, mu_s = 0.5, N = 100 N → no.*
 
-![Whether the body slips for 25 5 x 5 combinations of μ_s and N around your inputs (the other inputs as entered); the ring marks your inputs, which give no](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-live-2)
+![f_max (maximum static friction force) against N (normal force) from 50 N to 150 N](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-curve)
 
-*Whether the body slips for 25 5 x 5 combinations of μ_s and N around your inputs (the other inputs as entered); the ring marks your inputs, which give no. Blank cells admit no answer. Your inputs: mu_s = 0.5, N = 100 N, F = 40 N.*
-
-![Maximum static friction force and f_max - F as N runs from 60 to 140 N, every other input as you entered it (27 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-limit-live-3)
-
-*Maximum static friction force and f_max - F as N runs from 60 to 140 N, every other input as you entered it (27 solutions). Marked: your N = 100 N gives f_max = 50. Shaded by whether the body slips: yes, no. Your inputs: mu_s = 0.5, N = 100 N, F = 40 N.*
+*f_max (maximum static friction force) against N (normal force) from 50 N to 150 N. One curve for each value of mu_s (coefficient of static friction): 0.5, 0.26, 0.74. Other inputs as in the worked example: F = 40.0 N. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, N = 100 N, f_max = 50 N.*
 
 ```python
 classical_physics_ai999x.solve('static_friction_limit', mu_s=0.5, N=100.0, F=40.0)
@@ -7653,17 +7033,13 @@ $$
 - **Assumes:** $mu_s  \geq  0$; $0  \leq  \theta < 90$ degrees; $g = 9.80665$ $m/s^{2}$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Critical (steepest holding) angle as μ_s runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-live-1)
+![whether the body slides at the given angle (slips) over mu_s (coefficient of static friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-decision)
 
-*Critical (steepest holding) angle as μ_s runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your μ_s = 0.5 gives θ_c = 0.4636. Shaded by whether the body slides at the given angle: yes, no. Your inputs: mu_s = 0.5, theta = 20 deg.*
+*whether the body slides at the given angle (slips) over mu_s (coefficient of static friction) from 0.02 to 0.98 and theta (angle of the incline above the horizontal) from 0 rad to 1.5708 rad: each of the 31 × 21 cells is one run of classical-physics-ai999x, coloured by the verdict it returned, yes: 463 cells, no: 188 cells. Marked: the worked example, mu_s = 0.5, theta = 0.349066 rad → no.*
 
-![Whether the body slides at the given angle for 25 5 x 5 combinations of μ_s and θ around your inputs (the other inputs as entered); the ring marks your inputs, which give no](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-live-2)
+![theta_c (critical (steepest holding) angle) against mu_s (coefficient of static friction) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-curve)
 
-*Whether the body slides at the given angle for 25 5 x 5 combinations of μ_s and θ around your inputs (the other inputs as entered); the ring marks your inputs, which give no. Blank cells admit no answer. Your inputs: mu_s = 0.5, theta = 20 deg.*
-
-![Whether the body slides at the given angle as θ runs from 12 to 28 deg, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/static-friction-incline-live-3)
-
-*Whether the body slides at the given angle as θ runs from 12 to 28 deg, every other input as you entered it (29 solutions). Shaded by whether the body slides at the given angle: no, yes. Your inputs: mu_s = 0.5, theta = 20 deg.*
+*theta_c (critical (steepest holding) angle) against mu_s (coefficient of static friction) from 0.02 to 0.98. Other inputs as in the worked example: theta = 0.3490658503988659 rad. 41 points computed by classical-physics-ai999x; marked: the worked example, mu_s = 0.5, theta_c = 0.463648 rad.*
 
 ```python
 classical_physics_ai999x.solve('static_friction_incline', mu_s=0.5, theta=0.3490658503988659)
@@ -7711,13 +7087,9 @@ $$
 - **Assumes:** A, L0, $E > 0$; linear elastic (|strain| < 1)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Change of length (positive: extension) as F runs from 600 to 1400 N, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/youngs-modulus-deformation-live-1)
+![dL (change of length (positive: extension)) against A (cross-sectional area) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/youngs-modulus-deformation-curve)
 
-*Change of length (positive: extension) as F runs from 600 to 1400 N, every other input as you entered it (41 solutions). Marked: your F = 1000 N gives dL = 10 mm. Your inputs: F = 1000 N, A = 1 mm^2, L0 = 2 m, E = 200 GPa.*
-
-![Change of length (positive: extension) as A runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/youngs-modulus-deformation-live-2)
-
-*Change of length (positive: extension) as A runs from 0.6 to 1.4 mm^2, every other input as you entered it (29 solutions). Marked: your A = 1 mm^2 gives dL = 10 mm. Your inputs: F = 1000 N, A = 1 mm^2, L0 = 2 m, E = 200 GPa.*
+*dL (change of length (positive: extension)) against A (cross-sectional area) from 5.0000e-07 m^2 to 1.5000e-06 m^2. One curve for each value of F (axial force (positive: tension, negative: compression)): 1000 N, 500 N, 2000 N. Other inputs as in the worked example: L0 = 2.0 m, E = 200000000000.0 Pa. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 1.0000e-06 m^2, dL = 0.01 m.*
 
 ```python
 classical_physics_ai999x.solve('youngs_modulus_deformation', F=1000.0, A=1e-06, L0=2.0, E=200000000000.0)
@@ -7764,13 +7136,9 @@ $$
 - **Assumes:** A, h, $S > 0$; linear elastic (|strain| < 1)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Sideways displacement of the face as F runs from 24 to 56 kN, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shear-modulus-deformation-live-1)
+![dx (sideways displacement of the face) against A (area of the face the force acts on) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shear-modulus-deformation-curve)
 
-*Sideways displacement of the face as F runs from 24 to 56 kN, every other input as you entered it (41 solutions). Marked: your F = 40 kN gives dx = 80 um. Your inputs: F = 40 kN, A = 20 cm^2, h = 10 cm, S = 25 GPa.*
-
-![Sideways displacement of the face as A runs from 12 to 28 cm^2, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/shear-modulus-deformation-live-2)
-
-*Sideways displacement of the face as A runs from 12 to 28 cm^2, every other input as you entered it (29 solutions). Marked: your A = 20 cm^2 gives dx = 80 um. Your inputs: F = 40 kN, A = 20 cm^2, h = 10 cm, S = 25 GPa.*
+*dx (sideways displacement of the face) against A (area of the face the force acts on) from 0.001 m^2 to 0.003 m^2. One curve for each value of F (force parallel to the face): 40000 N, 20000 N, 80000 N. Other inputs as in the worked example: h = 0.1 m, S = 25000000000.0 Pa. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, A = 0.002 m^2, dx = 8.0000e-05 m.*
 
 ```python
 classical_physics_ai999x.solve('shear_modulus_deformation', F=40000.0, A=0.002, h=0.1, S=25000000000.0)
@@ -7816,13 +7184,9 @@ $$
 - **Assumes:** V0, $B > 0$; linear elastic (|dP / B| < 1)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Change of volume (negative: compression) as V0 runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bulk-modulus-compression-live-1)
+![dV (change of volume (negative: compression)) against B (bulk modulus) from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bulk-modulus-compression-curve)
 
-*Change of volume (negative: compression) as V0 runs from 0.6 to 1.4 m^3, every other input as you entered it (41 solutions). Marked: your V0 = 1 m^3 gives dV = -9.091 L. Your inputs: dP = 20 MPa, V0 = 1 m^3, B = 2.2 GPa.*
-
-![Change of volume (negative: compression) as B runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/bulk-modulus-compression-live-2)
-
-*Change of volume (negative: compression) as B runs from 1.32 to 3.08 GPa, every other input as you entered it (29 solutions). Marked: your B = 2.2 GPa gives dV = -9.091 L. Your inputs: dP = 20 MPa, V0 = 1 m^3, B = 2.2 GPa.*
+*dV (change of volume (negative: compression)) against B (bulk modulus) from 2.2000e+08 Pa to 2.2000e+10 Pa on a logarithmic axis. One curve for each value of dP (increase of pressure (negative: decrease)): 2.0000e+07 Pa, 1.0000e+07 Pa, 4.0000e+07 Pa. Other inputs as in the worked example: V0 = 1.0 m^3. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, B = 2.2000e+09 Pa, dV = -0.00909091 m^3.*
 
 ```python
 classical_physics_ai999x.solve('bulk_modulus_compression', dP=20000000.0, V0=1.0, B=2200000000.0)
@@ -7869,13 +7233,9 @@ $$
 - **Assumes:** one position per load; $xA  \neq  xB$; a rigid beam in equilibrium, vertical loads
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Upward reaction of support A as xB runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/beam-support-reactions-live-1)
+![RA (upward reaction of support A) against xB (position of support B) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/beam-support-reactions-curve)
 
-*Upward reaction of support A as xB runs from 2.4 to 5.6 m, every other input as you entered it (41 solutions). Marked: your xB = 4 m gives RA = 225. Your inputs: loads = 200, 300, positions = 1, 3, xA = 0 m, xB = 4 m.*
-
-![Upward reaction of support A as xA runs from -1 to 1 m, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/beam-support-reactions-live-2)
-
-*Upward reaction of support A as xA runs from -1 to 1 m, every other input as you entered it (29 solutions). Marked: your xA = 0 m gives RA = 225. Your inputs: loads = 200, 300, positions = 1, 3, xA = 0 m, xB = 4 m.*
+*RA (upward reaction of support A) against xB (position of support B) from 0.4 m to 40 m on a logarithmic axis. One curve for each value of xA (position of support A): 0 m, -0.5 m, 0.5 m. Other inputs as in the worked example: loads = [200.0, 300.0], positions = [1.0, 3.0]. 41 points per curve computed by classical-physics-ai999x; marked: the worked example, xB = 4 m, RA = 225 N.*
 
 ```python
 classical_physics_ai999x.solve('beam_support_reactions', loads=[200.0, 300.0], positions=[1.0, 3.0], xA=0.0, xB=4.0)
@@ -7922,9 +7282,9 @@ $$
 - **Assumes:** every mass > 0; one coordinate per mass
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The answer for your inputs: M (total mass) = 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centre-of-mass-point-masses-live-1)
+![x_cm (x coordinate of the centre of mass) as value 2 of masses (masses in kilograms) moves from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/centre-of-mass-point-masses-sensitivity)
 
-*The answer for your inputs: M (total mass) = 5. Your inputs: masses = 2, 3, x = 0, 5.*
+*x_cm (x coordinate of the centre of mass) as value 2 of masses (masses in kilograms) moves from 1.5 to 3.5, the other values as given ([2.0, 3.0]); 41 runs of classical-physics-ai999x. Other inputs: x = [0.0, 5.0]. Marked: the worked example, masses[2] = 3, x_cm = 3 m.*
 
 ```python
 classical_physics_ai999x.solve('centre_of_mass_point_masses', masses=[2.0, 3.0], x=[0.0, 5.0])
@@ -7973,17 +7333,13 @@ $$
 - **Assumes:** one direction per magnitude; magnitudes >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnitude of the resultant as directions[2] runs from 45 to 135, every other input as you entered it (31 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-live-1)
+![The plane vectors of the worked example as arrows from the origin: input magnitudes = (3, 4), directions = (0, 90); returned by classical-physics-ai999x: x_components = (3, 0), y_components = (0, 4); also returned Rx = 3, Ry = 4, R = 5, direction_deg = 53](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-vectors)
 
-*Magnitude of the resultant as directions[2] runs from 45 to 135, every other input as you entered it (31 solutions). Marked: your directions[2] = 90 gives R = 5. Your inputs: magnitudes = 3, 4, directions = 0, 90.*
+*The plane vectors of the worked example as arrows from the origin: input magnitudes = (3, 4), directions = (0, 90); returned by classical-physics-ai999x: x_components = (3, 0), y_components = (0, 4); also returned Rx = 3, Ry = 4, R = 5, direction_deg = 53.1301. Marked: the tip of each returned vector.*
 
-![Each vector drawn from the origin: magnitudes = (3, 4), directions = (0, 90), x_components = (3, 0), y_components = (0, 4) (answers drawn bold)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-live-2)
+![x component of each vector (x_components) at each y component of each vector (y_components), both returned by classical-physics-ai999x for the worked example (magnitudes = [3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-series)
 
-*Each vector drawn from the origin: magnitudes = (3, 4), directions = (0, 90), x_components = (3, 0), y_components = (0, 4) (answers drawn bold). Your inputs: magnitudes = 3, 4, directions = 0, 90.*
-
-![Every entry of x_components, y_components as computed for your inputs (2 entries, x_components first: 3, 0)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/vector-components-resultant-live-3)
-
-*Every entry of x_components, y_components as computed for your inputs (2 entries, x_components first: 3, 0). Your inputs: magnitudes = 3, 4, directions = 0, 90.*
+*x component of each vector (x_components) at each y component of each vector (y_components), both returned by classical-physics-ai999x for the worked example (magnitudes = [3.0, 4.0], directions = [0.0, 90.0]): 0 → 3; 4 → 0.*
 
 ```python
 classical_physics_ai999x.solve('vector_components_resultant', magnitudes=[3.0, 4.0], directions=[0.0, 90.0])
@@ -8032,13 +7388,13 @@ $$
 - **Assumes:** $I > 0$; rigid body, fixed axis
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Angular acceleration as τ runs from 7](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-second-law-live-1)
+![alpha (angular acceleration) against I (moment of inertia about the same axis) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-second-law-curve)
 
-*Angular acceleration as τ runs from 7.2 to 16.8 N*m, every other input as you entered it (41 solutions). Marked: your τ = 12 N*m gives α = 4. Your inputs: tau = 12 N*m, I = 3 kg*m^2.*
+*alpha (angular acceleration) against I (moment of inertia about the same axis) from 1.5 kg*m^2 to 4.5 kg*m^2. One curve for each value of tau (net torque about the axis): 12 N*m, 6 N*m, 24 N*m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I = 3 kg*m^2, alpha = 4 rad/s^2.*
 
-![Angular acceleration as I runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-second-law-live-2)
+![alpha (angular acceleration) over tau (net torque about the axis) from 6 N*m to 18 N*m and I (moment of inertia about the same axis) from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/rotational-second-law-field)
 
-*Angular acceleration as I runs from 1.8 to 4.2 kg*m^2, every other input as you entered it (29 solutions). Marked: your I = 3 kg*m^2 gives α = 4. Your inputs: tau = 12 N*m, I = 3 kg*m^2.*
+*alpha (angular acceleration) over tau (net torque about the axis) from 6 N*m to 18 N*m and I (moment of inertia about the same axis) from 1.5 kg*m^2 to 4.5 kg*m^2: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 1.33333 rad/s^2 to dark 12 rad/s^2); iso-lines at alpha = 2, 4, 6, 8, 10 rad/s^2. Marked: the worked example, tau = 12 N*m, I = 3 kg*m^2, alpha = 4 rad/s^2.*
 
 ```python
 classical_physics_ai999x.solve('rotational_second_law', tau=12.0, I=3.0)
@@ -8086,13 +7442,9 @@ $$
 - **Assumes:** I1, $I_{2} > 0$; no external torque about the axis
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Final angular velocity as I1 runs from 2](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-conservation-live-1)
+![omega2 (final angular velocity) against I2 (final moment of inertia) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-conservation-curve)
 
-*Final angular velocity as I1 runs from 2.4 to 5.6 kg*m^2, every other input as you entered it (41 solutions). Marked: your I1 = 4 kg*m^2 gives ω2 = 5. Your inputs: I1 = 4 kg*m^2, omega1 = 2 rad/s, I2 = 1.6 kg*m^2.*
-
-![Final angular velocity as ω1 runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/angular-momentum-conservation-live-2)
-
-*Final angular velocity as ω1 runs from 1.2 to 2.8 rad/s, every other input as you entered it (29 solutions). Marked: your ω1 = 2 rad/s gives ω2 = 5. Your inputs: I1 = 4 kg*m^2, omega1 = 2 rad/s, I2 = 1.6 kg*m^2.*
+*omega2 (final angular velocity) against I2 (final moment of inertia) from 0.8 kg*m^2 to 2.4 kg*m^2. One curve for each value of I1 (initial moment of inertia): 4 kg*m^2, 2 kg*m^2, 8 kg*m^2. Other inputs as in the worked example: omega1 = 2.0 rad/s. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, I2 = 1.6 kg*m^2, omega2 = 5 rad/s.*
 
 ```python
 classical_physics_ai999x.solve('angular_momentum_conservation', I1=4.0, omega1=2.0, I2=1.6)
@@ -8136,9 +7488,9 @@ $$
 - **Assumes:** exactly one of I and beta; $I > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Intensity level in dB as I runs from 6e-06 to 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-intensity-level-live-1)
+![beta (intensity level in dB) against I (sound intensity, if known) from 5](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-intensity-level-curve)
 
-*Intensity level in dB as I runs from 6e-06 to 1.4e-05 W/m^2, every other input as you entered it (41 solutions). Marked: your I = 1e-05 W/m^2 gives β = 70. Your inputs: I = 1e-5 W/m^2.*
+*beta (intensity level in dB) against I (sound intensity, if known) from 5.0000e-06 W/m^2 to 1.5000e-05 W/m^2. 31 points computed by classical-physics-ai999x; marked: the worked example, I = 1.0000e-05 W/m^2, beta = 70.*
 
 ```python
 classical_physics_ai999x.solve('sound_intensity_level', I=1e-05)
@@ -8190,13 +7542,13 @@ $$
 - **Assumes:** both levels, or the ratio (with or without the first level); ratio > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Change of level beta2 - beta1 in dB as β1 runs from 15 to 105, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-level-change-live-1)
+![d_beta (change of level beta2 - beta1 in dB) against beta1 (first sound level in dB) from 30 to 90](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-level-change-curve)
 
-*Change of level beta2 - beta1 in dB as β1 runs from 15 to 105, every other input as you entered it (41 solutions). Marked: your β1 = 60 gives d_beta = 20. Your inputs: beta1 = 60, beta2 = 80.*
+*d_beta (change of level beta2 - beta1 in dB) against beta1 (first sound level in dB) from 30 to 90. One curve for each value of beta2 (second sound level in dB): 80, 40, 160. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, beta1 = 60, d_beta = 20.*
 
-![Change of level beta2 - beta1 in dB as β2 runs from 20 to 140, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-level-change-live-2)
+![d_beta (change of level beta2 - beta1 in dB) over beta2 (second sound level in dB) from 40 to 120 and beta1 (first sound level in dB) from 30 to 90: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its sign and magnitude (second colour negative); iso-lines at d_beta = -25, 0, 25, 50, 75](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/sound-level-change-field)
 
-*Change of level beta2 - beta1 in dB as β2 runs from 20 to 140, every other input as you entered it (29 solutions). Marked: your β2 = 80 gives d_beta = 20. Your inputs: beta1 = 60, beta2 = 80.*
+*d_beta (change of level beta2 - beta1 in dB) over beta2 (second sound level in dB) from 40 to 120 and beta1 (first sound level in dB) from 30 to 90: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its sign and magnitude (second colour negative); iso-lines at d_beta = -25, 0, 25, 50, 75. Marked: the worked example, beta2 = 80, beta1 = 60, d_beta = 20.*
 
 ```python
 classical_physics_ai999x.solve('sound_level_change', beta1=60.0, beta2=80.0)
@@ -8249,17 +7601,9 @@ $$
 - **Assumes:** L, $v > 0$; $n  \geq  1$; n odd for a pipe closed at one end; no end correction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Frequency of the n-th harmonic as n runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/standing-wave-harmonics-live-1)
+![f_n (frequency of the n-th harmonic) against L (length of the string or pipe) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/standing-wave-harmonics-curve)
 
-*Frequency of the n-th harmonic as n runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your n = 1 gives f_n = 220. Your inputs: system = string, L = 0.65 m, v = 286 m/s, n = 1.*
-
-![Frequency of the n-th harmonic for every choice of system, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/standing-wave-harmonics-live-2)
-
-*Frequency of the n-th harmonic for every choice of system, every other input as you entered it (highlighted: your choice). string: 220; open pipe: 220; closed pipe: 110. Your inputs: system = string, L = 0.65 m, v = 286 m/s, n = 1.*
-
-![Frequency of the n-th harmonic and fundamental frequency as L runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/standing-wave-harmonics-live-3)
-
-*Frequency of the n-th harmonic and fundamental frequency as L runs from 0.39 to 0.91 m, every other input as you entered it (29 solutions). Marked: your L = 0.65 m gives f_n = 220. Your inputs: system = string, L = 0.65 m, v = 286 m/s, n = 1.*
+*f_n (frequency of the n-th harmonic) against L (length of the string or pipe) from 0.125 m to 0.375 m. One curve for each value of v (wave speed): 340 m/s, 170 m/s, 680 m/s. Other inputs as in the worked example: system = string, n = 3. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, L = 0.25 m, f_n = 2040 Hz.*
 
 ```python
 classical_physics_ai999x.solve('standing_wave_harmonics', system='string', L=0.65, v=286.0, n=1)
@@ -8308,13 +7652,13 @@ $$
 - **Assumes:** $T > 0$, $mu > 0$; a perfectly flexible string, small amplitudes
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Speed of transverse waves as μ runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/string-wave-speed-live-1)
+![v (speed of transverse waves) against mu (mass per unit length of the string) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/string-wave-speed-curve)
 
-*Speed of transverse waves as μ runs from 0.006 to 0.014 kg/m, every other input as you entered it (41 solutions). Marked: your μ = 0.01 kg/m gives v = 100. Your inputs: T = 100 N, mu = 0.01 kg/m.*
+*v (speed of transverse waves) against mu (mass per unit length of the string) from 0.005 kg/m to 0.015 kg/m. One curve for each value of T (tension in the string): 100 N, 50 N, 200 N. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, mu = 0.01 kg/m, v = 100 m/s.*
 
-![Speed of transverse waves as T runs from 60 to 140 N, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/string-wave-speed-live-2)
+![v (speed of transverse waves) over T (tension in the string) from 50 N to 150 N and mu (mass per unit length of the string) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/string-wave-speed-field)
 
-*Speed of transverse waves as T runs from 60 to 140 N, every other input as you entered it (29 solutions). Marked: your T = 100 N gives v = 100. Your inputs: T = 100 N, mu = 0.01 kg/m.*
+*v (speed of transverse waves) over T (tension in the string) from 50 N to 150 N and mu (mass per unit length of the string) from 0.005 kg/m to 0.015 kg/m: each of the 21 × 15 cells is one run of classical-physics-ai999x, shaded by its value (light 57.735 m/s to dark 173.205 m/s); iso-lines at v = 60, 80, 100, 120, 140, 160 m/s. Marked: the worked example, T = 100 N, mu = 0.01 kg/m, v = 100 m/s.*
 
 ```python
 classical_physics_ai999x.solve('string_wave_speed', T=100.0, mu=0.01)
@@ -8366,13 +7710,9 @@ $$
 - **Assumes:** $r > 0$, $L > 0$, $A > 0$, $R > 0$; line and plane treated as infinite; uniform charge; on a shell $(r = R)$ the field is refused; charges in vacuum (or air)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnitude of the electric field as Q runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gauss-law-symmetric-field-live-1)
+![E (magnitude of the electric field) against r (distance from the line, or from the centre (not needed for a plane)) from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gauss-law-symmetric-field-curve)
 
-*Magnitude of the electric field as Q runs from 1.2e-06 to 2.8e-06 C, every other input as you entered it (41 solutions). Marked: your Q = 2e-06 C gives E = 3.595e+05. Your inputs: geometry = line, Q = 2e-06 C, r = 0.1 m, L = 1 m.*
-
-![Magnitude of the electric field as r runs from 0](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/gauss-law-symmetric-field-live-2)
-
-*Magnitude of the electric field as r runs from 0.06 to 0.14 m, every other input as you entered it (29 solutions). Marked: your r = 0.1 m gives E = 3.595e+05. Your inputs: geometry = line, Q = 2e-06 C, r = 0.1 m, L = 1 m.*
+*E (magnitude of the electric field) against r (distance from the line, or from the centre (not needed for a plane)) from 0.05 m to 0.15 m. One curve for each value of Q (charge (with its sign): on the length L, the area A, or the whole sphere or shell): 2.0000e-06 C, 1.0000e-06 C, 4.0000e-06 C. Other inputs as in the worked example: geometry = line, L = 1.0 m. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r = 0.1 m, E = 359502 N/C.*
 
 ```python
 classical_physics_ai999x.solve('gauss_law_symmetric_field', geometry='line', Q=2e-06, L=1.0, r=0.1)
@@ -8431,17 +7771,13 @@ $$
 - **Assumes:** $r_{1} > 0$; $r_{2} > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Two resistors R1 = 6 Ω and R2 = 3 Ω connected in series (left) and in parallel (right), measured between the two terminals](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/two-resistors-series-parallel-schematic)
+![Two resistors R₁ = 6 Ω and R₂ = 3 Ω connected in series (left) and in parallel (right), measured between the two terminals (dots)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/two-resistors-series-parallel-schematic)
 
-*Two resistors R1 = 6 Ω and R2 = 3 Ω connected in series (left) and in parallel (right), measured between the two terminals. Marked: the equivalent resistances the model returns, Rs = 9 Ω (larger than either) and Rp = 2 Ω (smaller than either). Your inputs: r1 = 6 ohm, r2 = 3 ohm.*
+*Two resistors R₁ = 6 Ω and R₂ = 3 Ω connected in series (left) and in parallel (right), measured between the two terminals (dots). Marked: the equivalent resistances the package returns, Rs = 9 Ω (larger than either) and Rp = 2 Ω (smaller than either).*
 
-![Series equivalent and parallel equivalent as r2 runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/two-resistors-series-parallel-live-1)
+![rs (series equivalent) against r1 (first resistance) from 3 ohm to 9 ohm](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/two-resistors-series-parallel-curve)
 
-*Series equivalent and parallel equivalent as r2 runs from 1.8 to 4.2 ohm, every other input as you entered it (41 solutions). Marked: your r2 = 3 ohm gives rs = 9. Your inputs: r1 = 6 ohm, r2 = 3 ohm.*
-
-![Series equivalent and parallel equivalent as r1 runs from 3](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/two-resistors-series-parallel-live-2)
-
-*Series equivalent and parallel equivalent as r1 runs from 3.6 to 8.4 ohm, every other input as you entered it (29 solutions). Marked: your r1 = 6 ohm gives rs = 9. Your inputs: r1 = 6 ohm, r2 = 3 ohm.*
+*rs (series equivalent) against r1 (first resistance) from 3 ohm to 9 ohm. One curve for each value of r2 (second resistance): 3 ohm, 1.5 ohm, 6 ohm. 31 points per curve computed by classical-physics-ai999x; marked: the worked example, r1 = 6 ohm, rs = 9 ohm.*
 
 ```python
 classical_physics_ai999x.solve('two_resistors_series_parallel', r1=6.0, r2=3.0)
@@ -8484,17 +7820,9 @@ $$
 - **Assumes:** $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Velocity (top) and displacement (bottom) against time for a body starting at u = 4 m/s with a constant acceleration a = 2 m/s², 24 times each a solve of the model; the area under the velocity line up to t = 5 s is the displacement](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-acceleration-state-graph)
+![Velocity and displacement against time for a body starting at u = 4 m/s with constant acceleration a = 2 m/s², 24 times each from the package; the shaded area under the velocity line up to t = 5 s equals the displacement](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-acceleration-state-graph)
 
-*Velocity (top) and displacement (bottom) against time for a body starting at u = 4 m/s with a constant acceleration a = 2 m/s², 24 times each a solve of the model; the area under the velocity line up to t = 5 s is the displacement. Marked: v = 14 m/s and s = 45 m at t = 5 s. Your inputs: u = 4 m/s, a = 2 m/s^2, t = 5 s.*
-
-![Final velocity as t runs from 3 to 7 s, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-acceleration-state-live-1)
-
-*Final velocity as t runs from 3 to 7 s, every other input as you entered it (41 solutions). Marked: your t = 5 s gives v = 14. Your inputs: u = 4 m/s, a = 2 m/s^2, t = 5 s.*
-
-![Final velocity as a runs from 1](https://www.ai999x.com/?ax_fig=classical-physics-ai999x/uniform-acceleration-state-live-2)
-
-*Final velocity as a runs from 1.2 to 2.8 m/s^2, every other input as you entered it (29 solutions). Marked: your a = 2 m/s^2 gives v = 14. Your inputs: u = 4 m/s, a = 2 m/s^2, t = 5 s.*
+*Velocity and displacement against time for a body starting at u = 4 m/s with constant acceleration a = 2 m/s², 24 times each from the package; the shaded area under the velocity line up to t = 5 s equals the displacement. Marked: v = 14 m/s and s = 45 m at t = 5 s.*
 
 ```python
 classical_physics_ai999x.solve('uniform_acceleration_state', u=4.0, a=2.0, t=5.0)
